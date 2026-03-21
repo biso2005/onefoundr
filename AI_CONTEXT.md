@@ -50,9 +50,13 @@
 - [x] Homepage — Category journey map section (6 cards)
 - [x] Homepage — Featured guides section (1 large + 3 small)
 - [x] Homepage — Solopreneur stories section (3 founder cards)
+- [x] Homepage — Free resources / lead magnet section
+- [x] Homepage — Latest guides grid section (6 article cards with category filter tabs)
+- [x] Component extraction refactor (page.tsx modularized into 6 section components)
+- [x] Error boundary components (error.tsx and not-found.tsx)
 
 ## CURRENT TASK
-Build Homepage — Latest Guides Grid Section (final homepage section)
+Section pages and content templates
 
 ## DECISIONS MADE
 9. Email signup form is UI only (no backend yet)
@@ -100,7 +104,9 @@ git log              # View commit history
 src/
 ├── app/
 │   ├── layout.tsx        (root layout with metadata)
-│   ├── page.tsx          (homepage)
+│   ├── page.tsx          (homepage - renders 6 section components)
+│   ├── error.tsx         (error boundary component)
+│   ├── not-found.tsx     (404 page component)
 │   ├── globals.css       (Tailwind directives)
 │   ├── start/page.tsx
 │   ├── offer/page.tsx
@@ -111,10 +117,17 @@ src/
 │   ├── about/page.tsx
 │   ├── start-here/page.tsx
 │   └── newsletter/page.tsx
-├── components/           (reusable UI components - build next)
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   └── NewsletterSignup.tsx
+├── components/
+│   ├── Header.tsx        (navigation header)
+│   ├── Footer.tsx        (footer with links and newsletter)
+│   ├── NewsletterSignup.tsx
+│   └── home/             (homepage section components)
+│       ├── HeroSection.tsx
+│       ├── CategoryMap.tsx
+│       ├── FeaturedGuides.tsx
+│       ├── SolopreneurStories.tsx
+│       ├── FreeResources.tsx
+│       └── LatestGuides.tsx
 └── lib/
     └── constants.ts      (site config, nav links, footer links)
 ```
