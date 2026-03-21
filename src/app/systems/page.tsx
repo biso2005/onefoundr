@@ -31,31 +31,31 @@ export default async function SystemsPage() {
         {
           name: "Client Onboarding",
           description: "Professional onboarding systems",
-          href: "/systems/client-onboarding",
+          href: "/systems/done-over-perfect",
           articleCount: 6
         },
         {
           name: "Workflows",
           description: "Streamline your daily operations",
-          href: "/systems/workflows",
+          href: "/systems/automation-trap",
           articleCount: 7
         },
         {
           name: "Automation",
           description: "Automate repetitive tasks",
-          href: "/systems/automation",
+          href: "/systems/automation-trap",
           articleCount: 9
         },
         {
           name: "Project Management",
           description: "Manage projects and clients solo",
-          href: "/systems/project-management",
+          href: "/systems/done-over-perfect",
           articleCount: 6
         },
         {
           name: "Templates",
           description: "Ready-to-use business templates",
-          href: "/systems/templates",
+          href: "/systems/sops",
           articleCount: 10
         }
       ]}

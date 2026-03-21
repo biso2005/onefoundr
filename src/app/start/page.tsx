@@ -32,31 +32,31 @@ export default async function StartPage() {
         {
           name: "Idea Validation",
           description: "Test your idea before investing time",
-          href: "/start/idea-validation",
+          href: "/start/ai-launch-30days",
           articleCount: 8
         },
         {
           name: "Niche Selection",
           description: "Find your profitable sweet spot",
-          href: "/start/niche-selection",
+          href: "/start/business-ideas",
           articleCount: 6
         },
         {
           name: "Business Models",
           description: "Models that work for solo founders",
-          href: "/start/business-models",
+          href: "/start/ai-launch-30days",
           articleCount: 9
         },
         {
           name: "Market Research",
           description: "Research methods for solopreneurs",
-          href: "/start/market-research",
+          href: "/start/business-ideas",
           articleCount: 5
         },
         {
           name: "First Steps",
           description: "Your first actions as a solo founder",
-          href: "/start/first-steps",
+          href: "/start/ai-launch-30days",
           articleCount: 7
         }
       ]}

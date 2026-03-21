@@ -31,31 +31,31 @@ export default async function ToolsPage() {
         {
           name: "Website Builders",
           description: "Build your online presence",
-          href: "/tools/website-builders",
+          href: "/tools/ai-tools",
           articleCount: 7
         },
         {
           name: "Email Tools",
           description: "Email marketing platforms",
-          href: "/tools/email-tools",
+          href: "/tools/building-ai-agent",
           articleCount: 8
         },
         {
           name: "CRM",
           description: "Manage clients and leads",
-          href: "/tools/crm",
+          href: "/tools/ai-tools",
           articleCount: 6
         },
         {
           name: "Automation",
           description: "Zapier, Make, and more",
-          href: "/tools/automation",
+          href: "/tools/building-ai-agent",
           articleCount: 9
         },
         {
           name: "No-Code",
           description: "Build without coding",
-          href: "/tools/no-code",
+          href: "/tools/building-ai-agent",
           articleCount: 7
         }
       ]}

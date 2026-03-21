@@ -31,31 +31,31 @@ export default async function SalesPage() {
         {
           name: "Discovery Calls",
           description: "Master the sales conversation",
-          href: "/sales/discovery-calls",
+          href: "/sales/ai-cold-outreach",
           articleCount: 6
         },
         {
           name: "Sales Funnels",
           description: "Build funnels that convert",
-          href: "/sales/sales-funnels",
+          href: "/sales/getting-clients",
           articleCount: 7
         },
         {
           name: "Proposals",
           description: "Write proposals that win",
-          href: "/sales/proposals",
+          href: "/sales/ai-cold-outreach",
           articleCount: 5
         },
         {
           name: "Closing",
           description: "Close deals with confidence",
-          href: "/sales/closing",
+          href: "/sales/getting-clients",
           articleCount: 6
         },
         {
           name: "Follow Up",
           description: "Follow up without being annoying",
-          href: "/sales/follow-up",
+          href: "/sales/ai-cold-outreach",
           articleCount: 5
         }
       ]}

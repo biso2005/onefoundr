@@ -31,31 +31,31 @@ export default async function MarketingPage() {
         {
           name: "SEO",
           description: "Rank on Google without a team",
-          href: "/marketing/seo",
+          href: "/marketing/seo-2026",
           articleCount: 9
         },
         {
           name: "Email Marketing",
           description: "Build and monetize your email list",
-          href: "/marketing/email-marketing",
+          href: "/marketing/messaging-gap",
           articleCount: 8
         },
         {
           name: "Personal Branding",
           description: "Stand out as a solo founder",
-          href: "/marketing/personal-branding",
+          href: "/marketing/repurposing-content",
           articleCount: 7
         },
         {
           name: "Social Media",
           description: "Social strategy for one-person businesses",
-          href: "/marketing/social-media",
+          href: "/marketing/repurposing-content",
           articleCount: 8
         },
         {
           name: "Lead Generation",
           description: "Generate leads on autopilot",
-          href: "/marketing/lead-generation",
+          href: "/marketing/account-based-marketing",
           articleCount: 6
         }
       ]}
