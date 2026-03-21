@@ -103,6 +103,7 @@ legal/tax advice, specific industry expertise.
 - Status: PUBLISHED (April 4, 2026)
 - URL: /start/ai-launch-30days
 - Read time: 14 min
+- Editorial: 6-pass editing applied (softened numeric claims; added citation placeholders) (March 21, 2026)
 
 ### Article 4: "Building Your AI Operations Team: A Solopreneur's Playbook" ✅ PUBLISHED
 - File: src/content/systems/ai-operations-team.mdx
