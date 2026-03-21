@@ -79,11 +79,15 @@ export default function StartHerePage() {
           </div>
 
           {/* Journey Steps - Mobile (visible on mobile, hidden on md+) */}
-          <div className="flex md:hidden flex-col gap-4 mb-6">
+          <div className="md:hidden relative pl-12 mb-6">
+            {/* Vertical dashed line */}
+            <div className="absolute left-4 top-0 bottom-0 w-0.5 border-l-2 border-dashed border-accent" />
+            
             {JOURNEY_STEPS.map((step) => (
-              <div key={step.number} className="flex gap-3 items-center">
-                <div className="w-10 h-10 flex-shrink-0 rounded-full border-2 border-accent flex items-center justify-center">
-                  <span className="text-sm font-bold text-accent">
+              <div key={step.number} className="relative flex gap-4 pb-6 items-center">
+                {/* Circle positioned on the line */}
+                <div className="absolute -left-7 w-9 h-9 rounded-full border-2 border-accent bg-white flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs font-bold text-accent">
                     {step.number}
                   </span>
                 </div>
