@@ -1,7 +1,141 @@
+import PathCards from "@/components/start-here/PathCards";
+import PopularGuides from "@/components/start-here/PopularGuides";
+import FreeResources from "@/components/start-here/FreeResources";
+import NewsletterCTA from "@/components/start-here/NewsletterCTA";
+import FinalCTA from "@/components/start-here/FinalCTA";
+
+export const metadata = {
+  title: "Start Here — OneFoundr | Your Guide to Building a One-Person Business",
+  description:
+    "New to OneFoundr? This page will point you to exactly what you need based on where you are in your solo founder journey."
+};
+
+const JOURNEY_STEPS = [
+  { number: "1", label: "Start" },
+  { number: "2", label: "Offer" },
+  { number: "3", label: "Market" },
+  { number: "4", label: "Sell" },
+  { number: "5", label: "Systemize" },
+  { number: "6", label: "Grow" }
+];
+
 export default function StartHerePage() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-6">
-      <h1 className="text-3xl font-semibold text-primary">Start Here</h1>
-    </main>
+    <>
+      {/* SECTION 1: PAGE HERO */}
+      <section style={{ backgroundColor: "white", width: "100%", paddingTop: "80px", paddingBottom: "24px" }} className="md:py-20 py-12 px-6">
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#00B894", fontWeight: "600", marginBottom: "12px" }}>
+            Welcome
+          </p>
+
+          <h1 style={{ fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", marginBottom: "20px" }}>
+            New to OneFoundr? Start Here.
+          </h1>
+
+          <p style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.6", marginBottom: "8px" }}>
+            Whether you're just starting your solo business or looking to grow the one you have, this page will point you to exactly what you need. No overwhelm. Just the right next step.
+          </p>
+
+          <p style={{ fontSize: "14px", color: "#636E72", marginBottom: "48px" }}>
+            Reading time: 5 minutes | Last updated: December 2024
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 2: HOW IT WORKS */}
+      <section style={{ backgroundColor: "white", width: "100%", paddingTop: "0px", paddingBottom: "48px" }} className="px-6">
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "16px" }}>
+            How OneFoundr Works
+          </h2>
+
+          <p style={{ fontSize: "16px", color: "#636E72", lineHeight: "1.6", marginBottom: "24px" }}>
+            OneFoundr is organized around the solo founder journey. Think of it as a roadmap.
+          </p>
+
+          {/* Journey Steps - Desktop */}
+          <div style={{ display: "none" }} className="md:flex md:flex-row md:items-center md:gap-2 md:justify-between md:mb-6">
+            {JOURNEY_STEPS.map((step, index) => (
+              <div key={step.number} style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1 }}>
+                {/* Circle */}
+                <div
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    border: "2px solid #00B894",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "8px"
+                  }}
+                >
+                  <span style={{ fontSize: "14px", fontWeight: "700", color: "#00B894" }}>
+                    {step.number}
+                  </span>
+                </div>
+
+                {/* Label */}
+                <p style={{ fontSize: "13px", fontWeight: "500", color: "#2D3436", margin: 0, textAlign: "center" }}>
+                  {step.label}
+                </p>
+
+                {/* Connector Line */}
+                {index < JOURNEY_STEPS.length - 1 && (
+                  <div style={{ flex: 1, borderTop: "2px dashed #E2E8F0", marginTop: "12px", width: "100%" }} />
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Journey Steps - Mobile */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "24px" }} className="md:hidden">
+            {JOURNEY_STEPS.map((step) => (
+              <div key={step.number} style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+                <div
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    minWidth: "40px",
+                    borderRadius: "50%",
+                    border: "2px solid #00B894",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <span style={{ fontSize: "14px", fontWeight: "700", color: "#00B894" }}>
+                    {step.number}
+                  </span>
+                </div>
+                <p style={{ fontSize: "14px", fontWeight: "500", color: "#2D3436", margin: 0 }}>
+                  {step.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ fontSize: "16px", color: "#636E72", lineHeight: "1.6", marginBottom: "64px" }}>
+            You can follow the path step by step, or jump straight to the stage you're in right now.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 3: PATH CARDS */}
+      <PathCards />
+
+      {/* SECTION 4: POPULAR GUIDES */}
+      <PopularGuides />
+
+      {/* SECTION 5: FREE RESOURCES */}
+      <FreeResources />
+
+      {/* SECTION 6: NEWSLETTER CTA */}
+      <NewsletterCTA />
+
+      {/* SECTION 7: FINAL CTA */}
+      <FinalCTA />
+    </>
   );
 }
