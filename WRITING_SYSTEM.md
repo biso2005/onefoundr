@@ -117,6 +117,7 @@ legal/tax advice, specific industry expertise.
 - Status: PUBLISHED (April 11, 2026)
 - URL: /systems/ai-operations-team
 - Read time: 13 min
+- Editorial: 6-pass editing applied (softened numeric claims; replaced forbidden phrasing) (March 21, 2026)
 
 ### Article 5: "Building Your AI Agent: A Step-by-Step Guide for Solopreneurs" ✅ PUBLISHED
 - File: src/content/tools/building-ai-agent.mdx
