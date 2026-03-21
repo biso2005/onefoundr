@@ -79,27 +79,29 @@ export default function StartHerePage() {
           </div>
 
           {/* Journey Steps - Mobile (visible on mobile, hidden on md+) */}
-          <div className="md:hidden mb-8">
-            <div className="relative">
-              {/* Vertical dashed line - positioned behind all circles */}
-              <div className="absolute left-6 top-6 bottom-6 w-0 border-l-2 border-dashed border-accent opacity-40" />
-              
-              {/* Steps */}
-              {JOURNEY_STEPS.map((step) => (
-                <div key={step.number} className="flex items-center gap-6 py-4">
-                  <div className="flex-shrink-0 relative z-10">
-                    <div className="w-12 h-12 rounded-full border-2 border-accent bg-white flex items-center justify-center">
-                      <span className="text-sm font-bold text-accent">
-                        {step.number}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-base font-medium text-primary">
-                    {step.label}
-                  </p>
+          <div className="md:hidden mb-8" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            {JOURNEY_STEPS.map((step) => (
+              <div key={step.number} style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+                <div style={{
+                  width: "52px",
+                  height: "52px",
+                  minWidth: "52px",
+                  borderRadius: "50%",
+                  border: "2px solid #00B894",
+                  backgroundColor: "white",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}>
+                  <span style={{ fontSize: "16px", fontWeight: "700", color: "#00B894" }}>
+                    {step.number}
+                  </span>
                 </div>
-              ))}
-            </div>
+                <span style={{ fontSize: "16px", fontWeight: "500", color: "#2D3436" }}>
+                  {step.label}
+                </span>
+              </div>
+            ))}
           </div>
 
           <p style={{ fontSize: "16px", color: "#636E72", lineHeight: "1.6", marginBottom: "64px" }}>
