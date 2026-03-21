@@ -42,20 +42,23 @@ export default async function FeaturedGuides() {
   let featured = DEFAULT_FEATURED.featured;
   let small = DEFAULT_FEATURED.small;
   
-  if (featuredPosts.length >= 4) {
+  // Filter posts with missing properties and ensure safe access
+  const safeFeaturedPosts = featuredPosts.filter(post => post && post.frontmatter);
+  
+  if (safeFeaturedPosts && safeFeaturedPosts.length >= 4) {
     featured = {
-      category: featuredPosts[0].frontmatter.categoryLabel.toUpperCase(),
-      title: featuredPosts[0].frontmatter.title,
-      description: featuredPosts[0].frontmatter.description,
-      readTime: featuredPosts[0].frontmatter.readTime,
-      href: `/${featuredPosts[0].category}/${featuredPosts[0].slug}`
+      category: (safeFeaturedPosts[0].frontmatter?.categoryLabel || safeFeaturedPosts[0].category || "GENERAL").toUpperCase(),
+      title: safeFeaturedPosts[0].frontmatter?.title || "Untitled",
+      description: safeFeaturedPosts[0].frontmatter?.description || "",
+      readTime: safeFeaturedPosts[0].frontmatter?.readTime || "5 min read",
+      href: `/${safeFeaturedPosts[0].category}/${safeFeaturedPosts[0].slug}`
     };
     
-    small = featuredPosts.slice(1, 4).map(post => ({
-      category: post.frontmatter.categoryLabel.toUpperCase(),
+    small = safeFeaturedPosts.slice(1, 4).map(post => ({
+      category: (post.frontmatter?.categoryLabel || post.category || "GENERAL").toUpperCase(),
       emoji: "📚",
-      title: post.frontmatter.title,
-      readTime: post.frontmatter.readTime,
+      title: post.frontmatter?.title || "Untitled",
+      readTime: post.frontmatter?.readTime || "5 min read",
       href: `/${post.category}/${post.slug}`
     }));
   }
@@ -64,7 +67,7 @@ export default async function FeaturedGuides() {
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "40px", flexWrap: "wrap", gap: "16px" }} className="md:flex-row flex-col">
           <div>
-            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#00B894", fontWeight: "600", marginBottom: "8px" }}>
+            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "8px" }}>
               Learn
             </p>
             <h2 style={{ fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", margin: 0 }}>
@@ -75,7 +78,7 @@ export default async function FeaturedGuides() {
             href="/start"
             style={{
               fontSize: "14px",
-              color: "#00B894",
+              color: "#059669",
               fontWeight: "500",
               textDecoration: "none",
               whiteSpace: "nowrap",
@@ -94,7 +97,7 @@ export default async function FeaturedGuides() {
             href="/start"
             style={{
               fontSize: "14px",
-              color: "#00B894",
+              color: "#059669",
               fontWeight: "500",
               textDecoration: "none",
               transition: "text-decoration 0.2s"

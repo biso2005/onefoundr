@@ -77,20 +77,20 @@ export default function SampleIssue() {
                 color: "#2D3436",
                 marginBottom: "8px"
               }}>
-                <span style={{ fontWeight: "600", color: "#00B894" }}>1.</span> Hourly pricing punishes you for being efficient
+                <span style={{ fontWeight: "600", color: "#059669" }}>1.</span> Hourly pricing punishes you for being efficient
               </li>
               <li style={{
                 fontSize: "14px",
                 color: "#2D3436",
                 marginBottom: "8px"
               }}>
-                <span style={{ fontWeight: "600", color: "#00B894" }}>2.</span> Clients focus on time, not results
+                <span style={{ fontWeight: "600", color: "#059669" }}>2.</span> Clients focus on time, not results
               </li>
               <li style={{
                 fontSize: "14px",
                 color: "#2D3436"
               }}>
-                <span style={{ fontWeight: "600", color: "#00B894" }}>3.</span> Your income has a hard ceiling
+                <span style={{ fontWeight: "600", color: "#059669" }}>3.</span> Your income has a hard ceiling
               </li>
             </ol>
 
@@ -105,7 +105,7 @@ export default function SampleIssue() {
 
             <p style={{
               fontSize: "14px",
-              color: "#00B894",
+              color: "#059669",
               fontWeight: "500",
               marginBottom: "24px"
             }}>

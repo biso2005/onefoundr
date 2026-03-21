@@ -42,7 +42,7 @@ export default function Header() {
 
         {/* Desktop Navigation - Only show if not mobile */}
         {!isMobile && (
-          <nav style={{ display: "flex", gap: "32px" }}>
+          <nav aria-label="Main navigation" style={{ display: "flex", gap: "32px" }}>
             {NAV_LINKS.map((link) => {
               const isActive = isActivePath(link.href);
               return (
@@ -52,7 +52,7 @@ export default function Header() {
                   style={{
                     textDecoration: "none",
                     fontSize: "14px",
-                    color: isActive ? "#00B894" : "#636E72",
+                    color: isActive ? "#059669" : "#636E72",
                     fontWeight: isActive ? "500" : "400",
                     transition: "color 0.2s"
                   }}
@@ -69,6 +69,7 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
             style={{
               background: "none",
               border: "none",
@@ -80,6 +81,7 @@ export default function Header() {
             }}
           >
             <span
+              aria-hidden="true"
               style={{
                 display: "block",
                 width: "24px",
@@ -90,6 +92,7 @@ export default function Header() {
               }}
             ></span>
             <span
+              aria-hidden="true"
               style={{
                 display: "block",
                 width: "24px",
@@ -100,6 +103,7 @@ export default function Header() {
               }}
             ></span>
             <span
+              aria-hidden="true"
               style={{
                 display: "block",
                 width: "24px",
@@ -115,7 +119,7 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMobile && mobileMenuOpen && (
-        <nav style={{ borderTop: "1px solid #E2E8F0", backgroundColor: "#FFFFFF" }}>
+        <nav aria-label="Mobile navigation menu" style={{ borderTop: "1px solid #E2E8F0", backgroundColor: "#FFFFFF" }}>
           {NAV_LINKS.map((link) => {
             const isActive = isActivePath(link.href);
             return (
@@ -129,7 +133,7 @@ export default function Header() {
                   borderBottom: "1px solid #E2E8F0",
                   textDecoration: "none",
                   fontSize: "14px",
-                  color: isActive ? "#00B894" : "#2D3436",
+                  color: isActive ? "#059669" : "#2D3436",
                   fontWeight: isActive ? "500" : "400",
                   backgroundColor: isActive ? "#F7F7F7" : "transparent"
                 }}

@@ -41,7 +41,7 @@ export default function FeaturedGuidesClient({ featured, small }: FeaturedGuides
           }}
         >
           <div style={{ height: "220px", background: "linear-gradient(135deg, rgba(0, 184, 148, 0.1) 0%, rgba(0, 184, 148, 0.05) 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#059669", fontWeight: "600", margin: 0 }}>
               {featured.category}
             </p>
             <p style={{ fontSize: "18px", fontWeight: "700", color: "#2D3436", marginTop: "8px", margin: 0 }}>
@@ -50,7 +50,7 @@ export default function FeaturedGuidesClient({ featured, small }: FeaturedGuides
           </div>
 
           <div style={{ padding: "24px" }}>
-            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#059669", fontWeight: "600", margin: 0 }}>
               {featured.category}
             </p>
             <h3 style={{ fontSize: "20px", fontWeight: "700", color: "#2D3436", marginTop: "8px", marginBottom: 0 }}>
@@ -63,7 +63,7 @@ export default function FeaturedGuidesClient({ featured, small }: FeaturedGuides
               <span style={{ fontSize: "12px", color: "#636E72" }}>
                 {featured.readTime}
               </span>
-              <span style={{ fontSize: "14px", color: "#00B894", fontWeight: "500" }}>
+              <span style={{ fontSize: "14px", color: "#059669", fontWeight: "500" }}>
                 Read Guide →
               </span>
             </div>
@@ -95,7 +95,7 @@ export default function FeaturedGuidesClient({ featured, small }: FeaturedGuides
               </div>
 
               <div style={{ paddingLeft: "16px", display: "flex", flexDirection: "column", justifyContent: "center", flex: 1 }}>
-                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#059669", fontWeight: "600", margin: 0 }}>
                   {guide.category}
                 </p>
                 <h4 style={{ fontSize: "16px", fontWeight: "600", color: "#2D3436", marginTop: "4px", marginBottom: 0 }}>

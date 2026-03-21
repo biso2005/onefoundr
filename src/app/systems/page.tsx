@@ -25,70 +25,70 @@ export default async function SystemsPage() {
         {
           name: "SOPs",
           description: "Document every process",
-          href: "/systems/sops",
+          href: "/systems",
           articleCount: 8
         },
         {
           name: "Client Onboarding",
           description: "Professional onboarding systems",
-          href: "/systems/client-onboarding",
+          href: "/systems",
           articleCount: 6
         },
         {
           name: "Workflows",
           description: "Streamline your daily operations",
-          href: "/systems/workflows",
+          href: "/systems",
           articleCount: 7
         },
         {
           name: "Automation",
           description: "Automate repetitive tasks",
-          href: "/systems/automation",
+          href: "/systems",
           articleCount: 9
         },
         {
           name: "Project Management",
           description: "Manage projects and clients solo",
-          href: "/systems/project-management",
+          href: "/systems",
           articleCount: 6
         },
         {
           name: "Templates",
           description: "Ready-to-use business templates",
-          href: "/systems/templates",
+          href: "/systems",
           articleCount: 10
         }
       ]}
       featuredArticles={[
         {
+          title: "Building Your AI Operations Team: A Solopreneur's Playbook",
+          category: "AUTOMATION",
+          readTime: "13 min",
+          href: "/systems/ai-operations-team"
+        },
+        {
           title: "How to Create SOPs for Your Solo Business",
           category: "SOPS",
           readTime: "8 min",
-          href: "/systems/sops"
-        },
-        {
-          title: "Client Onboarding: Step-by-Step Process",
-          category: "ONBOARDING",
-          readTime: "10 min",
-          href: "/systems/client-onboarding"
+          href: "/systems"
         },
         {
           title: "Workflow Automation for Solo Businesses",
           category: "AUTOMATION",
           readTime: "12 min",
-          href: "/systems/automation"
+          href: "/systems"
         },
         {
           title: "Notion for Solopreneurs: Complete Setup",
           category: "TOOLS",
           readTime: "11 min",
-          href: "/systems/notion-setup"
+          href: "/systems"
         },
         {
           title: "20 Templates Every Solopreneur Needs",
           category: "TEMPLATES",
           readTime: "9 min",
-          href: "/systems/templates"
+          href: "/systems"
         }
       ]}
       relatedCategories={[

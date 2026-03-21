@@ -79,11 +79,11 @@ export default function HeroSection() {
             <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
                 <span style={{ marginRight: "8px" }}>✓</span>
-                50,000+ solo founders
+                Trusted by solo founders worldwide
               </div>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
                 <span style={{ marginRight: "8px" }}>✓</span>
-                200+ actionable guides
+                Actionable guides updated weekly
               </div>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
                 <span style={{ marginRight: "8px" }}>✓</span>
@@ -128,10 +128,10 @@ export default function HeroSection() {
 
             <div>
               <p style={{ fontSize: "14px", color: "#636E72", fontStyle: "italic", margin: 0 }}>
-                "The resource I wish existed when I started my solo business."
+                "Built for solo founders, by solo founders."
               </p>
               <p style={{ fontSize: "13px", color: "#9CA3AF", marginTop: "12px", margin: 0 }}>
-                — A OneFoundr reader
+                — Built for solo founders
               </p>
             </div>
           </div>

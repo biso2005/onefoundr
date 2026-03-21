@@ -68,7 +68,7 @@ export default function AboutPage() {
       {/* SECTION 1: PAGE HERO */}
       <section style={{ backgroundColor: "white", width: "100%", paddingTop: "80px", paddingBottom: "24px" }} className="md:py-20 py-12 px-6">
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#00B894", fontWeight: "600", marginBottom: "12px" }}>
+          <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "12px" }}>
             About OneFoundr
           </p>
 
@@ -224,7 +224,7 @@ export default function AboutPage() {
             style={{
               display: "inline-block",
               fontSize: "14px",
-              color: "#00B894",
+              color: "#059669",
               fontWeight: "500",
               textDecoration: "none",
               marginTop: "24px"

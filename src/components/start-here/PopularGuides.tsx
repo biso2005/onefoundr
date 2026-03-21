@@ -39,7 +39,7 @@ export default function PopularGuides() {
               }}
             >
               {/* Rank Number */}
-              <span style={{ fontSize: "24px", fontWeight: "700", color: "rgba(0, 184, 148, 0.2)", minWidth: "40px", textAlign: "center" }}>
+              <span style={{ fontSize: "24px", fontWeight: "700", color: "rgba(5, 150, 105, 0.2)", minWidth: "40px", textAlign: "center" }}>
                 {guide.rank}
               </span>
 
@@ -48,13 +48,13 @@ export default function PopularGuides() {
                 <p style={{ fontSize: "15px", fontWeight: "500", color: "#2D3436", margin: 0, marginBottom: "4px" }}>
                   {guide.title}
                 </p>
-                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#059669", fontWeight: "600", margin: 0 }}>
                   {guide.category}
                 </p>
               </div>
 
               {/* Arrow */}
-              <span style={{ color: "#00B894", fontSize: "16px", minWidth: "20px", textAlign: "right" }}>
+              <span style={{ color: "#059669", fontSize: "16px", minWidth: "20px", textAlign: "right" }}>
                 →
               </span>
             </Link>
@@ -66,7 +66,7 @@ export default function PopularGuides() {
           style={{
             display: "inline-block",
             fontSize: "14px",
-            color: "#00B894",
+            color: "#059669",
             fontWeight: "500",
             textDecoration: "none",
             marginTop: "16px"

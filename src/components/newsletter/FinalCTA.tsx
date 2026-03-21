@@ -1,12 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import EmailSignupForm from "../EmailSignupForm";
 
 export default function FinalCTA() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement newsletter signup when backend is ready
-  };
 
   return (
     <section style={{ backgroundColor: "#2D3436", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
@@ -17,7 +14,7 @@ export default function FinalCTA() {
           color: "white",
           marginBottom: "12px"
         }}>
-          Join 25,000+ Solo Founders
+          Trusted by Solo Founders Worldwide
         </h2>
 
         <p style={{
@@ -29,46 +26,13 @@ export default function FinalCTA() {
         </p>
 
         {/* Email Form */}
-        <form onSubmit={handleSubmit} style={{ maxWidth: "500px", margin: "0 auto 24px" }}>
-          <div style={{ display: "flex", gap: "0", flexDirection: "row" }} className="flex-col md:flex-row md:gap-0">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              required
-              style={{
-                flex: 1,
-                minWidth: "200px",
-                padding: "16px 20px",
-                borderRadius: "10px 0 0 10px",
-                border: "1px solid #4B5563",
-                fontSize: "16px",
-                fontFamily: "inherit",
-                outline: "none",
-                backgroundColor: "white",
-                color: "#2D3436"
-              }}
-              className="md:rounded-l-xl md:rounded-r-none focus:outline-none focus:border-accent"
-            />
-            <button
-              type="submit"
-              style={{
-                padding: "16px 32px",
-                backgroundColor: "#00B894",
-                color: "white",
-                border: "none",
-                borderRadius: "0 10px 10px 0",
-                fontSize: "16px",
-                fontWeight: "600",
-                cursor: "pointer",
-                transition: "opacity 0.2s",
-                whiteSpace: "nowrap"
-              }}
-              className="md:rounded-r-xl md:rounded-l-none hover:opacity-90"
-            >
-              Subscribe Free →
-            </button>
-          </div>
-        </form>
+        <div style={{ maxWidth: "500px", margin: "0 auto 24px" }}>
+          <EmailSignupForm 
+            variant="dark" 
+            buttonText="Subscribe Free →" 
+            placeholder="Enter your email address"
+          />
+        </div>
 
         <p style={{
           fontSize: "12px",
@@ -81,15 +45,15 @@ export default function FinalCTA() {
         {/* Explore Links */}
         <p style={{ fontSize: "14px", color: "#9CA3AF", marginBottom: "8px" }}>
           Or explore the site:{" "}
-          <Link href="/start-here" style={{ color: "#00B894", textDecoration: "none" }} className="hover:underline">
+          <Link href="/start-here" style={{ color: "#059669", textDecoration: "none" }} className="hover:underline">
             Start Here
           </Link>
           {" "}•{" "}
-          <Link href="/tools" style={{ color: "#00B894", textDecoration: "none" }} className="hover:underline">
+          <Link href="/tools" style={{ color: "#059669", textDecoration: "none" }} className="hover:underline">
             Browse Tools
           </Link>
           {" "}•{" "}
-          <Link href="/stories" style={{ color: "#00B894", textDecoration: "none" }} className="hover:underline">
+          <Link href="/stories" style={{ color: "#059669", textDecoration: "none" }} className="hover:underline">
             Read Stories
           </Link>
         </p>

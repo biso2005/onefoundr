@@ -68,7 +68,7 @@ export const MDXComponents = {
   // Links
   a: ({ href, children }: { href: string; children: React.ReactNode }) => (
     <a href={href} style={{
-      color: "#00B894",
+      color: "#059669",
       textDecoration: "underline",
       transition: "opacity 0.2s"
     }} className="hover:opacity-80">

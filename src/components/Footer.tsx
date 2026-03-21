@@ -2,13 +2,9 @@
 
 import Link from "next/link";
 import { SITE_NAME, SITE_TAGLINE, FOOTER_LINKS } from "@/lib/constants";
+import EmailSignupForm from "./EmailSignupForm";
 
 export default function Footer() {
-  // Handle form submission (no backend yet)
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement newsletter signup when backend is ready
-  };
 
   return (
     <footer>
@@ -23,43 +19,9 @@ export default function Footer() {
           </p>
 
           {/* Email Form */}
-          <form style={{ display: "flex", marginBottom: "12px", maxWidth: "400px", margin: "0 auto 12px" }}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              required
-              style={{
-                flex: 1,
-                padding: "12px",
-                borderRadius: "8px 0 0 8px",
-                border: "1px solid #E2E8F0",
-                fontSize: "14px",
-                fontFamily: "inherit",
-                outline: "none"
-              }}
-            />
-            <button
-              type="submit"
-              style={{
-                padding: "12px 24px",
-                backgroundColor: "#00B894",
-                color: "white",
-                border: "none",
-                borderRadius: "0 8px 8px 0",
-                fontSize: "14px",
-                fontWeight: "500",
-                cursor: "pointer",
-                transition: "background-color 0.2s"
-              }}
-
-            >
-              Subscribe
-            </button>
-          </form>
-
-          <p style={{ fontSize: "12px", color: "#636E72" }}>
-            Join 25,000+ solo founders
-          </p>
+          <div style={{ maxWidth: "400px", margin: "0 auto 12px" }}>
+            <EmailSignupForm variant="default" placeholder="Enter your email" />
+          </div>
         </div>
       </section>
 
@@ -82,13 +44,13 @@ export default function Footer() {
                 {SITE_TAGLINE}
               </p>
               <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#00B894"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
                   Twitter
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#00B894"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
                   LinkedIn
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#00B894"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
                   YouTube
                 </a>
               </div>
@@ -111,7 +73,7 @@ export default function Footer() {
                       transition: "color 0.2s"
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#00B894";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";
@@ -140,7 +102,7 @@ export default function Footer() {
                       transition: "color 0.2s"
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#00B894";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";
@@ -169,7 +131,7 @@ export default function Footer() {
                       transition: "color 0.2s"
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#00B894";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";

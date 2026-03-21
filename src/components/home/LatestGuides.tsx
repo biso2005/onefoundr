@@ -54,14 +54,18 @@ export default async function LatestGuides() {
   // Use real posts if available (up to 6), otherwise fall back to defaults
   let latestGuides = DEFAULT_LATEST_GUIDES;
   
-  if (allPosts.length > 0) {
-    latestGuides = allPosts.slice(0, 6).map(post => ({
-      category: post.frontmatter.categoryLabel.toUpperCase(),
-      title: post.frontmatter.title,
-      excerpt: post.frontmatter.description,
-      readTime: post.frontmatter.readTime,
-      href: `/${post.category}/${post.slug}`
-    }));
+  if (allPosts && allPosts.length > 0) {
+    // Filter out posts with missing critical properties and map with safe fallbacks
+    latestGuides = allPosts
+      .filter(post => post && post.frontmatter)
+      .slice(0, 6)
+      .map(post => ({
+        category: (post.frontmatter?.categoryLabel || post.category || "GENERAL").toUpperCase(),
+        title: post.frontmatter?.title || "Untitled",
+        excerpt: post.frontmatter?.description || "",
+        readTime: post.frontmatter?.readTime || "5 min read",
+        href: `/${post.category}/${post.slug}`
+      }));
   }
 
   return <LatestGuidesClient articles={latestGuides} />;

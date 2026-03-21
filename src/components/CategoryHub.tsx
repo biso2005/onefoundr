@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Post } from "@/lib/mdx";
+import EmailSignupForm from "./EmailSignupForm";
 
 interface CategoryHubProps {
   eyebrow: string;
@@ -47,12 +48,14 @@ export default function CategoryHub({
 }: CategoryHubProps) {
   // Use dynamic articles if provided, otherwise fall back to featured articles
   const articlesToDisplay = dynamicArticles && dynamicArticles.length > 0 
-    ? dynamicArticles.map(post => ({
-        title: post.frontmatter.title,
-        category: post.frontmatter.categoryLabel,
-        readTime: post.frontmatter.readTime,
-        href: `/${post.category}/${post.slug}`
-      }))
+    ? dynamicArticles
+        .filter(post => post && post.frontmatter)
+        .map(post => ({
+          title: post.frontmatter?.title || "Untitled",
+          category: (post.frontmatter?.categoryLabel || post.category || "GENERAL").toUpperCase(),
+          readTime: post.frontmatter?.readTime || "5 min read",
+          href: `/${post.category}/${post.slug}`
+        }))
     : featuredArticles;
   return (
     <>
@@ -62,7 +65,7 @@ export default function CategoryHub({
           <div style={{ display: "flex", flexDirection: "row", gap: "48px", alignItems: "flex-start" }} className="md:flex-row flex-col">
             {/* LEFT SIDE */}
             <div style={{ flex: "0 0 60%" }}>
-              <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#00B894", fontWeight: "600", marginBottom: "12px" }}>
+              <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "12px" }}>
                 {eyebrow}
               </p>
 
@@ -113,7 +116,7 @@ export default function CategoryHub({
                   }}
                   className="hover:shadow-md hover:border-accent"
                 >
-                  <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#00B894", fontWeight: "600", marginBottom: "16px", margin: 0 }}>
+                  <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "16px", margin: 0 }}>
                     📖 Complete Guide
                   </p>
 
@@ -129,7 +132,7 @@ export default function CategoryHub({
                     <p style={{ fontSize: "12px", color: "#636E72", margin: 0 }}>
                       {pillarGuide.readTime}
                     </p>
-                    <p style={{ fontSize: "14px", color: "#00B894", fontWeight: "500", margin: 0 }}>
+                    <p style={{ fontSize: "14px", color: "#059669", fontWeight: "500", margin: 0 }}>
                       Start Reading →
                     </p>
                   </div>
@@ -173,8 +176,8 @@ export default function CategoryHub({
                     <span
                       style={{
                         fontSize: "12px",
-                        color: "#00B894",
-                        backgroundColor: "rgba(0, 184, 148, 0.1)",
+                        color: "#059669",
+                        backgroundColor: "rgba(5, 150, 105, 0.1)",
                         padding: "4px 12px",
                         borderRadius: "20px",
                         whiteSpace: "nowrap",
@@ -185,7 +188,7 @@ export default function CategoryHub({
                     </span>
                   </div>
 
-                  <p style={{ fontSize: "14px", color: "#00B894", fontWeight: "500", margin: 0 }}>
+                  <p style={{ fontSize: "14px", color: "#059669", fontWeight: "500", margin: 0 }}>
                     Explore →
                   </p>
                 </div>
@@ -219,7 +222,7 @@ export default function CategoryHub({
                   className="hover:bg-gray-50 hover:rounded hover:px-4"
                 >
                   <div>
-                    <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+                    <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", margin: 0 }}>
                       {article.category}
                     </p>
                     <p style={{ fontSize: "16px", fontWeight: "500", color: "#2D3436", marginTop: "2px", margin: 0 }}>
@@ -231,7 +234,7 @@ export default function CategoryHub({
                     <p style={{ fontSize: "12px", color: "#636E72", margin: 0, whiteSpace: "nowrap" }}>
                       {article.readTime}
                     </p>
-                    <span style={{ color: "#00B894", fontSize: "16px" }}>→</span>
+                    <span style={{ color: "#059669", fontSize: "16px" }}>→</span>
                   </div>
                 </div>
               </Link>
@@ -288,40 +291,7 @@ export default function CategoryHub({
           </p>
 
           <div style={{ display: "flex", gap: "0", marginBottom: "8px" }} className="flex-col md:flex-row">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              style={{
-                flex: 1,
-                minWidth: "200px",
-                padding: "12px 20px",
-                borderRadius: "8px 0 0 8px",
-                border: "1px solid #4B5563",
-                fontSize: "14px",
-                fontFamily: "inherit",
-                outline: "none",
-                backgroundColor: "white",
-                color: "#2D3436"
-              }}
-              className="md:rounded-l-lg md:rounded-r-none focus:outline-none focus:ring-2 focus:ring-accent/50"
-            />
-            <button
-              style={{
-                padding: "12px 24px",
-                backgroundColor: "#00B894",
-                color: "white",
-                border: "none",
-                borderRadius: "0 8px 8px 0",
-                fontSize: "14px",
-                fontWeight: "600",
-                cursor: "pointer",
-                transition: "background-color 0.2s",
-                whiteSpace: "nowrap"
-              }}
-              className="md:rounded-r-lg md:rounded-l-none hover:opacity-90"
-            >
-              Subscribe Free →
-            </button>
+            <EmailSignupForm variant="dark" placeholder="Enter your email" />
           </div>
           <p style={{ fontSize: "12px", color: "#6B7280", marginTop: "8px" }}>
             No spam, just practical guides.

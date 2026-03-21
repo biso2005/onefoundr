@@ -1,5 +1,7 @@
 "use client";
 
+import EmailSignupForm from "../EmailSignupForm";
+
 export default function FreeResources() {
   return (
     <section style={{ backgroundColor: "#00B894", width: "100%", paddingTop: "80px", paddingBottom: "80px" }} className="md:py-20 py-12 px-6">
@@ -22,46 +24,12 @@ export default function FreeResources() {
             </p>
 
             <div style={{ display: "flex", gap: "0px", marginBottom: "16px", flexWrap: "wrap" }} className="md:flex-row flex-col">
-              <input
-                type="email"
+              <EmailSignupForm 
+                variant="green" 
+                buttonText="Get Free Access" 
                 placeholder="Enter your email"
-                style={{
-                  flex: 1,
-                  minWidth: "200px",
-                  padding: "14px 20px",
-                  borderRadius: "8px 0 0 8px",
-                  border: "none",
-                  fontSize: "14px",
-                  fontFamily: "inherit",
-                  outline: "none",
-                  color: "#2D3436",
-                  backgroundColor: "white"
-                }}
-                className="md:rounded-l-lg md:rounded-r-none focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="w-full"
               />
-              <button
-                style={{
-                  padding: "14px 28px",
-                  backgroundColor: "#2D3436",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "0 8px 8px 0",
-                  fontSize: "14px",
-                  fontWeight: "600",
-                  cursor: "pointer",
-                  transition: "background-color 0.2s",
-                  whiteSpace: "nowrap"
-                }}
-                className="md:rounded-r-lg md:rounded-l-none"
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#1a1f1f";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#2D3436";
-                }}
-              >
-                Get Free Access
-              </button>
             </div>
 
             <p style={{ fontSize: "12px", color: "rgba(255, 255, 255, 0.7)" }}>

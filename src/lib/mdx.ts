@@ -39,8 +39,22 @@ export function getPostBySlug(category: string, slug: string): Post | null {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent);
 
+    // Ensure all required frontmatter fields have fallbacks
+    const safeFrontmatter: PostFrontmatter = {
+      title: (data?.title as string) || "Untitled",
+      description: (data?.description as string) || "",
+      category: (data?.category as string) || category,
+      categoryLabel: (data?.categoryLabel as string) || (data?.category as string) || category,
+      date: (data?.date as string) || new Date().toISOString(),
+      readTime: (data?.readTime as string) || "5 min read",
+      author: (data?.author as string) || "OneFoundr",
+      featured: (data?.featured as boolean) || false,
+      image: (data?.image as string) || "",
+      tags: (Array.isArray(data?.tags) ? data.tags : []) as string[],
+    };
+
     return {
-      frontmatter: data as PostFrontmatter,
+      frontmatter: safeFrontmatter,
       content,
       slug,
       category,

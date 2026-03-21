@@ -59,7 +59,7 @@ export default function FinalCTA() {
               <span style={{ fontSize: "14px", color: "#2D3436", fontWeight: "500", flex: 1 }}>
                 {cta.text}
               </span>
-              <span style={{ color: "#00B894" }}>→</span>
+              <span style={{ color: "#059669" }}>→</span>
             </Link>
           ))}
         </div>

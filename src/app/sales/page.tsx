@@ -25,70 +25,70 @@ export default async function SalesPage() {
         {
           name: "Getting Clients",
           description: "Find and win your first clients",
-          href: "/sales/getting-clients",
+          href: "/sales",
           articleCount: 9
         },
         {
           name: "Discovery Calls",
           description: "Master the sales conversation",
-          href: "/sales/discovery-calls",
+          href: "/sales",
           articleCount: 6
         },
         {
           name: "Sales Funnels",
           description: "Build funnels that convert",
-          href: "/sales/sales-funnels",
+          href: "/sales",
           articleCount: 7
         },
         {
           name: "Proposals",
           description: "Write proposals that win",
-          href: "/sales/proposals",
+          href: "/sales",
           articleCount: 5
         },
         {
           name: "Closing",
           description: "Close deals with confidence",
-          href: "/sales/closing",
+          href: "/sales",
           articleCount: 6
         },
         {
           name: "Follow Up",
           description: "Follow up without being annoying",
-          href: "/sales/follow-up",
+          href: "/sales",
           articleCount: 5
         }
       ]}
       featuredArticles={[
         {
+          title: "The Solopreneur's Guide to AI-Powered Cold Outreach: Land Clients Without Warm Introductions",
+          category: "PROSPECTING",
+          readTime: "14 min",
+          href: "/sales/ai-cold-outreach"
+        },
+        {
           title: "How to Get Your First 10 Clients",
           category: "CLIENTS",
           readTime: "9 min",
-          href: "/sales/getting-clients"
-        },
-        {
-          title: "Discovery Call Script & Framework",
-          category: "CALLS",
-          readTime: "10 min",
-          href: "/sales/discovery-calls"
+          href: "/sales"
         },
         {
           title: "Sales Funnel for Solopreneurs: Simple Setup",
           category: "FUNNELS",
           readTime: "12 min",
-          href: "/sales/sales-funnels"
+          href: "/sales"
         },
         {
           title: "Selling Without Being Salesy",
           category: "CLOSING",
           readTime: "8 min",
-          href: "/sales/closing"
+          href: "/sales"
         },
         {
           title: "Follow-Up Emails That Convert",
           category: "FOLLOW UP",
           readTime: "7 min",
-          href: "/sales/follow-up"
+          href: "/sales"
         }
       ]}
       relatedCategories={[

@@ -26,70 +26,70 @@ export default async function StartPage() {
         {
           name: "Business Ideas",
           description: "Proven ideas for one-person businesses",
-          href: "/start/business-ideas",
+          href: "/start",
           articleCount: 12
         },
         {
           name: "Idea Validation",
           description: "Test your idea before investing time",
-          href: "/start/idea-validation",
+          href: "/start",
           articleCount: 8
         },
         {
           name: "Niche Selection",
           description: "Find your profitable sweet spot",
-          href: "/start/niche-selection",
+          href: "/start",
           articleCount: 6
         },
         {
           name: "Business Models",
           description: "Models that work for solo founders",
-          href: "/start/business-models",
+          href: "/start",
           articleCount: 9
         },
         {
           name: "Market Research",
           description: "Research methods for solopreneurs",
-          href: "/start/market-research",
+          href: "/start",
           articleCount: 5
         },
         {
           name: "First Steps",
           description: "Your first actions as a solo founder",
-          href: "/start/first-steps",
+          href: "/start",
           articleCount: 7
         }
       ]}
       featuredArticles={[
         {
+          title: "The AI-Powered Solopreneur Launchpad: From Idea to First Dollar in 30 Days",
+          category: "LAUNCH",
+          readTime: "14 min",
+          href: "/start/ai-launch-30days"
+        },
+        {
           title: "47 One-Person Business Ideas That Actually Work",
           category: "START",
           readTime: "12 min",
-          href: "/start/business-ideas"
-        },
-        {
-          title: "How to Validate a Business Idea in 7 Days",
-          category: "VALIDATION",
-          readTime: "10 min",
-          href: "/start/idea-validation"
+          href: "/start"
         },
         {
           title: "Best Business Models for Solopreneurs",
           category: "MODELS",
           readTime: "11 min",
-          href: "/start/business-models"
+          href: "/start"
         },
         {
           title: "Niche Selection: Find Your Profitable Sweet Spot",
           category: "NICHE",
           readTime: "9 min",
-          href: "/start/niche-selection"
+          href: "/start"
         },
         {
           title: "The Solo Founder's First 90 Days",
           category: "FIRST STEPS",
           readTime: "14 min",
-          href: "/start/first-steps"
+          href: "/start"
         }
       ]}
       relatedCategories={[

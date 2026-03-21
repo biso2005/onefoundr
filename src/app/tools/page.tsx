@@ -25,70 +25,70 @@ export default async function ToolsPage() {
         {
           name: "AI Tools",
           description: "AI tools that replace a team",
-          href: "/tools/ai-tools",
+          href: "/tools",
           articleCount: 15
         },
         {
           name: "Website Builders",
           description: "Build your online presence",
-          href: "/tools/website-builders",
+          href: "/tools",
           articleCount: 7
         },
         {
           name: "Email Tools",
           description: "Email marketing platforms",
-          href: "/tools/email-tools",
+          href: "/tools",
           articleCount: 8
         },
         {
           name: "CRM",
           description: "Manage clients and leads",
-          href: "/tools/crm",
+          href: "/tools",
           articleCount: 6
         },
         {
           name: "Automation",
           description: "Zapier, Make, and more",
-          href: "/tools/automation-tools",
+          href: "/tools",
           articleCount: 9
         },
         {
           name: "No-Code",
           description: "Build without coding",
-          href: "/tools/no-code",
+          href: "/tools",
           articleCount: 7
         }
       ]}
       featuredArticles={[
         {
+          title: "Building Your AI Agent: A Step-by-Step Guide for Solopreneurs",
+          category: "AI_AGENTS",
+          readTime: "15 min",
+          href: "/tools/building-ai-agent"
+        },
+        {
           title: "15 AI Tools That Replace a Team",
           category: "AI",
           readTime: "10 min",
-          href: "/tools/ai-tools"
-        },
-        {
-          title: "The Only 10 Tools You Actually Need",
-          category: "STACK",
-          readTime: "12 min",
-          href: "/tools/tech-stack"
+          href: "/tools"
         },
         {
           title: "Best CRM for Solopreneurs",
           category: "CRM",
           readTime: "9 min",
-          href: "/tools/crm"
+          href: "/tools"
         },
         {
           title: "Zapier vs Make vs n8n Compared",
           category: "AUTOMATION",
           readTime: "11 min",
-          href: "/tools/automation-tools"
+          href: "/tools"
         },
         {
           title: "ChatGPT for Solopreneurs: 25 Daily Uses",
           category: "AI",
           readTime: "8 min",
-          href: "/tools/chatgpt"
+          href: "/tools"
         }
       ]}
       relatedCategories={[

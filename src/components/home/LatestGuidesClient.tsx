@@ -24,14 +24,14 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
             key={tab}
             style={{
               fontSize: "14px",
-              color: tab === "All" ? "#00B894" : "#636E72",
+              color: tab === "All" ? "#059669" : "#636E72",
               fontWeight: tab === "All" ? "500" : "400",
               background: "none",
               border: "none",
               cursor: "pointer",
               padding: "0",
               textTransform: "capitalize",
-              borderBottom: tab === "All" ? "2px solid #00B894" : "none",
+              borderBottom: tab === "All" ? "2px solid #059669" : "none",
               paddingBottom: tab === "All" ? "4px" : "0"
             }}
           >
@@ -58,7 +58,7 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.borderColor = "#00B894";
+              el.style.borderColor = "#059669";
               el.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)";
             }}
             onMouseLeave={(e) => {
@@ -78,7 +78,7 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
             <div style={{ padding: "24px" }}>
               {/* Top Row: Category + Read Time */}
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0" }}>
-                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.08em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.08em", color: "#059669", fontWeight: "600", margin: 0 }}>
                   {article.category}
                 </p>
                 <p style={{ fontSize: "12px", color: "#636E72", margin: 0 }}>
@@ -97,7 +97,7 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
               </p>
 
               {/* Read Link */}
-              <p style={{ fontSize: "14px", color: "#00B894", fontWeight: "500", margin: 0 }}>
+              <p style={{ fontSize: "14px", color: "#059669", fontWeight: "500", margin: 0 }}>
                 Read Guide →
               </p>
             </div>

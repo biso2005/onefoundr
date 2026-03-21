@@ -1,5 +1,7 @@
 "use client";
 
+import EmailSignupForm from "./EmailSignupForm";
+
 export function NewsletterCTA() {
   return (
     <div style={{
@@ -26,45 +28,13 @@ export function NewsletterCTA() {
       </p>
 
       {/* Email Form */}
-      <form style={{
-        display: "flex",
-        gap: "0",
-        marginBottom: "12px"
-      }} className="flex-col md:flex-row md:gap-0" onSubmit={(e) => e.preventDefault()}>
-        <input
-          type="email"
+      <div style={{ marginBottom: "12px" }}>
+        <EmailSignupForm 
+          variant="green" 
+          buttonText="Subscribe" 
           placeholder="Enter your email"
-          style={{
-            flex: 1,
-            minWidth: "200px",
-            padding: "12px 16px",
-            backgroundColor: "white",
-            border: "none",
-            borderRadius: "6px 0 0 6px",
-            fontSize: "14px",
-            fontFamily: "inherit",
-            outline: "none"
-          }}
-          className="md:rounded-l-lg md:rounded-r-none focus:outline-none"
         />
-        <button
-          type="submit"
-          style={{
-            padding: "12px 20px",
-            backgroundColor: "#2D3436",
-            color: "white",
-            border: "none",
-            borderRadius: "0 6px 6px 0",
-            fontSize: "14px",
-            fontWeight: "600",
-            cursor: "pointer",
-            transition: "opacity 0.2s"
-          }}
-          className="md:rounded-r-lg md:rounded-l-none hover:opacity-90"
-        >
-          Subscribe
-        </button>
-      </form>
+      </div>
       <p style={{
         fontSize: "12px",
         color: "rgba(255, 255, 255, 0.7)",

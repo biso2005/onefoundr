@@ -82,7 +82,7 @@ export default function PathCards() {
               {/* Emoji and Label */}
               <div style={{ marginBottom: "16px" }}>
                 <span style={{ fontSize: "32px", marginRight: "8px" }}>{path.emoji}</span>
-                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.08em", color: "#00B894", fontWeight: "600", margin: 0 }}>
+                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.08em", color: "#059669", fontWeight: "600", margin: 0 }}>
                   {path.label}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function PathCards() {
                       textDecoration: "none"
                     }}
                   >
-                    <span style={{ fontSize: "13px", fontWeight: "700", color: "#00B894", minWidth: "20px" }}>
+                    <span style={{ fontSize: "13px", fontWeight: "700", color: "#059669", minWidth: "20px" }}>
                       {index + 1}
                     </span>
                     <span style={{ fontSize: "13px", color: "#2D3436" }}>

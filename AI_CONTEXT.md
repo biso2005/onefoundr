@@ -4,24 +4,9 @@
 - Tone: Professional but approachable
 
 ## SITE STRUCTURE
-- /start/ - Starting a solo business
-- /offer/ - Building your offer
-- /marketing/ - Marketing guides
-- /sales/ - Sales strategies
-- /resources/ - Templates & downloads
-
-## DESIGN RULES
-- Clean, minimal, lots of whitespace
-- Mobile-first responsive
-- Max content width: 1200px
-- Use Tailwind CSS only (no custom CSS unless necessary)
-- Components go in /src/components/
-- Reusable UI in /src/components/ui/
-
 ## COMPLETED FEATURES
   - Latest guides grid (6 cards)
 - [x] About page — COMPLETE ✅
-  - Page hero
   - The problem section
   - What OneFoundr is
   - 5 principles
@@ -29,7 +14,6 @@
 - [x] Project setup (Next.js 14, TypeScript, Tailwind)
 - [x] Brand colors configured
 - [x] Inter font setup
-- [x] Constants file with nav links and footer links
 - [x] Root layout with metadata
 - [x] Header component (desktop + mobile)
 - [x] Footer component (newsletter + links + bottom bar)
@@ -110,6 +94,29 @@ npm run lint         # Run ESLint
 git log              # View commit history
 ```
 
+
+## WRITING SYSTEM
+This project uses the V2.4.1 AI Writing System.
+Before writing ANY article, read WRITING_SYSTEM.md.
+
+Key rules:
+1. ALWAYS check persona consistency before claiming expertise
+2. ALWAYS check the 10-article rotation window before choosing elements
+3. NEVER use forbidden phrases (permanent + dynamic lists)
+4. ALWAYS vary structure, tone, opening, and credibility from recent articles
+5. MAX 3 consecutive articles from same pillar
+6. MAX 30% personal experience credibility over 10 articles
+7. EVERY article needs a publication package (SEO, excerpt, FAQ, social)
+8. UPDATE WRITING_SYSTEM.md tracking after every article
+
+Content pillars:
+1. Starting Solo (20%)
+2. Getting Clients (25%)  
+3. Running Lean (25%)
+4. Scaling Solo (15%)
+5. Staying Sane (15%)
+
+
 ## FILE STRUCTURE
 ```
 src/
@@ -147,3 +154,135 @@ src/
 42. Related categories show 3 other relevant categories
 43. Category newsletter CTA customizes heading per category
 ```
+
+# Content Architecture (Pillars, Hubs, Spokes)
+
+## PILLAR 1: STARTING SOLO (Start + Offer categories)
+- **HUB: How to Start a One-Person Business**
+  - SPOKE: Business Ideas for Solopreneurs
+  - SPOKE: Idea Validation Methods
+  - SPOKE: Niche Selection
+  - SPOKE: Business Models That Work Solo
+  - SPOKE: First 90 Days Plan
+- **HUB: Building Your Offer**
+  - SPOKE: Productized Services
+  - SPOKE: Digital Products
+  - SPOKE: Pricing Strategy
+  - SPOKE: Offer Stacking
+  - SPOKE: Memberships
+- Depth: 20+ articles planned
+
+## PILLAR 2: GETTING CLIENTS (Marketing + Sales categories)
+- **HUB: Marketing for Solopreneurs**
+  - SPOKE: Content Marketing (AI-Native Strategy)
+  - SPOKE: SEO in 2025 (AI Overviews, E-E-A-T)
+  - SPOKE: Newsletter Business
+  - SPOKE: Personal Branding
+  - SPOKE: Community-Led Growth
+  - SPOKE: Short-Form Video Strategy
+- **HUB: Sales for Solopreneurs**
+  - SPOKE: Getting First 10 Clients
+  - SPOKE: Discovery Calls
+  - SPOKE: Sales Funnels
+  - SPOKE: Proposals
+  - SPOKE: Follow-Up Systems
+- Depth: 25+ articles planned
+
+## PILLAR 3: RUNNING LEAN (Systems + Tools categories)
+- **HUB: The Solopreneur Operating System**
+  - SPOKE: Creating SOPs
+  - SPOKE: Client Onboarding
+  - SPOKE: Workflow Automation
+  - SPOKE: Project Management Solo
+  - SPOKE: Templates Library
+- **HUB: Tools & AI for Solopreneurs**
+  - SPOKE: Complete Tech Stack
+  - SPOKE: AI Tools That Replace a Team
+  - SPOKE: No-Code Building
+  - SPOKE: Tool Comparisons (X vs Y)
+  - SPOKE: Automation Recipes
+- Depth: 25+ articles planned
+
+## PILLAR 4: SCALING SOLO (Growth + Money categories)
+- **HUB: Scaling Without Hiring**
+  - SPOKE: Recurring Revenue Models
+  - SPOKE: Raising Prices
+  - SPOKE: Outsourcing & Contractors
+  - SPOKE: Partnerships
+  - SPOKE: When to Hire
+- **HUB: Solopreneur Finance**
+  - SPOKE: Cash Flow Management
+  - SPOKE: Tax Strategy
+  - SPOKE: Pricing Models
+  - SPOKE: Income Diversification
+- Depth: 15+ articles planned
+
+## PILLAR 5: STAYING SANE (Mindset + Productivity categories)
+- **HUB: The Solopreneur Mindset**
+  - SPOKE: Dealing with Loneliness
+  - SPOKE: Decision Fatigue
+  - SPOKE: Imposter Syndrome
+  - SPOKE: Burnout Prevention
+  - SPOKE: Work-Life Integration
+- **HUB: Solopreneur Productivity**
+  - SPOKE: Time Management
+  - SPOKE: Deep Work
+  - SPOKE: Routines
+  - SPOKE: Energy Management
+- Depth: 15+ articles planned
+
+## WRITING SYSTEM
+This project uses the V2.4.1 AI Writing System.
+Before writing ANY article, read WRITING_SYSTEM.md.
+
+Key rules:
+1. ALWAYS check persona consistency before claiming expertise
+2. ALWAYS check the 10-article rotation window before choosing elements
+3. NEVER use forbidden phrases (permanent + dynamic lists)
+4. ALWAYS vary structure, tone, opening, and credibility from recent articles
+5. MAX 3 consecutive articles from same pillar
+6. MAX 30% personal experience credibility over 10 articles
+7. EVERY article needs a publication package (SEO, excerpt, FAQ, social)
+8. UPDATE WRITING_SYSTEM.md tracking after every article
+
+Content pillars:
+1. Starting Solo (20%)
+2. Getting Clients (25%)  
+3. Running Lean (25%)
+4. Scaling Solo (15%)
+5. Staying Sane (15%)
+
+## Article Writing Checklist
+
+### BEFORE WRITING ANY ARTICLE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Check WRITING_SYSTEM.md — what's been used recently?
+□ Pick credibility source (which is underused?)
+□ Pick opening type (which hasn't been used?)
+□ Pick structure (which hasn't been used?)
+□ Pick tone (what contrasts with last article?)
+□ Check pillar (am I over 3 consecutive?)
+□ Check persona (can I credibly write this?)
+□ Check forbidden phrases (permanent + dynamic)
+
+### WHILE WRITING:
+━━━━━━━━━━━━━
+
+□ Vary sentence length (short. Then longer flowing ones.)
+□ Use 3-5 conversational devices
+□ Mix paragraph lengths (1-line to 5-line)
+□ Use 5+ human variability elements
+□ No forbidden phrases
+□ Include specific data/stats from research
+□ Real examples > generic advice
+
+### AFTER WRITING:
+━━━━━━━━━━━━━
+
+□ Update article tracking in WRITING_SYSTEM.md
+□ Update 10-article rolling window
+□ Add overused phrases to dynamic forbidden log
+□ Create publication package (SEO, FAQ, social)
+□ Generate 10+ related article ideas
+□ Commit the new/updated .mdx file

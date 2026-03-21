@@ -47,7 +47,6 @@ export default function NotFound() {
             fontSize: "16px",
             color: "#636E72",
             lineHeight: "1.6",
-            marginBottom: "32px",
             maxWidth: "500px",
             margin: "0 auto",
             marginBottom: "32px"
@@ -90,7 +89,7 @@ export default function NotFound() {
                 </span>
                 <span style={{
                   fontSize: "16px",
-                  color: "#00B894",
+                  color: "#059669",
                   marginLeft: "auto"
                 }}>
                   →
@@ -124,7 +123,7 @@ export default function NotFound() {
                 </span>
                 <span style={{
                   fontSize: "16px",
-                  color: "#00B894",
+                  color: "#059669",
                   marginLeft: "auto"
                 }}>
                   →
@@ -158,7 +157,7 @@ export default function NotFound() {
                 </span>
                 <span style={{
                   fontSize: "16px",
-                  color: "#00B894",
+                  color: "#059669",
                   marginLeft: "auto"
                 }}>
                   →

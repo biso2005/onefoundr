@@ -8,7 +8,7 @@ export default function NewsletterCTA() {
           <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "8px" }}>
             Stay in the Loop
           </h2>
-          <p style={{ fontSize: "18px", fontWeight: "500", color: "#00B894", marginBottom: "16px" }}>
+          <p style={{ fontSize: "18px", fontWeight: "500", color: "#059669", marginBottom: "16px" }}>
             The OneFoundr Letter
           </p>
         </div>
@@ -52,9 +52,12 @@ export default function NewsletterCTA() {
         {/* Email Form */}
         <div style={{ textAlign: "center" }}>
           <div style={{ display: "flex", gap: "0", marginBottom: "8px" }} className="flex-col md:flex-row">
+            <label htmlFor="email-start-here" className="sr-only">Email address</label>
             <input
+              id="email-start-here"
               type="email"
               placeholder="Enter your email"
+              autoComplete="email"
               style={{
                 flex: 1,
                 minWidth: "200px",
@@ -86,7 +89,7 @@ export default function NewsletterCTA() {
             </button>
           </div>
           <p style={{ fontSize: "12px", color: "#636E72", marginTop: "8px" }}>
-            Join 25,000+ solo founders
+            Trusted by solo founders worldwide
           </p>
         </div>
       </div>

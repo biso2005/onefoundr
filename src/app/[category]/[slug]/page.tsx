@@ -10,6 +10,7 @@ import {
 } from "@/lib/mdx";
 import { MDXComponents } from "@/components/MDXComponents";
 import { NewsletterCTA } from "@/components/NewsletterCTA";
+import { VALID_CONTENT_CATEGORIES, RESERVED_ROUTES } from "@/lib/constants";
 
 interface ArticlePageProps {
   params: {
@@ -21,7 +22,13 @@ interface ArticlePageProps {
 // Generate static params for all posts
 export async function generateStaticParams() {
   const slugs = getAllPostSlugs();
-  return slugs;
+  
+  // Filter out reserved routes and only include valid content categories
+  return slugs.filter(
+    (param) =>
+      VALID_CONTENT_CATEGORIES.includes(param.category as any) &&
+      !RESERVED_ROUTES.includes(param.category as any)
+  );
 }
 
 // Generate metadata for SEO
@@ -29,11 +36,24 @@ export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
   const { category, slug } = params;
+  
+  // Route guard: Check if category is valid for dynamic routes
+  if (
+    !VALID_CONTENT_CATEGORIES.includes(category as any) ||
+    RESERVED_ROUTES.includes(category as any)
+  ) {
+    return {
+      title: "Not Found",
+      description: "Page not found",
+    };
+  }
+  
   const post = getPostBySlug(category, slug);
 
   if (!post) {
     return {
       title: "Not Found",
+      description: "Post not found",
     };
   }
 
@@ -49,17 +69,19 @@ export async function generateMetadata({
   };
 }
 
-export default function ArticlePage({ params }: ArticlePageProps) {
+export default async function ArticlePage({ params }: ArticlePageProps) {
   const { category, slug } = params;
 
-  // Validate category (prevent conflicts with static routes)
-  const staticRoutes = ["about", "start-here", "newsletter", "api"];
-  if (staticRoutes.includes(category)) {
+  // Route guard: Check if category is valid for dynamic routes
+  if (
+    !VALID_CONTENT_CATEGORIES.includes(category as any) ||
+    RESERVED_ROUTES.includes(category as any)
+  ) {
     notFound();
   }
 
+  // Route guard: Check if slug exists
   const post = getPostBySlug(category, slug);
-
   if (!post) {
     notFound();
   }
@@ -96,7 +118,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           }}>
             <Link href="/" style={{
               fontSize: "14px",
-              color: "#00B894",
+              color: "#059669",
               textDecoration: "none"
             }} className="hover:underline">
               Home
@@ -104,7 +126,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             <span style={{ color: "#9CA3AF" }}>—</span>
             <Link href={`/${category}`} style={{
               fontSize: "14px",
-              color: "#00B894",
+              color: "#059669",
               textDecoration: "none"
             }} className="hover:underline">
               {post.frontmatter.categoryLabel}
@@ -123,7 +145,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             fontSize: "12px",
             textTransform: "uppercase",
             letterSpacing: "0.1em",
-            color: "#00B894",
+            color: "#059669",
             fontWeight: "600",
             marginBottom: "12px"
           }}>

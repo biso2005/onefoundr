@@ -25,70 +25,70 @@ export default async function MarketingPage() {
         {
           name: "Content Marketing",
           description: "Create content that attracts clients",
-          href: "/marketing/content-marketing",
+          href: "/marketing",
           articleCount: 11
         },
         {
           name: "SEO",
           description: "Rank on Google without a team",
-          href: "/marketing/seo",
+          href: "/marketing",
           articleCount: 9
         },
         {
           name: "Email Marketing",
           description: "Build and monetize your email list",
-          href: "/marketing/email-marketing",
+          href: "/marketing",
           articleCount: 8
         },
         {
           name: "Personal Branding",
           description: "Stand out as a solo founder",
-          href: "/marketing/personal-branding",
+          href: "/marketing",
           articleCount: 7
         },
         {
           name: "Social Media",
           description: "Social strategy for one-person businesses",
-          href: "/marketing/social-media",
+          href: "/marketing",
           articleCount: 8
         },
         {
           name: "Lead Generation",
           description: "Generate leads on autopilot",
-          href: "/marketing/lead-generation",
+          href: "/marketing",
           articleCount: 6
         }
       ]}
       featuredArticles={[
         {
+          title: "SEO for Solopreneurs 2026: Win Without a Budget",
+          category: "SEO",
+          readTime: "14 min",
+          href: "/marketing/seo-2026"
+        },
+        {
           title: "Content Marketing: Minimum Effort, Maximum Results",
           category: "CONTENT",
           readTime: "8 min",
-          href: "/marketing/content-marketing"
-        },
-        {
-          title: "SEO for Solopreneurs: Rank Without a Team",
-          category: "SEO",
-          readTime: "14 min",
-          href: "/marketing/seo"
+          href: "/marketing"
         },
         {
           title: "Personal Branding for Solo Founders",
           category: "BRANDING",
           readTime: "10 min",
-          href: "/marketing/personal-branding"
+          href: "/marketing"
         },
         {
           title: "Email List Building: 0 to 1,000 Subscribers",
           category: "EMAIL",
           readTime: "11 min",
-          href: "/marketing/email-marketing"
+          href: "/marketing"
         },
         {
           title: "How to Build an Audience from Zero",
           category: "AUDIENCE",
           readTime: "12 min",
-          href: "/marketing/audience-building"
+          href: "/marketing"
         }
       ]}
       relatedCategories={[
