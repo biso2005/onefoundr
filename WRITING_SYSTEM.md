@@ -131,6 +131,7 @@ legal/tax advice, specific industry expertise.
 - Status: PUBLISHED (April 18, 2026)
 - URL: /tools/building-ai-agent
 - Read time: 15 min
+- Editorial: 6-pass editing applied (softened numeric accuracy targets; removed exact ROI multipliers) (March 21, 2026)
 
 ### Article 6: "The Solopreneur's Guide to AI-Powered Cold Outreach: Land Clients Without Warm Introductions" ✅ PUBLISHED
 - File: src/content/sales/ai-cold-outreach.mdx
