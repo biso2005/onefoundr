@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal base styles + brand defaults */
+:root {
+  --color-primary: #2D3436;
+  --color-accent: #00B894;
+  --color-background: #FFFFFF;
+  --color-text: #2D3436;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Reset common element margins from starter */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.text-accent {
+  color: #00B894;
+}
+.bg-muted {
+  background-color: #F7F7F7;
+}
