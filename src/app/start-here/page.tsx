@@ -55,7 +55,7 @@ export default function StartHerePage() {
           </p>
 
           {/* Journey Steps - Desktop */}
-          <div style={{ display: "none" }} className="md:flex md:flex-row md:items-center md:gap-2 md:justify-between md:mb-6">
+          <div className="hidden md:flex md:flex-row md:items-center md:gap-2 md:justify-between md:mb-6">
             {JOURNEY_STEPS.map((step, index) => (
               <div key={step.number} style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1 }}>
                 {/* Circle */}
