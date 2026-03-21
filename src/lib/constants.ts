@@ -8,7 +8,7 @@ export const SITE_DESCRIPTION =
 export const VALID_CONTENT_CATEGORIES = ['start', 'offer', 'marketing', 'sales', 'systems', 'tools', 'mindset'] as const;
 
 // Reserved routes that should NOT be caught by dynamic routes
-export const RESERVED_ROUTES = ['about', 'start-here', 'newsletter', 'resources', 'stories', 'community', 'contact', 'advertise', 'write-for-us', 'privacy', 'terms'] as const;
+export const RESERVED_ROUTES = ['about', 'start-here', 'newsletter', 'resources', 'stories', 'community', 'contact', 'advertise', 'write-for-us', 'privacy', 'terms', 'money', 'growth', 'productivity'] as const;
 
 export const NAV_LINKS = [
   { name: "Start", href: "/start" },
