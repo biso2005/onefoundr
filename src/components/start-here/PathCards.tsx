@@ -63,7 +63,7 @@ export default function PathCards() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }} className="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px", alignItems: "stretch" }} className="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
           {PATHS.map((path) => (
             <div
               key={path.label}
@@ -73,7 +73,9 @@ export default function PathCards() {
                 padding: "32px",
                 borderTop: "4px solid #00B894",
                 boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
-                transition: "box-shadow 0.2s"
+                transition: "box-shadow 0.2s",
+                display: "flex",
+                flexDirection: "column"
               }}
               className="hover:shadow-md"
             >
@@ -137,7 +139,8 @@ export default function PathCards() {
                   fontSize: "13px",
                   fontWeight: "600",
                   textDecoration: "none",
-                  transition: "opacity 0.2s"
+                  transition: "opacity 0.2s",
+                  marginTop: "auto"
                 }}
                 className="hover:opacity-90"
               >
