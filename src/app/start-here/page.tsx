@@ -79,23 +79,27 @@ export default function StartHerePage() {
           </div>
 
           {/* Journey Steps - Mobile (visible on mobile, hidden on md+) */}
-          <div className="md:hidden relative pl-12 mb-6">
-            {/* Vertical dashed line */}
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 border-l-2 border-dashed border-accent" />
-            
-            {JOURNEY_STEPS.map((step) => (
-              <div key={step.number} className="relative flex gap-4 pb-6 items-center">
-                {/* Circle positioned on the line */}
-                <div className="absolute -left-7 w-9 h-9 rounded-full border-2 border-accent bg-white flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs font-bold text-accent">
-                    {step.number}
-                  </span>
+          <div className="md:hidden mb-8">
+            <div className="relative">
+              {/* Vertical dashed line - positioned behind all circles */}
+              <div className="absolute left-6 top-6 bottom-6 w-0 border-l-2 border-dashed border-accent opacity-40" />
+              
+              {/* Steps */}
+              {JOURNEY_STEPS.map((step) => (
+                <div key={step.number} className="flex items-center gap-6 py-4">
+                  <div className="flex-shrink-0 relative z-10">
+                    <div className="w-12 h-12 rounded-full border-2 border-accent bg-white flex items-center justify-center">
+                      <span className="text-sm font-bold text-accent">
+                        {step.number}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-base font-medium text-primary">
+                    {step.label}
+                  </p>
                 </div>
-                <p className="text-sm font-medium text-primary">
-                  {step.label}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <p style={{ fontSize: "16px", color: "#636E72", lineHeight: "1.6", marginBottom: "64px" }}>
