@@ -70,25 +70,25 @@ export default async function ToolsPage() {
           title: "15 AI Tools That Replace a Team",
           category: "AI",
           readTime: "10 min",
-          href: "/tools"
+          href: "/tools/ai-tools"
         },
         {
           title: "Best CRM for Solopreneurs",
           category: "CRM",
           readTime: "9 min",
-          href: "/tools"
+          href: "/tools/best-crm"
         },
         {
           title: "Zapier vs Make vs n8n Compared",
           category: "AUTOMATION",
           readTime: "11 min",
-          href: "/tools"
+          href: "/tools/zapier-vs-make"
         },
         {
           title: "ChatGPT for Solopreneurs: 25 Daily Uses",
           category: "AI",
           readTime: "8 min",
-          href: "/tools"
+          href: "/tools/chatgpt-daily-uses"
         }
       ]}
       relatedCategories={[

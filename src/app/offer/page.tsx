@@ -70,25 +70,25 @@ export default async function OfferPage() {
           title: "Pricing Strategy for Solopreneurs: Complete Playbook",
           category: "PRICING",
           readTime: "12 min",
-          href: "/offer"
+          href: "/offer/pricing-strategy"
         },
         {
           title: "Digital Products: From Idea to Income in 30 Days",
           category: "DIGITAL",
           readTime: "10 min",
-          href: "/offer"
+          href: "/offer/digital-products"
         },
         {
           title: "Offer Stacking: Multiple Revenue Streams",
           category: "STACKING",
           readTime: "9 min",
-          href: "/offer"
+          href: "/offer/offer-stacking"
         },
         {
           title: "How to Raise Prices Without Losing Clients",
           category: "PRICING",
           readTime: "8 min",
-          href: "/offer"
+          href: "/offer/raise-prices"
         }
       ]}
       relatedCategories={[

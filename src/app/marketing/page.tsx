@@ -70,25 +70,25 @@ export default async function MarketingPage() {
           title: "Content Marketing: Minimum Effort, Maximum Results",
           category: "CONTENT",
           readTime: "8 min",
-          href: "/marketing"
+          href: "/marketing/content-marketing"
         },
         {
           title: "Personal Branding for Solo Founders",
           category: "BRANDING",
           readTime: "10 min",
-          href: "/marketing"
+          href: "/marketing/personal-branding"
         },
         {
           title: "Email List Building: 0 to 1,000 Subscribers",
           category: "EMAIL",
           readTime: "11 min",
-          href: "/marketing"
+          href: "/marketing/email-list-building"
         },
         {
           title: "How to Build an Audience from Zero",
           category: "AUDIENCE",
           readTime: "12 min",
-          href: "/marketing"
+          href: "/marketing/build-audience"
         }
       ]}
       relatedCategories={[

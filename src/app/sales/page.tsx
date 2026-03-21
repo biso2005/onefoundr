@@ -70,25 +70,25 @@ export default async function SalesPage() {
           title: "How to Get Your First 10 Clients",
           category: "CLIENTS",
           readTime: "9 min",
-          href: "/sales"
+          href: "/sales/getting-clients"
         },
         {
           title: "Sales Funnel for Solopreneurs: Simple Setup",
           category: "FUNNELS",
           readTime: "12 min",
-          href: "/sales"
+          href: "/sales/sales-funnel"
         },
         {
           title: "Selling Without Being Salesy",
           category: "CLOSING",
           readTime: "8 min",
-          href: "/sales"
+          href: "/sales/selling-authentically"
         },
         {
           title: "Follow-Up Emails That Convert",
           category: "FOLLOW UP",
           readTime: "7 min",
-          href: "/sales"
+          href: "/sales/follow-up-email"
         }
       ]}
       relatedCategories={[

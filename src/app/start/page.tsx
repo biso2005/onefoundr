@@ -71,25 +71,25 @@ export default async function StartPage() {
           title: "47 One-Person Business Ideas That Actually Work",
           category: "START",
           readTime: "12 min",
-          href: "/start"
+          href: "/start/business-ideas"
         },
         {
           title: "Best Business Models for Solopreneurs",
           category: "MODELS",
           readTime: "11 min",
-          href: "/start"
+          href: "/start/business-models"
         },
         {
           title: "Niche Selection: Find Your Profitable Sweet Spot",
           category: "NICHE",
           readTime: "9 min",
-          href: "/start"
+          href: "/start/niche-selection"
         },
         {
           title: "The Solo Founder's First 90 Days",
           category: "FIRST STEPS",
           readTime: "14 min",
-          href: "/start"
+          href: "/start/first-90-days"
         }
       ]}
       relatedCategories={[

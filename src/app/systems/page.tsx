@@ -70,25 +70,25 @@ export default async function SystemsPage() {
           title: "How to Create SOPs for Your Solo Business",
           category: "SOPS",
           readTime: "8 min",
-          href: "/systems"
+          href: "/systems/sops"
         },
         {
           title: "Workflow Automation for Solo Businesses",
           category: "AUTOMATION",
           readTime: "12 min",
-          href: "/systems"
+          href: "/systems/workflow-automation"
         },
         {
           title: "Notion for Solopreneurs: Complete Setup",
           category: "TOOLS",
           readTime: "11 min",
-          href: "/systems"
+          href: "/systems/notion-setup"
         },
         {
           title: "20 Templates Every Solopreneur Needs",
           category: "TEMPLATES",
           readTime: "9 min",
-          href: "/systems"
+          href: "/systems/templates-solopreneur"
         }
       ]}
       relatedCategories={[
