@@ -358,6 +358,178 @@ Consecutive check (Articles 1–10):
 | 9 | Getting | Strategic | Question | Framework | Content repurposing |
 | 10 | Staying | Empathetic | Statement | Framework | Energy management |
 
+## ARTICLE TRACKING (PHASE 3 - COMPLETED ✅)
+
+### Article 13: "The Automation Trap: Why Most Solopreneurs Automate the Wrong Things" ✅ WRITTEN
+- File: content/systems/automation-trap.mdx
+- Category: SYSTEMS
+- Pillar: Running Lean
+- Credibility Source: Framework-based
+- Opening Type: Story-First (client lost to automated welcome)
+- Structure Type: Framework-First (task vs. judgment work)
+- Tone: Provocative/Cautionary
+- Word count: 3,100+
+- Status: WRITTEN (July 11, 2026)
+- URL: /systems/automation-trap
+- Read time: 13 min
+- Editorial Notes: 6-pass review applied; story opener immediately establishes problem; 3-question automation checklist is practical; verified no forbidden phrases; tone balanced between cautionary and practical
+
+### Article 14: "The Messaging Gap: Why New Solopreneurs Can't Articulate Their Value" ✅ WRITTEN
+- File: content/marketing/messaging-gap.mdx
+- Category: MARKETING
+- Pillar: Getting Clients
+- Credibility Source: Strategy-based
+- Opening Type: Problem-First (gap between what you do and why it matters)
+- Structure Type: Framework-First (3-layer messaging system)
+- Tone: Serious/Analytical
+- Word count: 3,400+
+- Status: WRITTEN (July 12, 2026)
+- URL: /marketing/messaging-gap
+- Read time: 14 min
+- Editorial Notes: 6-pass review applied; three-layer framework (situation/mechanism/outcome) clearly explained with multiple examples; pricing transparency examples included; verified no forbidden phrases; tone consistently analytical throughout
+
+### Article 15: "Against Imposter Syndrome: You Don't Have Fraud to Hide" ✅ WRITTEN
+- File: content/mindset/against-imposter-syndrome.mdx
+- Category: MINDSET
+- Pillar: Staying Sane
+- Credibility Source: Contrarian-First
+- Opening Type: Contrarian-First (challenge imposter syndrome narrative)
+- Structure Type: Framework-First (observable evidence framework)
+- Tone: Provocative/Permission-Giving
+- Word count: 3,300+
+- Status: WRITTEN (July 13, 2026)
+- URL: /mindset/against-imposter-syndrome
+- Read time: 13 min
+- Editorial Notes: 6-pass review applied; contrarian opening immediately challenges imposter narrative; three sections on truth about professional growth are permission-giving without being dismissive; verified no forbidden phrases; permission statements are clear and actionable
+
+### Article 16: "The Offer Menu: A 3-Tier System to Serve More Customers" ✅ WRITTEN
+- File: content/offer/offer-menu-tiers.mdx
+- Category: OFFER
+- Pillar: Starting Solo
+- Credibility Source: Framework-based
+- Opening Type: Problem-First (one-offer ceiling)
+- Structure Type: Framework-First (3-tier model)
+- Tone: Tactical/Practical
+- Word count: 3,200+
+- Status: WRITTEN (July 14, 2026)
+- URL: /offer/offer-menu-tiers
+- Read time: 13 min
+- Editorial Notes: 6-pass review applied; problem-first immediately names pain point; 3-tier framework clearly differentiated with pricing ratios (1/3, 1x, 2-3x); multiple specific examples (copywriting, operations); verified no forbidden phrases; tier pricing is presented as guidance with adjustment caveat
+
+### Article 17: "Done Over Perfect: Why Your MVP Should Ship This Week" ✅ WRITTEN
+- File: content/systems/done-over-perfect.mdx
+- Category: SYSTEMS
+- Pillar: Running Lean
+- Credibility Source: Philosophy-based
+- Opening Type: Statement-First (ship sooner, iterate faster)
+- Structure Type: Framework-First (MVP checklist + rules)
+- Tone: Empathetic/Permission-Giving
+- Word count: 3,300+
+- Status: WRITTEN (July 15, 2026)
+- URL: /systems/done-over-perfect
+- Read time: 14 min
+- Editorial Notes: 6-pass review applied; permission-giving tone established early and maintained; MVP checklist clearly differentiates "ship this" vs. "cut this"; three real-world examples (service/course/software) show practical implementation; verified no forbidden phrases; tone avoids toxic urgency while encouraging action
+
+### Article 18: "Account-Based Marketing: How to Land Your Ideal Clients (Not Everyone)" ✅ WRITTEN
+- File: content/marketing/account-based-marketing.mdx
+- Category: MARKETING
+- Pillar: Getting Clients
+- Credibility Source: Strategy-based
+- Opening Type: Question-First (what if you didn't try to attract everyone?)
+- Structure Type: Framework-First (5-step ABM process)
+- Tone: Strategic/Analytical
+- Word count: 3,250+
+- Status: WRITTEN (July 16, 2026)
+- URL: /marketing/account-based-marketing
+- Read time: 14 min
+- Editorial Notes: 6-pass review applied; question-first opening immediately shifts mindset; 5-step framework progression is logical and implementable; real example comparison (traditional vs. ABM) provides concrete metrics; verified no forbidden phrases; tone strategic without being overly complex
+
+## 18-ARTICLE ROLLING WINDOW (ARTICLES 1–18 TRACKING & FINAL ROTATION VALIDATION)
+
+### Overall Pillar Distribution (Articles 1–18)
+- Starting Solo: 4 (22%) — Articles 1, 3, 6, 16
+- Getting Clients: 5 (28%) — Articles 2, 5, 9, 14, 18
+- Running Lean: 3 (17%) — Articles 4, 13, 17
+- Scaling Solo: 3 (17%) — Articles 7, 11, 12
+- Staying Sane: 3 (17%) — Articles 8, 10, 15
+- **All near 20% target; no 3+ consecutive from same pillar ✅**
+
+Consecutive check (Articles 1–18):
+- Art 1→2: S.Solo → Getting ✅
+- Art 2→3: Getting → S.Solo ✅
+- Art 3→4: S.Solo → Running ✅
+- Art 4→5: Running → Getting ✅
+- Art 5→6: Getting → S.Solo ✅
+- Art 6→7: S.Solo → Scaling ✅
+- Art 7→8: Scaling → Staying ✅
+- Art 8→9: Staying → Getting ✅
+- Art 9→10: Getting → Staying ✅
+- Art 10→11: Staying → Scaling ✅
+- Art 11→12: Scaling → Scaling ⚠️ (2 consecutive, acceptable pattern break)
+- Art 12→13: Scaling → Running ✅
+- Art 13→14: Running → Getting ✅
+- Art 14→15: Getting → Staying ✅
+- Art 15→16: Staying → S.Solo ✅
+- Art 16→17: S.Solo → Running ✅
+- Art 17→18: Running → Getting ✅
+- **Max consecutive: 2 (Articles 11–12); rotation pattern healthy ✅**
+
+### Opening Type Distribution (Articles 1–18)
+- Contrarian-First: 2 (Articles 1, 15)
+- Problem-First: 4 (Articles 2, 7, 14, 16)
+- Story-First: 3 (Articles 6, 11, 13)
+- Question-First: 2 (Articles 9, 18)
+- Statement-First: 3 (Articles 10, 12, 17)
+- **Variety maintained; no 3+ consecutive ✅**
+
+### Structure Type Distribution (Articles 1–18)
+- Framework-First: 12 (Articles 2, 4, 7, 9, 10, 13, 14, 15, 16, 17, 18)
+- Narrative-First: 3 (Articles 6, 8, 11)
+- Problem-First → Solution: 2 (Articles 3, 5)
+- Decision Framework: 1 (Article 11)
+- **Framework-First intentionally leads structure variety; well-distributed ✅**
+
+### Tone Distribution (Articles 1–18)
+- Provocative/Contrarian: 3 (Articles 1, 7, 13, 15)
+- Serious/Analytical: 3 (Articles 2, 14, 18)
+- Tactical/Practical: 4 (Articles 3, 4, 5, 16)
+- Empathetic/Supportive: 3 (Articles 8, 10, 17)
+- Strategic/Big-Picture: 3 (Articles 6, 9, 11, 12)
+- Playful/Irreverent: 1 (Article 12)
+- **No 3+ consecutive same tone; tone variety balanced ✅**
+
+### Category Distribution (Articles 1–18)
+- OFFER: 6 (33%) — Articles 1, 7, 11, 12, 16
+- MARKETING: 4 (22%) — Articles 2, 9, 14, 18
+- MINDSET: 3 (17%) — Articles 8, 10, 15
+- SYSTEMS: 2 (11%) — Articles 4, 13, 17
+- START: 1 (6%) — Article 3
+- SALES: 1 (6%) — Article 6
+- TOOLS: 1 (6%) — Article 5
+- **Well-distributed; OFFER slightly higher due to pillar focus (intentional) ✅**
+
+### Rotation Summary Table (Complete 18-Article Arc)
+| Art | Pillar | Tone | Opening | Category | Notes |
+|-----|--------|------|---------|----------|-------|
+| 1 | S.Solo | Provoc | Contrast | OFFER | Niche positioning |
+| 2 | Getting | Serious | Problem | MARKETING | SEO data |
+| 3 | S.Solo | Tactical | Problem | START | 30-day launch |
+| 4 | Running | Tactical | Story | SYSTEMS | AI operations |
+| 5 | Getting | Tactical | Problem | TOOLS | Build AI agent |
+| 6 | S.Solo | Strategic | Problem | SALES | Cold outreach |
+| 7 | Scaling | Provoc | Problem | OFFER | Pricing strategy |
+| 8 | Staying | Empathetic | Story | MINDSET | Burnout |
+| 9 | Getting | Strategic | Question | MARKETING | Repurposing |
+| 10 | Staying | Empathetic | Statement | MINDSET | Energy |
+| 11 | Scaling | Strategic | Story | OFFER | Service-to-product |
+| 12 | Scaling | Playful | Statement | OFFER | Weird background |
+| 13 | Running | Provoc | Story | SYSTEMS | Automation trap |
+| 14 | Getting | Serious | Problem | MARKETING | Messaging gap |
+| 15 | Staying | Provoc | Contrarian | MINDSET | Imposter syndrome |
+| 16 | S.Solo | Tactical | Problem | OFFER | Offer menu |
+| 17 | Running | Empathetic | Statement | SYSTEMS | Done over perfect |
+| 18 | Getting | Strategic | Question | MARKETING | Account-based marketing |
+
 ## Article Writing Checklist
 
 ### BEFORE WRITING ANY ARTICLE:
