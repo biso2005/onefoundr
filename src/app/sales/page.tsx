@@ -19,7 +19,7 @@ export default async function SalesPage() {
         title: "Sales for Solopreneurs: How to Sell Without a Sales Team",
         description: "A complete sales system for solo founders who want consistent clients without the sleazy tactics.",
         readTime: "14 min read",
-        href: "/sales/complete-guide"
+        href: "/sales/getting-clients"
       }}
       subcategories={[
         {

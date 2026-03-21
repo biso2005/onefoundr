@@ -19,7 +19,7 @@ export default async function OfferPage() {
         title: "How to Create an Offer That Sells (For Solopreneurs)",
         description: "The complete guide to turning your skills into a sellable, scalable offer.",
         readTime: "12 min read",
-        href: "/offer/complete-guide"
+        href: "/offer/productized-services"
       }}
       subcategories={[
         {

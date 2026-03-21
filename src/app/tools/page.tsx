@@ -19,7 +19,7 @@ export default async function ToolsPage() {
         title: "Best Tools for Solopreneurs: The Complete Tech Stack Guide",
         description: "Every tool you need to run your solo business — organized by function, with honest reviews and recommendations.",
         readTime: "20 min read",
-        href: "/tools/complete-guide"
+        href: "/tools/ai-tools"
       }}
       subcategories={[
         {

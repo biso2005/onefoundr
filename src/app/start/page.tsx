@@ -20,7 +20,7 @@ export default async function StartPage() {
         title: "How to Start a One-Person Business: The Complete Guide",
         description: "The step-by-step foundation for launching your solo business — from idea validation to first revenue.",
         readTime: "15 min read",
-        href: "/start/complete-guide"
+        href: "/start/business-ideas"
       }}
       subcategories={[
         {

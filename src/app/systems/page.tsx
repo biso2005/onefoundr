@@ -19,7 +19,7 @@ export default async function SystemsPage() {
         title: "The Solopreneur Operating System: Systemize Your Business",
         description: "The complete framework for building systems that let your business run without you being involved in every task.",
         readTime: "15 min read",
-        href: "/systems/complete-guide"
+        href: "/systems/sops"
       }}
       subcategories={[
         {

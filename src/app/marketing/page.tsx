@@ -19,7 +19,7 @@ export default async function MarketingPage() {
         title: "Marketing for Solopreneurs: The Complete Guide",
         description: "A full marketing system designed for one-person businesses with limited time and budget.",
         readTime: "18 min read",
-        href: "/marketing/complete-guide"
+        href: "/marketing/content-marketing"
       }}
       subcategories={[
         {
