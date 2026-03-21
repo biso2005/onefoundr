@@ -1,0 +1,142 @@
+"use client";
+
+import Link from "next/link";
+
+export default function HeroSection() {
+  return (
+    <section style={{ backgroundColor: "white", width: "100%", paddingTop: "80px", paddingBottom: "80px" }} className="md:py-20 py-12 px-6">
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "center" }} className="md:grid-cols-[60%_40%] grid-cols-1">
+          
+          <div>
+            <p style={{ fontSize: "14px", fontWeight: "500", color: "#00B894", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "16px" }}>
+              For Solo Founders & Solopreneurs
+            </p>
+
+            <h1 style={{ fontSize: "clamp(32px, 8vw, 64px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", marginBottom: "24px" }}>
+              Build a Profitable Business.{" "}
+              <span style={{ color: "#00B894" }}>By Yourself.</span>
+            </h1>
+
+            <p style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.6", maxWidth: "540px", marginBottom: "32px" }}>
+              Actionable guides, proven systems, and the right tools to start, grow, and run a one-person business — without a team.
+            </p>
+
+            <div style={{ display: "flex", gap: "16px", marginBottom: "32px", flexWrap: "wrap" }} className="md:flex-row flex-col sm:flex">
+              <Link
+                href="/start-here"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "14px 32px",
+                  backgroundColor: "#00B894",
+                  color: "white",
+                  fontWeight: "600",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  transition: "background-color 0.2s",
+                  border: "none",
+                  cursor: "pointer"
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#009B7B";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#00B894";
+                }}
+              >
+                Start Here →
+              </Link>
+              <Link
+                href="/start"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "14px 32px",
+                  backgroundColor: "transparent",
+                  color: "#2D3436",
+                  fontWeight: "600",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  border: "2px solid #2D3436",
+                  transition: "all 0.2s"
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2D3436";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "white";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "#2D3436";
+                }}
+              >
+                Browse All Guides
+              </Link>
+            </div>
+
+            <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
+              <div style={{ fontSize: "14px", color: "#636E72" }}>
+                <span style={{ marginRight: "8px" }}>✓</span>
+                50,000+ solo founders
+              </div>
+              <div style={{ fontSize: "14px", color: "#636E72" }}>
+                <span style={{ marginRight: "8px" }}>✓</span>
+                200+ actionable guides
+              </div>
+              <div style={{ fontSize: "14px", color: "#636E72" }}>
+                <span style={{ marginRight: "8px" }}>✓</span>
+                100% free resources
+              </div>
+            </div>
+          </div>
+
+          <div style={{ backgroundColor: "#F7F7F7", borderRadius: "16px", border: "1px solid #E2E8F0", padding: "32px", display: "flex", flexDirection: "column", gap: "24px" }}>
+            <div>
+              <div style={{ fontSize: "32px", fontWeight: "700", color: "#00B894", marginBottom: "8px" }}>
+                200+
+              </div>
+              <div style={{ fontSize: "14px", color: "#636E72" }}>
+                Actionable Guides
+              </div>
+            </div>
+
+            <div style={{ borderTop: "1px solid #E2E8F0" }}></div>
+
+            <div>
+              <div style={{ fontSize: "32px", fontWeight: "700", color: "#00B894", marginBottom: "8px" }}>
+                50K+
+              </div>
+              <div style={{ fontSize: "14px", color: "#636E72" }}>
+                Solo Founders
+              </div>
+            </div>
+
+            <div style={{ borderTop: "1px solid #E2E8F0" }}></div>
+
+            <div>
+              <div style={{ fontSize: "32px", fontWeight: "700", color: "#00B894", marginBottom: "8px" }}>
+                15+
+              </div>
+              <div style={{ fontSize: "14px", color: "#636E72" }}>
+                Tool Categories
+              </div>
+            </div>
+
+            <div style={{ borderTop: "1px solid #E2E8F0" }}></div>
+
+            <div>
+              <p style={{ fontSize: "14px", color: "#636E72", fontStyle: "italic", margin: 0 }}>
+                "The resource I wish existed when I started my solo business."
+              </p>
+              <p style={{ fontSize: "13px", color: "#9CA3AF", marginTop: "12px", margin: 0 }}>
+                — A OneFoundr reader
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

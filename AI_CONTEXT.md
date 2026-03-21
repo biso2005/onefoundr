@@ -38,6 +38,7 @@
 - Reusable UI in /src/components/ui/
 
 ## COMPLETED FEATURES
+- [x] Homepage — Free resources / lead magnet section
 - [x] Project setup (Next.js 14, TypeScript, Tailwind)
 - [x] Brand colors configured
 - [x] Inter font setup
@@ -51,9 +52,12 @@
 - [x] Homepage — Solopreneur stories section (3 founder cards)
 
 ## CURRENT TASK
-Build Homepage — Free Resources / Lead Magnet Section
+Build Homepage — Latest Guides Grid Section (final homepage section)
 
 ## DECISIONS MADE
+9. Email signup form is UI only (no backend yet)
+19. Green background for lead magnet section (high visibility)
+20. Checklist card shows value ($149 crossed out → free)
 1. Using App Router (not Pages Router)
 2. Tailwind CSS only (no CSS modules)
 3. Header is "use client" component
