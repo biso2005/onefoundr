@@ -38,6 +38,12 @@
 - Reusable UI in /src/components/ui/
 
 ## COMPLETED FEATURES
+  - Latest guides grid (6 cards)
+- [x] About page — COMPLETE ✅
+  - Page hero
+  - The problem section
+  - What OneFoundr is
+  - 5 principles
 
 - [x] Project setup (Next.js 14, TypeScript, Tailwind)
 - [x] Brand colors configured
@@ -47,17 +53,16 @@
 - [x] Header component (desktop + mobile)
 - [x] Footer component (newsletter + links + bottom bar)
 - [x] Homepage — COMPLETE ✅
-  - Hero section
-  - Category journey map (6 cards)
-  - Featured guides (1 large + 3 small)
-  - Solopreneur stories (3 cards)
-  - Free resources / lead magnet
-  - Latest guides grid (6 cards)
 - [x] About page — COMPLETE ✅
-  - Page hero
-  - The problem section
-  - What OneFoundr is
-  - 5 principles
+- [x] Start Here page — COMPLETE ✅
+- [x] Category Hub Pages — COMPLETE ✅ (all 6)
+- [x] Newsletter landing page — COMPLETE ✅
+  - Hero with email form
+  - What you get (4 benefits)
+  - What you won't get (honesty)
+  - Sample issue (mock email)
+  - Social proof (3 testimonials)
+  - Final CTA with second email form
   - What you'll find here (10 categories)
   - Comparison table
   - CTA section
@@ -84,45 +89,27 @@
   - /tools — Tools & AI
 
 ## CURRENT TASK
-Build the Newsletter landing page
+Build the blog/content system with MDX
+
+## ALL PAGES BUILT
+- / (homepage)
+- /about
+- /start-here
+- /start
+- /offer
+- /marketing
+- /sales
+- /systems
+- /tools
+- /newsletter
 
 ## DECISIONS MADE
-1. Using App Router (not Pages Router)
-2. Tailwind CSS only (no CSS modules)
-3. Header is "use client" component
-4. Footer is server component
-5. Homepage is server component
-6. No icon library — using emoji for category icons
-7. Mobile breakpoint at 768px (md: in Tailwind)
-8. Newsletter form is UI only (no backend yet)
-9. Max content width: 1200px
-10. CTA buttons: primary (filled green) and secondary (outlined)
-11. Stats card with muted background on hero right side
-12. Category cards stored as array
-13. Cards are fully clickable links with hover effects
-14. Using placeholder data for featured articles
-15. Colored placeholder squares instead of real images
-16. Story cards use initials avatar (no real photos)
-17. Dark section for stories creates visual contrast
-18. Revenue shown as green pill badge
-19. Green background for lead magnet section (high visibility)
-20. Checklist card shows value ($149 crossed out → free)
-21. Article cards use placeholder gray area instead of images
-22. Category filter tabs are visual only (no functionality yet)
-23. Line-clamp-2 on titles and excerpts for consistent card height
-24. Homepage sections extracted into /components/home/
-25. Homepage visual flow: white → gray → white → dark → green → white → footer
-26. About page uses narrower content width (800px max vs 1200px)
-27. About page is a server component with exported metadata
-28. Reading pages use max-w-3xl for comfortable reading
-29. Comparison table uses green left border for OneFoundr column
-30. Principle cards use numbered circles with accent/10 background
-31. Start Here page uses 800px for reading sections, 1000px for path cards
-32. Journey steps use numbered circles with dashed connectors
-33. Path cards have green top border and reading lists
-34. Popular guides use ranked numbered list format
-35. Resource cards use 2-column grid with emoji icons
-36. Newsletter section shows "get vs don't get" comparison
+1-42. [previous decisions]
+43. Newsletter page has TWO email forms (hero + final CTA)
+44. Sample issue shows realistic mock email content
+45. Testimonials use placeholder names and roles
+46. Newsletter page is conversion-focused (minimal distractions)
+47. "What you won't get" section builds trust through honesty
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
