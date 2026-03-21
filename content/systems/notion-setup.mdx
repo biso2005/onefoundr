@@ -1,0 +1,295 @@
+---
+title: "Notion for Solopreneurs: Complete Setup & Templates"
+description: "Build your entire operations system in Notion — CRM, projects, content calendar, knowledge base."
+date: "2026-01-23"
+category: "systems"
+slug: "notion-setup"
+readTime: "16 min read"
+author: "OneFoundr"
+tags: ["notion", "tools", "systems", "organization", "solopreneur"]
+---
+
+# Notion for Solopreneurs: Complete Setup & Templates
+
+Notion is one tool that can replace five others for solopreneurs. It's a database with a beautiful interface — which means you can build a CRM, project tracker, content calendar, and knowledge base all in one place, all connected.
+
+The challenge isn't what Notion *can* do. It's knowing where to start.
+
+This guide walks through the complete setup: the databases you need, how to connect them, and the templates to start with.
+
+---
+
+## What Notion Is (And Isn't)
+
+**Notion is:**
+- A database tool (stores information)
+- A design tool (makes databases pretty)
+- A collaboration tool (share with teammates or clients)
+- Flexible (you customize it)
+
+**Notion is not:**
+- A code editor (no coding required)
+- Production-ready (it's good enough, not perfect)
+- Fast with 10,000+ records (it slows down)
+- A replacement for accounting software (use Wave or Stripe for money)
+
+Understand these limits before you build.
+
+---
+
+## The Core Databases Every Solopreneur Needs
+
+### Database 1: Contacts (Your CRM)
+
+**What to track:**
+- Name, email, phone
+- Company, title
+- How you met (referral/cold/content)
+- Last contact date
+- Stage (prospect/client/past client)
+- Notes
+
+**Why it matters:**
+You need to remember who people are, how to reach them, and where they are in your pipeline.
+
+**Setup:**
+- Create a table called "Contacts"
+- Add properties for each field above
+- Create views: "Active Prospects", "Recent Contacts", "Past Clients"
+
+### Database 2: Projects
+
+**What to track:**
+- Project name
+- Client (linked to Contacts)
+- Stage (Planning/In Progress/Complete/Invoice)
+- Due date
+- Budget
+- Hours logged
+- Notes
+
+**Why it matters:**
+One place to see all active work, deadlines, and what's billable.
+
+**Setup:**
+- Create a table called "Projects"
+- Link to Contacts database
+- Create views: "Active", "This Week", "By Client"
+
+### Database 3: Content Calendar
+
+**What to track:**
+- Content idea
+- Topic/pillar
+- Status (ideating/writing/editing/published)
+- Publish date
+- Platform (blog/email/LinkedIn/Twitter)
+- Links
+
+**Why it matters:**
+Keeps you consistent with content. One place to plan everything.
+
+**Setup:**
+- Create a table called "Content"
+- Add status options (ideating, writing, editing, published)
+- Create views: "By Month", "By Platform", "Drafts", "Published"
+
+### Database 4: Ideas Inbox
+
+**What to track:**
+- Idea
+- Category (product/content/business model)
+- Status (new/exploring/shelved)
+- Date captured
+- Notes
+
+**Why it matters:**
+Capture ideas when they hit without letting them derail you. Review quarterly.
+
+**Setup:**
+- Create a table called "Ideas"
+- Add fields: Idea, Category, Status, Date, Notes
+- Create views: "New Ideas", "To Explore", "Shelved"
+
+### Database 5: Invoices (Light Invoicing)
+
+**What to track:**
+- Invoice number
+- Client (linked to Contacts)
+- Amount
+- Date issued
+- Due date
+- Status (draft/sent/paid)
+- Project (linked to Projects)
+
+**Why it matters:**
+Quick reference for what you've billed and what's outstanding.
+
+**Setup:**
+- Create a table called "Invoices"
+- Link to Contacts and Projects
+- Create views: "Unpaid", "Paid", "This Year"
+
+---
+
+## How to Connect Databases (The Power Move)
+
+The magic of Notion is linking databases so information doesn't duplicate.
+
+**Example workflow:**
+1. You get a new client inquiry
+2. Create a new Contact (add them)
+3. Create a new Project (link to Contact)
+4. Create a new Invoice when complete (link to both)
+
+Now all their information is connected. Update the contact's email once, it updates everywhere.
+
+**How to link:**
+- In a table, create a property called "Client"
+- Choose "Relation" as the property type
+- Select the Contacts database
+- Now you can link projects to contacts
+
+---
+
+## The Complete Setup (2-Hour Process)
+
+### Phase 1: Create the Databases (30 minutes)
+
+1. Create workspace: "Business"
+2. Create 5 tables: Contacts, Projects, Content, Ideas, Invoices
+3. Add basic properties to each
+
+### Phase 2: Link Them Together (30 minutes)
+
+1. Add "Client" relation to Projects (links to Contacts)
+2. Add "Project" relation to Invoices (links to Projects)
+3. Test the links
+
+### Phase 3: Create Views (30 minutes)
+
+1. Contacts: "Active Prospects", "Past Clients"
+2. Projects: "Active", "This Week"
+3. Content: "Drafts", "Published", "By Month"
+4. Invoices: "Unpaid", "By Client"
+
+### Phase 4: Add Data (30 minutes)
+
+1. Import existing contacts (if you have a list)
+2. Add current projects
+3. Add scheduled content
+
+---
+
+## Notion Templates to Steal
+
+### Template 1: Simple Client Tracking
+
+```
+Contacts table:
+| Name | Email | Stage | Last Contact | Notes |
+|------|-------|-------|--------------|-------|
+| John | j@... | paid client | Dec 2025 | Referred by Sarah |
+```
+
+### Template 2: Project Tracker
+
+```
+Projects table:
+| Project | Client | Status | Due Date | Budget | Hours | |---------|--------|--------|----------|--------|-------|
+| Funnel | Acme Co | In Progress | Jan 30 | $2000 | 5 |
+```
+
+### Template 3: Content Calendar
+
+```
+Content table:
+| Title | Pillar | Status | Publish | Platform |
+|-------|--------|--------|---------|----------|
+| "How to..." | Start | Writing | Jan 28 | Blog |
+```
+
+---
+
+## Advanced Features (Don't Start Here)
+
+Once basic setup works, you can add:
+
+**Formulas:** Auto-calculate invoice totals
+**Filters:** "Show only overdue invoices"
+**Synced blocks:** Same data displayed in multiple places
+**Templates:** Button to create new project automatically
+
+These are powerful but optional. Master the basics first.
+
+---
+
+## Common Notion Mistakes
+
+### Mistake 1: Over-Designing
+
+Spending 8 hours making Notion "pretty" before entering data.
+
+✅ **Do this:** Build basic structure, add data, improve design when you have time.
+
+### Mistake 2: Too Many Databases
+
+Creating 15 databases for every possible use case.
+
+✅ **Do this:** Start with 5 core databases. Add more only if you need them.
+
+### Mistake 3: Abandoning It
+
+Building Notion, then not using it because maintenance feels overwhelming.
+
+✅ **Do this:** Spend 10 minutes weekly updating. Add data as things happen, not in batches.
+
+### Mistake 4: Duplicate Information
+
+Adding contact info in both Contacts and Projects, then updating one and forgetting the other.
+
+✅ **Do this:** Link databases instead. Update once, appears everywhere.
+
+---
+
+## Notion vs. Traditional Tools
+
+| Task | Notion | Airtable | HubSpot | Spreadsheet |
+|------|--------|----------|---------|-------------|
+| CRM | ✅ | ✅ | ✅✅ | ❌ |
+| Project Tracking | ✅ | ✅ | ⚠️ | ⚠️ |
+| Content Calendar | ✅ | ✅ | ⚠️ | ⚠️ |
+| Invoicing | ⚠️ | ⚠️ | ❌ | ⚠️ |
+| Ease of Setup | ✅✅ | ✅ | ❌ | ✅✅ |
+| Cost | Free | $10 | $50+ | Free |
+
+For solopreneurs, Notion is the best all-around choice.
+
+---
+
+## Migration Path
+
+If you're using multiple tools now:
+
+1. **Month 1:** Set up Notion, add contacts
+2. **Month 2:** Add projects, migrate from current project tool
+3. **Month 3:** Add content calendar
+4. **Month 4:** Add invoicing (light version)
+5. **Month 5:** Full integration, run entire business from Notion
+
+---
+
+## Setup Checklist
+
+- [ ] Create Notion account
+- [ ] Create workspace
+- [ ] Create 5 core databases
+- [ ] Add properties to each
+- [ ] Create relations (link databases)
+- [ ] Create basic views
+- [ ] Import existing data
+- [ ] Add new data for 1 week
+- [ ] Review what's working
+- [ ] Adjust as needed
+
+Start with this. Everything else builds from here.
