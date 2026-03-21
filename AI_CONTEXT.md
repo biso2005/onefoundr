@@ -45,16 +45,24 @@
 - [x] Root layout with metadata
 - [x] Header component (desktop + mobile)
 - [x] Footer component (newsletter + links + bottom bar)
-- [x] Homepage — Hero section
-- [x] Homepage — Category journey map section (6 cards)
-- [x] Homepage — Featured guides section (1 large + 3 small)
-- [x] Homepage — Solopreneur stories section (3 founder cards)
-- [x] Homepage — Free resources / lead magnet section
-- [x] Homepage — Latest guides grid section (6 cards)
 - [x] Homepage — COMPLETE ✅
+  - Hero section
+  - Category journey map (6 cards)
+  - Featured guides (1 large + 3 small)
+  - Solopreneur stories (3 cards)
+  - Free resources / lead magnet
+  - Latest guides grid (6 cards)
+- [x] About page — COMPLETE ✅
+  - Page hero
+  - The problem section
+  - What OneFoundr is
+  - 5 principles
+  - What you'll find here (10 categories)
+  - Comparison table
+  - CTA section
 
 ## CURRENT TASK
-Build the About page
+Build the Start Here page
 
 ## DECISIONS MADE
 1. Using App Router (not Pages Router)
@@ -82,6 +90,11 @@ Build the About page
 23. Line-clamp-2 on titles and excerpts for consistent card height
 24. Homepage sections extracted into /components/home/
 25. Homepage visual flow: white → gray → white → dark → green → white → footer
+26. About page uses narrower content width (800px max vs 1200px)
+27. About page is a server component with exported metadata
+28. Reading pages use max-w-3xl for comfortable reading
+29. Comparison table uses green left border for OneFoundr column
+30. Principle cards use numbered circles with accent/10 background
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
@@ -123,13 +136,15 @@ src/
 │   ├── Header.tsx        (navigation header)
 │   ├── Footer.tsx        (footer with links and newsletter)
 │   ├── NewsletterSignup.tsx
-│   └── home/             (homepage section components)
-│       ├── HeroSection.tsx
-│       ├── CategoryMap.tsx
-│       ├── FeaturedGuides.tsx
-│       ├── SolopreneurStories.tsx
-│       ├── FreeResources.tsx
-│       └── LatestGuides.tsx
+│   ├── home/             (homepage section components)
+│   │   ├── HeroSection.tsx
+│   │   ├── CategoryMap.tsx
+│   │   ├── FeaturedGuides.tsx
+│   │   ├── SolopreneurStories.tsx
+│   │   ├── FreeResources.tsx
+│   │   └── LatestGuides.tsx
+│   └── about/            (about page components)
+│       └── CTAButtons.tsx
 └── lib/
     └── constants.ts      (site config, nav links, footer links)
 ```
