@@ -38,7 +38,6 @@
 - Reusable UI in /src/components/ui/
 
 ## COMPLETED FEATURES
-- [x] Homepage — Free resources / lead magnet section
 - [x] Project setup (Next.js 14, TypeScript, Tailwind)
 - [x] Brand colors configured
 - [x] Inter font setup
@@ -51,17 +50,13 @@
 - [x] Homepage — Featured guides section (1 large + 3 small)
 - [x] Homepage — Solopreneur stories section (3 founder cards)
 - [x] Homepage — Free resources / lead magnet section
-- [x] Homepage — Latest guides grid section (6 article cards with category filter tabs)
-- [x] Component extraction refactor (page.tsx modularized into 6 section components)
-- [x] Error boundary components (error.tsx and not-found.tsx)
+- [x] Homepage — Latest guides grid section (6 cards)
+- [x] Homepage — COMPLETE ✅
 
 ## CURRENT TASK
-Section pages and content templates
+Build the About page
 
 ## DECISIONS MADE
-9. Email signup form is UI only (no backend yet)
-19. Green background for lead magnet section (high visibility)
-20. Checklist card shows value ($149 crossed out → free)
 1. Using App Router (not Pages Router)
 2. Tailwind CSS only (no CSS modules)
 3. Header is "use client" component
@@ -80,6 +75,13 @@ Section pages and content templates
 16. Story cards use initials avatar (no real photos)
 17. Dark section for stories creates visual contrast
 18. Revenue shown as green pill badge
+19. Green background for lead magnet section (high visibility)
+20. Checklist card shows value ($149 crossed out → free)
+21. Article cards use placeholder gray area instead of images
+22. Category filter tabs are visual only (no functionality yet)
+23. Line-clamp-2 on titles and excerpts for consistent card height
+24. Homepage sections extracted into /components/home/
+25. Homepage visual flow: white → gray → white → dark → green → white → footer
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
