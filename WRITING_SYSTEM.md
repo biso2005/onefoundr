@@ -145,6 +145,7 @@ legal/tax advice, specific industry expertise.
 - Status: PUBLISHED (April 25, 2026)
 - URL: /sales/ai-cold-outreach
 - Read time: 14 min
+- Editorial: 6-pass editing applied (softened response rate claims, removed exact conversion multipliers) (March 21, 2026)
 - Question: 2 (Articles 5, 10)
 - Contrarian: 2 (Articles 2, 8)
 - Provocative/Direct: 1 (Article 7)
