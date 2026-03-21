@@ -38,31 +38,33 @@
 - Reusable UI in /src/components/ui/
 
 ## COMPLETED FEATURES
-- [x] Project setup (Next.js 14, TypeScript, Tailwind CSS, App Router)
-- [x] Brand colors configured in tailwind.config.ts
-- [x] Inter font imported from Google Fonts
-- [x] Global styles and Tailwind directives
-- [x] Placeholder pages created for all main routes
-- [x] Constants file with site metadata and nav links
-- [x] Git repo initialized and first commit
-- [ ] Header component
-- [ ] Footer component
-- [ ] Homepage (detailed design)
-- [ ] Category pages (full content)
+- [x] Project setup (Next.js 14, TypeScript, Tailwind)
+- [x] Brand colors configured
+- [x] Inter font setup
+- [x] Constants file with nav links and footer links
+- [x] Root layout with metadata
+- [x] Header component (desktop + mobile)
+- [x] Footer component (newsletter + links + bottom bar)
+- [x] Homepage — Hero section
+- [x] Homepage — Category journey map section (6 cards)
 
 ## CURRENT TASK
-Build Header and Footer components using Tailwind CSS and constants from src/lib/constants.ts
+Build Homepage — Featured Guides Section
 
 ## DECISIONS MADE
-1. Using Next.js 14 App Router (src/app directory)
-2. TypeScript strict mode enabled
-3. Tailwind CSS 4.0 with @tailwindcss/postcss plugin
-4. No database required for MVP
-5. Brand colors in tailwind config (primary #2D3436, accent #00B894)
-6. Inter font from Google Fonts (no variable font)
-7. Placeholder pages created with h1 titles (will replace with real content)
-8. Git version control initialized
-9. ESLint with Next.js + TypeScript rules
+1. Using App Router (not Pages Router)
+2. Tailwind CSS only (no CSS modules)
+3. Header is "use client" component
+4. Footer is server component
+5. Homepage is server component
+6. No icon library — using emoji for category icons
+7. Mobile breakpoint at 768px (md: in Tailwind)
+8. Newsletter form is UI only (no backend yet)
+9. Max content width: 1200px
+10. CTA buttons: primary (filled green) and secondary (outlined)
+11. Stats card with muted background on hero right side
+12. Category cards stored as array (in page.tsx or constants.ts)
+13. Cards are fully clickable links with hover border effect
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
