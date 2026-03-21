@@ -25,37 +25,37 @@ export default async function MarketingPage() {
         {
           name: "Content Marketing",
           description: "Create content that attracts clients",
-          href: "/marketing",
+          href: "/marketing/content-marketing",
           articleCount: 11
         },
         {
           name: "SEO",
           description: "Rank on Google without a team",
-          href: "/marketing",
+          href: "/marketing/seo",
           articleCount: 9
         },
         {
           name: "Email Marketing",
           description: "Build and monetize your email list",
-          href: "/marketing",
+          href: "/marketing/email-marketing",
           articleCount: 8
         },
         {
           name: "Personal Branding",
           description: "Stand out as a solo founder",
-          href: "/marketing",
+          href: "/marketing/personal-branding",
           articleCount: 7
         },
         {
           name: "Social Media",
           description: "Social strategy for one-person businesses",
-          href: "/marketing",
+          href: "/marketing/social-media",
           articleCount: 8
         },
         {
           name: "Lead Generation",
           description: "Generate leads on autopilot",
-          href: "/marketing",
+          href: "/marketing/lead-generation",
           articleCount: 6
         }
       ]}

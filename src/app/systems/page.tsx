@@ -25,37 +25,37 @@ export default async function SystemsPage() {
         {
           name: "SOPs",
           description: "Document every process",
-          href: "/systems",
+          href: "/systems/sops",
           articleCount: 8
         },
         {
           name: "Client Onboarding",
           description: "Professional onboarding systems",
-          href: "/systems",
+          href: "/systems/client-onboarding",
           articleCount: 6
         },
         {
           name: "Workflows",
           description: "Streamline your daily operations",
-          href: "/systems",
+          href: "/systems/workflows",
           articleCount: 7
         },
         {
           name: "Automation",
           description: "Automate repetitive tasks",
-          href: "/systems",
+          href: "/systems/automation",
           articleCount: 9
         },
         {
           name: "Project Management",
           description: "Manage projects and clients solo",
-          href: "/systems",
+          href: "/systems/project-management",
           articleCount: 6
         },
         {
           name: "Templates",
           description: "Ready-to-use business templates",
-          href: "/systems",
+          href: "/systems/templates",
           articleCount: 10
         }
       ]}

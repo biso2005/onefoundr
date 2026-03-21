@@ -25,37 +25,37 @@ export default async function SalesPage() {
         {
           name: "Getting Clients",
           description: "Find and win your first clients",
-          href: "/sales",
+          href: "/sales/getting-clients",
           articleCount: 9
         },
         {
           name: "Discovery Calls",
           description: "Master the sales conversation",
-          href: "/sales",
+          href: "/sales/discovery-calls",
           articleCount: 6
         },
         {
           name: "Sales Funnels",
           description: "Build funnels that convert",
-          href: "/sales",
+          href: "/sales/sales-funnels",
           articleCount: 7
         },
         {
           name: "Proposals",
           description: "Write proposals that win",
-          href: "/sales",
+          href: "/sales/proposals",
           articleCount: 5
         },
         {
           name: "Closing",
           description: "Close deals with confidence",
-          href: "/sales",
+          href: "/sales/closing",
           articleCount: 6
         },
         {
           name: "Follow Up",
           description: "Follow up without being annoying",
-          href: "/sales",
+          href: "/sales/follow-up",
           articleCount: 5
         }
       ]}

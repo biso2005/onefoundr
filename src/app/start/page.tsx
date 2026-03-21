@@ -26,37 +26,37 @@ export default async function StartPage() {
         {
           name: "Business Ideas",
           description: "Proven ideas for one-person businesses",
-          href: "/start",
+          href: "/start/business-ideas",
           articleCount: 12
         },
         {
           name: "Idea Validation",
           description: "Test your idea before investing time",
-          href: "/start",
+          href: "/start/idea-validation",
           articleCount: 8
         },
         {
           name: "Niche Selection",
           description: "Find your profitable sweet spot",
-          href: "/start",
+          href: "/start/niche-selection",
           articleCount: 6
         },
         {
           name: "Business Models",
           description: "Models that work for solo founders",
-          href: "/start",
+          href: "/start/business-models",
           articleCount: 9
         },
         {
           name: "Market Research",
           description: "Research methods for solopreneurs",
-          href: "/start",
+          href: "/start/market-research",
           articleCount: 5
         },
         {
           name: "First Steps",
           description: "Your first actions as a solo founder",
-          href: "/start",
+          href: "/start/first-steps",
           articleCount: 7
         }
       ]}

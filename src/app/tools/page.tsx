@@ -25,37 +25,37 @@ export default async function ToolsPage() {
         {
           name: "AI Tools",
           description: "AI tools that replace a team",
-          href: "/tools",
+          href: "/tools/ai-tools",
           articleCount: 15
         },
         {
           name: "Website Builders",
           description: "Build your online presence",
-          href: "/tools",
+          href: "/tools/website-builders",
           articleCount: 7
         },
         {
           name: "Email Tools",
           description: "Email marketing platforms",
-          href: "/tools",
+          href: "/tools/email-tools",
           articleCount: 8
         },
         {
           name: "CRM",
           description: "Manage clients and leads",
-          href: "/tools",
+          href: "/tools/crm",
           articleCount: 6
         },
         {
           name: "Automation",
           description: "Zapier, Make, and more",
-          href: "/tools",
+          href: "/tools/automation",
           articleCount: 9
         },
         {
           name: "No-Code",
           description: "Build without coding",
-          href: "/tools",
+          href: "/tools/no-code",
           articleCount: 7
         }
       ]}

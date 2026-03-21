@@ -25,37 +25,37 @@ export default async function OfferPage() {
         {
           name: "Productized Services",
           description: "Turn services into scalable products",
-          href: "/offer",
+          href: "/offer/productized-services",
           articleCount: 8
         },
         {
           name: "Digital Products",
           description: "Create and sell digital products",
-          href: "/offer",
+          href: "/offer/digital-products",
           articleCount: 7
         },
         {
           name: "Coaching & Consulting",
           description: "Build a consulting or coaching offer",
-          href: "/offer",
+          href: "/offer/coaching-consulting",
           articleCount: 6
         },
         {
           name: "Pricing Strategy",
           description: "Price your offers for maximum profit",
-          href: "/offer",
+          href: "/offer/pricing-strategy",
           articleCount: 10
         },
         {
           name: "Memberships",
           description: "Build recurring membership revenue",
-          href: "/offer",
+          href: "/offer/memberships",
           articleCount: 5
         },
         {
           name: "Offer Stacking",
           description: "Create multiple revenue streams",
-          href: "/offer",
+          href: "/offer/offer-stacking",
           articleCount: 6
         }
       ]}
