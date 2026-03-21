@@ -23,7 +23,7 @@ export default function Footer() {
           </p>
 
           {/* Email Form */}
-          <form onSubmit={handleSubmit} style={{ display: "flex", marginBottom: "12px", maxWidth: "400px", margin: "0 auto 12px" }}>
+          <form style={{ display: "flex", marginBottom: "12px", maxWidth: "400px", margin: "0 auto 12px" }}>
             <input
               type="email"
               placeholder="Enter your email"
@@ -51,12 +51,7 @@ export default function Footer() {
                 cursor: "pointer",
                 transition: "background-color 0.2s"
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#009B7B";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.backgroundColor = "#00B894";
-              }}
+
             >
               Subscribe
             </button>

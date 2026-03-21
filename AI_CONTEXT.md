@@ -47,9 +47,10 @@
 - [x] Footer component (newsletter + links + bottom bar)
 - [x] Homepage — Hero section
 - [x] Homepage — Category journey map section (6 cards)
+- [x] Homepage — Featured guides section (1 large + 3 small)
 
 ## CURRENT TASK
-Build Homepage — Featured Guides Section
+Build Homepage — Solopreneur Stories Section
 
 ## DECISIONS MADE
 1. Using App Router (not Pages Router)
@@ -63,8 +64,10 @@ Build Homepage — Featured Guides Section
 9. Max content width: 1200px
 10. CTA buttons: primary (filled green) and secondary (outlined)
 11. Stats card with muted background on hero right side
-12. Category cards stored as array (in page.tsx or constants.ts)
-13. Cards are fully clickable links with hover border effect
+12. Category cards stored as array
+13. Cards are fully clickable links with hover effects
+14. Using placeholder data for featured articles (will connect to CMS later)
+15. Colored placeholder squares instead of real images for now
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
