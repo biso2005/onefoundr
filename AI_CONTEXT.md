@@ -38,6 +38,7 @@
 - Reusable UI in /src/components/ui/
 
 ## COMPLETED FEATURES
+
 - [x] Project setup (Next.js 14, TypeScript, Tailwind)
 - [x] Brand colors configured
 - [x] Inter font setup
@@ -60,9 +61,16 @@
   - What you'll find here (10 categories)
   - Comparison table
   - CTA section
+- [x] Start Here page — COMPLETE ✅
+  - Journey steps visualization
+  - 3 path cards (Starting, Running, Scaling)
+  - Top 10 popular guides
+  - Free resources grid
+  - Newsletter signup
+  - Final CTA with action rows
 
 ## CURRENT TASK
-Build the Start Here page
+Build Category Hub Pages (Start, Offer, Marketing, Sales, Systems, Tools)
 
 ## DECISIONS MADE
 1. Using App Router (not Pages Router)
@@ -95,6 +103,12 @@ Build the Start Here page
 28. Reading pages use max-w-3xl for comfortable reading
 29. Comparison table uses green left border for OneFoundr column
 30. Principle cards use numbered circles with accent/10 background
+31. Start Here page uses 800px for reading sections, 1000px for path cards
+32. Journey steps use numbered circles with dashed connectors
+33. Path cards have green top border and reading lists
+34. Popular guides use ranked numbered list format
+35. Resource cards use 2-column grid with emoji icons
+36. Newsletter section shows "get vs don't get" comparison
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
