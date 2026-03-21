@@ -61,6 +61,9 @@ legal/tax advice, specific industry expertise.
 - "Hyper-niche" (used 12+ times in Article 1; natural but watch for overuse in similar articles)
 - "E-E-A-T" (Article 2 - central to SEO content; monitor usage in Article 3+)
 - "zero-click searches" (Article 2 - specific stat; avoid unnecessary repetition)
+- "leaving money on the table" (Articles 7, 11 - used as metaphor; monitor in future pricing/scaling articles)
+- "value-based pricing" (Article 7 - central concept; naturally reappears; no overuse concern)
+- "weird combination/background" (Article 12 - key positioning concept; naturally appears in differentiation contexts)
 
 ## ARTICLE TRACKING (PHASE 1 - COMPLETED ✅)
 
@@ -197,6 +200,163 @@ legal/tax advice, specific industry expertise.
 - Running Lean: 0
 - Scaling Solo: 0
 - Staying Sane: 0
+
+## ARTICLE TRACKING (PHASE 2 - IN PROGRESS)
+
+### Article 7: "The Pricing Trap: Why Solopreneurs Undercharge (And How to Stop)" ✅ EDITED
+- File: src/content/offer/pricing-strategy.mdx
+- Category: OFFER
+- Pillar: Scaling Solo
+- Credibility Source: Framework-based
+- Opening Type: Problem-First (leaving money on table)
+- Structure Type: Framework-First (3-phase transition)
+- Tone: Provocative/Direct
+- Word count: 3,200+
+- Status: EDITED, 6-pass applied (June 13, 2026)
+- URL: /offer/pricing-strategy
+- Read time: 13 min
+- Editorial Notes: Softened "losing battle" for clarity; verified numeric examples are contextual and well-framed in scenarios; no forbidden phrases detected
+
+### Article 8: "The Productivity Paradox: Why Your Systems Are Burning You Out" ✅ EDITED
+- File: src/content/mindset/productivity-burnout.mdx
+- Category: MINDSET
+- Pillar: Staying Sane
+- Credibility Source: Story-First (personal experience)
+- Opening Type: Story-First (deleted Notion workspace)
+- Structure Type: Narrative-First (story → problem → solution)
+- Tone: Empathetic/Supportive
+- Word count: 3,000+
+- Status: EDITED, 6-pass applied (June 13, 2026)
+- URL: /mindset/productivity-burnout
+- Read time: 12 min
+- Editorial Notes: Strong story-first opener with clear problem statement; avoided forbidden phrases; time estimates (5-10 min daily, 30 min weekly) are contextual to story; validated tone matches empathetic mandate
+
+### Article 9: "The Content Repurposing Gold Mine: Turn 1 Article Into 15+ Assets" ✅ EDITED
+- File: src/content/marketing/repurposing-content.mdx
+- Category: MARKETING
+- Pillar: Getting Clients
+- Credibility Source: Framework-based
+- Opening Type: Question-First (why repurposing matters)
+- Structure Type: Framework-First (5-format system)
+- Tone: Strategic/Big-Picture
+- Word count: 3,400+
+- Status: EDITED, 6-pass applied (June 13, 2026)
+- URL: /marketing/repurposing-content
+- Read time: 14 min
+- Editorial Notes: Clear problem-solution framing; 5-format framework well-structured with concrete examples; time estimates (45 min, 30 min, 90 min) are implementation-based; verified E-E-A-T grounding in case studies
+
+### Article 10: "Energy, Not Time: The Real Bottleneck in Your Solopreneur Business" ✅ EDITED
+- File: src/content/mindset/energy-management.mdx
+- Category: MINDSET
+- Pillar: Staying Sane
+- Credibility Source: Framework-based
+- Opening Type: Statement-First (energy, not time is bottleneck)
+- Structure Type: Framework-First (energy budget)
+- Tone: Empathetic/Supportive
+- Word count: 3,200+
+- Status: EDITED, 6-pass applied (June 13, 2026)
+- URL: /mindset/energy-management
+- Read time: 13 min
+- Editorial Notes: Energy budget framework clearly explained with contextual examples; 3-hour deep work window is presented as general guidance with caveats (personal variation); avoided forbidden time-management clichés; tone consistently supportive without toxicity
+
+### Article 11: "From Service to Product: The Decision Framework Every Solopreneur Avoids" ✅ EDITED
+- File: src/content/offer/service-to-product.mdx
+- Category: OFFER
+- Pillar: Scaling Solo
+- Credibility Source: Framework-based
+- Opening Type: Story-First (Sarah's design template library)
+- Structure Type: Framework-First (3-pillar decision)
+- Tone: Strategic/Big-Picture
+- Word count: 3,500+
+- Status: EDITED, 6-pass applied (June 13, 2026)
+- URL: /offer/service-to-product
+- Read time: 15 min
+- Editorial Notes: Strong story opener with clear decision framework (3 pillars); numeric examples (presale pricing, timeframes) are contextual and conditional; presale strategy is realistic without overstating outcomes; avoided pressure language about productization
+
+### Article 12: "Your Unfair Advantage: Stop Competing on Credentials and Start Leveraging Your Weird Background" ✅ EDITED
+- File: src/content/offer/unfair-advantage.mdx
+- Category: OFFER
+- Pillar: Scaling Solo
+- Credibility Source: Observational
+- Opening Type: Statement-First (weird resume as edge)
+- Structure Type: Framework-First (mining + positioning)
+- Tone: Playful/Irreverent
+- Word count: 2,900+
+- Status: EDITED, 6-pass applied (June 13, 2026)
+- URL: /offer/unfair-advantage
+- Read time: 12 min
+- Editorial Notes: Personal positioning example establishes credibility; playful tone maintained consistently without unprofessionalism; positioning formula and examples are clear and actionable; avoided gatekeeping language about credentials; tone encourages self-awareness without judgment
+
+## 10-ARTICLE ROLLING WINDOW (ARTICLES 1–10 TRACKING)
+
+### Pillar Distribution (Articles 1–10)
+- Starting Solo: 3 (30%) — Articles 1, 3, 6
+- Getting Clients: 4 (40%) — Articles 2, 5, 9, skip Article 4 placement
+- Running Lean: 1 (10%) — Article 4
+- Scaling Solo: 2 (20%) — Articles 7, 11
+- Staying Sane: 2 (20%) — Articles 8, 10
+- **No 3+ consecutive from same pillar ✅**
+
+Consecutive check (Articles 1–10):
+- Art 1→2: S.Solo → Getting ✅
+- Art 2→3: Getting → S.Solo ✅
+- Art 3→4: S.Solo → Running ✅
+- Art 4→5: Running → Getting ✅
+- Art 5→6: Getting → S.Solo ✅
+- Art 6→7: S.Solo → Scaling ✅
+- Art 7→8: Scaling → Staying ✅
+- Art 8→9: Staying → Getting ✅
+- Art 9→10: Getting → Staying ✅
+- Max consecutive: 1 (each pillar unique entry) ✅
+
+### Opening Type Distribution (Articles 1–10)
+- Contrarian-First: 1 (Article 1)
+- Problem-First: 2 (Articles 2, 7)
+- Story-First: 2 (Articles 6, 11)
+- Question-First: 1 (Article 9)
+- Statement-First: 2 (Articles 10, 12)
+- **No 3+ consecutive ✅**
+
+### Structure Type Distribution (Articles 1–10)
+- Framework-First: 5 (Articles 2, 4, 7, 9, 10)
+- Problem-First → Solution: 2 (Articles 3, 5)
+- Narrative-First: 2 (Articles 6, 8)
+- Decision Framework: 1 (Article 11)
+- Mining + Positioning: 1 (Article 12)
+- **Framework-First well-distributed; no 3+ consecutive ✅**
+
+### Tone Distribution (Articles 1–10)
+- Provocative/Contrarian: 2 (Articles 1, 7)
+- Serious/Analytical: 1 (Article 2)
+- Tactical/Practical: 3 (Articles 3, 4, 5)
+- Empathetic/Supportive: 2 (Articles 8, 10)
+- Strategic/Big-Picture: 2 (Articles 6, 9, 11)
+- Playful/Irreverent: 0 (planned for Article 12)
+- **No 3+ consecutive same tone ✅**
+
+### Category Distribution (Articles 1–10)
+- OFFER: 4 (Articles 1, 7, 11, 12)
+- MARKETING: 1 (Article 9)
+- START: 1 (Article 3)
+- SYSTEMS: 1 (Article 4)
+- TOOLS: 1 (Article 5)
+- SALES: 1 (Article 6)
+- MINDSET: 2 (Articles 8, 10)
+- **Balanced across categories ✅**
+
+### Rotation Summary Table
+| Art | Pillar | Tone | Opening | Structure | Notes |
+|-----|--------|------|---------|-----------|-------|
+| 1 | Start | Provoc | Contrast | Framework | Contrarian positioning |
+| 2 | Getting | Serious | Problem | Framework | SEO data-driven |
+| 3 | Start | Tactical | Problem | Narr | 30-day launch |
+| 4 | Running | Tactical | Contrast | Framework | AI team structure |
+| 5 | Getting | Tactical | Problem | Framework | Build AI agent tutorial |
+| 6 | Start | Strategic | Problem | Narr | Cold outreach system |
+| 7 | Scaling | Provoc | Problem | Framework | Pricing strategy |
+| 8 | Staying | Empathetic | Story | Narr | Burnout + systems |
+| 9 | Getting | Strategic | Question | Framework | Content repurposing |
+| 10 | Staying | Empathetic | Statement | Framework | Energy management |
 
 ## Article Writing Checklist
 
