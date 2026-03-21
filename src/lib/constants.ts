@@ -5,7 +5,7 @@ export const SITE_DESCRIPTION =
   "Practical guides, tools, and systems for solopreneurs who want to build profitable businesses without a team.";
 
 // Valid content categories for dynamic routes
-export const VALID_CONTENT_CATEGORIES = ['start', 'offer', 'marketing', 'sales', 'systems', 'tools'] as const;
+export const VALID_CONTENT_CATEGORIES = ['start', 'offer', 'marketing', 'sales', 'systems', 'tools', 'mindset'] as const;
 
 // Reserved routes that should NOT be caught by dynamic routes
 export const RESERVED_ROUTES = ['about', 'start-here', 'newsletter', 'resources', 'stories', 'community', 'contact', 'advertise', 'write-for-us', 'privacy', 'terms'] as const;
