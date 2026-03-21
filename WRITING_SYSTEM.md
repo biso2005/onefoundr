@@ -67,8 +67,8 @@ legal/tax advice, specific industry expertise.
 
 ## ARTICLE TRACKING (PHASE 1 - COMPLETED ✅)
 
-### Article 1: "Hyper-Niche Positioning: The Unfair Advantage for Solopreneurs" ✅ PUBLISHED
-- File: src/content/offer/hyper-niche-positioning.mdx
+### Article 1: "Stop Selling 'Web Design.' Start Selling 'Webflow Sites for SaaS Startups.'" ✅ PUBLISHED
+- File: content/offer/hyper-niche-positioning.mdx
 - Category: OFFER
 - Pillar: Starting Solo
 - Credibility Source: Observational
@@ -80,8 +80,8 @@ legal/tax advice, specific industry expertise.
 - URL: /offer/hyper-niche-positioning
 - Read time: 11 min
 
-### Article 2: "SEO for Solopreneurs 2026: Win Without a Budget" ✅ PUBLISHED
-- File: src/content/marketing/seo-2026.mdx
+### Article 2: "SEO for Solopreneurs 2026: Zero-Click Optimization & E-E-A-T" ✅ PUBLISHED
+- File: content/marketing/seo-2026.mdx
 - Category: MARKETING
 - Pillar: Getting Clients
 - Credibility Source: Research + Data-driven
@@ -95,7 +95,7 @@ legal/tax advice, specific industry expertise.
 - Editorial: 6-pass editing applied (softened numeric claims; added citation placeholders) (April 28, 2026)
 
 ### Article 3: "The AI-Powered Solopreneur Launchpad: From Idea to First Dollar in 30 Days" ✅ PUBLISHED
-- File: src/content/start/ai-launch-30days.mdx
+- File: content/start/ai-launch-30days.mdx
 - Category: START
 - Pillar: Starting Solo
 - Credibility Source: Framework-based
@@ -109,7 +109,7 @@ legal/tax advice, specific industry expertise.
 - Editorial: 6-pass editing applied (softened numeric claims; added citation placeholders) (March 21, 2026)
 
 ### Article 4: "Building Your AI Operations Team: A Solopreneur's Playbook" ✅ PUBLISHED
-- File: src/content/systems/ai-operations-team.mdx
+- File: content/systems/ai-operations-team.mdx
 - Category: SYSTEMS
 - Pillar: Running Lean
 - Credibility Source: Framework-based
@@ -123,7 +123,7 @@ legal/tax advice, specific industry expertise.
 - Editorial: 6-pass editing applied (softened numeric claims; replaced forbidden phrasing) (March 21, 2026)
 
 ### Article 5: "Building Your AI Agent: A Step-by-Step Guide for Solopreneurs" ✅ PUBLISHED
-- File: src/content/tools/building-ai-agent.mdx
+- File: content/tools/building-ai-agent.mdx
 - Category: TOOLS
 - Pillar: Running Lean
 - Credibility Source: Tutorial/Framework
@@ -137,7 +137,7 @@ legal/tax advice, specific industry expertise.
 - Editorial: 6-pass editing applied (softened numeric accuracy targets; removed exact ROI multipliers) (March 21, 2026)
 
 ### Article 6: "The Solopreneur's Guide to AI-Powered Cold Outreach: Land Clients Without Warm Introductions" ✅ PUBLISHED
-- File: src/content/sales/ai-cold-outreach.mdx
+- File: content/sales/ai-cold-outreach.mdx
 - Category: SALES
 - Pillar: Getting Clients
 - Credibility Source: Research + Framework
@@ -204,7 +204,7 @@ legal/tax advice, specific industry expertise.
 ## ARTICLE TRACKING (PHASE 2 - IN PROGRESS)
 
 ### Article 7: "The Pricing Trap: Why Solopreneurs Undercharge (And How to Stop)" ✅ EDITED
-- File: src/content/offer/pricing-strategy.mdx
+- File: content/offer/pricing-strategy.mdx
 - Category: OFFER
 - Pillar: Scaling Solo
 - Credibility Source: Framework-based
@@ -218,7 +218,7 @@ legal/tax advice, specific industry expertise.
 - Editorial Notes: Softened "losing battle" for clarity; verified numeric examples are contextual and well-framed in scenarios; no forbidden phrases detected
 
 ### Article 8: "The Productivity Paradox: Why Your Systems Are Burning You Out" ✅ EDITED
-- File: src/content/mindset/productivity-burnout.mdx
+- File: content/mindset/productivity-burnout.mdx
 - Category: MINDSET
 - Pillar: Staying Sane
 - Credibility Source: Story-First (personal experience)
@@ -232,7 +232,7 @@ legal/tax advice, specific industry expertise.
 - Editorial Notes: Strong story-first opener with clear problem statement; avoided forbidden phrases; time estimates (5-10 min daily, 30 min weekly) are contextual to story; validated tone matches empathetic mandate
 
 ### Article 9: "The Content Repurposing Gold Mine: Turn 1 Article Into 15+ Assets" ✅ EDITED
-- File: src/content/marketing/repurposing-content.mdx
+- File: content/marketing/repurposing-content.mdx
 - Category: MARKETING
 - Pillar: Getting Clients
 - Credibility Source: Framework-based
@@ -246,7 +246,7 @@ legal/tax advice, specific industry expertise.
 - Editorial Notes: Clear problem-solution framing; 5-format framework well-structured with concrete examples; time estimates (45 min, 30 min, 90 min) are implementation-based; verified E-E-A-T grounding in case studies
 
 ### Article 10: "Energy, Not Time: The Real Bottleneck in Your Solopreneur Business" ✅ EDITED
-- File: src/content/mindset/energy-management.mdx
+- File: content/mindset/energy-management.mdx
 - Category: MINDSET
 - Pillar: Staying Sane
 - Credibility Source: Framework-based
@@ -260,7 +260,7 @@ legal/tax advice, specific industry expertise.
 - Editorial Notes: Energy budget framework clearly explained with contextual examples; 3-hour deep work window is presented as general guidance with caveats (personal variation); avoided forbidden time-management clichés; tone consistently supportive without toxicity
 
 ### Article 11: "From Service to Product: The Decision Framework Every Solopreneur Avoids" ✅ EDITED
-- File: src/content/offer/service-to-product.mdx
+- File: content/offer/service-to-product.mdx
 - Category: OFFER
 - Pillar: Scaling Solo
 - Credibility Source: Framework-based
@@ -274,7 +274,7 @@ legal/tax advice, specific industry expertise.
 - Editorial Notes: Strong story opener with clear decision framework (3 pillars); numeric examples (presale pricing, timeframes) are contextual and conditional; presale strategy is realistic without overstating outcomes; avoided pressure language about productization
 
 ### Article 12: "Your Unfair Advantage: Stop Competing on Credentials and Start Leveraging Your Weird Background" ✅ EDITED
-- File: src/content/offer/unfair-advantage.mdx
+- File: content/offer/unfair-advantage.mdx
 - Category: OFFER
 - Pillar: Scaling Solo
 - Credibility Source: Observational
