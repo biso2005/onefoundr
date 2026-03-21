@@ -61,16 +61,30 @@
   - What you'll find here (10 categories)
   - Comparison table
   - CTA section
-- [x] Start Here page — COMPLETE ✅
   - Journey steps visualization
   - 3 path cards (Starting, Running, Scaling)
   - Top 10 popular guides
   - Free resources grid
   - Newsletter signup
   - Final CTA with action rows
+ [x] Start Here page — COMPLETE ✅
+  - Journey steps visualization
+  - 3 path cards (Starting, Running, Scaling)
+  - Top 10 popular guides
+  - Free resources grid
+  - Newsletter signup
+  - Final CTA with action rows
+[x] Category Hub Pages — COMPLETE ✅
+  - Reusable CategoryHub component
+  - /start — Start Solo
+  - /offer — Build Your Offer
+  - /marketing — Marketing
+  - /sales — Sales
+  - /systems — Systems & Ops
+  - /tools — Tools & AI
 
 ## CURRENT TASK
-Build Category Hub Pages (Start, Offer, Marketing, Sales, Systems, Tools)
+Build the Newsletter landing page
 
 ## DECISIONS MADE
 1. Using App Router (not Pages Router)
@@ -132,33 +146,36 @@ git log              # View commit history
 ```
 src/
 ├── app/
-│   ├── layout.tsx        (root layout with metadata)
-│   ├── page.tsx          (homepage - renders 6 section components)
-│   ├── error.tsx         (error boundary component)
-│   ├── not-found.tsx     (404 page component)
-│   ├── globals.css       (Tailwind directives)
+│   ├── layout.tsx
+│   ├── page.tsx (homepage)
+│   ├── about/page.tsx
+│   ├── start-here/page.tsx
 │   ├── start/page.tsx
 │   ├── offer/page.tsx
 │   ├── marketing/page.tsx
 │   ├── sales/page.tsx
 │   ├── systems/page.tsx
 │   ├── tools/page.tsx
-│   ├── about/page.tsx
-│   ├── start-here/page.tsx
-│   └── newsletter/page.tsx
+│   └── newsletter/page.tsx (next)
 ├── components/
-│   ├── Header.tsx        (navigation header)
-│   ├── Footer.tsx        (footer with links and newsletter)
-│   ├── NewsletterSignup.tsx
-│   ├── home/             (homepage section components)
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── CategoryHub.tsx (reusable)
+│   ├── home/
 │   │   ├── HeroSection.tsx
 │   │   ├── CategoryMap.tsx
 │   │   ├── FeaturedGuides.tsx
 │   │   ├── SolopreneurStories.tsx
 │   │   ├── FreeResources.tsx
 │   │   └── LatestGuides.tsx
-│   └── about/            (about page components)
-│       └── CTAButtons.tsx
+│   └── start-here/ (if extracted)
 └── lib/
-    └── constants.ts      (site config, nav links, footer links)
+  └── constants.ts
+37. CategoryHub is a reusable server component
+38. Category data is passed as props (not hardcoded in component)
+39. Each category page file is short — just data + component
+40. All 6 category pages share same layout structure
+41. Subcategories show article count badges
+42. Related categories show 3 other relevant categories
+43. Category newsletter CTA customizes heading per category
 ```
