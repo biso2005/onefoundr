@@ -54,62 +54,40 @@ export default function StartHerePage() {
             OneFoundr is organized around the solo founder journey. Think of it as a roadmap.
           </p>
 
-          {/* Journey Steps - Desktop */}
-          <div className="hidden md:flex md:flex-row md:items-center md:gap-2 md:justify-between md:mb-6">
+          {/* Journey Steps - Desktop (hidden on mobile, visible on md+) */}
+          <div className="hidden md:flex flex-row items-center gap-2 justify-between mb-6">
             {JOURNEY_STEPS.map((step, index) => (
-              <div key={step.number} style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1 }}>
+              <div key={step.number} className="flex flex-col items-center flex-1">
                 {/* Circle */}
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    borderRadius: "50%",
-                    border: "2px solid #00B894",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: "8px"
-                  }}
-                >
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "#00B894" }}>
+                <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mb-2">
+                  <span className="text-sm font-bold text-accent">
                     {step.number}
                   </span>
                 </div>
 
                 {/* Label */}
-                <p style={{ fontSize: "13px", fontWeight: "500", color: "#2D3436", margin: 0, textAlign: "center" }}>
+                <p className="text-sm font-medium text-primary text-center">
                   {step.label}
                 </p>
 
                 {/* Connector Line */}
                 {index < JOURNEY_STEPS.length - 1 && (
-                  <div style={{ flex: 1, borderTop: "2px dashed #E2E8F0", marginTop: "12px", width: "100%" }} />
+                  <div className="flex-1 border-t-2 border-dashed border-gray-200 mt-2 w-full" />
                 )}
               </div>
             ))}
           </div>
 
-          {/* Journey Steps - Mobile */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "24px" }} className="md:hidden">
+          {/* Journey Steps - Mobile (visible on mobile, hidden on md+) */}
+          <div className="flex md:hidden flex-col gap-4 mb-6">
             {JOURNEY_STEPS.map((step) => (
-              <div key={step.number} style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-                <div
-                  style={{
-                    width: "40px",
-                    height: "40px",
-                    minWidth: "40px",
-                    borderRadius: "50%",
-                    border: "2px solid #00B894",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
-                >
-                  <span style={{ fontSize: "14px", fontWeight: "700", color: "#00B894" }}>
+              <div key={step.number} className="flex gap-3 items-center">
+                <div className="w-10 h-10 flex-shrink-0 rounded-full border-2 border-accent flex items-center justify-center">
+                  <span className="text-sm font-bold text-accent">
                     {step.number}
                   </span>
                 </div>
-                <p style={{ fontSize: "14px", fontWeight: "500", color: "#2D3436", margin: 0 }}>
+                <p className="text-sm font-medium text-primary">
                   {step.label}
                 </p>
               </div>
