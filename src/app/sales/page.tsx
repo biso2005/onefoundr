@@ -31,7 +31,7 @@ export default async function SalesPage() {
         {
           name: "Discovery Calls",
           description: "Master the sales conversation",
-          href: "/sales/ai-cold-outreach",
+          href: "/sales/discovery-calls",
           articleCount: 6
         },
         {
