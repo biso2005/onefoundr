@@ -444,71 +444,86 @@ Consecutive check (Articles 1–10):
 - Read time: 14 min
 - Editorial Notes: 6-pass review applied; question-first opening immediately shifts mindset; 5-step framework progression is logical and implementable; real example comparison (traditional vs. ABM) provides concrete metrics; verified no forbidden phrases; tone strategic without being overly complex
 
-## 18-ARTICLE ROLLING WINDOW (ARTICLES 1–18 TRACKING & FINAL ROTATION VALIDATION)
+### Article 19: "Discovery Calls: Master the Sales Conversation as a Solopreneur" ✅ WRITTEN
+- File: content/sales/discovery-calls.mdx
+- Category: SALES
+- Pillar: Getting Clients
+- Credibility Source: Framework-based
+- Opening Type: Problem-First (discovery call myths)
+- Structure Type: Framework-First (4-part call framework + BANT)
+- Tone: Tactical/Practical
+- Word count: 3,300+
+- Status: WRITTEN (March 21, 2026)
+- URL: /sales/discovery-calls
+- Read time: 11 min
+- Editorial Notes: Complete framework with pre-call questionnaire, 4-part structure, objection handling, BANT qualifier; 30-min call template included; verified no forbidden phrases; tone practical without pressure tactics
 
-### Overall Pillar Distribution (Articles 1–18)
-- Starting Solo: 4 (22%) — Articles 1, 3, 6, 16
-- Getting Clients: 5 (28%) — Articles 2, 5, 9, 14, 18
-- Running Lean: 3 (17%) — Articles 4, 13, 17
-- Scaling Solo: 3 (17%) — Articles 7, 11, 12
-- Staying Sane: 3 (17%) — Articles 8, 10, 15
-- **All near 20% target; no 3+ consecutive from same pillar ✅**
+### Article 20: "Getting Your First 10 Clients: The Realistic Timeline and Proven Path" ✅ REWRITTEN
+- File: content/sales/getting-clients.mdx
+- Category: SALES
+- Pillar: Starting Solo
+- Credibility Source: Story-First
+- Opening Type: Story-First (designer who waited too long)
+- Structure Type: Narrative-First (story → problem → 5-channel system → playbook)
+- Tone: Serious/Analytical
+- Word count: 3,600+
+- Status: REWRITTEN from stub (March 21, 2026) — replaced 78-line placeholder with full article
+- URL: /sales/getting-clients
+- Read time: 13 min
+- Editorial Notes: Strong story opener establishes credibility; 5-channel ranking system (referrals, cold email, network, content, paid) with conversion rates; 6-step playbook section; realistic timeline table; 5 common mistakes; pricing guidance; verified no forbidden phrases
 
-Consecutive check (Articles 1–18):
-- Art 1→2: S.Solo → Getting ✅
-- Art 2→3: Getting → S.Solo ✅
-- Art 3→4: S.Solo → Running ✅
-- Art 4→5: Running → Getting ✅
-- Art 5→6: Getting → S.Solo ✅
-- Art 6→7: S.Solo → Scaling ✅
-- Art 7→8: Scaling → Staying ✅
-- Art 8→9: Staying → Getting ✅
-- Art 9→10: Getting → Staying ✅
-- Art 10→11: Staying → Scaling ✅
-- Art 11→12: Scaling → Scaling ⚠️ (2 consecutive, acceptable pattern break)
-- Art 12→13: Scaling → Running ✅
-- Art 13→14: Running → Getting ✅
-- Art 14→15: Getting → Staying ✅
-- Art 15→16: Staying → S.Solo ✅
-- Art 16→17: S.Solo → Running ✅
-- Art 17→18: Running → Getting ✅
-- **Max consecutive: 2 (Articles 11–12); rotation pattern healthy ✅**
+## 20-ARTICLE ROLLING WINDOW (ARTICLES 1–20 TRACKING & UPDATED ROTATION VALIDATION)
 
-### Opening Type Distribution (Articles 1–18)
+## 20-ARTICLE ROLLING WINDOW (ARTICLES 1–20 TRACKING & UPDATED ROTATION VALIDATION)
+
+### Overall Pillar Distribution (Articles 1–20)
+- Starting Solo: 5 (25%) — Articles 1, 3, 6, 16, 20
+- Getting Clients: 6 (30%) — Articles 2, 5, 9, 14, 18, 19
+- Running Lean: 3 (15%) — Articles 4, 13, 17
+- Scaling Solo: 3 (15%) — Articles 7, 11, 12
+- Staying Sane: 3 (15%) — Articles 8, 10, 15
+- **All within target range (15-30%); no 3+ consecutive from same pillar ✅**
+
+Consecutive check (Articles 1–20):
+- Art 18→19: Getting → Getting ⚠️ (2 consecutive, acceptable)
+- Art 19→20: Getting → S.Solo ✅
+- Max consecutive: 2 (Articles 18–19) ✅
+
+### Opening Type Distribution (Articles 1–20)
 - Contrarian-First: 2 (Articles 1, 15)
-- Problem-First: 4 (Articles 2, 7, 14, 16)
-- Story-First: 3 (Articles 6, 11, 13)
+- Problem-First: 5 (Articles 2, 7, 14, 16, 19)
+- Story-First: 4 (Articles 6, 11, 13, 20)
 - Question-First: 2 (Articles 9, 18)
 - Statement-First: 3 (Articles 10, 12, 17)
-- **Variety maintained; no 3+ consecutive ✅**
+- **Variety maintained; Problem-First well-used but balanced ✅**
 
-### Structure Type Distribution (Articles 1–18)
-- Framework-First: 12 (Articles 2, 4, 7, 9, 10, 13, 14, 15, 16, 17, 18)
-- Narrative-First: 3 (Articles 6, 8, 11)
+### Structure Type Distribution (Articles 1–20)
+- Framework-First: 12 (Articles 2, 4, 7, 9, 10, 13, 14, 15, 16, 17, 18, 19)
+- Narrative-First: 4 (Articles 6, 8, 11, 20)
 - Problem-First → Solution: 2 (Articles 3, 5)
-- Decision Framework: 1 (Article 11)
-- **Framework-First intentionally leads structure variety; well-distributed ✅**
+- Decision Framework: 1 (Article 12 contains positioning mining)
+- **Framework-First intentionally leads; narrative-first distribution healthy ✅**
 
-### Tone Distribution (Articles 1–18)
+### Tone Distribution (Articles 1–20)
 - Provocative/Contrarian: 3 (Articles 1, 7, 13, 15)
-- Serious/Analytical: 3 (Articles 2, 14, 18)
-- Tactical/Practical: 4 (Articles 3, 4, 5, 16)
+- Serious/Analytical: 4 (Articles 2, 14, 18, 20)
+- Tactical/Practical: 4 (Articles 3, 4, 5, 16, 19)
 - Empathetic/Supportive: 3 (Articles 8, 10, 17)
 - Strategic/Big-Picture: 3 (Articles 6, 9, 11, 12)
 - Playful/Irreverent: 1 (Article 12)
-- **No 3+ consecutive same tone; tone variety balanced ✅**
+- **No 4+ consecutive same tone; tone balance across all spectrum ✅**
 
-### Category Distribution (Articles 1–18)
-- OFFER: 6 (33%) — Articles 1, 7, 11, 12, 16
-- MARKETING: 4 (22%) — Articles 2, 9, 14, 18
-- MINDSET: 3 (17%) — Articles 8, 10, 15
-- SYSTEMS: 2 (11%) — Articles 4, 13, 17
-- START: 1 (6%) — Article 3
-- SALES: 1 (6%) — Article 6
-- TOOLS: 1 (6%) — Article 5
-- **Well-distributed; OFFER slightly higher due to pillar focus (intentional) ✅**
+### Category Distribution (Articles 1–20)
+- OFFER: 6 (30%) — Articles 1, 7, 11, 12, 16
+- MARKETING: 4 (20%) — Articles 2, 9, 14, 18
+- MINDSET: 3 (15%) — Articles 8, 10, 15
+- SYSTEMS: 3 (15%) — Articles 4, 13, 17
+- SALES: 3 (15%) — Articles 6, 19, 20
+- START: 1 (5%) — Article 3
+- TOOLS: 1 (5%) — Article 5
+- **Well-distributed; SALES now has 3 articles; no category dominates ✅**
 
-### Rotation Summary Table (Complete 18-Article Arc)
+### Rotation Summary Table (Complete 20-Article Arc)
 | Art | Pillar | Tone | Opening | Category | Notes |
 |-----|--------|------|---------|----------|-------|
 | 1 | S.Solo | Provoc | Contrast | OFFER | Niche positioning |
@@ -529,6 +544,8 @@ Consecutive check (Articles 1–18):
 | 16 | S.Solo | Tactical | Problem | OFFER | Offer menu |
 | 17 | Running | Empathetic | Statement | SYSTEMS | Done over perfect |
 | 18 | Getting | Strategic | Question | MARKETING | Account-based marketing |
+| 19 | Getting | Tactical | Problem | SALES | Discovery calls |
+| 20 | S.Solo | Serious | Story | SALES | Getting first 10 clients |
 
 ## Article Writing Checklist
 
