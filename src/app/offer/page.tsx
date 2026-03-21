@@ -1,11 +1,13 @@
 import CategoryHub from "@/components/CategoryHub";
+import { getPostsByCategory } from "@/lib/mdx";
 
 export const metadata = {
   title: "Build Your Offer — OneFoundr | Package & Price Your Offer",
   description: "Learn to package, price, and position offers that people actually want to buy."
 };
 
-export default function OfferPage() {
+export default async function OfferPage() {
+  const posts = getPostsByCategory("offer");
   return (
     <CategoryHub
       eyebrow="CATEGORY"
@@ -94,6 +96,7 @@ export default function OfferPage() {
         { name: "Sales", emoji: "🤝", href: "/sales" },
         { name: "Marketing", emoji: "📣", href: "/marketing" }
       ]}
+      dynamicArticles={posts}
     />
   );
 }

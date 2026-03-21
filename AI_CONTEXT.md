@@ -1,17 +1,4 @@
 # OneFoundr - AI Context File
-# Last Updated: March 21, 2026
-# AI: Read this file before every task.
-
-## PROJECT OVERVIEW
-- Name: OneFoundr
-- URL: onefoundr.com
-- Purpose: Resource hub for solopreneurs and solo founders
-- Tagline: "Build Solo. Build Smart."
-- Stack: Next.js 14, TypeScript, Tailwind CSS, App Router
-
-## BRAND
-- Primary Color: #2D3436 (Charcoal)
-- Accent Color: #00B894 (Mint Green)
 - Background: #FFFFFF
 - Font: Inter
 - Tone: Professional but approachable
@@ -21,12 +8,6 @@
 - /offer/ - Building your offer
 - /marketing/ - Marketing guides
 - /sales/ - Sales strategies
-- /systems/ - Systems & operations
-- /tools/ - Tools & AI
-- /about/ - About page
-- /start-here/ - New visitor guide
-- /newsletter/ - Newsletter signup
-- /stories/ - Solopreneur stories
 - /resources/ - Templates & downloads
 
 ## DESIGN RULES

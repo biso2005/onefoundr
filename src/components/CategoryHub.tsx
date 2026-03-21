@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Post } from "@/lib/mdx";
 
 interface CategoryHubProps {
   eyebrow: string;
@@ -29,6 +30,7 @@ interface CategoryHubProps {
     emoji: string;
     href: string;
   }>;
+  dynamicArticles?: Post[];
 }
 
 export default function CategoryHub({
@@ -40,8 +42,18 @@ export default function CategoryHub({
   pillarGuide,
   subcategories,
   featuredArticles,
-  relatedCategories
+  relatedCategories,
+  dynamicArticles
 }: CategoryHubProps) {
+  // Use dynamic articles if provided, otherwise fall back to featured articles
+  const articlesToDisplay = dynamicArticles && dynamicArticles.length > 0 
+    ? dynamicArticles.map(post => ({
+        title: post.frontmatter.title,
+        category: post.frontmatter.categoryLabel,
+        readTime: post.frontmatter.readTime,
+        href: `/${post.category}/${post.slug}`
+      }))
+    : featuredArticles;
   return (
     <>
       {/* SECTION 1: CATEGORY HERO */}
@@ -191,7 +203,7 @@ export default function CategoryHub({
           </h2>
 
           <div>
-            {featuredArticles.map((article, index) => (
+            {articlesToDisplay.map((article, index) => (
               <Link key={article.href} href={article.href}>
                 <div
                   style={{
@@ -200,7 +212,7 @@ export default function CategoryHub({
                     alignItems: "center",
                     paddingTop: "16px",
                     paddingBottom: "16px",
-                    borderBottom: index < featuredArticles.length - 1 ? "1px solid #E2E8F0" : "none",
+                    borderBottom: index < articlesToDisplay.length - 1 ? "1px solid #E2E8F0" : "none",
                     cursor: "pointer",
                     transition: "background-color 0.2s"
                   }}

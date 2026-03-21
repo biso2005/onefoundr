@@ -1,11 +1,13 @@
 import CategoryHub from "@/components/CategoryHub";
+import { getPostsByCategory } from "@/lib/mdx";
 
 export const metadata = {
   title: "Tools & AI — OneFoundr | Your Tech Stack for Solo Business",
   description: "The essential tech stack and AI tools for running a one-person business."
 };
 
-export default function ToolsPage() {
+export default async function ToolsPage() {
+  const posts = getPostsByCategory("tools");
   return (
     <CategoryHub
       eyebrow="CATEGORY"
@@ -94,6 +96,7 @@ export default function ToolsPage() {
         { name: "Marketing", emoji: "📣", href: "/marketing" },
         { name: "Start", emoji: "💡", href: "/start" }
       ]}
+      dynamicArticles={posts}
     />
   );
 }

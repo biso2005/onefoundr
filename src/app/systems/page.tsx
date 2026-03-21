@@ -1,11 +1,13 @@
 import CategoryHub from "@/components/CategoryHub";
+import { getPostsByCategory } from "@/lib/mdx";
 
 export const metadata = {
   title: "Systems & Ops — OneFoundr | Build Your Operating System",
   description: "Build SOPs, workflows, and automations that run your business smoothly."
 };
 
-export default function SystemsPage() {
+export default async function SystemsPage() {
+  const posts = getPostsByCategory("systems");
   return (
     <CategoryHub
       eyebrow="CATEGORY"
@@ -94,6 +96,7 @@ export default function SystemsPage() {
         { name: "Sales", emoji: "🤝", href: "/sales" },
         { name: "Marketing", emoji: "📣", href: "/marketing" }
       ]}
+      dynamicArticles={posts}
     />
   );
 }

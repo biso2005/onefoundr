@@ -1,11 +1,14 @@
 import CategoryHub from "@/components/CategoryHub";
+import { getPostsByCategory } from "@/lib/mdx";
 
 export const metadata = {
   title: "Start Solo — OneFoundr | How to Start a One-Person Business",
   description: "Guides to help you validate your idea, choose a niche, and launch your solo business."
 };
 
-export default function StartPage() {
+export default async function StartPage() {
+  const posts = getPostsByCategory("start");
+
   return (
     <CategoryHub
       eyebrow="CATEGORY"
@@ -94,6 +97,7 @@ export default function StartPage() {
         { name: "Marketing", emoji: "📣", href: "/marketing" },
         { name: "Tools", emoji: "🛠️", href: "/tools" }
       ]}
+      dynamicArticles={posts}
     />
   );
 }

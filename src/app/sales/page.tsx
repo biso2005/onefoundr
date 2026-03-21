@@ -1,11 +1,13 @@
 import CategoryHub from "@/components/CategoryHub";
+import { getPostsByCategory } from "@/lib/mdx";
 
 export const metadata = {
   title: "Sales — OneFoundr | Win Clients & Close Deals",
   description: "Win clients and close deals confidently — without being pushy or salesy."
 };
 
-export default function SalesPage() {
+export default async function SalesPage() {
+  const posts = getPostsByCategory("sales");
   return (
     <CategoryHub
       eyebrow="CATEGORY"
@@ -94,6 +96,7 @@ export default function SalesPage() {
         { name: "Offer", emoji: "📦", href: "/offer" },
         { name: "Systems", emoji: "⚙️", href: "/systems" }
       ]}
+      dynamicArticles={posts}
     />
   );
 }
