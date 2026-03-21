@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   title: "OneFoundr",
   description:
     "Practical guides, tools, and systems for solopreneurs who want to build profitable businesses without a team.",
+  metadataBase: new URL("https://onefoundr.com"),
   openGraph: {
     title: "OneFoundr",
     description:
@@ -23,7 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="bg-background text-text">{children}</body>
+      <body className="bg-background text-text">
+        <Header />
+        <main className="min-h-screen">{children}</main>
+      </body>
     </html>
   );
 }
