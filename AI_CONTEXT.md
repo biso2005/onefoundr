@@ -48,9 +48,10 @@
 - [x] Homepage — Hero section
 - [x] Homepage — Category journey map section (6 cards)
 - [x] Homepage — Featured guides section (1 large + 3 small)
+- [x] Homepage — Solopreneur stories section (3 founder cards)
 
 ## CURRENT TASK
-Build Homepage — Solopreneur Stories Section
+Build Homepage — Free Resources / Lead Magnet Section
 
 ## DECISIONS MADE
 1. Using App Router (not Pages Router)
@@ -66,8 +67,11 @@ Build Homepage — Solopreneur Stories Section
 11. Stats card with muted background on hero right side
 12. Category cards stored as array
 13. Cards are fully clickable links with hover effects
-14. Using placeholder data for featured articles (will connect to CMS later)
-15. Colored placeholder squares instead of real images for now
+14. Using placeholder data for featured articles
+15. Colored placeholder squares instead of real images
+16. Story cards use initials avatar (no real photos)
+17. Dark section for stories creates visual contrast
+18. Revenue shown as green pill badge
 
 ## DO NOT
 - Don't use CSS modules (Tailwind only)
