@@ -581,3 +581,43 @@ Consecutive check (Articles 1–20):
 □ Create publication package (SEO, FAQ, social)
 □ Generate 10+ related article ideas
 □ Commit the new/updated .mdx file
+
+---
+
+## EMERGENCY FEATURED ARTICLE FILLS (Outside 20-Article Rotation)
+
+**Reason**: Category pages referenced 26 featured articles via hardcoded hrefs. 13 articles didn't exist as MDX files. Created emergency fill articles on May 2, 2026 to resolve broken links.
+
+### Emergency Fill Articles (13 total, created May 2, 2026) ✅
+
+**SYSTEMS (3 articles):**
+- **Article E1**: "Workflow Automation for Solo Businesses" (workflow-automation.mdx) — 353 lines, 14 min read
+- **Article E2**: "Notion for Solopreneurs: Complete Setup" (notion-setup.mdx) — 365 lines, 16 min read
+- **Article E3**: "20 Templates Every Solopreneur Needs" (templates-solopreneur.mdx) — 286 lines, 12 min read
+
+**MARKETING (3 articles):**
+- **Article E4**: "Personal Branding for Solo Founders: Build Authority in Your Niche" (personal-branding.mdx) — 13 min read
+- **Article E5**: "Email List Building: From 0 to 1,000 Subscribers" (email-list-building.mdx) — 14 min read
+- **Article E6**: "How to Build an Audience from Zero" (build-audience.mdx) — 15 min read
+
+**SALES (3 articles):**
+- **Article E7**: "Sales Funnel for Solopreneurs: Simple Setup" (sales-funnel.mdx) — 12 min read
+- **Article E8**: "Selling Without Being Salesy: The Soft Close Framework" (selling-authentically.mdx) — 13 min read
+- **Article E9**: "Follow-Up Emails That Convert: Persistence Without Pushiness" (follow-up-email.mdx) — 12 min read
+
+**TOOLS (3 articles):**
+- **Article E10**: "Best CRM for Solopreneurs: Find Your Perfect Fit" (best-crm.mdx) — 13 min read
+- **Article E11**: "Zapier vs Make vs n8n Compared: Which Automation Platform Wins" (zapier-vs-make.mdx) — 14 min read
+- **Article E12**: "ChatGPT for Solopreneurs: 25 Daily Uses That Save Hours" (chatgpt-daily-uses.mdx) — 13 min read
+
+**OFFER (1 article):**
+- **Article E13**: "How to Raise Prices Without Losing Clients" (raise-prices.mdx) — 13 min read
+
+**START (3 articles):**
+- **Article E14**: "Best Business Models for Solopreneurs: Which One Fits You" (business-models.mdx) — 14 min read
+- **Article E15**: "Niche Selection: Find Your Profitable Sweet Spot" (niche-selection.mdx) — 13 min read
+- **Article E16**: "The Solo Founder's First 90 Days: Your Roadmap to Launch" (first-90-days.mdx) — 15 min read
+
+**Status**: All 13 articles created, all featured article hrefs corrected in category pages (6 pages, 24 broken links fixed), committed May 2 2026 (commits 4139ffc + e4b9830)
+
+**Note**: These articles follow WRITING_SYSTEM guidelines re: structure/frameworks but are outside the planned 20-article rotation matrix. They fill immediate content gaps referenced by the site itself.
