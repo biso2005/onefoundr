@@ -152,41 +152,47 @@ export default function CategoryHub({
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }} className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {subcategories.map((subcategory) => (
-              <div
-                key={subcategory.name}
-                style={{
-                  backgroundColor: "white",
-                  borderRadius: "12px",
-                  padding: "24px",
-                  border: "1px solid #E2E8F0",
-                  cursor: "default",
-                  transition: "all 0.2s"
-                }}
-              >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
-                  <div>
-                    <p style={{ fontSize: "16px", fontWeight: "600", color: "#2D3436", margin: 0 }}>
-                      {subcategory.name}
-                    </p>
-                    <p style={{ fontSize: "14px", color: "#636E72", marginTop: "4px", margin: 0 }}>
-                      {subcategory.description}
-                    </p>
+              <Link key={subcategory.href} href={subcategory.href}>
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    border: "1px solid #E2E8F0",
+                    cursor: "pointer",
+                    transition: "all 0.2s"
+                  }}
+                  className="hover:border-accent hover:shadow-sm"
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
+                    <div>
+                      <p style={{ fontSize: "16px", fontWeight: "600", color: "#2D3436", margin: 0 }}>
+                        {subcategory.name}
+                      </p>
+                      <p style={{ fontSize: "14px", color: "#636E72", marginTop: "4px", margin: 0 }}>
+                        {subcategory.description}
+                      </p>
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#059669",
+                        backgroundColor: "rgba(5, 150, 105, 0.1)",
+                        padding: "4px 12px",
+                        borderRadius: "20px",
+                        whiteSpace: "nowrap",
+                        marginLeft: "12px"
+                      }}
+                    >
+                      {subcategory.articleCount} guides
+                    </span>
                   </div>
-                  <span
-                    style={{
-                      fontSize: "12px",
-                      color: "#059669",
-                      backgroundColor: "rgba(5, 150, 105, 0.1)",
-                      padding: "4px 12px",
-                      borderRadius: "20px",
-                      whiteSpace: "nowrap",
-                      marginLeft: "12px"
-                    }}
-                  >
-                    {subcategory.articleCount} guides
-                  </span>
+
+                  <p style={{ fontSize: "14px", color: "#059669", fontWeight: "500", margin: 0 }}>
+                    Explore →
+                  </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
