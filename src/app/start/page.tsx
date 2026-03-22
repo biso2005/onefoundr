@@ -39,24 +39,24 @@ export default async function StartPage() {
           {
             name: "Niche Selection",
             description: "Find your profitable sweet spot",
-            href: "/start/business-ideas",
+            href: "/start/niche-selection",
             articleCount: 6
           },
           {
             name: "Business Models",
             description: "Models that work for solo founders",
-            href: "/start/ai-launch-30days",
+            href: "/start/business-models",
             articleCount: 9
           },
           {
-            name: "Market Research",
-            description: "Research methods for solopreneurs",
-            href: "/start/business-ideas",
+            name: "First 90 Days",
+            description: "Your action plan for the first 90 days",
+            href: "/start/first-90-days",
             articleCount: 5
           },
           {
-            name: "First Steps",
-            description: "Your first actions as a solo founder",
+            name: "AI Launch Strategy",
+            description: "Launch faster with AI tools and automation",
             href: "/start/ai-launch-30days",
             articleCount: 7
           }
