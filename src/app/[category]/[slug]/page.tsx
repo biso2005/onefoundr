@@ -13,10 +13,10 @@ import { NewsletterCTA } from "@/components/NewsletterCTA";
 import { VALID_CONTENT_CATEGORIES, RESERVED_ROUTES } from "@/lib/constants";
 
 interface ArticlePageProps {
-  params: {
+  params: Promise<{
     category: string;
     slug: string;
-  };
+  }>;
 }
 
 // Generate static params for all posts
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
-  const { category, slug } = params;
+  const { category, slug } = await params;
   
   // Route guard: Check if category is valid for dynamic routes
   if (
@@ -70,7 +70,7 @@ export async function generateMetadata({
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
-  const { category, slug } = params;
+  const { category, slug } = await params;
 
   // Route guard: Check if category is valid for dynamic routes
   if (

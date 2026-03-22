@@ -301,6 +301,7 @@ export default function TermsPage() {
           hello@onefoundr.com
         </p>
       </div>
-    </main>
+    </section>
+    </>
   );
 }

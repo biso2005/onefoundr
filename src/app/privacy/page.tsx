@@ -287,6 +287,7 @@ export default function PrivacyPage() {
           hello@onefoundr.com
         </p>
       </div>
-    </main>
+    </section>
+    </>
   );
 }
