@@ -1,47 +1,42 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy — OneFoundr",
   description: "OneFoundr privacy policy — how we collect, use, and protect your data.",
 };
 
 export default function PrivacyPage() {
   return (
-    <main id="main-content" style={{ width: "100%", paddingTop: "80px", paddingBottom: "48px", paddingLeft: "24px", paddingRight: "24px" }} className="px-6">
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        {/* Legal Disclaimer */}
-        <div style={{
-          fontSize: "14px",
-          fontStyle: "italic",
-          color: "#636E72",
-          backgroundColor: "#F7F7F7",
-          padding: "16px",
-          borderRadius: "8px",
-          marginBottom: "32px"
-        }}>
-          <p style={{ margin: 0 }}>
-            This is a simplified privacy policy. For legal compliance in your jurisdiction, consult a legal professional.
+    <>
+      {/* DISCLAIMER BANNER */}
+      <section style={{ backgroundColor: "#FEF3C7", width: "100%", paddingTop: "16px", paddingBottom: "16px" }} className="px-6">
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <p style={{ fontSize: "14px", color: "#78350F", margin: "0", fontWeight: "500" }}>
+            ⚠️ <strong>Legal Disclaimer:</strong> This is a template. Before publishing, consult a legal professional.
           </p>
         </div>
+      </section>
 
-        {/* Page Heading */}
-        <h1 style={{
-          fontSize: "36px",
-          fontWeight: "700",
-          color: "#2D3436",
-          marginBottom: "8px"
-        }}>
-          Privacy Policy
-        </h1>
+      {/* PAGE HEADER */}
+      <section style={{ backgroundColor: "white", width: "100%", paddingTop: "80px", paddingBottom: "24px" }} className="md:py-20 py-12 px-6">
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "12px" }}>
+            Privacy Policy
+          </p>
 
-        <p style={{
-          fontSize: "14px",
-          color: "#636E72",
-          marginBottom: "48px"
-        }}>
-          Last updated: December 2024
-        </p>
+          <h1 style={{ fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", marginBottom: "20px" }}>
+            Your Privacy Matters to Us
+          </h1>
 
+          <p style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.6", marginBottom: "24px" }}>
+            Last Updated: March 22, 2026
+          </p>
+        </div>
+      </section>
+
+      {/* CONTENT */}
+      <section style={{ backgroundColor: "white", width: "100%", paddingTop: "0px", paddingBottom: "48px" }} className="px-6">
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
         {/* Section 1: Information We Collect */}
         <h2 style={{
           fontSize: "20px",

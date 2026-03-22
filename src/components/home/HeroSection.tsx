@@ -95,10 +95,10 @@ export default function HeroSection() {
           <div style={{ backgroundColor: "#F7F7F7", borderRadius: "16px", border: "1px solid #E2E8F0", padding: "32px", display: "flex", flexDirection: "column", gap: "24px" }}>
             <div>
               <div style={{ fontSize: "32px", fontWeight: "700", color: "#00B894", marginBottom: "8px" }}>
-                200+
+                6+
               </div>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
-                Actionable Guides
+                Core Categories
               </div>
             </div>
 
@@ -106,10 +106,10 @@ export default function HeroSection() {
 
             <div>
               <div style={{ fontSize: "32px", fontWeight: "700", color: "#00B894", marginBottom: "8px" }}>
-                50K+
+                100%
               </div>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
-                Solo Founders
+                Free Resources
               </div>
             </div>
 

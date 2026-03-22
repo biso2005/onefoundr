@@ -60,7 +60,7 @@ export default function StartHerePage() {
               <div key={step.number} className="flex flex-col items-center flex-1">
                 {/* Circle */}
                 <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mb-2">
-                  <span className="text-sm font-bold text-accent">
+                  <span className="text-sm font-bold text-accentDark">
                     {step.number}
                   </span>
                 </div>

@@ -8,7 +8,7 @@ import FinalCTA from "@/components/newsletter/FinalCTA";
 export const metadata = {
   title: "The OneFoundr Letter — Weekly Tips for Solo Founders",
   description:
-    "Join 25,000+ solopreneurs getting one actionable idea every Tuesday to build a better one-person business. No fluff, just results."
+    "Join our growing community of solo founders getting one actionable idea every Tuesday to build a better one-person business. No fluff, just results."
 };
 
 export default function NewsletterPage() {

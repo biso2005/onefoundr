@@ -89,7 +89,7 @@ export default function EmailSignupForm({
       case 'default':
         return 'text-accentDark';
       case 'dark':
-        return 'text-accent';
+        return 'text-accentDark';
       case 'green':
         return 'text-white';
       default:

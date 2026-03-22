@@ -33,7 +33,7 @@ export default function FreeResources() {
             </div>
 
             <p style={{ fontSize: "12px", color: "rgba(255, 255, 255, 0.7)" }}>
-              Downloaded by 12,000+ solo founders • No spam, ever
+              Free for solo founders • No spam, ever
             </p>
           </div>
 
