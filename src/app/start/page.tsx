@@ -33,8 +33,8 @@ export default async function StartPage() {
           {
             name: "Idea Validation",
             description: "Test your idea before investing time",
-            href: "/start/ai-launch-30days",
-            articleCount: 8
+            href: "/start/idea-validation",
+            articleCount: 5
           },
           {
             name: "Niche Selection",
