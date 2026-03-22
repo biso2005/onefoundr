@@ -58,7 +58,7 @@ export const FOOTER_LINKS = {
   ],
   Company: [
     { name: "About", href: "/about" },
-    { name: "Contact (Coming Soon)", href: "/start-here" },
+    { name: "Contact", href: "/contact" },
     { name: "Advertise (Coming Soon)", href: "/start-here" },
     { name: "Write for Us (Coming Soon)", href: "/start-here" }
   ],
