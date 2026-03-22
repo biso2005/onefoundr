@@ -91,26 +91,34 @@ export default function Footer() {
                 Resources
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                {FOOTER_LINKS.Resources.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    style={{
-                      fontSize: "14px",
-                      color: "#9CA3AF",
-                      textDecoration: "none",
-                      transition: "color 0.2s"
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";
-                    }}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {FOOTER_LINKS.Resources.map((link) => {
+                  const isComingSoon = link.name.includes("(Coming Soon)");
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      style={{
+                        fontSize: "14px",
+                        color: isComingSoon ? "#6B7280" : "#9CA3AF",
+                        textDecoration: "none",
+                        transition: "color 0.2s",
+                        cursor: isComingSoon ? "default" : "pointer"
+                      }}
+                      onMouseEnter={(e) => {
+                        if (!isComingSoon) {
+                          (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isComingSoon) {
+                          (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";
+                        }
+                      }}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 
@@ -120,26 +128,34 @@ export default function Footer() {
                 Company
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                {FOOTER_LINKS.Company.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    style={{
-                      fontSize: "14px",
-                      color: "#9CA3AF",
-                      textDecoration: "none",
-                      transition: "color 0.2s"
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";
-                    }}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {FOOTER_LINKS.Company.map((link) => {
+                  const isComingSoon = link.name.includes("(Coming Soon)");
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      style={{
+                        fontSize: "14px",
+                        color: isComingSoon ? "#6B7280" : "#9CA3AF",
+                        textDecoration: "none",
+                        transition: "color 0.2s",
+                        cursor: isComingSoon ? "default" : "pointer"
+                      }}
+                      onMouseEnter={(e) => {
+                        if (!isComingSoon) {
+                          (e.currentTarget as HTMLAnchorElement).style.color = "#059669";
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isComingSoon) {
+                          (e.currentTarget as HTMLAnchorElement).style.color = "#9CA3AF";
+                        }
+                      }}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>

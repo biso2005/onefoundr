@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CATEGORY_EMOJI } from "@/lib/constants";
 
 interface FeaturedGuidesClientProps {
   featured: {
@@ -20,6 +21,10 @@ interface FeaturedGuidesClientProps {
 }
 
 export default function FeaturedGuidesClient({ featured, small }: FeaturedGuidesClientProps) {
+  // Get emoji for featured category
+  const categoryKey = featured.category.toLowerCase().split(' ')[0];
+  const emoji = CATEGORY_EMOJI[categoryKey] || '📄';
+
   return (
     <>
       <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "24px", alignItems: "flex-start" }} className="md:grid-cols-[55%_45%] grid-cols-1">
@@ -40,12 +45,12 @@ export default function FeaturedGuidesClient({ featured, small }: FeaturedGuides
             (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
           }}
         >
-          <div style={{ height: "220px", background: "linear-gradient(135deg, rgba(0, 184, 148, 0.1) 0%, rgba(0, 184, 148, 0.05) 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#059669", fontWeight: "600", margin: 0 }}>
+          <div style={{ height: "220px", backgroundColor: "#F7F7F7", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px" }}>
+            <div style={{ fontSize: "64px" }}>
+              {emoji}
+            </div>
+            <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#636E72", fontWeight: "500", margin: 0 }}>
               {featured.category}
-            </p>
-            <p style={{ fontSize: "18px", fontWeight: "700", color: "#2D3436", marginTop: "8px", margin: 0 }}>
-              Featured
             </p>
           </div>
 

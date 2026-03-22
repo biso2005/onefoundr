@@ -166,10 +166,72 @@ export default function NotFound() {
             </Link>
           </div>
 
+          {/* Popular Guides Section */}
+          <div style={{
+            marginTop: "48px",
+            paddingTop: "32px",
+            borderTop: "1px solid #E2E8F0"
+          }}>
+            <p style={{
+              fontSize: "14px",
+              color: "#9CA3AF",
+              margin: "0 0 16px 0",
+              textAlign: "center"
+            }}>
+              Or try one of these:
+            </p>
+            
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              maxWidth: "400px",
+              margin: "0 auto",
+              alignItems: "center"
+            }}>
+              <Link href="/start/business-ideas">
+                <span style={{
+                  fontSize: "14px",
+                  color: "#00B894",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "text-decoration 0.2s"
+                }} className="hover:underline">
+                  47 One-Person Business Ideas
+                </span>
+              </Link>
+              
+              <Link href="/tools/ai-tools">
+                <span style={{
+                  fontSize: "14px",
+                  color: "#00B894",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "text-decoration 0.2s"
+                }} className="hover:underline">
+                  AI Tools That Replace a Team
+                </span>
+              </Link>
+              
+              <Link href="/sales/getting-clients">
+                <span style={{
+                  fontSize: "14px",
+                  color: "#00B894",
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  transition: "text-decoration 0.2s"
+                }} className="hover:underline">
+                  How to Get Your First 10 Clients
+                </span>
+              </Link>
+            </div>
+          </div>
+
           {/* Search hint */}
           <p style={{
             fontSize: "14px",
-            color: "#636E72"
+            color: "#636E72",
+            marginTop: "32px"
           }}>
             Or try searching for what you need
           </p>

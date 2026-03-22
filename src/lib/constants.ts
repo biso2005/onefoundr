@@ -4,6 +4,20 @@ export const SITE_URL = "https://onefoundr.com";
 export const SITE_DESCRIPTION =
   "Practical guides, tools, and systems for solopreneurs who want to build profitable businesses without a team.";
 
+// Category emoji mapping
+export const CATEGORY_EMOJI: Record<string, string> = {
+  start: '💡',
+  offer: '📦',
+  marketing: '📣',
+  sales: '🤝',
+  systems: '⚙️',
+  tools: '🛠️',
+  mindset: '🧠',
+  money: '💰',
+  growth: '📈',
+  productivity: '⏰',
+};
+
 // Valid content categories for dynamic routes
 export const VALID_CONTENT_CATEGORIES = ['start', 'offer', 'marketing', 'sales', 'systems', 'tools', 'mindset'] as const;
 
@@ -37,16 +51,16 @@ export const SECONDARY_NAV_LINKS = [
 export const FOOTER_LINKS = {
   Categories: NAV_LINKS,
   Resources: [
-    { name: "Stories", href: "/start-here" },  // TODO: Link to /stories when created
-    { name: "Templates", href: "/start-here" },  // TODO: Link to /templates when created
+    { name: "Stories (Coming Soon)", href: "/start-here" },
+    { name: "Templates (Coming Soon)", href: "/start-here" },
     { name: "Newsletter", href: "/newsletter" },
-    { name: "Community", href: "/start-here" }  // TODO: Link to /community when created
+    { name: "Community (Coming Soon)", href: "/start-here" }
   ],
   Company: [
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/start-here" },  // TODO: Link to /contact when created
-    { name: "Advertise", href: "/start-here" },  // TODO: Link to /advertise when created
-    { name: "Write for Us", href: "/start-here" }  // TODO: Link to /write-for-us when created
+    { name: "Contact (Coming Soon)", href: "/start-here" },
+    { name: "Advertise (Coming Soon)", href: "/start-here" },
+    { name: "Write for Us (Coming Soon)", href: "/start-here" }
   ],
   Legal: [
     { name: "Privacy Policy", href: "/privacy" },

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CATEGORY_EMOJI } from "@/lib/constants";
 
 interface LatestGuidesClientProps {
   articles: Array<{
@@ -67,8 +68,11 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
               el.style.boxShadow = "none";
             }}
           >
-            {/* Image Placeholder */}
-            <div style={{ height: "180px", backgroundColor: "#F7F7F7", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+            {/* Image Placeholder with Category Emoji */}
+            <div style={{ height: "180px", backgroundColor: "#F7F7F7", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: "12px" }}>
+              <div style={{ fontSize: "48px" }}>
+                {CATEGORY_EMOJI[article.category.toLowerCase()] || '📄'}
+              </div>
               <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.08em", color: "#636E72", fontWeight: "500", margin: 0 }}>
                 {article.category}
               </p>

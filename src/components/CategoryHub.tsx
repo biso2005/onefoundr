@@ -46,17 +46,39 @@ export default function CategoryHub({
   relatedCategories,
   dynamicArticles
 }: CategoryHubProps) {
-  // Use dynamic articles if provided, otherwise fall back to featured articles
-  const articlesToDisplay = dynamicArticles && dynamicArticles.length > 0 
-    ? dynamicArticles
-        .filter(post => post && post.frontmatter)
-        .map(post => ({
-          title: post.frontmatter?.title || "Untitled",
-          category: (post.frontmatter?.categoryLabel || post.category || "GENERAL").toUpperCase(),
-          readTime: post.frontmatter?.readTime || "5 min read",
-          href: `/${post.category}/${post.slug}`
-        }))
-    : featuredArticles;
+  // Smart article display: merge dynamic + featured to always show content
+  const getArticlesToDisplay = () => {
+    if (!dynamicArticles || dynamicArticles.length === 0) {
+      // No dynamic articles, use fallback featured articles
+      return featuredArticles;
+    }
+
+    // Map dynamic articles to the same format as featured articles
+    const mappedDynamic = dynamicArticles
+      .filter(post => post && post.frontmatter)
+      .map(post => ({
+        title: post.frontmatter?.title || "Untitled",
+        category: (post.frontmatter?.categoryLabel || post.category || "GENERAL").toUpperCase(),
+        readTime: post.frontmatter?.readTime || "5 min read",
+        href: `/${post.category}/${post.slug}`
+      }));
+
+    // If we have 1-2 posts, fill remaining slots with featured articles (3-5 total)
+    if (mappedDynamic.length <= 2) {
+      // Deduplicate by title (case-insensitive)
+      const titles = new Set(mappedDynamic.map(a => a.title.toLowerCase()));
+      const fillArticles = featuredArticles.filter(
+        a => !titles.has(a.title.toLowerCase())
+      );
+      // Return up to 5 total items
+      return [...mappedDynamic, ...fillArticles].slice(0, 5);
+    }
+
+    // If we have 3+ posts, return them as-is
+    return mappedDynamic;
+  };
+
+  const articlesToDisplay = getArticlesToDisplay();
   return (
     <>
       {/* SECTION 1: CATEGORY HERO */}
@@ -175,15 +197,15 @@ export default function CategoryHub({
                   <span
                     style={{
                       fontSize: "12px",
-                      color: "#059669",
-                      backgroundColor: "rgba(5, 150, 105, 0.1)",
+                      color: subcategory.articleCount === 0 ? "#9CA3AF" : "#059669",
+                      backgroundColor: subcategory.articleCount === 0 ? "rgba(156, 163, 175, 0.1)" : "rgba(5, 150, 105, 0.1)",
                       padding: "4px 12px",
                       borderRadius: "20px",
                       whiteSpace: "nowrap",
                       marginLeft: "12px"
                     }}
                   >
-                    {subcategory.articleCount} guides
+                    {subcategory.articleCount === 0 ? "Coming soon" : `${subcategory.articleCount} guides`}
                   </span>
                 </div>
               </div>
