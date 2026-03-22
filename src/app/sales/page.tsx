@@ -59,38 +59,7 @@ export default async function SalesPage() {
           articleCount: 5
         }
       ]}
-      featuredArticles={[
-        {
-          title: "The Solopreneur's Guide to AI-Powered Cold Outreach: Land Clients Without Warm Introductions",
-          category: "PROSPECTING",
-          readTime: "14 min",
-          href: "/sales/ai-cold-outreach"
-        },
-        {
-          title: "How to Get Your First 10 Clients",
-          category: "CLIENTS",
-          readTime: "9 min",
-          href: "/sales/getting-clients"
-        },
-        {
-          title: "Sales Funnel for Solopreneurs: Simple Setup",
-          category: "FUNNELS",
-          readTime: "12 min",
-          href: "/sales/sales-funnel"
-        },
-        {
-          title: "Selling Without Being Salesy",
-          category: "CLOSING",
-          readTime: "8 min",
-          href: "/sales/selling-authentically"
-        },
-        {
-          title: "Follow-Up Emails That Convert",
-          category: "FOLLOW UP",
-          readTime: "7 min",
-          href: "/sales/follow-up-email"
-        }
-      ]}
+      featuredArticles={[]}
       relatedCategories={[
         { name: "Marketing", emoji: "📣", href: "/marketing" },
         { name: "Offer", emoji: "📦", href: "/offer" },

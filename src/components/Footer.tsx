@@ -44,14 +44,14 @@ export default function Footer() {
                 {SITE_TAGLINE}
               </p>
               <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
-                  Twitter
+                <a href="https://twitter.com/onefoundr" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
+                  Twitter/X
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
-                  LinkedIn
+                <a href="#" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
+                  LinkedIn {/* TODO: Add LinkedIn URL */}
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
-                  YouTube
+                <a href="#" target="_blank" rel="noopener noreferrer" style={{ fontSize: "14px", color: "#9CA3AF", textDecoration: "none", transition: "color 0.2s" }} onMouseEnter={(e) => e.currentTarget.style.color = "#059669"} onMouseLeave={(e) => e.currentTarget.style.color = "#9CA3AF"}>
+                  YouTube {/* TODO: Add YouTube URL */}
                 </a>
               </div>
             </div>

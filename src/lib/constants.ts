@@ -29,8 +29,7 @@ export const NAV_LINKS = [
   { name: "Offer", href: "/offer" },
   { name: "Marketing", href: "/marketing" },
   { name: "Sales", href: "/sales" },
-  { name: "Systems", href: "/systems" },
-  { name: "Tools", href: "/tools" }
+  { name: "Systems", href: "/systems" }
 ];
 
 export const SECONDARY_NAV_LINKS = [

@@ -9,7 +9,11 @@ import {
   getRelatedPosts,
 } from "@/lib/mdx";
 import { MDXComponents } from "@/components/MDXComponents";
-import { NewsletterCTA } from "@/components/NewsletterCTA";
+import AuthorBox from "@/components/AuthorBox";
+import { calculateReadingTime } from "@/lib/readingTime";
+import NewsletterCTA from "@/components/NewsletterCTA";
+import { ShareButtons } from "@/components/ShareButtons";
+import { CategoryIcon } from "@/components/CategoryIcon";
 import { VALID_CONTENT_CATEGORIES, RESERVED_ROUTES } from "@/lib/constants";
 
 interface ArticlePageProps {
@@ -96,6 +100,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     day: "numeric",
   });
 
+  // Calculate reading time from raw MDX content
+  const readingTime = calculateReadingTime(post.content);
+
   return (
     <main style={{ width: "100%" }}>
       {/* ARTICLE HEADER */}
@@ -179,42 +186,36 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             alignItems: "center",
             gap: "16px",
             flexWrap: "wrap",
-            marginBottom: "48px"
+            marginBottom: "48px",
+            justifyContent: "space-between"
           }}>
-            <p style={{
-              fontSize: "14px",
-              color: "#2D3436",
-              fontWeight: "500",
-              margin: 0
-            }}>
-              {post.frontmatter.author}
-            </p>
-            <span style={{
-              color: "#9CA3AF"
-            }}>
-              •
-            </span>
-            <p style={{
-              fontSize: "14px",
-              color: "#636E72",
-              margin: 0
-            }}>
-              {formattedDate}
-            </p>
-            <span style={{
-              color: "#9CA3AF"
-            }}>
-              •
-            </span>
-            <p style={{
-              fontSize: "14px",
-              color: "#636E72",
-              margin: 0
-            }}>
-              {post.frontmatter.readTime}
-            </p>
+            <div style={{ display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+              <p style={{
+                fontSize: "14px",
+                color: "#2D3436",
+                fontWeight: "500",
+                margin: 0
+              }}>
+                {post.frontmatter.author}
+              </p>
+              <span style={{ color: "#9CA3AF" }}>•</span>
+              <p style={{
+                fontSize: "14px",
+                color: "#636E72",
+                margin: 0
+              }}>
+                {formattedDate}
+              </p>
+              <span style={{ color: "#9CA3AF" }}>•</span>
+              <span className="text-sm text-gray-500">⏱ {readingTime}</span>
+            </div>
+            <ShareButtons title={post.frontmatter.title} url={`/${category}/${slug}`} />
           </div>
 
+          {/* Category Visual */}
+          <div style={{ display: "flex", justifyContent: "center", margin: "32px 0" }}>
+            <CategoryIcon category={category?.toLowerCase?.() || "start"} size="md" className="!h-32 !w-full" />
+          </div>
           {/* Divider */}
           <div style={{
             borderTop: "1px solid #E2E8F0",
@@ -233,11 +234,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           {/* MDX Content */}
-          <div style={{
-            color: "#636E72"
-          }}>
+          <div style={{ color: "#636E72" }}>
             <MDXRemote source={post.content} components={MDXComponents} />
           </div>
+          {/* Author Box */}
+          <AuthorBox />
+          {/* Newsletter CTA */}
+          <NewsletterCTA />
 
           {/* ARTICLE FOOTER */}
           <div style={{
@@ -274,53 +277,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               marginBottom: "32px"
             }}></div>
 
-            {/* Author Box */}
-            <div style={{
-              backgroundColor: "#F7F7F7",
-              borderRadius: "12px",
-              padding: "24px",
-              display: "flex",
-              gap: "16px",
-              alignItems: "flex-start",
-              marginBottom: "48px"
-            }} className="md:flex-row flex-col">
-              {/* Avatar */}
-              <div style={{
-                width: "48px",
-                height: "48px",
-                minWidth: "48px",
-                backgroundColor: "#00B894",
-                borderRadius: "9999px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "white",
-                fontWeight: "700",
-                fontSize: "16px"
-              }}>
-                OF
-              </div>
 
-              {/* Author Info */}
-              <div>
-                <p style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#2D3436",
-                  margin: "0 0 4px 0"
-                }}>
-                  Written by {post.frontmatter.author}
-                </p>
-                <p style={{
-                  fontSize: "14px",
-                  color: "#636E72",
-                  margin: 0,
-                  lineHeight: "1.6"
-                }}>
-                  Practical guides for solopreneurs building one-person businesses.
-                </p>
-              </div>
-            </div>
 
             {/* Related Articles */}
             {relatedPosts.length > 0 && (
@@ -388,8 +345,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </div>
             )}
 
-            {/* Newsletter CTA */}
-            <NewsletterCTA />
           </div>
         </div>
       </article>

@@ -1,4 +1,5 @@
 import PathCards from "@/components/start-here/PathCards";
+import { Rocket, Package, Megaphone, DollarSign, Settings, Cpu, ArrowDown } from "lucide-react";
 import PopularGuides from "@/components/start-here/PopularGuides";
 import FreeResources from "@/components/start-here/FreeResources";
 import NewsletterCTA from "@/components/start-here/NewsletterCTA";
@@ -11,12 +12,60 @@ export const metadata = {
 };
 
 const JOURNEY_STEPS = [
-  { number: "1", label: "Start" },
-  { number: "2", label: "Offer" },
-  { number: "3", label: "Market" },
-  { number: "4", label: "Sell" },
-  { number: "5", label: "Systemize" },
-  { number: "6", label: "Grow" }
+  {
+    number: "1",
+    label: "Start Solo",
+    icon: Rocket,
+    article: {
+      href: "/start/business-ideas",
+      title: "One-Person Business Ideas That Actually Work"
+    }
+  },
+  {
+    number: "2",
+    label: "Build Offer",
+    icon: Package,
+    article: {
+      href: "/offer/productized-services",
+      title: "Productized Services: The $5K-$20K/Month Bridge to Scaling"
+    }
+  },
+  {
+    number: "3",
+    label: "Marketing",
+    icon: Megaphone,
+    article: {
+      href: "/marketing/content-marketing",
+      title: "Content Marketing for Solopreneurs: Minimum Effort, Maximum Results"
+    }
+  },
+  {
+    number: "4",
+    label: "Sales",
+    icon: DollarSign,
+    article: {
+      href: "/sales/getting-clients",
+      title: "Getting Your First 10 Clients: The Honest Playbook (No Theory, Just Numbers)"
+    }
+  },
+  {
+    number: "5",
+    label: "Systems",
+    icon: Settings,
+    article: {
+      href: "/systems/sops",
+      title: "How to Create SOPs for Your Solo Business"
+    }
+  },
+  {
+    number: "6",
+    label: "Tools",
+    icon: Cpu,
+    article: {
+      href: "/tools/ai-tools",
+      title: "15 AI Tools That Replace a Team for Solopreneurs in 2025"
+    }
+  }
 ];
 
 export default function StartHerePage() {
@@ -56,52 +105,73 @@ export default function StartHerePage() {
 
           {/* Journey Steps - Desktop (hidden on mobile, visible on md+) */}
           <div className="hidden md:flex flex-row items-center gap-2 justify-between mb-6">
-            {JOURNEY_STEPS.map((step, index) => (
-              <div key={step.number} className="flex flex-col items-center flex-1">
-                {/* Circle */}
-                <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mb-2">
-                  <span className="text-sm font-bold text-accentDark">
-                    {step.number}
-                  </span>
+            {JOURNEY_STEPS.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <div key={step.number} className="flex flex-col items-center flex-1 relative">
+                  {/* Icon above number */}
+                  <Icon className="text-emerald-500 mb-1" size={24} />
+                  {/* Circle */}
+                  <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mb-2">
+                    <span className="text-sm font-bold text-accentDark">
+                      {step.number}
+                    </span>
+                  </div>
+                  {/* Label */}
+                  <p className="text-sm font-medium text-primary text-center">
+                    {step.label}
+                  </p>
+                  {/* Top pick link */}
+                  <a
+                    href={step.article.href}
+                    className="text-sm text-emerald-600 hover:text-emerald-700 underline mt-2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📌 Start with: {step.article.title}
+                  </a>
+                  {/* Connector Line */}
+                  {index < JOURNEY_STEPS.length - 1 && (
+                    <div className="absolute right-0 top-1/2 w-full h-0.5 border-t-2 border-dashed border-gray-200 z-0" style={{ left: '100%', width: '40px', marginTop: '-1px' }} />
+                  )}
                 </div>
-
-                {/* Label */}
-                <p className="text-sm font-medium text-primary text-center">
-                  {step.label}
-                </p>
-
-                {/* Connector Line */}
-                {index < JOURNEY_STEPS.length - 1 && (
-                  <div className="flex-1 border-t-2 border-dashed border-gray-200 mt-2 w-full" />
-                )}
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Journey Steps - Mobile (visible on mobile, hidden on md+) */}
-          <div className="md:hidden mb-8" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            {JOURNEY_STEPS.map((step) => (
-              <div key={step.number} style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-                <div style={{
-                  width: "52px",
-                  height: "52px",
-                  minWidth: "52px",
-                  borderRadius: "50%",
-                  border: "2px solid #00B894",
-                  backgroundColor: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
-                }}>
-                  <span style={{ fontSize: "16px", fontWeight: "700", color: "#00B894" }}>
-                    {step.number}
-                  </span>
-                </div>
-                <span style={{ fontSize: "16px", fontWeight: "500", color: "#2D3436" }}>
-                  {step.label}
-                </span>
-              </div>
-            ))}
+          <div className="md:hidden mb-8 flex flex-col gap-6">
+            {JOURNEY_STEPS.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <>
+                  <div key={step.number} className="flex items-center gap-4">
+                    <div className="flex flex-col items-center">
+                      <Icon className="text-emerald-500 mb-1" size={24} />
+                      <div className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center mb-1">
+                        <span className="text-base font-bold text-accentDark">
+                          {step.number}
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <span className="text-base font-semibold text-primary block mb-1">{step.label}</span>
+                      <a
+                        href={step.article.href}
+                        className="text-sm text-emerald-600 hover:text-emerald-700 underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        📌 Start with: {step.article.title}
+                      </a>
+                    </div>
+                  </div>
+                  {index < JOURNEY_STEPS.length - 1 && (
+                    <ArrowDown className="text-gray-300 my-2 mx-auto" size={20} />
+                  )}
+                </>
+              );
+            })}
           </div>
 
           <p style={{ fontSize: "16px", color: "#636E72", lineHeight: "1.6", marginBottom: "64px" }}>

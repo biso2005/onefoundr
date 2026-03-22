@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CATEGORY_EMOJI } from "@/lib/constants";
+import { CategoryIcon } from "@/components/CategoryIcon";
 
 interface LatestGuidesClientProps {
   articles: Array<{
@@ -13,7 +13,7 @@ interface LatestGuidesClientProps {
   }>;
 }
 
-const FILTER_TABS = ["All", "Start", "Offer", "Marketing", "Sales", "Systems", "Tools"];
+const FILTER_TABS = ["All", "Start", "Offer", "Marketing", "Sales", "Systems"];
 
 export default function LatestGuidesClient({ articles }: LatestGuidesClientProps) {
   return (
@@ -68,15 +68,8 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
               el.style.boxShadow = "none";
             }}
           >
-            {/* Image Placeholder with Category Emoji */}
-            <div style={{ height: "180px", backgroundColor: "#F7F7F7", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: "12px" }}>
-              <div style={{ fontSize: "48px" }}>
-                {CATEGORY_EMOJI[article.category.toLowerCase()] || '📄'}
-              </div>
-              <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.08em", color: "#636E72", fontWeight: "500", margin: 0 }}>
-                {article.category}
-              </p>
-            </div>
+            {/* Category Icon Visual */}
+            <CategoryIcon category={article.category?.toLowerCase?.() || "start"} size="sm" />
 
             {/* Content Area */}
             <div style={{ padding: "24px" }}>
@@ -90,10 +83,13 @@ export default function LatestGuidesClient({ articles }: LatestGuidesClientProps
                 </p>
               </div>
 
+
               {/* Title */}
               <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#2D3436", marginTop: "12px", marginBottom: "0", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
                 {article.title}
               </h3>
+              {/* Reading Time */}
+              <span className="text-xs text-gray-400" style={{ display: "block", marginTop: "4px", marginBottom: "0" }}>⏱ {article.readTime}</span>
 
               {/* Excerpt */}
               <p style={{ fontSize: "14px", color: "#636E72", lineHeight: "1.6", marginTop: "8px", marginBottom: "16px", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>

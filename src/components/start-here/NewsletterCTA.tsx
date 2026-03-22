@@ -50,7 +50,7 @@ export default function NewsletterCTA() {
         </div>
 
         {/* Email Form */}
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", maxWidth: "448px", margin: "0 auto" }}>
           <div style={{ display: "flex", gap: "0", marginBottom: "8px" }} className="flex-col md:flex-row">
             <label htmlFor="email-start-here" className="sr-only">Email address</label>
             <input

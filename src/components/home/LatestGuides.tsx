@@ -4,7 +4,7 @@ import LatestGuidesClient from "./LatestGuidesClient";
 const DEFAULT_LATEST_GUIDES = [
   {
     category: "START",
-    title: "47 One-Person Business Ideas That Actually Work in 2024",
+    title: "One-Person Business Ideas That Actually Work",
     excerpt: "A curated list of proven business models for solopreneurs, categorized by skill set and revenue potential.",
     readTime: "12 min read",
     href: "/start/business-ideas"
@@ -46,7 +46,7 @@ const DEFAULT_LATEST_GUIDES = [
   }
 ];
 
-const FILTER_TABS = ["All", "Start", "Offer", "Marketing", "Sales", "Systems", "Tools"];
+const FILTER_TABS = ["All", "Start", "Offer", "Marketing", "Sales", "Systems"];
 
 export default async function LatestGuides() {
   const allPosts = getAllPosts();

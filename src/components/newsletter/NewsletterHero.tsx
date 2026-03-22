@@ -51,7 +51,7 @@ export default function NewsletterHero() {
         </p>
 
         {/* Email Form */}
-        <div style={{ maxWidth: "500px", margin: "0 auto 24px" }}>
+        <div style={{ maxWidth: "448px", margin: "0 auto 24px" }}>
           <EmailSignupForm 
             variant="default" 
             buttonText="Subscribe Free →" 

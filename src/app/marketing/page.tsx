@@ -43,7 +43,7 @@ export default async function MarketingPage() {
         {
           name: "Personal Branding",
           description: "Stand out as a solo founder",
-          href: "/marketing/repurposing-content",
+          href: "/marketing/personal-branding",
           articleCount: 7
         },
         {
@@ -59,38 +59,7 @@ export default async function MarketingPage() {
           articleCount: 6
         }
       ]}
-      featuredArticles={[
-        {
-          title: "SEO for Solopreneurs 2026: Win Without a Budget",
-          category: "SEO",
-          readTime: "14 min",
-          href: "/marketing/seo-2026"
-        },
-        {
-          title: "Content Marketing: Minimum Effort, Maximum Results",
-          category: "CONTENT",
-          readTime: "8 min",
-          href: "/marketing/content-marketing"
-        },
-        {
-          title: "Personal Branding for Solo Founders",
-          category: "BRANDING",
-          readTime: "10 min",
-          href: "/marketing/personal-branding"
-        },
-        {
-          title: "Email List Building: 0 to 1,000 Subscribers",
-          category: "EMAIL",
-          readTime: "11 min",
-          href: "/marketing/email-list-building"
-        },
-        {
-          title: "How to Build an Audience from Zero",
-          category: "AUDIENCE",
-          readTime: "12 min",
-          href: "/marketing/build-audience"
-        }
-      ]}
+      featuredArticles={[]}
       relatedCategories={[
         { name: "Sales", emoji: "🤝", href: "/sales" },
         { name: "Start", emoji: "💡", href: "/start" },

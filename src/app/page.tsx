@@ -14,12 +14,35 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <CategoryMap />
-      <FeaturedGuides />
-      <SolopreneurStories />
-      <FreeResources />
-      <LatestGuides />
+      {/* Section 1: Hero */}
+      <div className="bg-white py-16 md:py-20">
+        <HeroSection />
+      </div>
+
+      {/* Section 2: Category Grid / Browse by Topic */}
+      <div className="bg-gray-50 py-16 md:py-20">
+        <CategoryMap />
+      </div>
+
+      {/* Section 3: Featured Guides */}
+      <div className="bg-white py-16 md:py-20">
+        <FeaturedGuides />
+      </div>
+
+      {/* Section 4: Solopreneur Stories */}
+      <div className="bg-gray-50 py-16 md:py-20">
+        <SolopreneurStories />
+      </div>
+
+      {/* Section 5: Newsletter CTA (FreeResources) */}
+      <div className="bg-gray-900 py-16 md:py-20">
+        <FreeResources />
+      </div>
+
+      {/* Section 6: Latest Guides */}
+      <div className="bg-white py-16 md:py-20">
+        <LatestGuides />
+      </div>
     </>
   );
 }

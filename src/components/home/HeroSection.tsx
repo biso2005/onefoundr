@@ -46,34 +46,33 @@ export default function HeroSection() {
                   (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#00B894";
                 }}
               >
-                Start Here →
+                Start Here
               </Link>
-              <Link
-                href="/start"
+              <a
+                href="/newsletter"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   padding: "14px 32px",
                   backgroundColor: "transparent",
-                  color: "#2D3436",
+                  color: "#00B894",
                   fontWeight: "600",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  border: "2px solid #2D3436",
-                  transition: "all 0.2s"
+                  border: "2px solid #00B894",
+                  transition: "all 0.2s",
+                  cursor: "pointer"
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#2D3436";
-                  (e.currentTarget as HTMLAnchorElement).style.color = "white";
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#F0FDF4";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
-                  (e.currentTarget as HTMLAnchorElement).style.color = "#2D3436";
                 }}
               >
-                Browse All Guides
-              </Link>
+                Join Newsletter
+              </a>
             </div>
 
             <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>

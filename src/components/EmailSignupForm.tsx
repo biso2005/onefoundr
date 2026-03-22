@@ -61,7 +61,7 @@ export default function EmailSignupForm({
           status === 'error' ? 'border-red-400' : ''
         }`;
       case 'dark':
-        return `${baseStyles} bg-white border-none rounded-l-xl md:rounded-l-xl rounded-xl md:rounded-none text-gray-900`;
+        return `${baseStyles} bg-gray-800 border border-gray-600 text-white rounded-l-xl md:rounded-l-xl rounded-xl md:rounded-none`;
       case 'green':
         return `${baseStyles} bg-white border-none rounded-l-lg md:rounded-l-lg rounded-lg md:rounded-none text-gray-900`;
       default:
@@ -76,7 +76,7 @@ export default function EmailSignupForm({
       case 'default':
         return `${baseStyles} bg-accent text-white hover:bg-opacity-90 rounded-r-xl md:rounded-r-xl rounded-xl md:rounded-none`;
       case 'dark':
-        return `${baseStyles} bg-accent text-white hover:bg-opacity-90 rounded-r-xl md:rounded-r-xl rounded-xl md:rounded-none`;
+        return `${baseStyles} bg-emerald-500 text-white hover:bg-emerald-400 rounded-r-xl md:rounded-r-xl rounded-xl md:rounded-none`;
       case 'green':
         return `${baseStyles} bg-primary text-white hover:bg-opacity-90 rounded-r-lg md:rounded-r-lg rounded-lg md:rounded-none`;
       default:
@@ -123,7 +123,7 @@ export default function EmailSignupForm({
   // Form State
   return (
     <div className={className}>
-      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:gap-0">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col md:flex-row gap-3 md:gap-0">
         <label htmlFor={`email-${emailId}`} className="sr-only">
           Email address
         </label>

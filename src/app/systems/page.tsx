@@ -59,38 +59,7 @@ export default async function SystemsPage() {
           articleCount: 10
         }
       ]}
-      featuredArticles={[
-        {
-          title: "Building Your AI Operations Team: A Solopreneur's Playbook",
-          category: "AUTOMATION",
-          readTime: "13 min",
-          href: "/systems/ai-operations-team"
-        },
-        {
-          title: "How to Create SOPs for Your Solo Business",
-          category: "SOPS",
-          readTime: "8 min",
-          href: "/systems/sops"
-        },
-        {
-          title: "Workflow Automation for Solo Businesses",
-          category: "AUTOMATION",
-          readTime: "12 min",
-          href: "/systems/workflow-automation"
-        },
-        {
-          title: "Notion for Solopreneurs: Complete Setup",
-          category: "TOOLS",
-          readTime: "11 min",
-          href: "/systems/notion-setup"
-        },
-        {
-          title: "20 Templates Every Solopreneur Needs",
-          category: "TEMPLATES",
-          readTime: "9 min",
-          href: "/systems/templates-solopreneur"
-        }
-      ]}
+      featuredArticles={[]}
       relatedCategories={[
         { name: "Tools", emoji: "🛠️", href: "/tools" },
         { name: "Sales", emoji: "🤝", href: "/sales" },

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Post } from "@/lib/mdx";
 import EmailSignupForm from "./EmailSignupForm";
+import { CategoryIcon, categoryConfig } from "@/components/CategoryIcon";
 
 interface CategoryHubProps {
   eyebrow: string;
@@ -46,6 +47,9 @@ export default function CategoryHub({
   relatedCategories,
   dynamicArticles
 }: CategoryHubProps) {
+  // Get the category key from title (e.g., "Marketing" -> "marketing")
+  const categoryKey = title.toLowerCase() || "start";
+
   // Smart article display: merge dynamic + featured to always show content
   const getArticlesToDisplay = () => {
     if (!dynamicArticles || dynamicArticles.length === 0) {
@@ -92,9 +96,7 @@ export default function CategoryHub({
               </p>
 
               <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-                <span style={{ fontSize: "clamp(32px, 8vw, 48px)" }}>
-                  {emoji}
-                </span>
+                <CategoryIcon category={categoryKey} size="lg" />
                 <h1 style={{ fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", margin: 0 }}>
                   {title}
                 </h1>
@@ -129,7 +131,7 @@ export default function CategoryHub({
               <Link href={pillarGuide.href}>
                 <div
                   style={{
-                    backgroundColor: "#F7F7F7",
+                    background: `linear-gradient(135deg, ${categoryConfig[categoryKey]?.gradient?.replace('from-', '')?.replace('to-', '')?.replace(/ /g, ', ') || 'rgba(0, 184, 148, 0.1), rgba(5, 150, 105, 0.1)'})`,
                     borderRadius: "16px",
                     padding: "28px",
                     border: "1px solid #E2E8F0",
@@ -174,41 +176,48 @@ export default function CategoryHub({
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }} className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {subcategories.map((subcategory) => (
-              <div
+              <Link
                 key={subcategory.name}
-                style={{
-                  backgroundColor: "white",
-                  borderRadius: "12px",
-                  padding: "24px",
-                  border: "1px solid #E2E8F0",
-                  cursor: "default",
-                  transition: "all 0.2s"
-                }}
+                href={subcategory.href}
+                style={{ textDecoration: "none" }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
-                  <div>
-                    <p style={{ fontSize: "16px", fontWeight: "600", color: "#2D3436", margin: 0 }}>
-                      {subcategory.name}
-                    </p>
-                    <p style={{ fontSize: "14px", color: "#636E72", marginTop: "4px", margin: 0 }}>
-                      {subcategory.description}
-                    </p>
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "12px",
+                    padding: "24px",
+                    border: "1px solid #E2E8F0",
+                    cursor: "pointer",
+                    transition: "all 0.2s",
+                    height: "100%"
+                  }}
+                  className="hover:border-green-400 hover:shadow-md"
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
+                    <div>
+                      <p style={{ fontSize: "16px", fontWeight: "600", color: "#2D3436", margin: 0 }}>
+                        {subcategory.name}
+                      </p>
+                      <p style={{ fontSize: "14px", color: "#636E72", marginTop: "4px", margin: 0 }}>
+                        {subcategory.description}
+                      </p>
+                    </div>
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: subcategory.articleCount === 0 ? "#9CA3AF" : "#059669",
+                        backgroundColor: subcategory.articleCount === 0 ? "rgba(156, 163, 175, 0.1)" : "rgba(5, 150, 105, 0.1)",
+                        padding: "4px 12px",
+                        borderRadius: "20px",
+                        whiteSpace: "nowrap",
+                        marginLeft: "12px"
+                      }}
+                    >
+                      {subcategory.articleCount === 0 ? "Coming soon" : `${subcategory.articleCount} guides`}
+                    </span>
                   </div>
-                  <span
-                    style={{
-                      fontSize: "12px",
-                      color: subcategory.articleCount === 0 ? "#9CA3AF" : "#059669",
-                      backgroundColor: subcategory.articleCount === 0 ? "rgba(156, 163, 175, 0.1)" : "rgba(5, 150, 105, 0.1)",
-                      padding: "4px 12px",
-                      borderRadius: "20px",
-                      whiteSpace: "nowrap",
-                      marginLeft: "12px"
-                    }}
-                  >
-                    {subcategory.articleCount === 0 ? "Coming soon" : `${subcategory.articleCount} guides`}
-                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -221,21 +230,25 @@ export default function CategoryHub({
             Popular {title} Guides
           </h2>
 
-          <div>
+          <div className={articlesToDisplay.length < 3 ? "grid grid-cols-1 gap-6" : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}>
             {articlesToDisplay.map((article, index) => (
               <Link key={article.href} href={article.href}>
                 <div
                   style={{
                     display: "flex",
+                    flexDirection: "column",
                     justifyContent: "space-between",
-                    alignItems: "center",
-                    paddingTop: "16px",
-                    paddingBottom: "16px",
-                    borderBottom: index < articlesToDisplay.length - 1 ? "1px solid #E2E8F0" : "none",
+                    alignItems: "flex-start",
+                    padding: "20px",
+                    border: "1px solid #E2E8F0",
+                    borderRadius: "12px",
+                    marginBottom: "0",
+                    background: "#fff",
+                    boxShadow: "0 1px 2px rgba(44,62,80,0.03)",
                     cursor: "pointer",
                     transition: "background-color 0.2s"
                   }}
-                  className="hover:bg-gray-50 hover:rounded hover:px-4"
+                  className="hover:bg-gray-50 hover:shadow-md"
                 >
                   <div>
                     <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", margin: 0 }}>
@@ -245,8 +258,7 @@ export default function CategoryHub({
                       {article.title}
                     </p>
                   </div>
-
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginLeft: "12px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "12px" }}>
                     <p style={{ fontSize: "12px", color: "#636E72", margin: 0, whiteSpace: "nowrap" }}>
                       {article.readTime}
                     </p>

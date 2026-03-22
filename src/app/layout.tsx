@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -41,6 +42,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -62,6 +69,8 @@ export default function RootLayout({
         <main id="main-content" className="min-h-screen">{children}</main>
         {/* Footer component */}
         <Footer />
+        {/* Scroll to top button */}
+        <ScrollToTop />
       </body>
     </html>
   );
