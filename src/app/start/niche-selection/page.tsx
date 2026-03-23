@@ -175,26 +175,37 @@ export default function NicheSelectionPage() {
         </section>
 
         {/* SECTION 5 — THE 5 QUESTION STRESS TEST */}
-        <section className="mb-16 pb-12 border-b border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">The 5 Question Stress Test</h2>
-          <p className="text-gray-700 mb-8">
+        <section style={{ marginBottom: '64px', paddingBottom: '48px', borderBottom: '1px solid #e5e7eb' }}>
+          <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>The 5 Question Stress Test</h2>
+          <p style={{ color: '#374151', marginBottom: '32px' }}>
             Any niche idea you have must pass all 5 of these questions. If it fails any one of them, pick something else.
           </p>
-          <div className="space-y-3">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {nicheQuestions.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => setExpandedQuestion(expandedQuestion === idx ? null : idx)}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 transition-colors text-left"
+                style={{
+                  width: '100%',
+                  backgroundColor: '#f9fafb',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: '8px',
+                  padding: '16px',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  transition: 'background-color 0.2s'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <p className="font-semibold text-gray-900">{item.question}</p>
-                  <span className="text-gray-500 flex-shrink-0">
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '16px' }}>
+                  <p style={{ fontWeight: '600', color: '#111827', margin: 0 }}>{item.question}</p>
+                  <span style={{ color: '#6b7280', flexShrink: 0 }}>
                     {expandedQuestion === idx ? '−' : '+'}
                   </span>
                 </div>
                 {expandedQuestion === idx && (
-                  <p className="text-gray-600 mt-3 pt-3 border-t border-gray-200">
+                  <p style={{ color: '#4b5563', marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #e5e7eb', margin: 0 }}>
                     {item.explanation}
                   </p>
                 )}
@@ -204,35 +215,35 @@ export default function NicheSelectionPage() {
         </section>
 
         {/* SECTION 6 — REAL NICHE EXAMPLES */}
-        <section className="mb-16 pb-12 border-b border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">12 Real Niche Examples</h2>
-          <p className="text-gray-700 mb-8">
+        <section style={{ marginBottom: '64px', paddingBottom: '48px', borderBottom: '1px solid #e5e7eb' }}>
+          <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>12 Real Niche Examples</h2>
+          <p style={{ color: '#374151', marginBottom: '32px' }}>
             These are all real niches that solopreneurs are running profitably right now.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '24px' }}>
             {nicheExamples.map((example) => (
-              <div key={example.slug} className="bg-white border border-gray-200 rounded-lg p-6 hover:border-gray-300 transition-colors">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{example.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{example.description}</p>
+              <div key={example.slug} style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '24px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>{example.name}</h3>
+                <p style={{ color: '#4b5563', fontSize: '14px', marginBottom: '16px' }}>{example.description}</p>
                 
-                <div className="space-y-2 mb-4 text-sm">
-                  <div>
-                    <span className="text-gray-600">Skill: </span>
-                    <span className="font-semibold text-gray-900">{example.skill}</span>
+                <div style={{ marginBottom: '16px' }}>
+                  <div style={{ marginBottom: '8px', fontSize: '14px' }}>
+                    <span style={{ color: '#6b7280' }}>Skill: </span>
+                    <span style={{ fontWeight: '600', color: '#111827' }}>{example.skill}</span>
                   </div>
-                  <div>
-                    <span className="text-gray-600">Audience: </span>
-                    <span className="font-semibold text-gray-900">{example.audience}</span>
+                  <div style={{ marginBottom: '8px', fontSize: '14px' }}>
+                    <span style={{ color: '#6b7280' }}>Audience: </span>
+                    <span style={{ fontWeight: '600', color: '#111827' }}>{example.audience}</span>
                   </div>
-                  <div>
-                    <span className="text-gray-600">Pain: </span>
-                    <span className="font-semibold text-gray-900">{example.pain}</span>
+                  <div style={{ fontSize: '14px' }}>
+                    <span style={{ color: '#6b7280' }}>Pain: </span>
+                    <span style={{ fontWeight: '600', color: '#111827' }}>{example.pain}</span>
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                  <span className="text-sm font-semibold text-gray-700">{example.revenueRange}</span>
-                  <span className={`text-xs font-bold px-3 py-1 rounded-full ${getRatingColor(example.rating)}`}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '16px', borderTop: '1px solid #e5e7eb' }}>
+                  <span style={{ fontSize: '14px', fontWeight: '600', color: '#374151' }}>{example.revenueRange}</span>
+                  <span style={{ fontSize: '12px', fontWeight: 'bold', padding: '4px 12px', borderRadius: '9999px' }} className={getRatingColor(example.rating)}>
                     {example.rating}
                   </span>
                 </div>
@@ -242,9 +253,9 @@ export default function NicheSelectionPage() {
         </section>
 
         {/* SECTION 7 — COMMON MISTAKES */}
-        <section className="mb-16 pb-12 border-b border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Mistakes to Avoid</h2>
-          <div className="space-y-3 max-w-2xl">
+        <section style={{ marginBottom: '64px', paddingBottom: '48px', borderBottom: '1px solid #e5e7eb' }}>
+          <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: '#111827', marginBottom: '32px' }}>Mistakes to Avoid</h2>
+          <div style={{ maxWidth: '896px' }}>
             {[
               'Niching before you have any clients',
               'Picking a niche where nobody is already paying',
@@ -252,8 +263,8 @@ export default function NicheSelectionPage() {
               'Picking something you hate just because it\'s profitable',
               'Listening to advice from people who have never run a solo business',
             ].map((mistake, idx) => (
-              <div key={idx} className="flex items-start gap-3 text-lg text-gray-700">
-                <span className="text-red-500 font-bold flex-shrink-0">✕</span>
+              <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '18px', color: '#374151', marginBottom: '12px' }}>
+                <span style={{ color: '#ef4444', fontWeight: 'bold', flexShrink: 0, marginTop: '2px' }}>✕</span>
                 <span>{mistake}</span>
               </div>
             ))}
