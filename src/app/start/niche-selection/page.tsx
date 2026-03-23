@@ -47,28 +47,28 @@ export default function NicheSelectionPage() {
         </section>
 
         {/* SECTION 1 — THE MYTH */}
-        <section className="mb-16 pb-12 border-b border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Why most niche advice is terrible for you</h2>
-          <div className="max-w-3xl text-gray-700 space-y-4">
-            <p className="text-lg leading-relaxed">
+        <section style={{ marginBottom: '64px', paddingBottom: '48px', borderBottom: '1px solid #e5e7eb' }}>
+          <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: '#111827', marginBottom: '24px' }}>Why most niche advice is terrible for you</h2>
+          <div style={{ maxWidth: '768px', color: '#374151' }}>
+            <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '16px' }}>
               99% of niche selection advice was written for people with teams, investors and marketing budgets. It was not written for you.
             </p>
-            <p className="bg-gray-50 border-l-4 border-blue-500 pl-4 py-4 text-base">
+            <p style={{ backgroundColor: '#f9fafb', borderLeft: '4px solid #3b82f6', paddingLeft: '16px', paddingTop: '16px', paddingBottom: '16px', marginBottom: '16px', fontSize: '16px' }}>
               The standard advice: <strong>"Niche down as much as possible. Pick something super specific. Own it."</strong>
             </p>
-            <p className="text-lg leading-relaxed">This is terrible advice for solo founders.</p>
-            <p className="text-lg leading-relaxed">
+            <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '16px' }}>This is terrible advice for solo founders.</p>
+            <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '16px' }}>
               If you niche too early before you have any clients, you will spend 6 months building something nobody wants. You will niche yourself into a dead end with zero customers.
             </p>
-            <p className="text-lg font-semibold text-gray-900 mt-8">
+            <p style={{ fontSize: '18px', fontWeight: '600', color: '#111827', marginTop: '32px', marginBottom: '16px' }}>
               The correct approach for solo founders is the exact opposite:
             </p>
-            <ol className="space-y-3 mt-4 pl-6 list-decimal">
-              <li className="text-lg"><strong>Start broad.</strong> Take any paying client.</li>
-              <li className="text-lg"><strong>Notice patterns.</strong> Look for who pays well and who you enjoy working with.</li>
-              <li className="text-lg"><strong>Narrow deliberately.</strong> Only when you have real data.</li>
+            <ol style={{ marginTop: '16px', paddingLeft: '24px', color: '#374151' }}>
+              <li style={{ fontSize: '18px', marginBottom: '12px' }}><strong>Start broad.</strong> Take any paying client.</li>
+              <li style={{ fontSize: '18px', marginBottom: '12px' }}><strong>Notice patterns.</strong> Look for who pays well and who you enjoy working with.</li>
+              <li style={{ fontSize: '18px', marginBottom: '12px' }}><strong>Narrow deliberately.</strong> Only when you have real data.</li>
             </ol>
-            <p className="text-lg font-semibold text-gray-900 mt-8">
+            <p style={{ fontSize: '18px', fontWeight: '600', color: '#111827', marginTop: '32px' }}>
               This is the anti-niche method. It works 10x better.
             </p>
           </div>
