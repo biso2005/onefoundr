@@ -49,26 +49,26 @@ export default function NicheSelectionPage() {
         {/* SECTION 1 — THE MYTH */}
         <section className="mb-16 pb-12 border-b border-gray-200">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Why most niche advice is terrible for you</h2>
-          <div className="prose prose-lg max-w-3xl text-gray-700">
-            <p>
+          <div className="max-w-3xl text-gray-700 space-y-4">
+            <p className="text-lg leading-relaxed">
               99% of niche selection advice was written for people with teams, investors and marketing budgets. It was not written for you.
             </p>
-            <p className="bg-gray-50 border-l-4 border-blue-500 pl-4 py-2 my-4">
+            <p className="bg-gray-50 border-l-4 border-blue-500 pl-4 py-4 text-base">
               The standard advice: <strong>"Niche down as much as possible. Pick something super specific. Own it."</strong>
             </p>
-            <p>This is terrible advice for solo founders.</p>
-            <p>
+            <p className="text-lg leading-relaxed">This is terrible advice for solo founders.</p>
+            <p className="text-lg leading-relaxed">
               If you niche too early before you have any clients, you will spend 6 months building something nobody wants. You will niche yourself into a dead end with zero customers.
             </p>
-            <p className="text-lg font-semibold text-gray-900 mt-6">
+            <p className="text-lg font-semibold text-gray-900 mt-8">
               The correct approach for solo founders is the exact opposite:
             </p>
-            <ol className="space-y-2 mt-4">
-              <li><strong>1. Start broad.</strong> Take any paying client.</li>
-              <li><strong>2. Notice patterns.</strong> Look for who pays well and who you enjoy working with.</li>
-              <li><strong>3. Narrow deliberately.</strong> Only when you have real data.</li>
+            <ol className="space-y-3 mt-4 pl-6 list-decimal">
+              <li className="text-lg"><strong>Start broad.</strong> Take any paying client.</li>
+              <li className="text-lg"><strong>Notice patterns.</strong> Look for who pays well and who you enjoy working with.</li>
+              <li className="text-lg"><strong>Narrow deliberately.</strong> Only when you have real data.</li>
             </ol>
-            <p className="text-lg font-semibold text-gray-900 mt-6">
+            <p className="text-lg font-semibold text-gray-900 mt-8">
               This is the anti-niche method. It works 10x better.
             </p>
           </div>
