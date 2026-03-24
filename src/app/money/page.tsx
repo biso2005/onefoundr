@@ -65,6 +65,68 @@ export default function MoneyPage() {
         </div>
       </section>
 
+      {/* FEATURED GUIDE */}
+      <section style={{
+        padding: '64px 24px',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+        <Link href="/money/solo-ceiling" style={{ textDecoration: 'none' }}>
+          <article style={{
+            background: 'linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%)',
+            padding: '48px',
+            borderRadius: '12px',
+            border: '2px solid #9333ea',
+            cursor: 'pointer',
+            transition: 'all 0.2s ease',
+            marginBottom: '24px'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow = '0 12px 24px rgba(147, 51, 234, 0.15)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}>
+            <p style={{
+              fontSize: '12px',
+              fontWeight: '700',
+              color: '#7c3aed',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              marginBottom: '12px'
+            }}>
+              Featured Guide
+            </p>
+            <h2 style={{
+              fontSize: '32px',
+              fontWeight: '700',
+              color: '#1a1a1a',
+              marginBottom: '12px',
+              lineHeight: '1.3'
+            }}>
+              Scale Without Hiring
+            </h2>
+            <p style={{
+              fontSize: '16px',
+              color: '#555',
+              lineHeight: '1.6',
+              marginBottom: '16px'
+            }}>
+              Break through your £4k–£6k ceiling. Learn the three levers—productization, premium pricing, automation—to 2-3x revenue without hiring.
+            </p>
+            <span style={{
+              fontSize: '14px',
+              color: '#7c3aed',
+              fontWeight: '600'
+            }}>
+              Read full guide →
+            </span>
+          </article>
+        </Link>
+      </section>
+
       {/* FEATURED ARTICLES GRID */}
       <section style={{
         padding: '64px 24px',
