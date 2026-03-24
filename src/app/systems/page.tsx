@@ -16,49 +16,12 @@ export default async function SystemsPage() {
       description="Build SOPs, workflows, and automations that run your business smoothly. Operate like a real company — even as a team of one."
       color="text-green-500"
       pillarGuide={{
-        title: "The Solopreneur Operating System: Systemize Your Business",
-        description: "The complete framework for building systems that let your business run without you being involved in every task.",
-        readTime: "15 min read",
-        href: "/systems/sops"
+        title: "Coming Soon",
+        description: "More comprehensive guides on building systems, SOPs, automation, and workflows are coming soon.",
+        readTime: "Check back later",
+        href: "/systems"
       }}
-      subcategories={[
-        {
-          name: "SOPs",
-          description: "Document every process",
-          href: "/systems/sops",
-          articleCount: 8
-        },
-        {
-          name: "Client Onboarding",
-          description: "Professional onboarding systems",
-          href: "/systems/done-over-perfect",
-          articleCount: 6
-        },
-        {
-          name: "Workflows",
-          description: "Streamline your daily operations",
-          href: "/systems/automation-trap",
-          articleCount: 7
-        },
-        {
-          name: "Automation",
-          description: "Automate repetitive tasks",
-          href: "/systems/automation-trap",
-          articleCount: 9
-        },
-        {
-          name: "Project Management",
-          description: "Manage projects and clients solo",
-          href: "/systems/done-over-perfect",
-          articleCount: 6
-        },
-        {
-          name: "Templates",
-          description: "Ready-to-use business templates",
-          href: "/systems/sops",
-          articleCount: 10
-        }
-      ]}
+      subcategories={[]}
       featuredArticles={[]}
       relatedCategories={[
         { name: "Tools", emoji: "🛠️", href: "/tools" },

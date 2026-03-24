@@ -53,8 +53,8 @@ export default function FinalCTA() {
             Browse Tools
           </Link>
           {" "}•{" "}
-          <Link href="/stories" style={{ color: "#059669", textDecoration: "none" }} className="hover:underline">
-            Read Stories
+          <Link href="/start-here" style={{ color: "#059669", textDecoration: "none" }} className="hover:underline">
+            Read Guides
           </Link>
         </p>
       </div>
