@@ -178,7 +178,7 @@ export default function CategoryHub({
                         ? "text-gray-400 bg-gray-100"
                         : "text-accentDark bg-emerald-50"
                     }`}>
-                      {subcategory.articleCount === 0 ? "Coming soon" : `${subcategory.articleCount} guides`}
+                      {subcategory.articleCount === 0 ? "Coming soon" : subcategory.articleCount}
                     </span>
                   </div>
                 </div>
