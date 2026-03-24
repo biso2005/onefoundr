@@ -1,5 +1,7 @@
+'use client';
+
 import Link from "next/link";
-import { Post } from "@/lib/mdx";
+import type { Post } from "@/lib/mdx";
 import EmailSignupForm from "./EmailSignupForm";
 import { CategoryIcon, categoryConfig } from "@/components/CategoryIcon";
 
