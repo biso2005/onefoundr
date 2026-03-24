@@ -204,7 +204,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 color: "#636E72",
                 margin: 0
               }}>
-                {formattedDate}
+                Last updated: {formattedDate}
               </p>
               <span style={{ color: "#9CA3AF" }}>•</span>
               <span className="text-sm text-gray-500">⏱ {readingTime}</span>

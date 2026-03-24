@@ -173,13 +173,9 @@ export default function CategoryHub({
                         {subcategory.description}
                       </p>
                     </div>
-                    {subcategory.articleCount !== 1 && (
-                      <span className={`text-xs px-3 py-1 rounded-full whitespace-nowrap ml-3 ${
-                        subcategory.articleCount === 0
-                          ? "text-gray-400 bg-gray-100"
-                          : "text-accentDark bg-emerald-50"
-                      }`}>
-                        {subcategory.articleCount === 0 ? "Coming soon" : subcategory.articleCount}
+                    {subcategory.articleCount > 1 && (
+                      <span className="text-xs px-3 py-1 rounded-full whitespace-nowrap ml-3 text-accentDark bg-emerald-50">
+                        {subcategory.articleCount}
                       </span>
                     )}
                   </div>
