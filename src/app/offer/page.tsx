@@ -34,7 +34,8 @@ export default function OfferPage() {
     {
       title: "I'm starting from scratch",
       description: "I know what I want to do, but I haven't sold it yet. I need to create my first offer.",
-      pointsTo: "First Offer"
+      pointsTo: "First Offer",
+      href: "/offer/from-scratch"
     },
     {
       title: "I have an offer but something's off",
@@ -104,8 +105,8 @@ export default function OfferPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">Where Are You Right Now?</h2>
           <p className="text-textLight mb-8">Pick the one that sounds most like you:</p>
           <div className="space-y-4">
-            {diagnostics.map((diag, idx) => (
-              <div key={idx} className="bg-white border border-gray-100 rounded-xl p-6 hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer">
+            {diagnostics.map((diag, idx) => {
+              const content = (
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-primary mb-2">{diag.title}</h3>
@@ -113,9 +114,26 @@ export default function OfferPage() {
                   </div>
                   <ArrowRight className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                 </div>
-                <p className="text-xs font-semibold text-accent uppercase tracking-wider mt-4">→ {diag.pointsTo}</p>
-              </div>
-            ))}
+              );
+
+              if (diag.href) {
+                return (
+                  <Link key={idx} href={diag.href} className="no-underline">
+                    <div className="bg-white border border-gray-100 rounded-xl p-6 hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer">
+                      {content}
+                      <p className="text-xs font-semibold text-accent uppercase tracking-wider mt-4">→ {diag.pointsTo}</p>
+                    </div>
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={idx} className="bg-white border border-gray-100 rounded-xl p-6 hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer">
+                  {content}
+                  <p className="text-xs font-semibold text-accent uppercase tracking-wider mt-4">→ {diag.pointsTo}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
