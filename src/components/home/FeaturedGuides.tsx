@@ -4,33 +4,33 @@ import FeaturedGuidesClient from "./FeaturedGuidesClient";
 
 const DEFAULT_FEATURED = {
   featured: {
-    category: "TOOLS & AI",
-    title: "The Only 10 Tools You Actually Need as a Solopreneur",
-    description: "A curated list of essential tools to run your entire solo business — from website to invoicing to automation.",
-    readTime: "12 min read",
-    href: "/tools/tech-stack"
+    category: "OFFER",
+    title: "The Pricing Trap: Why Solopreneurs Undercharge (And How to Stop)",
+    description: "You're leaving money on the table. Here's why—and the framework to fix it without losing customers.",
+    readTime: "11 min read",
+    href: "/offer/pricing-strategy"
   },
   small: [
     {
       category: "MARKETING",
       emoji: "📣",
-      title: "Content Marketing for Solopreneurs: Minimum Effort, Maximum Results",
-      readTime: "8 min read",
-      href: "/marketing/content-marketing"
-    },
-    {
-      category: "OFFER",
-      emoji: "📦",
-      title: "Pricing Strategy for Solopreneurs: The Complete Playbook",
+      title: "The Content Repurposing Gold Mine: Turn 1 Article Into 15+ Assets",
       readTime: "10 min read",
-      href: "/offer/pricing-strategy"
+      href: "/marketing/repurposing-content"
     },
     {
       category: "SYSTEMS",
       emoji: "⚙️",
-      title: "The Solopreneur Operating System: Systemize Every Part of Your Business",
-      readTime: "15 min read",
-      href: "/systems"
+      title: "Building Your AI Operations Team: A Solopreneur's Playbook",
+      readTime: "12 min read",
+      href: "/systems/ai-operations-team"
+    },
+    {
+      category: "MINDSET",
+      emoji: "🧠",
+      title: "Energy, Not Time: The Real Bottleneck in Your Solopreneur Business",
+      readTime: "9 min read",
+      href: "/mindset/energy-management"
     }
   ]
 };

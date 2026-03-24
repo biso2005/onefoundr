@@ -4,45 +4,45 @@ import LatestGuidesClient from "./LatestGuidesClient";
 const DEFAULT_LATEST_GUIDES = [
   {
     category: "START",
-    title: "One-Person Business Ideas That Actually Work",
-    excerpt: "A curated list of proven business models for solopreneurs, categorized by skill set and revenue potential.",
-    readTime: "12 min read",
-    href: "/start/business-ideas"
-  },
-  {
-    category: "TOOLS",
-    title: "15 AI Tools That Replace a Team for Solopreneurs",
-    excerpt: "The best AI tools for content, marketing, operations, and customer service — tested and ranked.",
-    readTime: "10 min read",
-    href: "/tools/ai-tools"
-  },
-  {
-    category: "MARKETING",
-    title: "SEO for Solopreneurs: How to Rank Without a Team",
-    excerpt: "A practical SEO strategy designed for one-person businesses with limited time and budget.",
+    title: "The AI-Powered Solopreneur Launchpad: From Idea to First Dollar in 30 Days",
+    excerpt: "The 30-day rapid launch framework for solopreneurs. Validate, position, launch, and close your first customers—using AI to compress what normally takes 90 days.",
     readTime: "14 min read",
-    href: "/marketing/seo"
+    href: "/start/ai-launch-30days"
   },
   {
     category: "OFFER",
-    title: "Productized Services: How to Build One That Scales",
-    excerpt: "Turn your freelance skills into a scalable, productized service with predictable revenue.",
+    title: "The Pricing Trap: Why Solopreneurs Undercharge (And How to Stop)",
+    excerpt: "You're leaving money on the table. Here's why—and the framework to fix it without losing customers.",
     readTime: "11 min read",
-    href: "/offer/productized-services"
+    href: "/offer/pricing-strategy"
   },
   {
-    category: "SYSTEMS",
-    title: "How to Create SOPs for Your Solo Business",
-    excerpt: "Document every process so your business runs smoothly — even when you take a day off.",
-    readTime: "8 min read",
-    href: "/systems/sops"
+    category: "MARKETING",
+    title: "SEO for Solopreneurs: Zero-Click Optimization & E-E-A-T",
+    excerpt: "The SEO strategy built for one-person teams. Master zero-click searches, E-E-A-T signals, and niche authority—the type that actually converts.",
+    readTime: "13 min read",
+    href: "/marketing/seo-2026"
   },
   {
     category: "SALES",
-    title: "How to Get Your First 10 Clients as a Solopreneur",
-    excerpt: "Proven strategies to land your first paying clients without a sales team or big budget.",
-    readTime: "9 min read",
-    href: "/sales/getting-clients"
+    title: "The Solopreneur's Guide to AI-Powered Cold Outreach: Land Clients Without Warm Introductions",
+    excerpt: "Generic cold outreach often underperforms. AI-powered personalized cold outreach performs significantly better. Here's the exact system.",
+    readTime: "10 min read",
+    href: "/sales/ai-cold-outreach"
+  },
+  {
+    category: "SYSTEMS",
+    title: "Building Your AI Operations Team: A Solopreneur's Playbook",
+    excerpt: "You don't need to hire. You need to architect. Meet the 3-tier AI operations team that replaces 2-4 full-time employees for under $100/month.",
+    readTime: "12 min read",
+    href: "/systems/ai-operations-team"
+  },
+  {
+    category: "TOOLS",
+    title: "Building Your AI Agent: A Step-by-Step Guide for Solopreneurs",
+    excerpt: "Stop hiring support staff. Build an AI agent that handles customer inquiries 24/7, learns from interactions, and gets smarter every day.",
+    readTime: "11 min read",
+    href: "/tools/building-ai-agent"
   }
 ];
 

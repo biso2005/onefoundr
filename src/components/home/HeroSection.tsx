@@ -13,13 +13,12 @@ export default function HeroSection() {
               For Solo Founders & Solopreneurs
             </p>
 
-            <h1 style={{ fontSize: "clamp(32px, 8vw, 64px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", marginBottom: "24px" }}>
-              Build a Profitable Business.{" "}
-              <span style={{ color: "#00B894" }}>By Yourself.</span>
+            <h1 style={{ fontSize: "clamp(32px, 8vw, 64px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", marginBottom: "12px" }}>
+              Build Solo. Build Smart.
             </h1>
 
             <p style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.6", maxWidth: "540px", marginBottom: "32px" }}>
-              Actionable guides, proven systems, and the right tools to start, grow, and run a one-person business — without a team.
+              Everything you need to start, grow, and scale a profitable business—by yourself. Practical guides, proven systems, and the right tools to build on your terms.
             </p>
 
             <div style={{ display: "flex", gap: "16px", marginBottom: "32px", flexWrap: "wrap" }} className="md:flex-row flex-col sm:flex">
@@ -78,11 +77,11 @@ export default function HeroSection() {
             <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
                 <span style={{ marginRight: "8px" }}>✓</span>
-                Trusted by solo founders worldwide
+                12+ actionable guides
               </div>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
                 <span style={{ marginRight: "8px" }}>✓</span>
-                Actionable guides updated weekly
+                Built for solopreneurs, by solopreneurs
               </div>
               <div style={{ fontSize: "14px", color: "#636E72" }}>
                 <span style={{ marginRight: "8px" }}>✓</span>

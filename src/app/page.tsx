@@ -23,19 +23,19 @@ export default function Home() {
         <CategoryMap />
       </div>
 
+      {/* Section 3: Featured Guides */}
+      <div className="bg-white py-16 md:py-20">
+        <FeaturedGuides />
+      </div>
+
       {/* Section 4: Latest Guides */}
       <div className="bg-white py-16 md:py-20">
         <LatestGuides />
       </div>
 
-      {/* Section 5: Newsletter CTA (FreeResources) */}
+      {/* Section 5: Newsletter CTA */}
       <div className="bg-gray-900 py-16 md:py-20">
         <FreeResources />
-      </div>
-
-      {/* Section 6: Latest Guides */}
-      <div className="bg-white py-16 md:py-20">
-        <LatestGuides />
       </div>
     </>
   );
