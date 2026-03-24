@@ -6,18 +6,18 @@ import { TrendingUp, Coins, ArrowRight } from 'lucide-react';
 import { businessIdeas, ideaCategories, ideaDifficulties } from '@/data/businessIdeas';
 import type { IdeaCategory, Difficulty } from '@/data/businessIdeas';
 
-const categoryColors: Record<IdeaCategory, { bg: string; text: string; border: string }> = {
-  'Local Services': { bg: '#EFF6FF', text: '#1E40AF', border: '#93C5FD' },
-  'Digital Services': { bg: '#F3E8FF', text: '#6B21A8', border: '#E9D5FF' },
-  'Physical Products': { bg: '#FEF3C7', text: '#92400E', border: '#FCD34D' },
-  'Digital Products & Online': { bg: '#ECFDF5', text: '#065F46', border: '#A7F3D0' },
-  'Rental & Resale': { bg: '#FCE7F3', text: '#831843', border: '#FBCFE8' },
+const categoryClasses: Record<IdeaCategory, { badge: string; hoverBorder: string }> = {
+  'Local Services':              { badge: 'bg-blue-50 text-blue-800',      hoverBorder: 'hover:border-blue-300' },
+  'Digital Services':            { badge: 'bg-purple-50 text-purple-800',  hoverBorder: 'hover:border-purple-300' },
+  'Physical Products':           { badge: 'bg-amber-50 text-amber-800',    hoverBorder: 'hover:border-amber-300' },
+  'Digital Products & Online':   { badge: 'bg-emerald-50 text-emerald-800', hoverBorder: 'hover:border-emerald-300' },
+  'Rental & Resale':             { badge: 'bg-pink-50 text-pink-800',      hoverBorder: 'hover:border-pink-300' },
 };
 
-const difficultyColors: Record<Difficulty, { bg: string; text: string }> = {
-  'Beginner': { bg: '#F0FDF4', text: '#166534' },
-  'Intermediate': { bg: '#FFFBEB', text: '#92400E' },
-  'Advanced': { bg: '#FEF2F2', text: '#991B1B' },
+const difficultyClasses: Record<Difficulty, string> = {
+  'Beginner':     'bg-green-50 text-green-800',
+  'Intermediate': 'bg-amber-50 text-amber-800',
+  'Advanced':     'bg-red-50 text-red-800',
 };
 
 export default function BusinessIdeasPage() {
@@ -31,44 +31,34 @@ export default function BusinessIdeasPage() {
   });
 
   return (
-    <div style={{ backgroundColor: '#FFFFFF', width: '100%', minHeight: '100vh' }}>
+    <div className="bg-white w-full min-h-screen">
+
       {/* Hero Section */}
-      <section style={{ backgroundColor: '#FFFFFF', paddingTop: '64px', paddingBottom: '48px', borderBottom: '1px solid #E2E8F0' }} className="px-6">
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ marginBottom: '16px' }}>
-            <p style={{ fontSize: '12px', fontWeight: '600', color: '#00B894', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0 }}>
-              CATEGORY
-            </p>
-          </div>
-          <h1 style={{ fontSize: 'clamp(28px, 6vw, 48px)', fontWeight: '700', color: '#2D3436', marginBottom: '16px', lineHeight: '1.2' }}>
+      <section className="bg-white pt-16 pb-12 border-b border-border px-6">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-4">CATEGORY</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
             One-Person Business Ideas
           </h1>
-          <p style={{ fontSize: '16px', color: '#636E72', lineHeight: '1.6', maxWidth: '600px', margin: 0 }}>
+          <p className="text-base text-textLight leading-relaxed max-w-xl">
             41+ profitable ideas you can start alone. Low startup costs, proven demand, and revenue possible in 90 days.
           </p>
         </div>
       </section>
 
-      <div style={{ maxWidth: '1200px', margin: '0 auto', paddingTop: '48px', paddingBottom: '64px' }} className="px-6">
+      <div className="max-w-6xl mx-auto pt-12 pb-16 px-6">
+
         {/* Category Filters */}
-        <div style={{ marginBottom: '32px' }}>
-          <p style={{ fontSize: '12px', fontWeight: '600', color: '#2D3436', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Category
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-4">Category</p>
+          <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setSelectedCategory('All')}
-              style={{
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '14px',
-                fontWeight: '500',
-                border: 'none',
-                cursor: 'pointer',
-                backgroundColor: selectedCategory === 'All' ? '#00B894' : '#F7F7F7',
-                color: selectedCategory === 'All' ? 'white' : '#636E72',
-                transition: 'all 0.2s',
-              }}
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer transition-all ${
+                selectedCategory === 'All'
+                  ? 'bg-accent text-white'
+                  : 'bg-muted text-textLight hover:bg-gray-200'
+              }`}
             >
               All Categories
             </button>
@@ -76,17 +66,11 @@ export default function BusinessIdeasPage() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                style={{
-                  padding: '10px 20px',
-                  borderRadius: '8px',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  border: 'none',
-                  cursor: 'pointer',
-                  backgroundColor: selectedCategory === category ? '#00B894' : '#F7F7F7',
-                  color: selectedCategory === category ? 'white' : '#636E72',
-                  transition: 'all 0.2s',
-                }}
+                className={`px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer transition-all ${
+                  selectedCategory === category
+                    ? 'bg-accent text-white'
+                    : 'bg-muted text-textLight hover:bg-gray-200'
+                }`}
               >
                 {category}
               </button>
@@ -95,24 +79,16 @@ export default function BusinessIdeasPage() {
         </div>
 
         {/* Difficulty Filters */}
-        <div style={{ marginBottom: '32px' }}>
-          <p style={{ fontSize: '12px', fontWeight: '600', color: '#2D3436', marginBottom: '16px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            Difficulty Level
-          </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-4">Difficulty Level</p>
+          <div className="flex flex-wrap gap-3">
             <button
               onClick={() => setSelectedDifficulty('All Levels')}
-              style={{
-                padding: '10px 20px',
-                borderRadius: '8px',
-                fontSize: '14px',
-                fontWeight: '500',
-                border: 'none',
-                cursor: 'pointer',
-                backgroundColor: selectedDifficulty === 'All Levels' ? '#00B894' : '#F7F7F7',
-                color: selectedDifficulty === 'All Levels' ? 'white' : '#636E72',
-                transition: 'all 0.2s',
-              }}
+              className={`px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer transition-all ${
+                selectedDifficulty === 'All Levels'
+                  ? 'bg-accent text-white'
+                  : 'bg-muted text-textLight hover:bg-gray-200'
+              }`}
             >
               All Levels
             </button>
@@ -120,17 +96,11 @@ export default function BusinessIdeasPage() {
               <button
                 key={diff}
                 onClick={() => setSelectedDifficulty(diff)}
-                style={{
-                  padding: '10px 20px',
-                  borderRadius: '8px',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  border: 'none',
-                  cursor: 'pointer',
-                  backgroundColor: selectedDifficulty === diff ? '#00B894' : '#F7F7F7',
-                  color: selectedDifficulty === diff ? 'white' : '#636E72',
-                  transition: 'all 0.2s',
-                }}
+                className={`px-5 py-2.5 rounded-lg text-sm font-medium cursor-pointer transition-all ${
+                  selectedDifficulty === diff
+                    ? 'bg-accent text-white'
+                    : 'bg-muted text-textLight hover:bg-gray-200'
+                }`}
               >
                 {diff}
               </button>
@@ -139,120 +109,59 @@ export default function BusinessIdeasPage() {
         </div>
 
         {/* Results Count */}
-        <p style={{ fontSize: '14px', color: '#636E72', marginBottom: '32px' }}>
-          Showing <span style={{ fontWeight: '600', color: '#2D3436' }}>{filteredIdeas.length}</span> of{' '}
-          <span style={{ fontWeight: '600', color: '#2D3436' }}>{businessIdeas.length}</span> ideas
+        <p className="text-sm text-textLight mb-8">
+          Showing <span className="font-semibold text-primary">{filteredIdeas.length}</span> of{' '}
+          <span className="font-semibold text-primary">{businessIdeas.length}</span> ideas
         </p>
 
         {/* Ideas Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '24px', marginBottom: '48px' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredIdeas.map((idea) => {
-            const categoryColor = categoryColors[idea.category];
-
+            const cc = categoryClasses[idea.category];
             return (
               <div
                 key={idea.slug}
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  border: '1px solid #E2E8F0',
-                  borderRadius: '12px',
-                  padding: '24px',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: '100%',
-                }}
-                onMouseEnter={(e) => {
-                  const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = categoryColor.border;
-                  el.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
-                }}
-                onMouseLeave={(e) => {
-                  const el = e.currentTarget as HTMLDivElement;
-                  el.style.borderColor = '#E2E8F0';
-                  el.style.boxShadow = 'none';
-                }}
+                className={`bg-white border border-border rounded-xl p-6 flex flex-col h-full transition-all hover:shadow-md ${cc.hoverBorder}`}
               >
                 {/* Category Badge */}
-                <div style={{ marginBottom: '12px' }}>
-                  <span
-                    style={{
-                      display: 'inline-block',
-                      fontSize: '11px',
-                      fontWeight: '600',
-                      padding: '4px 12px',
-                      borderRadius: '6px',
-                      backgroundColor: categoryColor.bg,
-                      color: categoryColor.text,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.03em',
-                    }}
-                  >
+                <div className="mb-3">
+                  <span className={`inline-block text-[11px] font-semibold px-3 py-1 rounded-md uppercase tracking-wide ${cc.badge}`}>
                     {idea.category}
                   </span>
                 </div>
 
                 {/* Name */}
-                <h3 style={{ fontSize: '16px', fontWeight: '600', color: '#2D3436', margin: '0 0 8px 0' }}>
-                  {idea.name}
-                </h3>
+                <h3 className="text-base font-semibold text-primary mb-2">{idea.name}</h3>
 
                 {/* Description */}
-                <p style={{ fontSize: '14px', color: '#636E72', lineHeight: '1.5', margin: '0 0 16px 0', flex: 1 }}>
-                  {idea.description}
-                </p>
+                <p className="text-sm text-textLight leading-relaxed mb-4 flex-1">{idea.description}</p>
 
                 {/* Revenue & Cost Row */}
-                <div style={{ display: 'flex', gap: '16px', marginBottom: '16px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <TrendingUp size={14} style={{ color: '#00B894' }} />
-                    <span style={{ fontSize: '13px', color: '#636E72' }}>{idea.revenueRange}</span>
+                <div className="flex gap-4 mb-4">
+                  <div className="flex items-center gap-1.5">
+                    <TrendingUp size={14} className="text-accent" />
+                    <span className="text-[13px] text-textLight">{idea.revenueRange}</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Coins size={14} style={{ color: '#9CA3AF' }} />
-                    <span style={{ fontSize: '13px', color: '#636E72' }}>{idea.startupCost}</span>
+                  <div className="flex items-center gap-1.5">
+                    <Coins size={14} className="text-gray-400" />
+                    <span className="text-[13px] text-textLight">{idea.startupCost}</span>
                   </div>
                 </div>
 
                 {/* Difficulty + CTA Row */}
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '16px', borderTop: '1px solid #F0F0F0' }}>
-                  <span
-                    style={{
-                      fontSize: '12px',
-                      fontWeight: '600',
-                      padding: '4px 12px',
-                      borderRadius: '6px',
-                      backgroundColor: difficultyColors[idea.difficulty].bg,
-                      color: difficultyColors[idea.difficulty].text,
-                    }}
-                  >
+                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-md ${difficultyClasses[idea.difficulty]}`}>
                     {idea.difficulty}
                   </span>
                   {idea.hasArticle ? (
                     <Link
                       href={`/start/business-ideas/${idea.slug}`}
-                      style={{
-                        fontSize: '13px',
-                        fontWeight: '600',
-                        color: '#00B894',
-                        textDecoration: 'none',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '6px',
-                        transition: 'gap 0.2s',
-                      }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLAnchorElement).style.gap = '10px';
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLAnchorElement).style.gap = '6px';
-                      }}
+                      className="text-[13px] font-semibold text-accent flex items-center gap-1.5 hover:gap-2.5 transition-all"
                     >
-                      Read <ArrowRight size={14} style={{ transition: 'transform 0.2s' }} />
+                      Read <ArrowRight size={14} />
                     </Link>
                   ) : (
-                    <span style={{ fontSize: '12px', color: '#9CA3AF', fontStyle: 'italic' }}>Coming soon</span>
+                    <span className="text-xs text-gray-400 italic">Coming soon</span>
                   )}
                 </div>
               </div>
@@ -262,28 +171,14 @@ export default function BusinessIdeasPage() {
 
         {/* Empty State */}
         {filteredIdeas.length === 0 && (
-          <div style={{ textAlign: 'center', paddingTop: '64px', paddingBottom: '64px' }}>
-            <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>No ideas match your filters.</p>
+          <div className="text-center py-16">
+            <p className="text-base text-textLight mb-6">No ideas match your filters.</p>
             <button
               onClick={() => {
                 setSelectedCategory('All');
                 setSelectedDifficulty('All Levels');
               }}
-              style={{
-                fontSize: '14px',
-                fontWeight: '600',
-                color: '#00B894',
-                backgroundColor: 'transparent',
-                border: 'none',
-                cursor: 'pointer',
-                transition: 'opacity 0.2s',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.opacity = '0.8';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.opacity = '1';
-              }}
+              className="text-sm font-semibold text-accent bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity"
             >
               Clear all filters
             </button>
