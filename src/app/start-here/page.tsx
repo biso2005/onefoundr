@@ -63,7 +63,7 @@ const JOURNEY_STEPS = [
     icon: Cpu,
     article: {
       href: "/tools/ai-tools",
-      title: "15 AI Tools That Replace a Team for Solopreneurs in 2025"
+        title: "15 AI Tools That Replace a Team for Solopreneurs"
     }
   }
 ];
@@ -103,73 +103,21 @@ export default function StartHerePage() {
             OneFoundr is organized around the solo founder journey. Think of it as a roadmap.
           </p>
 
-          {/* Journey Steps - Desktop (hidden on mobile, visible on md+) */}
-          <div className="hidden md:flex flex-row items-center gap-2 justify-between mb-6">
+          {/* Journey Steps (responsive single render to avoid duplicated content in extracted views) */}
+          <div className="mb-8 grid grid-cols-1 md:grid-cols-6 gap-6 items-start">
             {JOURNEY_STEPS.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div key={step.number} className="flex flex-col items-center flex-1 relative">
-                  {/* Icon above number */}
-                  <Icon className="text-emerald-500 mb-1" size={24} />
-                  {/* Circle */}
+                <div key={step.number} className="flex flex-col items-center text-center md:text-left md:items-start">
+                  <Icon className="text-emerald-500 mb-2" size={24} />
                   <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center mb-2">
-                    <span className="text-sm font-bold text-accentDark">
-                      {step.number}
-                    </span>
+                    <span className="text-sm font-bold text-accentDark">{step.number}</span>
                   </div>
-                  {/* Label */}
-                  <p className="text-sm font-medium text-primary text-center">
-                    {step.label}
-                  </p>
-                  {/* Top pick link */}
-                  <a
-                    href={step.article.href}
-                    className="text-sm text-emerald-600 hover:text-emerald-700 underline mt-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <p className="text-sm font-medium text-primary mb-1">{step.label}</p>
+                  <a href={step.article.href} className="text-sm text-emerald-600 hover:text-emerald-700 underline" target="_blank" rel="noopener noreferrer">
                     📌 Start with: {step.article.title}
                   </a>
-                  {/* Connector Line */}
-                  {index < JOURNEY_STEPS.length - 1 && (
-                    <div className="absolute right-0 top-1/2 w-full h-0.5 border-t-2 border-dashed border-gray-200 z-0" style={{ left: '100%', width: '40px', marginTop: '-1px' }} />
-                  )}
                 </div>
-              );
-            })}
-          </div>
-
-          {/* Journey Steps - Mobile (visible on mobile, hidden on md+) */}
-          <div className="md:hidden mb-8 flex flex-col gap-6">
-            {JOURNEY_STEPS.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <>
-                  <div key={step.number} className="flex items-center gap-4">
-                    <div className="flex flex-col items-center">
-                      <Icon className="text-emerald-500 mb-1" size={24} />
-                      <div className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center mb-1">
-                        <span className="text-base font-bold text-accentDark">
-                          {step.number}
-                        </span>
-                      </div>
-                    </div>
-                    <div>
-                      <span className="text-base font-semibold text-primary block mb-1">{step.label}</span>
-                      <a
-                        href={step.article.href}
-                        className="text-sm text-emerald-600 hover:text-emerald-700 underline"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        📌 Start with: {step.article.title}
-                      </a>
-                    </div>
-                  </div>
-                  {index < JOURNEY_STEPS.length - 1 && (
-                    <ArrowDown className="text-gray-300 my-2 mx-auto" size={20} />
-                  )}
-                </>
               );
             })}
           </div>
