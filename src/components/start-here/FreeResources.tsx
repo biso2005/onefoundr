@@ -46,7 +46,7 @@ export default function FreeResources() {
 
         <div className="text-center">
           <Link
-            href="/resources"
+            href="/tools"
             className="inline-block text-sm text-accent font-medium no-underline hover:text-accentDark transition-colors"
           >
             Get All Templates Free →
