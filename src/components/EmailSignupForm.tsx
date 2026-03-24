@@ -53,7 +53,7 @@ export default function EmailSignupForm({
 
   // Styling based on variant
   const getInputStyles = () => {
-    const baseStyles = 'px-4 py-3 text-base placeholder-gray-400 transition-all duration-200 disabled:opacity-50';
+    const baseStyles = 'flex-1 min-w-0 px-4 py-3 text-base placeholder-gray-400 transition-all duration-200 disabled:opacity-50';
     
     switch (variant) {
       case 'default':
