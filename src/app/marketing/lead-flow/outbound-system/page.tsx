@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Outbound System | OneFoundr",
-  description: "Build a lead flow system based on controlled, targeted cold outreach and follow-up.",
+  title: "Outbound Lead Flow System | OneFoundr",
+  description: "A structured cold outreach system that puts you in control of your lead flow.",
 };
 
 export default function OutboundSystemPage() {
@@ -14,9 +14,10 @@ export default function OutboundSystemPage() {
       <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-3">
         MARKETING / LEAD FLOW
       </p>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Outbound System</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-2">The Outbound System</h1>
+      <p className="text-sm text-emerald-600 font-medium mb-6">For B2B & high-ticket services</p>
       <p className="text-gray-600 text-lg leading-relaxed mb-6">
-        Targeted cold outreach + CRM + structured follow-up. You control the flow by controlling who you contact.
+        A structured cold outreach system that puts you in control of your lead flow.
       </p>
       <p className="text-sm text-gray-400 italic">Detailed guide coming soon.</p>
     </div>

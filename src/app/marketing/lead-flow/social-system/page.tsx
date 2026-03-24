@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Social System | OneFoundr",
-  description: "Build a lead flow system based on content, community, and turning followers into customers.",
+  title: "Social Lead Flow System | OneFoundr",
+  description: "Turn social media followers into paying customers through content and conversations.",
 };
 
 export default function SocialSystemPage() {
@@ -14,9 +14,10 @@ export default function SocialSystemPage() {
       <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-3">
         MARKETING / LEAD FLOW
       </p>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Social System</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-2">The Social System</h1>
+      <p className="text-sm text-emerald-600 font-medium mb-6">For personal brands & creators</p>
       <p className="text-gray-600 text-lg leading-relaxed mb-6">
-        Daily content + DM conversations + community building. Turn followers into relationships, relationships into customers.
+        Turn social media followers into paying customers through content and conversations.
       </p>
       <p className="text-sm text-gray-400 italic">Detailed guide coming soon.</p>
     </div>

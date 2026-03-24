@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Content System | OneFoundr",
-  description: "Build a lead flow system based on creating content once and attracting leads forever.",
+  title: "Content Lead Flow System | OneFoundr",
+  description: "Build a lead engine with SEO, lead magnets, and email nurture that works while you sleep.",
 };
 
 export default function ContentSystemPage() {
@@ -14,9 +14,10 @@ export default function ContentSystemPage() {
       <p className="text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-3">
         MARKETING / LEAD FLOW
       </p>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Content System</h1>
+      <h1 className="text-4xl font-bold text-gray-900 mb-2">The Content System</h1>
+      <p className="text-sm text-emerald-600 font-medium mb-6">For digital businesses & thought leaders</p>
       <p className="text-gray-600 text-lg leading-relaxed mb-6">
-        SEO or YouTube + lead magnet + email nurture. Create content once, attract leads forever. Build authority while you sleep.
+        Build a lead engine with SEO, lead magnets, and email nurture that works while you sleep.
       </p>
       <p className="text-sm text-gray-400 italic">Detailed guide coming soon.</p>
     </div>
