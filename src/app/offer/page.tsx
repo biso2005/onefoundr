@@ -45,7 +45,8 @@ export default function OfferPage() {
     {
       title: "I want to scale without hiring",
       description: "My offer works, but I'm trading time for money. I need to productize or create tiers.",
-      pointsTo: "Productization"
+      pointsTo: "Productization",
+      href: "/money/solo-ceiling"
     }
   ];
 
