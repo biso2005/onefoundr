@@ -41,7 +41,7 @@ export default function BusinessIdeasPage() {
             One-Person Business Ideas
           </h1>
           <p className="text-base text-textLight leading-relaxed max-w-xl">
-            50+ profitable ideas you can start alone. Low startup costs, proven demand, and revenue possible in 90 days.
+            {businessIdeas.length}+ profitable ideas you can start alone. Low startup costs, proven demand, and revenue possible in 90 days.
           </p>
         </div>
       </section>
