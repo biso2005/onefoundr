@@ -87,7 +87,7 @@ export default function StartHerePage() {
           </p>
 
           <p style={{ fontSize: "14px", color: "#636E72", marginBottom: "48px" }}>
-            Reading time: 5 minutes | Last updated: December 2024
+            Reading time: 5 minutes | Last updated: March 2026
           </p>
         </div>
       </section>
