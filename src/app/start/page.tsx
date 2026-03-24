@@ -1,6 +1,7 @@
 import CategoryHub from "@/components/CategoryHub";
 import Link from "next/link";
 import { getPostsByCategory } from "@/lib/mdx";
+import { businessIdeas } from "@/data/businessIdeas";
 
 export const metadata = {
   title: "Start Solo — OneFoundr | How to Start a One-Person Business",
@@ -27,9 +28,9 @@ export default async function StartPage() {
         subcategories={[
           {
             name: "Business Ideas",
-            description: "Browse 41+ profitable ideas you can start alone",
+            description: `Browse ${businessIdeas.length}+ profitable ideas you can start alone`,
             href: "/start/business-ideas",
-            articleCount: 41
+            articleCount: businessIdeas.length
           },
           {
             name: "Idea Validation",
