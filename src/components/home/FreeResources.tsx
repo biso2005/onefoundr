@@ -4,34 +4,34 @@ import EmailSignupForm from "../EmailSignupForm";
 
 export default function FreeResources() {
   return (
-    <section style={{ backgroundColor: "#00B894", width: "100%", padding: "80px 24px" }}>
-      <div style={{ maxWidth: "1000px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "center" }}>
+    <section className="bg-accent w-full py-20 px-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT COLUMN */}
         <div>
-          <div style={{ display: "inline-block", backgroundColor: "rgba(255,255,255,0.3)", color: "white", fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", padding: "4px 12px", borderRadius: "20px", marginBottom: "20px" }}>
+          <div className="inline-block bg-white/30 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-5">
             Free Resource
           </div>
-          <h2 style={{ fontSize: "42px", fontWeight: 800, color: "#1a1a2e", marginBottom: "16px", lineHeight: "1.15" }}>
+          <h2 className="text-[42px] font-extrabold text-[#1a1a2e] mb-4 leading-tight">
             The Solopreneur Starter Kit
           </h2>
-          <p style={{ fontSize: "17px", color: "#1a3a2a", fontWeight: 500, marginBottom: "32px", lineHeight: "1.6" }}>
+          <p className="text-[17px] font-medium text-[#1a3a2a] mb-8 leading-relaxed">
             Everything you need to start and run your one-person business — templates, checklists, and guides in one free bundle.
           </p>
-          <div style={{ marginBottom: "16px" }}>
+          <div className="mb-4">
             <EmailSignupForm
               variant="green"
               buttonText="Get Free Access"
               placeholder="Enter your email"
             />
           </div>
-          <p style={{ fontSize: "13px", color: "#1a3a2a" }}>Free for solo founders • No spam, ever</p>
+          <p className="text-[13px] text-[#1a3a2a]">Free for solo founders • No spam, ever</p>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div style={{ backgroundColor: "white", borderRadius: "20px", padding: "36px", boxShadow: "0 20px 60px rgba(0,0,0,0.15)" }}>
-          <h3 style={{ fontSize: "18px", fontWeight: 700, color: "#2D3436", marginBottom: "24px" }}>What's Inside:</h3>
-          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px 0" }}>
+        <div className="bg-white rounded-2xl p-9 shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
+          <h3 className="text-lg font-bold text-primary mb-6">What's Inside:</h3>
+          <ul className="list-none p-0 mb-6">
             {[
               "Business Model Canvas Template",
               "Client Proposal Template",
@@ -40,17 +40,17 @@ export default function FreeResources() {
               "30-Day Content Calendar",
               "SOP Template Library"
             ].map((item, index) => (
-              <li key={index} style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
-                <span style={{ color: "#00B894", fontSize: "18px", flexShrink: 0 }}>✅</span>
-                <span style={{ fontSize: "15px", color: "#2D3436", fontWeight: 500 }}>{item}</span>
+              <li key={index} className="flex items-center gap-3 mb-4">
+                <span className="text-accent text-lg shrink-0">✅</span>
+                <span className="text-[15px] text-primary font-medium">{item}</span>
               </li>
             ))}
           </ul>
-          <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: "20px" }}>
-            <p style={{ fontSize: "14px", color: "#636E72", marginBottom: "4px" }}>
-              Total value: <span style={{ textDecoration: "line-through" }}>$149</span>
+          <div className="border-t border-border pt-5">
+            <p className="text-sm text-textLight mb-1">
+              Total value: <span className="line-through">$149</span>
             </p>
-            <p style={{ fontSize: "14px", fontWeight: 700, color: "#059669" }}>Yours free today</p>
+            <p className="text-sm font-bold text-accentDark">Yours free today</p>
           </div>
         </div>
 

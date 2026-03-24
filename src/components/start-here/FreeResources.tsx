@@ -11,42 +11,32 @@ const RESOURCES = [
 
 export default function FreeResources() {
   return (
-    <section style={{ backgroundColor: "#F7F7F7", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "8px", textAlign: "center" }}>
+    <section className="bg-muted w-full py-16 px-6">
+      <div className="max-w-[800px] mx-auto">
+        <h2 className="text-[clamp(24px,5vw,42px)] font-bold text-primary mb-2 text-center">
           Free Templates & Resources
         </h2>
-        <p style={{ fontSize: "16px", color: "#636E72", marginBottom: "32px", textAlign: "center" }}>
+        <p className="text-base text-textLight mb-8 text-center">
           Tools to help you take action faster
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "24px" }} className="md:grid-cols-2 grid-cols-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {RESOURCES.map((resource, index) => (
             <div
               key={index}
-              style={{
-                backgroundColor: "white",
-                borderRadius: "8px",
-                padding: "20px",
-                border: "1px solid #E2E8F0",
-                display: "flex",
-                gap: "16px",
-                alignItems: "center",
-                transition: "all 0.2s"
-              }}
-              className="hover:shadow-sm"
+              className="bg-white rounded-lg p-5 border border-border flex gap-4 items-center transition-all hover:shadow-sm"
             >
               {/* Emoji */}
-              <span style={{ fontSize: "24px", minWidth: "32px", textAlign: "center" }}>
+              <span className="text-2xl min-w-[32px] text-center">
                 {resource.emoji}
               </span>
 
               {/* Content */}
               <div>
-                <p style={{ fontSize: "14px", fontWeight: "600", color: "#2D3436", margin: 0, marginBottom: "4px" }}>
+                <p className="text-sm font-semibold text-primary mb-1">
                   {resource.name}
                 </p>
-                <p style={{ fontSize: "13px", color: "#636E72", margin: 0 }}>
+                <p className="text-[13px] text-textLight m-0">
                   {resource.description}
                 </p>
               </div>
@@ -54,16 +44,10 @@ export default function FreeResources() {
           ))}
         </div>
 
-        <div style={{ textAlign: "center" }}>
+        <div className="text-center">
           <Link
             href="/resources"
-            style={{
-              display: "inline-block",
-              fontSize: "14px",
-              color: "#00B894",
-              fontWeight: "500",
-              textDecoration: "none"
-            }}
+            className="inline-block text-sm text-accent font-medium no-underline hover:text-accentDark transition-colors"
           >
             Get All Templates Free →
           </Link>

@@ -4,19 +4,19 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section style={{ backgroundColor: "#F7F7F7", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        <div style={{ textAlign: "center", marginBottom: "32px" }}>
-          <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "8px" }}>
+    <section className="bg-muted w-full py-16 px-6">
+      <div className="max-w-[800px] mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-[clamp(24px,5vw,42px)] font-bold text-primary mb-2">
             Your Next Step
           </h2>
-          <p style={{ fontSize: "16px", color: "#636E72" }}>
+          <p className="text-base text-textLight">
             Don't overthink it. Pick one:
           </p>
         </div>
 
         {/* CTA Rows */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "32px" }}>
+        <div className="flex flex-col gap-3 mb-8">
           {[
             {
               emoji: "🌱",
@@ -42,31 +42,18 @@ export default function FinalCTA() {
             <Link
               key={index}
               href={cta.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-                backgroundColor: "white",
-                borderRadius: "8px",
-                padding: "16px 20px",
-                border: "1px solid #E2E8F0",
-                textDecoration: "none",
-                transition: "all 0.2s"
-              }}
-              className="hover:shadow-sm"
+              className="flex items-center gap-3 bg-white rounded-lg px-5 py-4 border border-border no-underline transition-all hover:shadow-sm"
             >
-              <span style={{ fontSize: "18px", minWidth: "24px" }}>{cta.emoji}</span>
-              <span style={{ fontSize: "14px", color: "#2D3436", fontWeight: "500", flex: 1 }}>
-                {cta.text}
-              </span>
-              <span style={{ color: "#059669" }}>→</span>
+              <span className="text-lg min-w-[24px]">{cta.emoji}</span>
+              <span className="text-sm text-primary font-medium flex-1">{cta.text}</span>
+              <span className="text-accentDark">→</span>
             </Link>
           ))}
         </div>
 
         {/* Final Message */}
-        <div style={{ textAlign: "center" }}>
-          <p style={{ fontSize: "18px", fontWeight: "700", color: "#2D3436" }}>
+        <div className="text-center">
+          <p className="text-lg font-bold text-primary">
             Welcome to OneFoundr. Let's build. 🚀
           </p>
         </div>

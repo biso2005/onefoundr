@@ -86,77 +86,57 @@ export default function CategoryHub({
   return (
     <>
       {/* SECTION 1: CATEGORY HERO */}
-      <section style={{ backgroundColor: "white", width: "100%", paddingTop: "80px", paddingBottom: "24px" }} className="md:py-20 py-12 px-6">
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ display: "flex", flexDirection: "row", gap: "48px", alignItems: "flex-start" }} className="md:flex-row flex-col">
+      <section className="bg-white w-full pt-20 pb-6 md:py-20 py-12 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col md:flex-row gap-12 items-start">
             {/* LEFT SIDE */}
-            <div style={{ flex: "0 0 60%" }}>
-              <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "12px" }}>
+            <div className="w-full md:w-[60%]">
+              <p className="text-xs uppercase tracking-widest text-accentDark font-semibold mb-3">
                 {eyebrow}
               </p>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
+              <div className="flex items-center gap-4 mb-5">
                 <CategoryIcon category={categoryKey} size="lg" />
-                <h1 style={{ fontSize: "clamp(28px, 6vw, 48px)", fontWeight: "700", color: "#2D3436", lineHeight: "1.2", margin: 0 }}>
+                <h1 className="text-[clamp(28px,6vw,48px)] font-bold text-primary leading-tight m-0">
                   {title}
                 </h1>
               </div>
 
-              <p style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.6", marginBottom: "32px", maxWidth: "500px" }}>
+              <p className="text-lg text-textLight leading-relaxed mb-8 max-w-[500px]">
                 {description}
               </p>
 
               <Link href={pillarGuide.href}>
-                <button
-                  style={{
-                    padding: "14px 28px",
-                    backgroundColor: "#00B894",
-                    color: "white",
-                    border: "none",
-                    borderRadius: "8px",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                    transition: "background-color 0.2s"
-                  }}
-                  className="hover:opacity-90"
-                >
+                <button className="px-7 py-3.5 bg-accent text-white border-0 rounded-lg text-base font-semibold cursor-pointer transition-opacity hover:opacity-90">
                   Read the Complete Guide →
                 </button>
               </Link>
             </div>
 
             {/* RIGHT SIDE - PILLAR GUIDE CARD */}
-            <div style={{ flex: "0 0 40%" }}>
+            <div className="w-full md:w-[40%]">
               <Link href={pillarGuide.href}>
                 <div
-                  style={{
-                    background: `linear-gradient(135deg, ${categoryConfig[categoryKey]?.gradient?.replace('from-', '')?.replace('to-', '')?.replace(/ /g, ', ') || 'rgba(0, 184, 148, 0.1), rgba(5, 150, 105, 0.1)'})`,
-                    borderRadius: "16px",
-                    padding: "28px",
-                    border: "1px solid #E2E8F0",
-                    cursor: "pointer",
-                    transition: "all 0.2s"
-                  }}
-                  className="hover:shadow-md hover:border-accent"
+                  style={{ background: `linear-gradient(135deg, ${categoryConfig[categoryKey]?.gradient?.replace('from-', '')?.replace('to-', '')?.replace(/ /g, ', ') || 'rgba(0, 184, 148, 0.1), rgba(5, 150, 105, 0.1)'})` }}
+                  className="rounded-2xl p-7 border border-border cursor-pointer transition-all hover:shadow-md hover:border-accent"
                 >
-                  <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", marginBottom: "16px", margin: 0 }}>
+                  <p className="text-xs uppercase tracking-widest text-accentDark font-semibold mb-4">
                     📖 Complete Guide
                   </p>
 
-                  <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#2D3436", marginBottom: "8px", lineHeight: "1.3" }}>
+                  <h3 className="text-lg font-bold text-primary mb-2 leading-snug">
                     {pillarGuide.title}
                   </h3>
 
-                  <p style={{ fontSize: "14px", color: "#636E72", lineHeight: "1.6", marginBottom: "16px" }}>
+                  <p className="text-sm text-textLight leading-relaxed mb-4">
                     {pillarGuide.description}
                   </p>
 
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <p style={{ fontSize: "12px", color: "#636E72", margin: 0 }}>
+                  <div className="flex justify-between items-center">
+                    <p className="text-xs text-textLight m-0">
                       {pillarGuide.readTime}
                     </p>
-                    <p style={{ fontSize: "14px", color: "#059669", fontWeight: "500", margin: 0 }}>
+                    <p className="text-sm text-accentDark font-medium m-0">
                       Start Reading →
                     </p>
                   </div>
@@ -168,51 +148,34 @@ export default function CategoryHub({
       </section>
 
       {/* SECTION 2: SUBCATEGORIES GRID */}
-      <section style={{ backgroundColor: "#F7F7F7", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "32px", textAlign: "center" }}>
+      <section className="bg-muted w-full py-16 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <h2 className="text-[clamp(24px,5vw,42px)] font-bold text-primary mb-8 text-center">
             Topics in {title}
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px" }} className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {subcategories.map((subcategory) => (
               <Link
                 key={subcategory.name}
                 href={subcategory.href}
-                style={{ textDecoration: "none" }}
+                className="no-underline"
               >
-                <div
-                  style={{
-                    backgroundColor: "white",
-                    borderRadius: "12px",
-                    padding: "24px",
-                    border: "1px solid #E2E8F0",
-                    cursor: "pointer",
-                    transition: "all 0.2s",
-                    height: "100%"
-                  }}
-                  className="hover:border-green-400 hover:shadow-md"
-                >
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
+                <div className="bg-white rounded-xl p-6 border border-border cursor-pointer transition-all h-full hover:border-green-400 hover:shadow-md">
+                  <div className="flex justify-between items-start mb-4">
                     <div>
-                      <p style={{ fontSize: "16px", fontWeight: "600", color: "#2D3436", margin: 0 }}>
+                      <p className="text-base font-semibold text-primary m-0">
                         {subcategory.name}
                       </p>
-                      <p style={{ fontSize: "14px", color: "#636E72", marginTop: "4px", margin: 0 }}>
+                      <p className="text-sm text-textLight mt-1 m-0">
                         {subcategory.description}
                       </p>
                     </div>
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: subcategory.articleCount === 0 ? "#9CA3AF" : "#059669",
-                        backgroundColor: subcategory.articleCount === 0 ? "rgba(156, 163, 175, 0.1)" : "rgba(5, 150, 105, 0.1)",
-                        padding: "4px 12px",
-                        borderRadius: "20px",
-                        whiteSpace: "nowrap",
-                        marginLeft: "12px"
-                      }}
-                    >
+                    <span className={`text-xs px-3 py-1 rounded-full whitespace-nowrap ml-3 ${
+                      subcategory.articleCount === 0
+                        ? "text-gray-400 bg-gray-100"
+                        : "text-accentDark bg-emerald-50"
+                    }`}>
                       {subcategory.articleCount === 0 ? "Coming soon" : `${subcategory.articleCount} guides`}
                     </span>
                   </div>
@@ -223,46 +186,30 @@ export default function CategoryHub({
         </div>
       </section>
 
-      {/* SECTION 3: FEATURED ARTICLES LIST */}
-      <section style={{ backgroundColor: "white", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "32px" }}>
+      {/* SECTION 3: FEATURED ARTICLES */}
+      <section className="bg-white w-full py-16 px-6">
+        <div className="max-w-[800px] mx-auto">
+          <h2 className="text-[clamp(24px,5vw,42px)] font-bold text-primary mb-8">
             Popular {title} Guides
           </h2>
 
           <div className={articlesToDisplay.length < 3 ? "grid grid-cols-1 gap-6" : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}>
-            {articlesToDisplay.map((article, index) => (
+            {articlesToDisplay.map((article) => (
               <Link key={article.href} href={article.href}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    padding: "20px",
-                    border: "1px solid #E2E8F0",
-                    borderRadius: "12px",
-                    marginBottom: "0",
-                    background: "#fff",
-                    boxShadow: "0 1px 2px rgba(44,62,80,0.03)",
-                    cursor: "pointer",
-                    transition: "background-color 0.2s"
-                  }}
-                  className="hover:bg-gray-50 hover:shadow-md"
-                >
+                <div className="flex flex-col justify-between items-start p-5 border border-border rounded-xl bg-white shadow-[0_1px_2px_rgba(44,62,80,0.03)] cursor-pointer transition-colors hover:bg-gray-50 hover:shadow-md">
                   <div>
-                    <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em", color: "#059669", fontWeight: "600", margin: 0 }}>
+                    <p className="text-xs uppercase tracking-widest text-accentDark font-semibold m-0">
                       {article.category}
                     </p>
-                    <p style={{ fontSize: "16px", fontWeight: "500", color: "#2D3436", marginTop: "2px", margin: 0 }}>
+                    <p className="text-base font-medium text-primary mt-0.5 m-0">
                       {article.title}
                     </p>
                   </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginTop: "12px" }}>
-                    <p style={{ fontSize: "12px", color: "#636E72", margin: 0, whiteSpace: "nowrap" }}>
+                  <div className="flex items-center gap-3 mt-3">
+                    <p className="text-xs text-textLight m-0 whitespace-nowrap">
                       {article.readTime}
                     </p>
-                    <span style={{ color: "#059669", fontSize: "16px" }}>→</span>
+                    <span className="text-accentDark text-base">→</span>
                   </div>
                 </div>
               </Link>
@@ -272,35 +219,18 @@ export default function CategoryHub({
       </section>
 
       {/* SECTION 4: RELATED CATEGORIES */}
-      <section style={{ backgroundColor: "#F7F7F7", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "clamp(20px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "24px", textAlign: "center" }}>
+      <section className="bg-muted w-full py-16 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <h2 className="text-[clamp(20px,5vw,42px)] font-bold text-primary mb-6 text-center">
             Explore Other Topics
           </h2>
 
-          <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "16px" }}>
+          <div className="flex justify-center flex-wrap gap-4">
             {relatedCategories.map((category) => (
               <Link key={category.href} href={category.href}>
-                <div
-                  style={{
-                    backgroundColor: "white",
-                    borderRadius: "8px",
-                    padding: "12px 20px",
-                    border: "1px solid #E2E8F0",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    cursor: "pointer",
-                    transition: "all 0.2s"
-                  }}
-                  className="hover:border-accent hover:shadow-sm"
-                >
-                  <span style={{ fontSize: "18px" }}>
-                    {category.emoji}
-                  </span>
-                  <p style={{ fontSize: "14px", fontWeight: "500", color: "#2D3436", margin: 0 }}>
-                    {category.name}
-                  </p>
+                <div className="bg-white rounded-lg px-5 py-3 border border-border flex items-center gap-2 cursor-pointer transition-all hover:border-accent hover:shadow-sm">
+                  <span className="text-lg">{category.emoji}</span>
+                  <p className="text-sm font-medium text-primary m-0">{category.name}</p>
                 </div>
               </Link>
             ))}
@@ -309,19 +239,19 @@ export default function CategoryHub({
       </section>
 
       {/* SECTION 5: NEWSLETTER CTA */}
-      <section style={{ backgroundColor: "#2D3436", width: "100%", paddingTop: "48px", paddingBottom: "48px" }} className="px-6">
-        <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontSize: "clamp(20px, 5vw, 42px)", fontWeight: "700", color: "white", marginBottom: "8px" }}>
+      <section className="bg-primary w-full py-12 px-6">
+        <div className="max-w-[800px] mx-auto text-center">
+          <h2 className="text-[clamp(20px,5vw,42px)] font-bold text-white mb-2">
             Get {title} Tips Weekly
           </h2>
-          <p style={{ fontSize: "14px", color: "#9CA3AF", marginBottom: "24px" }}>
+          <p className="text-sm text-gray-400 mb-6">
             Join solo founders building smarter businesses
           </p>
 
-          <div style={{ display: "flex", gap: "0", marginBottom: "8px" }} className="flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row gap-0 mb-2">
             <EmailSignupForm variant="dark" placeholder="Enter your email" />
           </div>
-          <p style={{ fontSize: "12px", color: "#6B7280", marginTop: "8px" }}>
+          <p className="text-xs text-gray-500 mt-2">
             No spam, just practical guides.
           </p>
         </div>

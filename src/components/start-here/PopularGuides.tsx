@@ -15,46 +15,41 @@ const POPULAR_GUIDES = [
 
 export default function PopularGuides() {
   return (
-    <section style={{ backgroundColor: "white", width: "100%", paddingTop: "64px", paddingBottom: "64px" }} className="px-6">
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        <h2 style={{ fontSize: "clamp(24px, 5vw, 42px)", fontWeight: "700", color: "#2D3436", marginBottom: "8px" }}>
+    <section className="bg-white w-full py-16 px-6">
+      <div className="max-w-[800px] mx-auto">
+        <h2 className="text-[clamp(24px,5vw,42px)] font-bold text-primary mb-2">
           Reader Favorites
         </h2>
-        <p style={{ fontSize: "16px", color: "#636E72", marginBottom: "32px" }}>
+        <p className="text-base text-textLight mb-8">
           Our most-read guides across all categories
         </p>
 
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div className="flex flex-col">
           {POPULAR_GUIDES.map((guide, index) => (
             <Link
               key={index}
               href={guide.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "16px",
-                padding: "16px 0",
-                borderBottom: index < POPULAR_GUIDES.length - 1 ? "1px solid #E2E8F0" : "none",
-                textDecoration: "none"
-              }}
+              className={`flex items-center gap-4 py-4 no-underline ${
+                index < POPULAR_GUIDES.length - 1 ? "border-b border-border" : ""
+              }`}
             >
               {/* Rank Number */}
-              <span style={{ fontSize: "24px", fontWeight: "700", color: "rgba(5, 150, 105, 0.2)", minWidth: "40px", textAlign: "center" }}>
+              <span className="text-2xl font-bold text-accentDark/20 min-w-[40px] text-center">
                 {guide.rank}
               </span>
 
               {/* Content */}
-              <div style={{ flex: 1 }}>
-                <p style={{ fontSize: "15px", fontWeight: "500", color: "#2D3436", margin: 0, marginBottom: "4px" }}>
+              <div className="flex-1">
+                <p className="text-[15px] font-medium text-primary m-0 mb-1">
                   {guide.title}
                 </p>
-                <p style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#059669", fontWeight: "600", margin: 0 }}>
+                <p className="text-xs uppercase tracking-wider text-accentDark font-semibold m-0">
                   {guide.category}
                 </p>
               </div>
 
               {/* Arrow */}
-              <span style={{ color: "#059669", fontSize: "16px", minWidth: "20px", textAlign: "right" }}>
+              <span className="text-accentDark text-base min-w-[20px] text-right">
                 →
               </span>
             </Link>
@@ -63,14 +58,7 @@ export default function PopularGuides() {
 
         <Link
           href="/start"
-          style={{
-            display: "inline-block",
-            fontSize: "14px",
-            color: "#059669",
-            fontWeight: "500",
-            textDecoration: "none",
-            marginTop: "16px"
-          }}
+          className="inline-block text-sm text-accentDark font-medium no-underline mt-4 hover:text-accent transition-colors"
         >
           View All Guides →
         </Link>

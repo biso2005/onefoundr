@@ -1,8 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "../../src";
 
-/* Minimal base styles + brand defaults */
+/* Custom color tokens for Tailwind v4 utility generation */
+@theme {
+  --color-primary: #2D3436;
+  --color-accent: #00B894;
+  --color-accentDark: #059669;
+  --color-background: #FFFFFF;
+  --color-muted: #F7F7F7;
+  --color-text: #2D3436;
+  --color-textLight: #636E72;
+  --color-border: #E2E8F0;
+}
+
+/* Minimal base styles */
 :root {
   --color-primary: #2D3436;
   --color-accent: #00B894;
@@ -27,16 +38,9 @@ body {
   color: var(--color-text);
 }
 
-/* Reset common element margins from starter */
+/* Reset common element margins */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-}
-
-.text-accent {
-  color: #00B894;
-}
-.bg-muted {
-  background-color: #F7F7F7;
 }
 
 /* Focus visible styles for keyboard navigation */
@@ -50,7 +54,6 @@ select:focus-visible {
   border-radius: 4px;
 }
 
-/* Remove default outline for mouse users */
 a:focus:not(:focus-visible),
 button:focus:not(:focus-visible),
 input:focus:not(:focus-visible),
@@ -71,4 +74,3 @@ select:focus:not(:focus-visible) {
   white-space: nowrap;
   border-width: 0;
 }
-
