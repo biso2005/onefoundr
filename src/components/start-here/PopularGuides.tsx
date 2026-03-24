@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { businessIdeas } from "@/data/businessIdeas";
 
 const POPULAR_GUIDES = [
   { rank: 1, title: "Best Tools for Solopreneurs", category: "TOOLS", href: "/tools" },
-  { rank: 2, title: "47 One-Person Business Ideas", category: "START", href: "/start/business-ideas" },
+  { rank: 2, title: `${businessIdeas.length} One-Person Business Ideas`, category: "START", href: "/start/business-ideas" },
   { rank: 3, title: "AI Tools That Replace a Team", category: "TOOLS", href: "/tools/ai-tools" },
   { rank: 4, title: "How to Get Your First 10 Clients", category: "SALES", href: "/sales/getting-clients" },
   { rank: 5, title: "Pricing Strategy for Solopreneurs", category: "OFFER", href: "/offer/pricing-strategy" },
