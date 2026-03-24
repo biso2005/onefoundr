@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Partnerships & Referrals | OneFoundr",
-  description: "Partner with businesses that serve the same customers but aren't competitors.",
+  description: "How to get other businesses to send you customers.",
 };
 
 export default function PartnershipsPage() {

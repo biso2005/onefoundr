@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Cold Outreach | OneFoundr",
-  description: "Reach people you don't know yet with personalized, value-first messages.",
+  description: "How to reach people who don't know you yet—without being spammy.",
 };
 
 export default function ColdOutreachPage() {

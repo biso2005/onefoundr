@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Warm Outreach | OneFoundr",
-  description: "Tap your existing network to get your first customers.",
+  description: "How to tap your existing network to land your first paying customers.",
 };
 
 export default function WarmOutreachPage() {

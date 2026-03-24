@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Free Work & Samples | OneFoundr",
-  description: "Give away your work to get testimonials, case studies, and referrals.",
+  description: "How to give away work strategically to land paying customers fast.",
 };
 
 export default function FreeWorkPage() {

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Local Networking | OneFoundr",
-  description: "Face-to-face events, local business groups, and neighborhood apps.",
+  description: "How to land local customers through face-to-face connections.",
 };
 
 export default function LocalNetworkingPage() {

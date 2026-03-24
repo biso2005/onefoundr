@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Communities & Forums | OneFoundr",
-  description: "Show up in online communities to build trust before you pitch.",
+  description: "How to find customers in online communities without being salesy.",
 };
 
 export default function CommunitiesPage() {
