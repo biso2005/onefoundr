@@ -248,9 +248,7 @@ export default function CategoryHub({
             Join solo founders building smarter businesses
           </p>
 
-          <div className="flex flex-col md:flex-row gap-0 mb-2">
-            <EmailSignupForm variant="dark" placeholder="Enter your email" />
-          </div>
+          <EmailSignupForm variant="dark" placeholder="Enter your email" className="mb-2" />
           <p className="text-xs text-gray-500 mt-2">
             No spam, just practical guides.
           </p>
