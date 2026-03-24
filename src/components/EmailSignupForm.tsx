@@ -122,8 +122,8 @@ export default function EmailSignupForm({
 
   // Form State
   return (
-    <div className={className}>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col md:flex-row gap-3 md:gap-0">
+    <div className={`${className} flex justify-center`}>
+      <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col md:flex-row gap-3 md:gap-0">
         <label htmlFor={`email-${emailId}`} className="sr-only">
           Email address
         </label>
