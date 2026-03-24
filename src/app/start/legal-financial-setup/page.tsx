@@ -1,4 +1,3 @@
-import CategoryHub from '@/components/CategoryHub';
 import EmailSignupForm from '@/components/EmailSignupForm';
 import Link from 'next/link';
 
@@ -137,12 +136,16 @@ export const metadata = {
 export default function LegalFinancialSetupPage() {
   return (
     <div className="bg-white w-full">
-      <CategoryHub
-        title="Legal & Financial Setup"
-        slug="legal-setup"
-        backgroundColor="from-blue-50 to-indigo-100"
-        description="A minimum viable, 48-hour guide to getting compliant without the red tape."
-      />
+      {/* HERO SECTION */}
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 w-full py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">START SOLO</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Legal & Financial Setup</h1>
+          <p className="text-lg text-gray-700 max-w-2xl">
+            A minimum viable, 48-hour guide to getting compliant without the red tape. What you actually need to start.
+          </p>
+        </div>
+      </section>
 
       <ContentSection
         title="Stop Over-Complicating Your Setup"
