@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { EmailSignupForm } from "@/components/EmailSignupForm";
-import { businessModels } from "@/data/businessModels";
+import EmailSignupForm from "@/components/EmailSignupForm";
 
 export const metadata = {
   title: "Legal & Financial Setup for Solo Founders — OneFoundr",
@@ -251,7 +250,7 @@ export default function LegalSetupPage() {
           <p className="text-gray-400 mb-8">
             One actionable idea every Tuesday to help you build a better one-person business.
           </p>
-          <EmailSignupForm dark />
+          <EmailSignupForm variant="dark" />
         </div>
       </section>
     </main>
