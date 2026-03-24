@@ -10,16 +10,16 @@ export default async function SystemsPage() {
   const posts = getPostsByCategory("systems");
   return (
     <CategoryHub
-      eyebrow="CATEGORY"
+      eyebrow="STAGE 3"
       emoji="⚙️"
       title="Systems & Ops"
       description="Build SOPs, workflows, and automations that run your business smoothly. Operate like a real company — even as a team of one."
       color="text-green-500"
       pillarGuide={{
-        title: "Coming Soon",
-        description: "More comprehensive guides on building systems, SOPs, automation, and workflows are coming soon.",
-        readTime: "Check back later",
-        href: "/systems"
+        title: "Building Your AI Operations Team: A Solopreneur's Playbook",
+        description: "You don't need to hire. You need to architect. Meet the 3-tier AI operations team that replaces 2-4 full-time employees for under $100/month.",
+        readTime: "15 min read",
+        href: "/systems/ai-operations-team"
       }}
       subcategories={[]}
       featuredArticles={[]}

@@ -1,11 +1,34 @@
+"use client";
+
 import { CheckCircle } from "lucide-react";
 import { CategoryIcon } from "@/components/CategoryIcon";
-
-export const metadata = {
-  title: "The Solo Founder Weekly | OneFoundr",
-};
+import { useState } from "react";
 
 export default function NewsletterPage() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    
+    // Validate email
+    if (!email || !email.includes("@")) {
+      alert("Please enter a valid email address");
+      setLoading(false);
+      return;
+    }
+
+    // Mock success (backend would be integrated here)
+    await new Promise(resolve => setTimeout(resolve, 800));
+    setSubmitted(true);
+    setEmail("");
+    setLoading(false);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => setSubmitted(false), 3000);
+  };
 
   return (
     <main className="max-w-2xl mx-auto py-16 px-4">
@@ -37,21 +60,28 @@ export default function NewsletterPage() {
       </div>
 
       {/* Form Section */}
-      <form className="max-w-md mx-auto">
+      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
         <input
           type="email"
           placeholder="you@example.com"
-          className="w-full py-3 px-4 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={loading || submitted}
+          className="w-full py-3 px-4 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm disabled:bg-gray-50"
           required
         />
         <button
           type="submit"
-          className="w-full mt-3 bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+          disabled={loading || submitted}
+          className="w-full mt-3 bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
-          Subscribe — It's Free
+          {submitted ? "✓ Check your email!" : loading ? "Subscribing..." : "Subscribe — It's Free"}
         </button>
         <p className="text-xs text-gray-400 text-center mt-4">
           Join a growing community of solo builders. No spam, ever. Unsubscribe with one click.
+        </p>
+        <p className="text-xs text-gray-500 text-center mt-2">
+          We respect your privacy. See our <a href="/privacy" className="text-emerald-600 hover:underline">privacy policy</a> for GDPR compliance details.
         </p>
       </form>
 
