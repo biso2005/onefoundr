@@ -6,28 +6,36 @@ import { useState } from "react";
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    
-    // Validate email
-    if (!email || !email.includes("@")) {
-      alert("Please enter a valid email address");
-      setLoading(false);
+    setErrorMessage("");
+
+    // Validation
+    if (!email.trim()) {
+      setStatus('error');
+      setErrorMessage("Please enter your email address");
       return;
     }
 
-    // Mock success (backend would be integrated here)
+    if (!validateEmail(email)) {
+      setStatus('error');
+      setErrorMessage("Please enter a valid email address");
+      return;
+    }
+
+    // Simulate subscription
+    setStatus('loading');
     await new Promise(resolve => setTimeout(resolve, 800));
-    setSubmitted(true);
+    setStatus('success');
     setEmail("");
-    setLoading(false);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
@@ -60,30 +68,50 @@ export default function NewsletterPage() {
       </div>
 
       {/* Form Section */}
-      <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="you@example.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          disabled={loading || submitted}
-          className="w-full py-3 px-4 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm disabled:bg-gray-50"
-          required
-        />
-        <button
-          type="submit"
-          disabled={loading || submitted}
-          className="w-full mt-3 bg-accent text-white py-3 rounded-lg font-semibold hover:bg-accentDark transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
-        >
-          {submitted ? "✓ Check your email!" : loading ? "Subscribing..." : "Subscribe — It's Free"}
-        </button>
-        <p className="text-xs text-gray-400 text-center mt-4">
-          Join a growing community of solo builders. No spam, ever. Unsubscribe with one click.
-        </p>
-        <p className="text-xs text-gray-500 text-center mt-2">
-          We respect your privacy. See our <a href="/privacy" className="text-emerald-600 hover:underline">privacy policy</a> for GDPR compliance details.
-        </p>
-      </form>
+      {status === 'success' ? (
+        <div className="max-w-md mx-auto text-center">
+          <div className="bg-emerald-50 rounded-xl p-8 border border-emerald-200">
+            <p className="text-2xl mb-2">✅</p>
+            <p className="text-lg font-semibold text-emerald-900 mb-2">You're subscribed!</p>
+            <p className="text-sm text-emerald-700">Check your inbox for your first issue next Tuesday.</p>
+          </div>
+        </div>
+      ) : (
+        <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={status === 'loading'}
+            className={`w-full py-3 px-4 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-offset-0 text-sm transition-all disabled:opacity-50 ${
+              status === 'error' ? 'border-red-400 focus:ring-red-500' : 'border-gray-200 focus:ring-emerald-500'
+            }`}
+            aria-describedby={status === 'error' ? "email-error" : undefined}
+          />
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="w-full mt-3 bg-accent text-white py-3 rounded-lg font-semibold hover:bg-accentDark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {status === 'loading' ? '...' : 'Subscribe — It\'s Free'}
+          </button>
+          
+          {/* Error Message */}
+          {status === 'error' && (
+            <p id="email-error" className="text-red-500 text-sm mt-2 font-medium">
+              {errorMessage}
+            </p>
+          )}
+          
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Join a growing community of solo builders. No spam, ever. Unsubscribe with one click.
+          </p>
+          <p className="text-xs text-gray-500 text-center mt-2">
+            We respect your privacy. See our <a href="/privacy" className="text-emerald-600 hover:underline">privacy policy</a> for GDPR compliance details.
+          </p>
+        </form>
+      )}
 
       {/* What to Expect Section */}
       <section className="mt-16">

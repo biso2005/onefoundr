@@ -2,15 +2,51 @@
 import { useState } from "react";
 
 export default function NewsletterCTA() {
-  const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState("");
-  const [showToast, setShowToast] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 2500);
+    setErrorMessage("");
+
+    // Validation
+    if (!email.trim()) {
+      setStatus('error');
+      setErrorMessage('Please enter your email');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setStatus('error');
+      setErrorMessage('Please enter a valid email');
+      return;
+    }
+
+    // Simulate subscription
+    setStatus('loading');
+    setTimeout(() => {
+      setStatus('success');
+      setEmail("");
+      // In future: integrate with ConvertKit/Beehiiv
+    }, 600);
+  }
+
+  // Success State
+  if (status === 'success') {
+    return (
+      <section className="bg-gradient-to-br from-gray-50 to-emerald-50 rounded-2xl p-8 md:p-12 my-12 text-center w-full">
+        <div className="max-w-md mx-auto">
+          <p className="text-emerald-700 font-semibold text-lg">✅ You're subscribed!</p>
+          <p className="text-emerald-600 text-sm mt-2">Check your inbox for your first issue next Tuesday.</p>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -24,26 +60,31 @@ export default function NewsletterCTA() {
           <input
             type="email"
             placeholder="you@example.com"
-            className="flex-1 px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm"
+            className={`flex-1 px-4 py-3 rounded-l-lg md:rounded-l-lg rounded-lg md:rounded-none border-2 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-sm transition-all ${
+              status === 'error' ? 'border-red-400' : 'border-gray-200'
+            } disabled:opacity-50`}
             value={email}
             onChange={e => setEmail(e.target.value)}
-            disabled={submitted}
-            required
+            disabled={status === 'loading'}
+            aria-describedby={status === 'error' ? "newsletter-error" : undefined}
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-medium text-sm hover:bg-emerald-700 transition-colors mt-3 md:mt-0 md:ml-3 whitespace-nowrap disabled:opacity-60"
-            disabled={submitted}
+            className="px-6 py-3 bg-accent text-white rounded-r-lg md:rounded-r-lg rounded-lg md:rounded-none font-medium text-sm hover:bg-accentDark transition-colors mt-3 md:mt-0 md:ml-0 whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+            disabled={status === 'loading'}
           >
-            {submitted ? "Coming Soon!" : "Subscribe"}
+            {status === 'loading' ? '...' : 'Subscribe'}
           </button>
         </form>
-        <p className="text-xs text-gray-400 mt-4">No spam. Unsubscribe anytime.</p>
-        {showToast && (
-          <div className="fixed left-1/2 -translate-x-1/2 bottom-8 bg-emerald-600 text-white px-4 py-2 rounded shadow-lg text-sm z-50">
-            Newsletter launching soon — stay tuned!
-          </div>
+        
+        {/* Error Message */}
+        {status === 'error' && (
+          <p id="newsletter-error" className="text-red-500 text-xs mt-2 font-medium">
+            {errorMessage}
+          </p>
         )}
+        
+        <p className="text-xs text-gray-400 mt-4">No spam. Unsubscribe anytime.</p>
       </div>
     </section>
   );
