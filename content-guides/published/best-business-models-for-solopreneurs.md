@@ -1,12 +1,14 @@
 ---
 title: "Best Business Models for Solopreneurs — Which One Actually Fits Your Skills & Lifestyle"
-description: "Compare 8 solopreneur business models side-by-side. Find your fit with a real decision framework. Skip the hype, pick what actually works."
+meta_title: "Best Business Models for Solopreneurs — 8 Models Compared"
+meta_description: "Compare 8 solopreneur business models side-by-side. Find your fit with a real decision framework. Skip the hype, pick what actually works."
+slug: "/best-business-models-for-solopreneurs"
+author: "[Your Name]"
 date: "2026-03-25"
+last_updated: "2026-03-25"
 category: "start"
-slug: "business-models"
-readTime: "15 min read"
-author: "OneFoundr"
-tags: ["best business models for solopreneurs", "solopreneur business ideas comparison", "one person business models that scale", "small business models", "solopreneur revenue models"]
+tags: ["best business models for solopreneurs", "solopreneur business ideas comparison", "one person business models that scale"]
+reading_time: "15 minutes"
 ---
 
 # Best business models for solopreneurs — Which one actually fits your skills and lifestyle
@@ -304,3 +306,24 @@ A productized service that makes $20K/month and lets you work 30 hours/week is a
 Choose based on your skills, your runway, your lifestyle, and your honest assessment of risk. Test the model with just one project or customer before committing fully.
 
 And remember: the best model is the one you'll actually stick with. So pick something you don't hate doing.
+
+<!-- INTERNAL LINK: /blog/solopreneur-business-ideas — Specific 1-person business ideas to explore -->
+<!-- INTERNAL LINK: /blog/productized-services — Deep dive on productizing your service -->
+<!-- INTERNAL LINK: /start/business-canvas — Free business model canvas template -->
+<!-- INTERNAL LINK: /blog/solopreneur-tools-and-systems — Tools that let you scale solo -->
+
+<!-- EXTERNAL LINK: Indie Hackers communities -> https://www.indiehackers.com -->
+<!-- EXTERNAL LINK: Tim Ferriss lifestyle design -> https://tim.blog/lifestyle -->
+
+<!-- IMAGE: Hero section showing the 8 models in icons | ALT: 8 solopreneur business models -->
+<!-- IMAGE: Comparison matrix table (alt text embedded in table) -->
+
+<!-- IMAGE: 8 business model icons/comparison visual -->
+<!-- IMAGE: Sarah's case study (before/after comparison) -->
+
+<!-- POST-PUBLISH CHECKLIST:
+- Confirm primary keyword "best business models for solopreneurs" in H1, intro, conclusion
+- Confirm secondary keywords used naturally
+- Replace [Your Name] with actual author
+- Add internal links with actual URLs
+-->

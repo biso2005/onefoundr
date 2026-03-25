@@ -22,7 +22,7 @@ export const businessModels: BusinessModel[] = [
     scalability: 'Low',
     bestFor: 'Skilled professionals who need income fast',
     icon: 'Pencil',
-    hasArticle: false,
+    hasArticle: true,
   },
   {
     slug: 'consulting',
@@ -33,7 +33,7 @@ export const businessModels: BusinessModel[] = [
     scalability: 'Low–Medium',
     bestFor: 'Experts with deep industry experience',
     icon: 'Briefcase',
-    hasArticle: false,
+    hasArticle: true,
   },
   {
     slug: 'productized-services',
@@ -44,7 +44,7 @@ export const businessModels: BusinessModel[] = [
     scalability: 'Medium',
     bestFor: 'People who want repeatable, predictable work',
     icon: 'Package',
-    hasArticle: false,
+    hasArticle: true,
   },
   {
     slug: 'digital-products',
@@ -55,7 +55,7 @@ export const businessModels: BusinessModel[] = [
     scalability: 'High',
     bestFor: 'Teachers, writers, and designers',
     icon: 'Download',
-    hasArticle: false,
+    hasArticle: true,
   },
   {
     slug: 'saas-software',

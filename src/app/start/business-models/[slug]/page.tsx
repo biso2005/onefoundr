@@ -1,22 +1,158 @@
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { MDXComponents } from '@/components/MDXComponents';
+import { mdxSerializeOptions } from '@/lib/mdx-options';
 import { businessModels } from '@/data/businessModels';
 
+interface BusinessModelFrontmatter {
+  title: string;
+  description: string;
+  date: string;
+  category: string;
+  slug: string;
+  readTime: string;
+  author: string;
+  tags: string[];
+}
+
+interface BusinessModelPost {
+  frontmatter: BusinessModelFrontmatter;
+  content: string;
+  slug: string;
+}
+
+function getBusinessModelBySlug(slug: string): BusinessModelPost | null {
+  try {
+    const contentDirectory = path.join(process.cwd(), 'content', 'start', 'business-models');
+    const filePath = path.join(contentDirectory, `${slug}.mdx`);
+
+    if (!fs.existsSync(filePath)) {
+      return null;
+    }
+
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const { data, content } = matter(fileContent);
+
+    return {
+      frontmatter: data as BusinessModelFrontmatter,
+      content,
+      slug,
+    };
+  } catch (error) {
+    console.error(`Error reading business model ${slug}:`, error);
+    return null;
+  }
+}
+
+function getAllBusinessModelSlugs(): string[] {
+  try {
+    const contentDirectory = path.join(process.cwd(), 'content', 'start', 'business-models');
+    
+    if (!fs.existsSync(contentDirectory)) {
+      return [];
+    }
+
+    const files = fs.readdirSync(contentDirectory).filter(f => f.endsWith('.mdx'));
+    return files.map(f => f.replace('.mdx', ''));
+  } catch (error) {
+    console.error('Error reading business model slugs:', error);
+    return [];
+  }
+}
+
 export function generateStaticParams() {
-  return businessModels.map(model => ({ slug: model.slug }));
-}
-
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const model = businessModels.find(m => m.slug === params.slug);
-  if (!model) return { title: 'Not Found' };
+  const mdxSlugs = getAllBusinessModelSlugs();
+  const dataSlugs = businessModels.map(model => ({ slug: model.slug }));
   
-  return {
-    title: `${model.name} Business Model — OneFoundr`,
-    description: model.description,
-  };
+  // Combine MDX files with data structure for backward compatibility
+  const allSlugs = new Map();
+  dataSlugs.forEach(item => allSlugs.set(item.slug, item));
+  mdxSlugs.forEach(slug => {
+    if (!allSlugs.has(slug)) {
+      allSlugs.set(slug, { slug });
+    }
+  });
+  
+  return Array.from(allSlugs.values());
 }
 
-export default function BusinessModelPage({ params }: { params: { slug: string } }) {
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const post = getBusinessModelBySlug(params.slug);
+  
+  if (post) {
+    return {
+      title: `${post.frontmatter.title}`,
+      description: post.frontmatter.description,
+    };
+  }
+
+  // Fallback to data structure
+  const model = businessModels.find(m => m.slug === params.slug);
+  if (model) {
+    return {
+      title: `${model.name} Business Model — OneFoundr`,
+      description: model.description,
+    };
+  }
+  
+  return { title: 'Not Found' };
+}
+
+export default async function BusinessModelPage({ params }: { params: { slug: string } }) {
+  const post = getBusinessModelBySlug(params.slug);
+  
+  if (post) {
+    return (
+      <article className="bg-white min-h-screen">
+        <div className="max-w-4xl mx-auto px-6 py-16">
+          <Link 
+            href="/start/business-models" 
+            className="text-accent hover:text-accentDark font-semibold text-sm mb-6 inline-flex items-center gap-2"
+          >
+            ← Back to Business Models
+          </Link>
+          
+          <header className="mb-12">
+            <h1 className="text-5xl font-bold mb-4 text-text">
+              {post.frontmatter.title}
+            </h1>
+            <p className="text-gray-600 text-lg mb-4">
+              {post.frontmatter.description}
+            </p>
+            <div className="flex gap-6 text-sm text-gray-700">
+              <span>📅 {new Date(post.frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>⏱️ {post.frontmatter.readTime}</span>
+              <span>✍️ {post.frontmatter.author}</span>
+            </div>
+          </header>
+
+          <div className="prose prose-lg max-w-none">
+            <MDXRemote 
+              source={post.content} 
+              components={MDXComponents}
+              options={mdxSerializeOptions}
+            />
+          </div>
+
+          <footer className="mt-16 pt-8 border-t border-gray-200">
+            <Link 
+              href="/start/business-models" 
+              className="inline-block px-6 py-3 bg-accent text-white rounded-lg hover:bg-accentDark transition-colors font-semibold"
+            >
+              ← Back to All Models
+            </Link>
+          </footer>
+        </div>
+      </article>
+    );
+  }
+
+  // Fallback to data structure for backward compatibility
   const model = businessModels.find(m => m.slug === params.slug);
   
   if (!model) {
@@ -73,15 +209,6 @@ export default function BusinessModelPage({ params }: { params: { slug: string }
 
           <p style={{ fontSize: '14px', color: '#636E72', lineHeight: '1.6', margin: '24px 0' }}>
             <span style={{ fontWeight: '600', color: '#2D3436' }}>Best for:</span> {model.bestFor}
-          </p>
-        </div>
-
-        <div style={{ backgroundColor: '#F0F9FF', borderRadius: '12px', padding: '24px', marginBottom: '48px', borderLeft: '4px solid #0EA5E9', border: '1px solid #E0F2FE' }}>
-          <p style={{ margin: 0, color: '#0C4A6E', fontSize: '16px', fontWeight: '600' }}>
-            Guide in development
-          </p>
-          <p style={{ margin: '8px 0 0 0', color: '#0369A1', fontSize: '14px' }}>
-            Deep-dive guides with implementation strategies are coming soon. Subscribe to our newsletter to get notified when this guide is ready.
           </p>
         </div>
 
