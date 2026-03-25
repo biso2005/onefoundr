@@ -119,7 +119,7 @@ export default function CategoryHub({
             <div className="w-full md:w-[40%]">
               <Link href={pillarGuide.href}>
                 <div
-                  style={{ background: `linear-gradient(135deg, ${categoryConfig[categoryKey]?.gradient?.replace('from-', '')?.replace('to-', '')?.replace(/ /g, ', ') || 'rgba(0, 184, 148, 0.1), rgba(5, 150, 105, 0.1)'})` }}
+                  style={{ background: `linear-gradient(135deg, rgba(0, 184, 148, 0.1), rgba(5, 150, 105, 0.1))` }}
                   className="rounded-2xl p-7 border border-border cursor-pointer transition-all hover:shadow-md hover:border-accent"
                 >
                   <p className="text-xs uppercase tracking-widest text-accentDark font-semibold mb-4">

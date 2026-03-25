@@ -290,7 +290,7 @@ export default function First90DaysPage() {
           <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
             <li style={{ marginBottom: '8px' }}>Create a Notion template or checklist with the exact steps you take</li>
             <li style={{ marginBottom: '8px' }}>Estimate time for each step (you have real data from Phase 2)</li>
-            <li style={{ marginBottom: '8px' }}>Identify any task that takes >2 hours that could be delegated later</li>
+            <li style={{ marginBottom: '8px' }}>Identify any task that takes &gt;2 hours that could be delegated later</li>
           </ul>
           <p style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', fontSize: '14px' }}>
             <strong>Goal:</strong> By Day 75, you can deliver the entire offer by following a 1-page checklist. Any new client reuses 80% of the work from the last client.
