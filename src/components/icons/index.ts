@@ -24,6 +24,7 @@ export { ValueCheck } from './ValueCheck';
 export { ContentSignal } from './ContentSignal';
 export { UserNetwork } from './UserNetwork';
 export { WorkflowLoop } from './WorkflowLoop';
+export { AutomationGear } from './AutomationGear';
 export { Megaphone } from './Megaphone';
 export { Handshake } from './Handshake';
 export { Gear } from './Gear';
@@ -64,4 +65,11 @@ export const SYSTEMS_ICONS = {
   workflows: 'WorkflowLoop',
   sops: 'WorkflowLoop',
   processes: 'WorkflowLoop',
+} as const;
+
+// Tools & AI icons
+export const TOOLS_ICONS = {
+  automation: 'AutomationGear',
+  aiTools: 'AutomationGear',
+  integration: 'AutomationGear',
 } as const;
