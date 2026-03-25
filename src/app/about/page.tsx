@@ -1,6 +1,5 @@
 import Link from "next/link";
 import CTAButtons from "@/components/about/CTAButtons";
-import { CategoryIcon } from "@/components/CategoryIcon";
 
 export const metadata = {
   title: "About OneFoundr — The Playbook for One-Person Businesses",
@@ -111,11 +110,6 @@ export default function AboutPage() {
           <p style={{ fontSize: "18px", color: "#636E72", marginBottom: "0" }}>
             Everything here comes from real experience — what worked, what didn't, and what I'd do differently.
           </p>
-          <div style={{ display: "flex", justifyContent: "center", margin: "32px 0" }}>
-            <div style={{ width: 120, height: 120 }}>
-              <CategoryIcon category="start" size="md" className="!h-30 !w-30" />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -128,48 +122,13 @@ export default function AboutPage() {
           <p style={{ fontSize: "18px", color: "#636E72", marginBottom: "24px" }}>
             OneFoundr covers five core areas of building a solo business:
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "24px" }}>
-            <div style={{ background: "#fff", borderRadius: "12px", boxShadow: "0 2px 8px rgba(44,62,80,0.04)", padding: "24px", textAlign: "left" }}>
-              <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px", color: "#00B894" }}>
-                <Link href="/start">1. Starting Solo</Link>
-              </h3>
-              <p style={{ fontSize: "16px", color: "#636E72", margin: 0 }}>
-                Go from idea to first dollar. Business models, validation, niche selection, and your first 90 days.
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "12px", boxShadow: "0 2px 8px rgba(44,62,80,0.04)", padding: "24px", textAlign: "left" }}>
-              <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px", color: "#00B894" }}>
-                <Link href="/marketing">2. Getting Clients</Link>
-              </h3>
-              <p style={{ fontSize: "16px", color: "#636E72", margin: 0 }}>
-                Marketing and sales strategies that work without a team. Content, outreach, funnels, and closing.
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "12px", boxShadow: "0 2px 8px rgba(44,62,80,0.04)", padding: "24px", textAlign: "left" }}>
-              <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px", color: "#00B894" }}>
-                <Link href="/systems">3. Running Lean</Link>
-              </h3>
-              <p style={{ fontSize: "16px", color: "#636E72", margin: 0 }}>
-                Systems, SOPs, automation, and the only tools you actually need.
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "12px", boxShadow: "0 2px 8px rgba(44,62,80,0.04)", padding: "24px", textAlign: "left" }}>
-              <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px", color: "#00B894" }}>
-                <Link href="/sales">4. Scaling Solo</Link>
-              </h3>
-              <p style={{ fontSize: "16px", color: "#636E72", margin: 0 }}>
-                Grow revenue without hiring. Pricing, recurring income, and smart outsourcing.
-              </p>
-            </div>
-            <div style={{ background: "#fff", borderRadius: "12px", boxShadow: "0 2px 8px rgba(44,62,80,0.04)", padding: "24px", textAlign: "left" }}>
-              <h3 style={{ fontSize: "20px", fontWeight: "700", marginBottom: "8px", color: "#00B894" }}>
-                5. Staying Sane
-              </h3>
-              <p style={{ fontSize: "16px", color: "#636E72", margin: 0 }}>
-                Burnout prevention, decision fatigue, loneliness, and building a life you actually enjoy.
-              </p>
-            </div>
-          </div>
+          <ul style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.8", marginBottom: "0", paddingLeft: "20px" }}>
+            <li><strong><Link href="/start" className="text-accent hover:text-accentDark">Starting Solo</Link></strong> — Go from idea to first dollar. Business models, validation, niche selection, and your first 90 days.</li>
+            <li><strong><Link href="/marketing" className="text-accent hover:text-accentDark">Getting Clients</Link></strong> — Marketing and sales strategies that work without a team. Content, outreach, funnels, and closing.</li>
+            <li><strong><Link href="/systems" className="text-accent hover:text-accentDark">Running Lean</Link></strong> — Systems, SOPs, automation, and the only tools you actually need.</li>
+            <li><strong><Link href="/sales" className="text-accent hover:text-accentDark">Scaling Solo</Link></strong> — Grow revenue without hiring. Pricing, recurring income, and smart outsourcing.</li>
+            <li><strong>Staying Sane</strong> — Burnout prevention, decision fatigue, loneliness, and building a life you actually enjoy.</li>
+          </ul>
         </div>
       </section>
 
