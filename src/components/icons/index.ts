@@ -22,6 +22,7 @@ export { PricingTag } from './PricingTag';
 export { PricingHouse } from './PricingHouse';
 export { ValueCheck } from './ValueCheck';
 export { ContentSignal } from './ContentSignal';
+export { UserNetwork } from './UserNetwork';
 export { Megaphone } from './Megaphone';
 export { Handshake } from './Handshake';
 export { Gear } from './Gear';
@@ -53,4 +54,6 @@ export const OFFER_ICONS = {
 // Marketing-related icons
 export const MARKETING_ICONS = {
   contentStrategy: 'ContentSignal',
+  audience: 'UserNetwork',
+  leadMagnet: 'UserNetwork',
 } as const;
