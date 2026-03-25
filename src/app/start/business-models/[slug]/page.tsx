@@ -65,18 +65,25 @@ function getAllBusinessModelSlugs(): string[] {
   }
 }
 
+// Slugs that have dedicated page.tsx files — must not be pre-rendered by [slug]
+const DEDICATED_PAGE_SLUGS = ['consulting', 'freelancing', 'digital-products', 'productized-services', 'saas-software'];
+
 export function generateStaticParams() {
   const mdxSlugs = getAllBusinessModelSlugs();
-  const dataSlugs = businessModels.map(model => ({ slug: model.slug }));
+  const dataSlugs = businessModels
+    .filter(model => !DEDICATED_PAGE_SLUGS.includes(model.slug))
+    .map(model => ({ slug: model.slug }));
   
-  // Combine MDX files with data structure for backward compatibility
+  // Combine MDX files (excluding dedicated pages) with remaining data slugs
   const allSlugs = new Map();
   dataSlugs.forEach(item => allSlugs.set(item.slug, item));
-  mdxSlugs.forEach(slug => {
-    if (!allSlugs.has(slug)) {
-      allSlugs.set(slug, { slug });
-    }
-  });
+  mdxSlugs
+    .filter(slug => !DEDICATED_PAGE_SLUGS.includes(slug))
+    .forEach(slug => {
+      if (!allSlugs.has(slug)) {
+        allSlugs.set(slug, { slug });
+      }
+    });
   
   return Array.from(allSlugs.values());
 }
