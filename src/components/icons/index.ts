@@ -21,6 +21,7 @@ export { StackingBlocks } from './StackingBlocks';
 export { PricingTag } from './PricingTag';
 export { PricingHouse } from './PricingHouse';
 export { ValueCheck } from './ValueCheck';
+export { ContentSignal } from './ContentSignal';
 export { Megaphone } from './Megaphone';
 export { Handshake } from './Handshake';
 export { Gear } from './Gear';
@@ -47,4 +48,9 @@ export const OFFER_ICONS = {
   pricing: 'PricingTag',
   pricingModels: 'PricingHouse',
   value: 'ValueCheck',
+} as const;
+
+// Marketing-related icons
+export const MARKETING_ICONS = {
+  contentStrategy: 'ContentSignal',
 } as const;
