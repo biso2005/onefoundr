@@ -1,3 +1,8 @@
+// Enable ISR: revalidate every 60 seconds (adjust as needed)
+export const revalidate = 60;
+
+// Optionally, force dynamic rendering (uncomment if you want SSR always)
+// export const dynamic = "force-dynamic";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";

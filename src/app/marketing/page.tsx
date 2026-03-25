@@ -1,3 +1,5 @@
+// Enable ISR: revalidate every 60 seconds (adjust as needed)
+export const revalidate = 60;
 import CategoryHub from "@/components/CategoryHub";
 import { getPostsByCategory } from "@/lib/mdx";
 
