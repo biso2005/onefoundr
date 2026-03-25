@@ -74,3 +74,63 @@ select:focus:not(:focus-visible) {
   white-space: nowrap;
   border-width: 0;
 }
+/* Syntax Highlighting for Code Blocks (Shiki - github-dark theme) */
+.syntax-highlighted-code-block {
+  background-color: #0d1117 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 8px !important;
+}
+
+/* Shiki token colors (github-dark theme) */
+.syntax-highlighted-code-block code {
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+/* String literal */
+.syntax-highlighted-code-block .shiki-string {
+  color: #a5d6ff;
+}
+
+/* Keyword */
+.syntax-highlighted-code-block .shiki-keyword {
+  color: #ff7b72;
+}
+
+/* Function/Property */
+.syntax-highlighted-code-block .shiki-function {
+  color: #d2a8ff;
+}
+
+/* Class name */
+.syntax-highlighted-code-block .shiki-class {
+  color: #79c0ff;
+}
+
+/* Variable */
+.syntax-highlighted-code-block .shiki-variable {
+  color: #c9d1d9;
+}
+
+/* Comment */
+.syntax-highlighted-code-block .shiki-comment {
+  color: #8b949e;
+  font-style: italic;
+}
+
+/* Number */
+.syntax-highlighted-code-block .shiki-number {
+  color: #79c0ff;
+}
+
+/* Generic text/default */
+.syntax-highlighted-code-block span {
+  color: #c9d1d9;
+}
+
+/* Ensure highlighted spans inherit theme properly */
+.syntax-highlighted-code-block .highlight {
+  background-color: rgba(55, 97, 140, 0.5);
+  padding: 2px 4px;
+  border-radius: 2px;
+}

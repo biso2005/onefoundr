@@ -125,35 +125,47 @@ export const MDXComponents = {
     </blockquote>
   ),
 
-  // Code
-  code: ({ children }: { children: React.ReactNode }) => (
-    <code style={{
-      backgroundColor: "#F7F7F7",
-      fontSize: "14px",
-      padding: "2px 6px",
-      borderRadius: "4px",
-      fontFamily: "monospace",
-      color: "#2D3436"
-    }}>
+  // Code (inline)
+  code: ({ children, className }: { children: React.ReactNode; className?: string }) => (
+    <code 
+      className={className}
+      style={{
+        backgroundColor: "#F7F7F7",
+        fontSize: "14px",
+        padding: "2px 6px",
+        borderRadius: "4px",
+        fontFamily: "monospace",
+        color: "#2D3436"
+      }}>
       {children}
     </code>
   ),
 
-  // Pre (code block)
-  pre: ({ children }: { children: React.ReactNode }) => (
-    <pre style={{
-      backgroundColor: "#2D3436",
-      color: "white",
-      padding: "24px",
-      borderRadius: "12px",
-      overflowX: "auto",
-      margin: "24px 0",
-      fontSize: "14px",
-      lineHeight: "1.5"
-    }}>
-      {children}
-    </pre>
-  ),
+  // Pre (code block) - handles both plain and syntax-highlighted code
+  pre: ({ children, className = "", ...props }: { children: React.ReactNode; className?: string; [key: string]: any }) => {
+    // Check if code block has syntax highlighting (from rehype-pretty-code)
+    const isSyntaxHighlighted = className.includes("rehype-code-block");
+    
+    return (
+      <pre 
+        className={`${className} syntax-highlighted-code-block`}
+        style={{
+          backgroundColor: isSyntaxHighlighted ? "transparent" : "#2D3436",
+          color: isSyntaxHighlighted ? "inherit" : "white",
+          padding: "24px",
+          borderRadius: "12px",
+          overflowX: "auto",
+          margin: "24px 0",
+          fontSize: "14px",
+          lineHeight: "1.5",
+          border: isSyntaxHighlighted ? "1px solid #E2E8F0" : "none"
+        }}
+        {...props}
+      >
+        {children}
+      </pre>
+    );
+  },
 
   // Strong
   strong: ({ children }: { children: React.ReactNode }) => (

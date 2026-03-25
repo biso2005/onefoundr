@@ -9,6 +9,7 @@ import {
   getRelatedPosts,
 } from "@/lib/mdx";
 import { MDXComponents } from "@/components/MDXComponents";
+import { mdxSerializeOptions } from "@/lib/mdx-options";
 import AuthorBox from "@/components/AuthorBox";
 import { calculateReadingTime } from "@/lib/readingTime";
 import NewsletterCTA from "@/components/NewsletterCTA";
@@ -235,7 +236,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           {/* MDX Content */}
           <div style={{ color: "#636E72" }}>
-            <MDXRemote source={post.content} components={MDXComponents} />
+            <MDXRemote 
+              source={post.content} 
+              components={MDXComponents}
+              options={mdxSerializeOptions}
+            />
           </div>
           {/* Author Box */}
           <AuthorBox />
