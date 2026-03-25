@@ -268,7 +268,7 @@ export default function LegalFinancialSetupPage() {
               </ul>
             </div>
             <Link href="https://www.chase.co.uk" target="_blank" rel="noopener noreferrer">
-              <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <button className="px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accentDark transition-colors">
                 Open Your Account Now →
               </button>
             </Link>

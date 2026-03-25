@@ -234,7 +234,7 @@ export default function FirstCustomersPage() {
           </p>
           <Link
             href="/marketing"
-            className="inline-block px-6 py-3 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors"
+            className="inline-block px-6 py-3 bg-accent text-white rounded-lg font-medium hover:bg-accentDark transition-colors"
           >
             Back to Marketing Hub
           </Link>

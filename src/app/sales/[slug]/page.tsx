@@ -88,7 +88,7 @@ export default function SalesGuidePage({ params }: { params: { slug: string } })
           <p className="text-textLight mb-4">Join other solopreneurs building sustainable solo businesses.</p>
           <Link 
             href="/#newsletter" 
-            className="inline-block bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-all no-underline"
+            className="inline-block bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-accentDark transition-all no-underline"
           >
             Subscribe to Updates
           </Link>

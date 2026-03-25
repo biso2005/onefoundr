@@ -73,7 +73,7 @@ export default function NewsletterPage() {
         <button
           type="submit"
           disabled={loading || submitted}
-          className="w-full mt-3 bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="w-full mt-3 bg-accent text-white py-3 rounded-lg font-semibold hover:bg-accentDark transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {submitted ? "✓ Check your email!" : loading ? "Subscribing..." : "Subscribe — It's Free"}
         </button>
