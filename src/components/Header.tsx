@@ -49,12 +49,15 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={isActive ? "page" : undefined}
                   style={{
                     textDecoration: "none",
                     fontSize: "14px",
                     color: isActive ? "#059669" : "#636E72",
-                    fontWeight: isActive ? "500" : "400",
-                    transition: "color 0.2s"
+                    fontWeight: isActive ? "600" : "400",
+                    transition: "color 0.2s",
+                    borderBottom: isActive ? "2px solid #00B894" : "2px solid transparent",
+                    paddingBottom: "2px"
                   }}
                 >
                   {link.name}
@@ -126,6 +129,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={isActive ? "page" : undefined}
                 style={{
                   display: "block",
                   width: "100%",
@@ -134,8 +138,11 @@ export default function Header() {
                   textDecoration: "none",
                   fontSize: "14px",
                   color: isActive ? "#059669" : "#2D3436",
-                  fontWeight: isActive ? "500" : "400",
-                  backgroundColor: isActive ? "#F7F7F7" : "transparent"
+                  fontWeight: isActive ? "600" : "400",
+                  backgroundColor: isActive ? "#F7F7F7" : "transparent",
+                  borderLeft: isActive ? "4px solid #00B894" : "4px solid transparent",
+                  paddingLeft: isActive ? "20px" : "24px",
+                  transition: "all 0.2s"
                 }}
               >
                 {link.name}
