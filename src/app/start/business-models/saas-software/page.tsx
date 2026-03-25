@@ -5,146 +5,126 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import NewsletterCTA from '@/components/NewsletterCTA';
 
 export default function SaaSSoftwarePage() {
-  const timeAllocationComparison = [
+  const timelineData = [
     {
-      phase: 'Month 1–3 (Build Phase)',
-      development: '40 hrs/week',
-      supportAndBugs: '0',
-      salesAndMarketing: '0',
-      revenueGenerated: '£0',
-      reality: 'Burning savings with zero runway visibility',
+      month: '1',
+      consulting: '£2,000',
+      saaS_codeFIrst: '£0 (building)',
+      saaS_conciergeFIrst: '£1,500 (manual service)',
     },
     {
-      phase: 'Month 4 (Launch)',
-      development: '30 hrs/week',
-      supportAndBugs: '5 hrs/week (early bugs)',
-      salesAndMarketing: '5 hrs/week',
-      revenueGenerated: '£100/month (2 customers)',
-      reality: '35 hours of work generating £25/hour',
+      month: '2',
+      consulting: '£4,000',
+      saaS_codeFIrst: '£0 (building)',
+      saaS_conciergeFIrst: '£1,500 (manual service)',
     },
     {
-      phase: 'Month 5–6 (Support Hell)',
-      development: '20 hrs/week',
-      supportAndBugs: '15 hrs/week (feature requests, outages)',
-      salesAndMarketing: '5 hrs/week',
-      revenueGenerated: '£200–500/month',
-      reality: '40 hours of work yet still underpaid relative to consulting',
-    },
-  ];
-
-  const conciergeBuildSteps = [
-    {
-      step: 'Step 1: The Manual Service (Week 1–8)',
-      description: 'Sell the outcome before building the app',
-      mechanism:
-        'Example: "I will generate your monthly VAT reports manually from your Shopify data for £500/month"',
-      workRequired: 'You spend 40 hours/month on manual work (data pulls, calculations, formatting)',
-      clientExperience: 'They get a polished PDF report every month. They do not see the Excel sheets or the pain.',
-      revenue: '£500/month (immediate, no code)',
+      month: '3',
+      consulting: '£6,000',
+      saaS_codeFIrst: '£0 (still building)',
+      saaS_conciergeFIrst: '£1,500 + automation starts',
     },
     {
-      step: 'Step 2: The Pain Identification (Week 9–16)',
-      description: 'Discover what to automate',
-      mechanism:
-        'After 3 months of manual delivery, you identify: "I spend 10 hours just pulling data from Shopify API. The rest is formatting."',
-      workRequired: 'Analyze your own workflow. Which 5 hours are most painful? Which 5 hours create the most value?',
-      clientExperience: 'No change. They still get the same report.',
-      revenue: '£500/month (unchanged)',
+      month: '4',
+      consulting: '£4,000',
+      saaS_codeFIrst: '£100 (2 paying users)',
+      saaS_conciergeFIrst: '£1,500 (20% automated)',
     },
     {
-      step: 'Step 3: The Micro-Automation (Month 7+)',
-      description: 'Code only the intersection of pain and value',
-      mechanism:
-        'Build a Python script (not a SaaS) that pulls Shopify data, formats into your template, and emails the PDF. You still do the VAT math (the value-add), the script does the copying.',
-      workRequired: 'Week 1: 20 hours to code the script. Week 2+: 2 hours/month to monitor.',
-      clientExperience: 'Report arrives more reliably. Still a PDF they open monthly.',
-      revenue: '£500/month (unchanged) but now you work 2 hrs/month instead of 40',
+      month: '5',
+      consulting: '£0 (pivot)',
+      saaS_codeFIrst: '£300 (support hell)',
+      saaS_conciergeFIrst: '£1,500 (50% automated)',
+    },
+    {
+      month: '6',
+      consulting: '-',
+      saaS_codeFIrst: '£0 (burnout)',
+      saaS_conciergeFIrst: '£3,000 (software + service clients)',
     },
   ];
 
-  const maintenanceBurdenTable = [
+  const conciergePath = [
     {
-      title: 'Micro-SaaS Trap',
-      price: '£9/month',
-      targetRevenue: '£3,000/month',
-      customersNeeded: '334 customers',
-      monthlyChurn: '5–10%',
-      newCustomersMonthly: '17–34 (just to maintain)',
-      supportBurden: '3–4 tickets/day at 1% contact rate',
-      effectiveRate: '£9–15/hour after support costs',
-      viability: '❌ Unsustainable (support overhead = revenue)',
+      step: 'Step 1: The Concierge MVP (Days 1–14)',
+      description: 'The Pitch',
+      detail:
+        '"I will manually generate these compliance reports for you for £500/month while I build the automation."',
     },
     {
-      title: 'Concierge → Micro-SaaS',
-      price: '£500/month',
-      targetRevenue: '£3,000/month',
-      customersNeeded: '6 customers',
-      monthlyChurn: '5–10% (still losing 1 customer/month)',
-      newCustomersMonthly: '1–2 (manageable)',
-      supportBurden: '2–3 support emails/month per customer',
-      effectiveRate: '£125–200/hour (you only support 6 people, not 334)',
-      viability: '✅ Viable (support scales with price)',
+      step: '',
+      description: 'The Delivery',
+      detail:
+        'You use Google Sheets, Airtable, Zapier, and manual data entry. It takes you 10 hours. They pay £500. Hourly rate: £50/hour (viable).',
+    },
+    {
+      step: '',
+      description: 'The Value',
+      detail:
+        'They get the outcome (the report). They do not care how it is made.',
+    },
+    {
+      step: '',
+      description: 'The Validation',
+      detail:
+        'If nobody pays £500 for the manual version, nobody will pay £49 for the software version. Kill it here, not after 6 months coding.',
+    },
+    {
+      step: 'Step 2: The Pain Audit (Month 2–3)',
+      description: 'Document Everything',
+      detail:
+        'Which part of the 10-hour manual process makes you want to cry? Which part is most painful for you to do?',
+    },
+    {
+      step: '',
+      description: 'The "Automation ROI" Test',
+      detail:
+        'If automating Step 3 saves you 3 hours, and you have 5 clients, that is 15 hours/month saved. This is worth coding. If it saves 30 minutes, leave it manual.',
+    },
+    {
+      step: '',
+      description: 'The "Invisible Automation" Rule',
+      detail:
+        'Automate the parts painful for you, invisible to them (data scraping, formatting, calculations—not the UI or auth system).',
+    },
+    {
+      step: 'Step 3: The Gradual Replacement (Month 4–6)',
+      description: 'Week 1',
+      detail:
+        'Write a Python script that does 20% of the manual work. You now work 8 hours, deliver same result.',
+    },
+    {
+      step: '',
+      description: 'Week 4',
+      detail: 'Script does 50%. You work 5 hours.',
+    },
+    {
+      step: '',
+      description: 'Week 8',
+      detail: 'Script does 80%. You work 2 hours (oversight only).',
+    },
+    {
+      step: '',
+      description: 'Month 6',
+      detail:
+        'You charge the same £500, work 30 minutes (checking outputs). This is now "software" but with proven demand and existing revenue.',
     },
   ];
 
-  const b2bCharacteristics = [
-    {
-      title: '"PDF Invoice Generator for Polish Contractors"',
-      singleFeature: 'Generate VAT-compliant invoices for Polish tax law (not global - too complex)',
-      apiIntegration: 'Optional Stripe connect (for direct invoicing) or manual payment',
-      userAccounts: 'Minimal (just email + password)',
-      pricing: '£200/month (15 customers = £3,000)',
-      soloFit: '✅ High (you are the expert on Polish tax)',
-    },
-    {
-      title: '"Email Cleaner for Real Estate Agents"',
-      singleFeature: 'Parse emails from rental inquiries, extract tenant info into a CSV',
-      apiIntegration: 'Gmail API (only integration needed)',
-      userAccounts: 'Gmail auth only (use Clerk)',
-      pricing: '£250/month (12 customers = £3,000)',
-      soloFit: '✅ High (you know real estate pain points)',
-    },
-    {
-      title: '"Analytics Exporter for Shopify Stores"',
-      singleFeature: 'Export Shopify analytics to Google Sheets weekly (no dashboard UI)',
-      apiIntegration: 'Shopify API + Google Sheets API',
-      userAccounts: 'Shopify + Google auth (use Supabase)',
-      pricing: '£300/month (10 customers = £3,000)',
-      soloFit: '✅ High (solves a specific workflow)',
-    },
-  ];
-
-  const whatNotToBuild = [
-    'Authentication system (use Clerk or Supabase Auth)',
-    'Billing/payment processing (use Stripe or Lemonsqueezy)',
-    'User dashboard with charts (too much UI; use email reports instead)',
-    'Team management (stick to individual accounts)',
-    'Mobile app (web only; use responsive design)',
-    'Admin panel for content management (use Airtable as your backend)',
-    'API for customers to build on (too much support burden)',
-  ];
-
-  const dontStartChecklist = [
+  const dontDoChecklist = [
     'You need revenue in <90 days',
-    'You do not have 6 months of expenses saved (or a financial safety net)',
-    'The problem is not already solved by you manually (if you wouldn\'t pay £200/month for this yourself, users won\'t either)',
-    'You are not already a developer (no-code tools like Bubble/Flutterflow are not production-ready for SaaS)',
-    'You hate waking up to server outages at 2am (monitoring anxiety is real)',
-    'You have not sold the manual version first (you are betting on assumptions)',
-  ];
-
-  const doStartChecklist = [
-    'You have manually done this 5+ times and cried from the repetition (validation via pain)',
-    'You have an audience of 3,000+ Twitter followers or 1,000+ email subscribers (launch distribution)',
-    'You can describe the app in one sentence: "It connects X to Y" or "It generates Z automatically"',
-    'You have a £5,000 emergency fund for when Stripe holds payouts or a customer charges back',
-    'You already have customers willing to pay £200+/month for the manual version (pre-sell validation)',
+    'You have <£5,000 emergency fund',
+    'You have not manually done this service 5+ times (you do not understand the edge cases)',
+    'You cannot describe the app in one sentence ("Connects X to Y")',
+    'You have <1,000 email subs or <3,000 Twitter followers (distribution gap)',
+    'You are learning to code while building this (learn first, build second)',
+    'The problem is not painful enough that you would pay £200/month to make it go away',
   ];
 
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-      {/* Hero Section */}
-      <section style={{ marginBottom: '48px', textAlign: 'center' }}>
+      {/* Hero Section - WARNING */}
+      <section style={{ marginBottom: '48px' }}>
         <Breadcrumbs
           items={[
             { label: 'Start Solo', href: '/start' },
@@ -152,366 +132,466 @@ export default function SaaSSoftwarePage() {
             { label: 'SaaS / Software' },
           ]}
         />
+        
+        <div style={{ backgroundColor: '#FEF2F2', borderLeft: '6px solid #DC2626', padding: '24px', borderRadius: '8px', marginBottom: '24px' }}>
+          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#DC2626', fontSize: '16px', textTransform: 'uppercase' }}>
+            🚨 STOP: Read This First
+          </p>
+          <p style={{ margin: '0', fontSize: '15px', color: '#7F1D1D', lineHeight: '1.6' }}>
+            If you need revenue in the next 60 days, close this page now and go to <Link href="/start/business-models/consulting" style={{ color: '#DC2626', fontWeight: '600', textDecoration: 'underline' }}>consulting</Link>. SaaS requires 6 months runway minimum. No exceptions. No part-time jobs.
+          </p>
+        </div>
+
         <h1 style={{ fontSize: '42px', fontWeight: '700', color: '#2D3436', marginBottom: '16px', lineHeight: '1.2' }}>
-          SaaS: The Expert Mode (Do Not Code First)
+          SaaS: The Solo Founder Trap
         </h1>
-        <p style={{ fontSize: '18px', color: '#636E72', marginBottom: '16px', lineHeight: '1.6' }}>
-          SaaS is the only business model where you pay to work. Before you've earned a pound, you are paying for servers, uptime, security updates, and customer support. For a solo founder, SaaS is a liability masquerading as an asset unless architected as "Micro-SaaS" with specific constraints.
+        <p style={{ fontSize: '18px', color: '#636E72', marginBottom: '24px', lineHeight: '1.6' }}>
+          (Sell the Manual Version First)
         </p>
-        <p style={{ fontSize: '16px', color: '#C62828', fontWeight: '600' }}>
-          Build the manual version first. Get paid to learn the requirements. Then automate the painful parts.
+
+        <div style={{ backgroundColor: '#F3F4F6', padding: '20px', borderRadius: '8px', marginBottom: '32px', borderLeft: '4px solid #636E72' }}>
+          <p style={{ margin: '0 0 16px 0', fontSize: '16px', color: '#1F2937', lineHeight: '1.6', fontStyle: 'italic' }}>
+            "I spent 8 months building a customer portal that nobody wanted. Beautiful code. Perfect auth flow. Stripe integration. Unit tests. Then I met a founder who sold the manual version of the same service for £2,000/month while building the software in the background. She owned the customer relationship before she owned the codebase. I owned a GitHub repo and an empty bank account."
+          </p>
+          <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
+            — Every developer who learned SaaS the wrong way
+          </p>
+        </div>
+
+        <p style={{ fontSize: '15px', color: '#2D3436', marginBottom: '16px', lineHeight: '1.6' }}>
+          <strong>The only way to build software alone without going broke:</strong> Manual service → Automated script → Paid product.
+        </p>
+        <p style={{ fontSize: '15px', color: '#2D3436', lineHeight: '1.6' }}>
+          SaaS is the only business model where you pay to work. Unlike services (immediate cash) or digital products (build once, sell often), SaaS requires ongoing rent—servers, security patches, customer support—before you have earned a single pound.
         </p>
       </section>
 
-      {/* Section 1: The Solo SaaS Math */}
+      {/* Section 1: The Math */}
       <section style={{ marginBottom: '48px' }}>
         <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          Section 1: The Solo SaaS Math — Why 6 Months of Coding = Death
+          Section 1: Why Coding First Kills Solo Founders
         </h2>
 
         <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>
-          The standard advice: "Build a minimum viable product, launch it, iterate." This advice is for funded teams. For a solo founder with £0 savings, it is a roadmap to failure.
+          The timeline tells the story. Three paths. Only one survives to Month 6.
         </p>
 
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The Standard SaaS Timeline (For Solos):</h3>
-
         <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
               <tr style={{ backgroundColor: '#F5F5F5', borderBottom: '2px solid #2D3436' }}>
-                <th style={{ padding: '10px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Timeline</th>
-                <th style={{ padding: '10px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Dev Time</th>
-                <th style={{ padding: '10px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Support</th>
-                <th style={{ padding: '10px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Sales</th>
-                <th style={{ padding: '10px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Revenue</th>
+                <th style={{ padding: '12px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Month</th>
+                <th style={{ padding: '12px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Consulting</th>
+                <th style={{ padding: '12px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>SaaS (Code First)</th>
+                <th style={{ padding: '12px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>SaaS (Concierge First)</th>
               </tr>
             </thead>
             <tbody>
-              {timeAllocationComparison.map((row, idx) => (
+              {timelineData.map((row, idx) => (
                 <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0', backgroundColor: idx % 2 === 0 ? '#FFFFFF' : '#F9FAFB' }}>
-                  <td style={{ padding: '10px', fontWeight: '600', color: '#2D3436' }}>{row.phase}</td>
-                  <td style={{ padding: '10px', color: '#636E72' }}>{row.development}</td>
-                  <td style={{ padding: '10px', color: '#636E72' }}>{row.supportAndBugs}</td>
-                  <td style={{ padding: '10px', color: '#636E72' }}>{row.salesAndMarketing}</td>
-                  <td style={{ padding: '10px', fontWeight: '600', color: row.revenueGenerated.includes('£0') ? '#C62828' : '#2E7D32' }}>
-                    {row.revenueGenerated}
-                  </td>
+                  <td style={{ padding: '12px', fontWeight: '600', color: '#2D3436' }}>Month {row.month}</td>
+                  <td style={{ padding: '12px', color: '#2E7D32', fontWeight: '500' }}>{row.consulting}</td>
+                  <td style={{ padding: '12px', color: '#C62828', fontWeight: '500' }}>{row.saaS_codeFIrst}</td>
+                  <td style={{ padding: '12px', color: '#1565C0', fontWeight: '500' }}>{row.saaS_conciergeFIrst}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '20px', borderRadius: '8px' }}>
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The Maintenance Tax:</h3>
+
+        <div style={{ backgroundColor: '#E8F5E9', padding: '20px', borderRadius: '8px', marginBottom: '24px', borderLeft: '4px solid #2E7D32' }}>
+          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#1B5E20' }}>
+            Revenue: £3,000/month SaaS MRR
+          </p>
+          <div style={{ display: 'grid', gap: '8px', fontSize: '14px', color: '#2D3436' }}>
+            <p style={{ margin: '0' }}>
+              <strong>Tools Cost:</strong> £300/month (Vercel Pro, Supabase, Stripe, Auth)
+            </p>
+            <p style={{ margin: '0' }}>
+              <strong>True Profit:</strong> £2,700
+            </p>
+            <p style={{ margin: '0' }}>
+              <strong>Time Required:</strong> 25 hours/week (coding, support, bug fixes, security patches)
+            </p>
+            <p style={{ margin: '0' }}>
+              <strong>Hourly Rate:</strong> £27/hour (worse than McDonald's shift manager)
+            </p>
+            <p style={{ margin: '0' }}>
+              <strong>The Burnout:</strong> Server goes down at 2am. You fix it. Customer finds edge case. You patch it. Stripe flags account for "high risk." You appeal it. All before you have earned enough to pay rent.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: '#FEF2F2', borderLeft: '4px solid #DC2626', padding: '16px', borderRadius: '8px' }}>
+          <p style={{ margin: '0', fontSize: '14px', color: '#7F1D1D', lineHeight: '1.6' }}>
+            <strong>GBP Reality Check:</strong> Solo SaaS only beats consulting at &gt;£5,000 MRR with &lt;10 hours/week maintenance. Until then, it is a low-paid job with equity that may never materialize.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 2: The Concierge-First Methodology */}
+      <section style={{ marginBottom: '48px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
+          Section 2: The Concierge-First Methodology — Sell the Manual Version First
+        </h2>
+
+        <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>
+          You are not building software. You are productizing a manual service that you automate incrementally. This is the only path that guarantees customer validation before you write a single line of code.
+        </p>
+
+        {conciergePath.map((item, idx) => (
+          <div key={idx} style={{ marginBottom: '16px' }}>
+            {item.step && (
+              <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', margin: '0 0 8px 0' }}>
+                {item.step}
+              </h4>
+            )}
+            <div style={{ backgroundColor: 'white', border: '1px solid #E2E8F0', padding: '12px', borderRadius: '6px' }}>
+              <div>
+                <p style={{ margin: '0 0 4px 0', fontSize: '12px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
+                  {item.description}
+                </p>
+                <p style={{ margin: '0', fontSize: '14px', color: '#2D3436', lineHeight: '1.5' }}>
+                  {item.detail}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        <div style={{ backgroundColor: '#E3F2FD', borderLeft: '4px solid #1565C0', padding: '16px', borderRadius: '8px', marginTop: '24px' }}>
+          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#1565C0' }}>
+            The Solo Constraint:
+          </p>
+          <p style={{ margin: '0', fontSize: '14px', color: '#0D47A1' }}>
+            You never build a "platform." You build a script that saves you 10 hours. The customer pays for the outcome (the report), not the codebase. If you cannot describe your product in terms of customer outcomes, you do not have a SaaS business yet.
+          </p>
+        </div>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px', marginTop: '24px' }}>
+          Model Markers by Business Type:
+        </h3>
+
+        <div style={{ display: 'grid', gap: '12px' }}>
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '14px' }}>
+              Service → SaaS
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
+              "VAT calculations for EU ecommerce stores" (manual accountant → automated tool)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '14px' }}>
+              Consulting → SaaS
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
+              "SEO audits" (manual review → automated crawler)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '14px' }}>
+              Freelancing → SaaS
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
+              "Website backups" (manual downloads → automated sync)
+            </p>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: '#FEF2F2', borderLeft: '4px solid #DC2626', padding: '16px', borderRadius: '8px', marginTop: '24px' }}>
+          <p style={{ margin: '0', fontSize: '14px', color: '#7F1D1D', fontWeight: '600' }}>
+            Critical Distinction: If you cannot sell 3 manual monthly retainers (£1,500/month total), you do not have a SaaS idea. You have a hypothesis.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 3: The B2B Imperative */}
+      <section style={{ marginBottom: '48px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
+          Section 3: The B2B Imperative — The £200/Month Minimum (Or Death)
+        </h2>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#C62828', marginBottom: '12px' }}>❌ B2C SaaS (Do Not Do This):</h3>
+
+        <div style={{ display: 'grid', gap: '8px', marginBottom: '24px' }}>
+          <div style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Price: £9/month</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>
+              You need 334 customers for £3k/month survival revenue
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Support: 3–4 tickets/day</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>
+              Even at 1% contact rate, 334 customers = overwhelming support load
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Churn: 5–10% monthly</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>
+              You lose 17–34 customers every month (must acquire new ones just to stay flat)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Result: Bankruptcy</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>
+              You spend 40 hours on support for £2,000 revenue. You burn out by Month 4.
+            </p>
+          </div>
+        </div>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2E7D32', marginBottom: '12px' }}>✅ B2B SaaS (This Is Your Only Path):</h3>
+
+        <div style={{ display: 'grid', gap: '8px', marginBottom: '24px' }}>
+          <div style={{ backgroundColor: '#E8F5E9', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#1B5E20', fontSize: '13px' }}>Price: £200–500/month</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#2E7D32' }}>
+              15 customers × £200 = £3,000/month (solo maximum)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#E8F5E9', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#1B5E20', fontSize: '13px' }}>Support: 2–3 tickets/week</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#2E7D32' }}>
+              Business users figure it out. They do not call you for "how do I use this?"
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#E8F5E9', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#1B5E20', fontSize: '13px' }}>Churn: 2–3% monthly</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#2E7D32' }}>
+              Businesses do not switch tools monthly. They stick around.
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#E8F5E9', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#1B5E20', fontSize: '13px' }}>Result: Viable</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#2E7D32' }}>
+              You can handle 15 customers solo. You work 30–35 hours/week. You earn £5,000+/month profit.
+            </p>
+          </div>
+        </div>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The "One Feature" Architecture:</h3>
+
+        <div style={{ display: 'grid', gap: '8px', marginBottom: '24px' }}>
+          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#E65100', fontSize: '13px' }}>
+              ✓ One integration (e.g., "PDF exports from Shopify," not "universal e-commerce integration")
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#E65100', fontSize: '13px' }}>
+              ✓ No user management (single user accounts, invite-only, or no auth—use Stripe Customer Portal for billing)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#E65100', fontSize: '13px' }}>
+              ✓ No dashboard (Email reports, not login portals—reduces hosting complexity)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#E65100', fontSize: '13px' }}>
+              ✓ No teams (If they need multi-user, they are too big for you; churn them to enterprise tools)
+            </p>
+          </div>
+        </div>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The "Just Use" Dependencies (Do Not Build These):</h3>
+
+        <div style={{ display: 'grid', gap: '8px' }}>
+          <div style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0', fontSize: '13px', color: '#1565C0' }}>
+              <strong>Auth:</strong> Clerk or Supabase Auth (not Passport.js from scratch)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0', fontSize: '13px', color: '#1565C0' }}>
+              <strong>Billing:</strong> Stripe Customer Portal (not custom dashboard)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0', fontSize: '13px', color: '#1565C0' }}>
+              <strong>Database:</strong> Supabase or Railway (not DigitalOcean + manual backups)
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '6px' }}>
+            <p style={{ margin: '0', fontSize: '13px', color: '#1565C0' }}>
+              <strong>Hosting:</strong> Vercel (not AWS EC2 with Terraform)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Emergency Fund & Runway */}
+      <section style={{ marginBottom: '48px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
+          Section 4: The Emergency Fund & Runway Requirements
+        </h2>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The 6-Month Rule:</h3>
+
+        <p style={{ fontSize: '15px', color: '#636E72', marginBottom: '16px' }}>
+          You must have 6 months of expenses saved before starting SaaS. No exceptions. Here is why:
+        </p>
+
+        <div style={{ display: 'grid', gap: '8px', marginBottom: '24px' }}>
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #636E72' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '13px' }}>Month 1–3: Building (£0–£1,500/month)</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>Concierge service phase. Some revenue, but not enough.</p>
+          </div>
+
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #636E72' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '13px' }}>Month 4–6: Automation (Revenue flat, time debt increasing)</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>You are coding while servicing. Double workload.</p>
+          </div>
+
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #636E72' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '13px' }}>Month 6+: Stripe Holds Payouts for 90 Days</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>
+              New SaaS accounts are flagged as "high risk." You cannot access revenue for 60–90 days. You still pay server costs. You still need to eat.
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#F5F5F5', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #636E72' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#2D3436', fontSize: '13px' }}>Month 9+: First Profitable Month (Maybe)</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#636E72' }}>Assuming nothing breaks, nobody churns, and you do not panic and take a consulting gig.</p>
+          </div>
+        </div>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The Emergency Fund:</h3>
+
+        <div style={{ backgroundColor: '#E8F5E9', borderLeft: '4px solid #2E7D32', padding: '16px', borderRadius: '8px', marginBottom: '24px' }}>
+          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#1B5E20', fontSize: '14px' }}>
+            £5,000 minimum (3 months bare survival) in a separate account labeled "SaaS Death Fund."
+          </p>
+          <p style={{ margin: '0', fontSize: '13px', color: '#2E7D32' }}>
+            This money is not for development. This is your food, rent, and utilities fund while Stripe holds your payouts.
+          </p>
+        </div>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The "Kill It" Checkpoints:</h3>
+
+        <div style={{ display: 'grid', gap: '8px' }}>
+          <div style={{ backgroundColor: '#FEF2F2', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #DC2626' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Day 30</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#7F1D1D' }}>
+              If 0 manual service sales: Kill it. This means nobody wants this, even for free.
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FEF2F2', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #DC2626' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Day 90</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#7F1D1D' }}>
+              If &lt;£1,500/month from manual service: Kill it. Scale does not happen in Month 6.
+            </p>
+          </div>
+
+          <div style={{ backgroundColor: '#FEF2F2', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #DC2626' }}>
+            <p style={{ margin: '0 0 4px 0', fontWeight: '600', color: '#C62828', fontSize: '13px' }}>Day 180</p>
+            <p style={{ margin: '0', fontSize: '12px', color: '#7F1D1D' }}>
+              If automation has not reduced your hours by 50%: Kill it. The code is not saving you time, just debt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: Tech Stack */}
+      <section style={{ marginBottom: '48px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
+          Section 5: Technical Architecture — The "Never Build" Stack
+        </h2>
+
+        <p style={{ fontSize: '15px', color: '#636E72', marginBottom: '24px' }}>
+          Your job is not to build technology. Your job is to automate customer pain. Use off-the-shelf services for everything except the one automation layer that saves you 10 hours/month.
+        </p>
+
+        <div style={{ backgroundColor: '#E3F2FD', border: '2px solid #1565C0', padding: '20px', borderRadius: '8px', marginBottom: '24px' }}>
+          <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#1565C0', margin: '0 0 16px 0' }}>The Solo Stack:</h4>
+          <div style={{ display: 'grid', gap: '8px' }}>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Frontend:</strong> Next.js 14 (App Router) deployed to Vercel (zero config hosting)
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Backend:</strong> Serverless functions (Vercel/Netlify), not persistent servers
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Database:</strong> Supabase (Postgres with auth/billing built-in)
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Auth:</strong> Clerk or Supabase Auth (password reset emails handled for you)
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Billing:</strong> Stripe Checkout + Customer Portal (never build your own billing dashboard)
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Email:</strong> Resend or Loops (transactional only, no marketing automation)
+            </p>
+            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
+              <strong>Monitoring:</strong> Vercel Analytics + simple UptimeRobot (free tier)
+            </p>
+          </div>
+        </div>
+
+        <div style={{ backgroundColor: '#FEF2F2', borderLeft: '4px solid #DC2626', padding: '16px', borderRadius: '8px' }}>
           <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#C62828' }}>
-            The Reality Check:
+            The "One Serverless Function" Rule:
           </p>
-          <p style={{ margin: '0', fontSize: '14px', color: '#B71C1C', lineHeight: '1.6' }}>
-            You coded for 6 months earning £0. By Month 7, your savings are gone. You panic. You take a consulting gig. Your SaaS—half-finished, half-supported, half-marketed—dies. You have earned £0 and spent 1,000 hours.
+          <p style={{ margin: '0', fontSize: '14px', color: '#7F1D1D' }}>
+            If your app requires a constantly running server (WebSocket, cron jobs, background workers), it is too complex for solo. Use Vercel Edge Functions, Supabase Edge Functions, or do not build it.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 6: Don't Do This Checklist */}
+      <section style={{ marginBottom: '48px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
+          Section 6: Read This Before You Write Code
+        </h2>
+
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#C62828', marginBottom: '12px' }}>❌ Do NOT Proceed If:</h3>
+
+        <div style={{ display: 'grid', gap: '8px', marginBottom: '24px' }}>
+          {dontDoChecklist.map((item, idx) => (
+            <div key={idx} style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
+              <p style={{ margin: '0', fontSize: '13px', color: '#7F1D1D' }}>☐ {item}</p>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ backgroundColor: '#FEF2F2', borderLeft: '4px solid #DC2626', padding: '16px', borderRadius: '8px', marginBottom: '24px' }}>
+          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#C62828' }}>
+            If you checked any box above:
+          </p>
+          <p style={{ margin: '0', fontSize: '14px', color: '#7F1D1D' }}>
+            <Link
+              href="/start/business-models/consulting"
+              style={{ color: '#C62828', fontWeight: '600', textDecoration: 'underline' }}
+            >
+              Go to Consulting Instead
+            </Link>
           </p>
         </div>
 
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px', marginTop: '24px' }}>The Maintenance Problem:</h3>
-
-        <div style={{ display: 'grid', gap: '12px', marginBottom: '32px' }}>
-          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #F57C00' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#E65100', fontSize: '14px' }}>
-              Server Monitoring (24/7)
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>Your app is down at 2am. You alone can fix it. Sleep is a luxury.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #F57C00' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#E65100', fontSize: '14px' }}>
-              Security Updates (Continuous)
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
-              A zero-day vulnerability drops. You patch within 2 hours or you are liable if customer data leaks.
-            </p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #F57C00' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#E65100', fontSize: '14px' }}>
-              Feature Creep (Constant)
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
-              Every customer asks "Can you just add...?" You say yes to keep them. You gain 100 hours of work.
-            </p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #F57C00' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#E65100', fontSize: '14px' }}>
-              Onboarding Support (Unpredictable)
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
-              Half your customers cannot figure out the UI. You spend 2 hours explaining per customer. Time = gone.
-            </p>
-          </div>
-        </div>
+        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2E7D32', marginBottom: '12px' }}>✅ Proceed Only If:</h3>
 
         <div style={{ backgroundColor: '#E8F5E9', borderLeft: '4px solid #2E7D32', padding: '16px', borderRadius: '8px' }}>
           <p style={{ margin: '0', fontSize: '14px', color: '#2E7D32', lineHeight: '1.6' }}>
-            <strong>The Rule:</strong> Solo SaaS only works if you have 6 months runway AND no immediate revenue needs AND coding is your therapy, not your job. Nearly no solo founder fits this profile.
-          </p>
-        </div>
-      </section>
-
-      {/* Section 2: The Concierge-First Method */}
-      <section style={{ marginBottom: '48px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          Section 2: The Concierge-First Method — Service → Script → Software
-        </h2>
-
-        <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>
-          The alternative: Sell the manual version first. Get paid while you learn the requirements. Then automate only the parts that cause you pain.
-        </p>
-
-        {conciergeBuildSteps.map((step, idx) => (
-          <div key={idx} style={{ backgroundColor: 'white', border: '2px solid #E2E8F0', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', margin: '0 0 12px 0' }}>
-              {step.step}
-            </h3>
-
-            <div style={{ display: 'grid', gap: '10px' }}>
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '12px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  Description
-                </p>
-                <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>{step.description}</p>
-              </div>
-
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '12px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  The Mechanism
-                </p>
-                <p style={{ margin: '0', fontSize: '14px', color: '#2D3436', fontStyle: 'italic' }}>{step.mechanism}</p>
-              </div>
-
-              <div style={{ backgroundColor: '#E3F2FD', padding: '10px', borderRadius: '6px' }}>
-                <p style={{ margin: '0 0 4px 0', fontSize: '12px', fontWeight: '600', color: '#1565C0', textTransform: 'uppercase' }}>
-                  Your Work
-                </p>
-                <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>{step.workRequired}</p>
-              </div>
-
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '12px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  What They See
-                </p>
-                <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>{step.clientExperience}</p>
-              </div>
-
-              <div style={{ backgroundColor: '#E8F5E9', padding: '10px', borderRadius: '6px' }}>
-                <p style={{ margin: '0 0 4px 0', fontSize: '12px', fontWeight: '600', color: '#1B5E20', textTransform: 'uppercase' }}>
-                  Revenue
-                </p>
-                <p style={{ margin: '0', fontSize: '14px', color: '#2E7D32', fontWeight: '600' }}>{step.revenue}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-
-        <div style={{ backgroundColor: '#F5F5F5', borderLeft: '4px solid #636E72', padding: '16px', borderRadius: '8px' }}>
-          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#2D3436' }}>
-            The Solo Constraint:
-          </p>
-          <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>
-            You never build a "platform." You build a "script that saves you 10 hours." The customer never sees the complexity. They see a polished output.
-          </p>
-        </div>
-      </section>
-
-      {/* Section 3 & 4: B2B Price Floor & Maintenance */}
-      <section style={{ marginBottom: '48px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          Section 3: The B2B Price Floor & Maintenance Tax
-        </h2>
-
-        <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>
-          SaaS only works solo if you target B2B businesses, charge high, and keep customer count low. The alternative (B2C, low price, high volume) is a support death trap.
-        </p>
-
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The Comparison: Micro-SaaS Trap vs Concierge-First:</h3>
-
-        <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '11px' }}>
-            <thead>
-              <tr style={{ backgroundColor: '#F5F5F5', borderBottom: '2px solid #2D3436' }}>
-                <th style={{ padding: '8px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Model</th>
-                <th style={{ padding: '8px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Price</th>
-                <th style={{ padding: '8px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Customers for £3k</th>
-                <th style={{ padding: '8px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Churn Impact</th>
-                <th style={{ padding: '8px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Support Load</th>
-                <th style={{ padding: '8px', textAlign: 'left', fontWeight: '700', color: '#2D3436' }}>Viable?</th>
-              </tr>
-            </thead>
-            <tbody>
-              {maintenanceBurdenTable.map((row, idx) => (
-                <tr key={idx} style={{ borderBottom: '1px solid #E2E8F0', backgroundColor: idx % 2 === 0 ? '#FFFFFF' : '#F9FAFB' }}>
-                  <td style={{ padding: '8px', fontWeight: '600', color: '#2D3436' }}>{row.title}</td>
-                  <td style={{ padding: '8px', color: '#636E72' }}>{row.price}</td>
-                  <td style={{ padding: '8px', color: '#636E72' }}>{row.customersNeeded}</td>
-                  <td style={{ padding: '8px', color: '#636E72', fontSize: '10px' }}>{row.newCustomersMonthly}</td>
-                  <td style={{ padding: '8px', color: '#636E72', fontSize: '10px' }}>{row.supportBurden}</td>
-                  <td style={{ padding: '8px', fontWeight: '600', color: idx === 0 ? '#C62828' : '#2E7D32' }}>
-                    {row.viability}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>The Real Cost of "Passive" Income:</h3>
-
-        <div style={{ display: 'grid', gap: '12px', marginBottom: '24px' }}>
-          <div style={{ backgroundColor: '#E8F5E9', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#1B5E20', fontSize: '14px' }}>
-              Revenue: £3,000/month
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#2E7D32' }}>Concierge SaaS with 6 paying customers at £500 each</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFF3E0', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #F57C00' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#E65100', fontSize: '14px' }}>
-              Tools Cost: £200–400/month
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#636E72' }}>
-              Hosting (£40), Database (£50), Auth (£30), Email (£20), Monitoring (£30), Stripe fees (variable), Emergency buffer (£50+)
-            </p>
-          </div>
-
-          <div style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #1565C0' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#1565C0', fontSize: '14px' }}>
-              True Profit: £2,600/month
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>If you spend 20 hours on dev/support, that is £130/hour. Viable.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#E3F2FD', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #1565C0' }}>
-            <p style={{ margin: '0 0 4px 0', fontWeight: '700', color: '#1565C0', fontSize: '14px' }}>
-              Profitability Checkpoint
-            </p>
-            <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>
-              SaaS beats consulting only when you have &gt;20 customers or &gt;£5k MRR with &lt;10 hours/week maintenance. Until then, you are underpaid.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: What NOT to Build */}
-      <section style={{ marginBottom: '48px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          Section 4 & 5: What NOT to Build (Plus B2B Characteristics)
-        </h2>
-
-        <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>
-          The secret to solo SaaS viability: Do not build the platform. Build the automation layer.
-        </p>
-
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>❌ What NOT to Build (Pay for These Instead):</h3>
-
-        <div style={{ display: 'grid', gap: '8px', marginBottom: '32px' }}>
-          {whatNotToBuild.map((item, idx) => (
-            <div key={idx} style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
-              <p style={{ margin: '0', fontSize: '13px', color: '#B71C1C' }}>✗ {item}</p>
-            </div>
-          ))}
-        </div>
-
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>✅ Real B2B Micro-SaaS Examples:</h3>
-
-        {b2bCharacteristics.map((example, idx) => (
-          <div key={idx} style={{ backgroundColor: 'white', border: '2px solid #E2E8F0', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
-            <h4 style={{ fontSize: '14px', fontWeight: '700', color: '#2D3436', margin: '0 0 12px 0' }}>
-              {example.title}
-            </h4>
-
-            <div style={{ display: 'grid', gap: '10px' }}>
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '11px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  Single Feature
-                </p>
-                <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>{example.singleFeature}</p>
-              </div>
-
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '11px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  API Integration
-                </p>
-                <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>{example.apiIntegration}</p>
-              </div>
-
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '11px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  User Accounts
-                </p>
-                <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>{example.userAccounts}</p>
-              </div>
-
-              <div style={{ backgroundColor: '#E8F5E9', padding: '10px', borderRadius: '6px' }}>
-                <p style={{ margin: '0 0 4px 0', fontSize: '11px', fontWeight: '600', color: '#1B5E20', textTransform: 'uppercase' }}>
-                  Pricing & Math
-                </p>
-                <p style={{ margin: '0', fontSize: '13px', color: '#2E7D32' }}>{example.pricing}</p>
-              </div>
-
-              <div>
-                <p style={{ margin: '0 0 4px 0', fontSize: '11px', fontWeight: '600', color: '#636E72', textTransform: 'uppercase' }}>
-                  Solo Fit
-                </p>
-                <p style={{ margin: '0', fontSize: '13px', color: '#2D3436' }}>{example.soloFit}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* Section 6: The Gate Checklist */}
-      <section style={{ marginBottom: '48px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          Section 6: The "Don't Code First" Gate — Honest Assessment
-        </h2>
-
-        <p style={{ fontSize: '16px', color: '#636E72', marginBottom: '24px' }}>
-          Before you code a single line, be brutally honest about your situation.
-        </p>
-
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>❌ Do NOT Choose SaaS If:</h3>
-
-        <div style={{ display: 'grid', gap: '8px', marginBottom: '32px' }}>
-          {dontStartChecklist.map((item, idx) => (
-            <div key={idx} style={{ backgroundColor: '#FFEBEE', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #C62828' }}>
-              <p style={{ margin: '0', fontSize: '13px', color: '#B71C1C' }}>☐ {item}</p>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '8px', marginBottom: '32px' }}>
-          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#C62828' }}>
-            If any box is checked:
-          </p>
-          <p style={{ margin: '0', fontSize: '14px', color: '#B71C1C' }}>
-            Start with <Link href="/start/business-models/consulting" style={{ color: '#C62828', textDecoration: 'underline' }}>consulting</Link> or <Link href="/start/business-models/freelancing" style={{ color: '#C62828', textDecoration: 'underline' }}>freelancing</Link> instead. Build capital and distribution. Return to SaaS when you have both.
-          </p>
-        </div>
-
-        <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>✅ Choose SaaS Only If:</h3>
-
-        <div style={{ display: 'grid', gap: '8px', marginBottom: '32px' }}>
-          {doStartChecklist.map((item, idx) => (
-            <div key={idx} style={{ backgroundColor: '#E8F5E9', padding: '12px', borderRadius: '6px', borderLeft: '3px solid #2E7D32' }}>
-              <p style={{ margin: '0', fontSize: '13px', color: '#1B5E20' }}>☑ {item}</p>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ backgroundColor: '#E8F5E9', borderLeft: '4px solid #2E7D32', padding: '16px', borderRadius: '8px' }}>
-          <p style={{ margin: '0 0 12px 0', fontWeight: '700', color: '#1B5E20' }}>
-            If all (or most) boxes are checked:
-          </p>
-          <p style={{ margin: '0', fontSize: '14px', color: '#2E7D32' }}>
-            You are ready. Use the Concierge-First method: Sell the manual version for £500/month, get 3–6 customers, document which 5 hours hurt the most, then code only that automation layer.
+            You are already a developer, have 6 months runway, have manually serviced 3+ clients, and understand you will not see "passive income" for 12 months minimum.
           </p>
         </div>
       </section>
@@ -519,13 +599,13 @@ export default function SaaSSoftwarePage() {
       {/* Your Next Step */}
       <section style={{ marginBottom: '48px', backgroundColor: '#E3F2FD', padding: '32px', borderRadius: '12px' }}>
         <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1565C0', marginBottom: '16px' }}>
-          Your Next Step — Sell the Manual Version First
+          Your Next Step — Validate the SaaS Idea First
         </h2>
         <p style={{ fontSize: '15px', color: '#0D47A1', marginBottom: '24px', lineHeight: '1.8' }}>
-          SaaS is not an entry point—it is an escape hatch from manual services. You want to build software? Great. Do it manually first, get paid £500/month to learn the requirements, then automate the painful parts.
+          Do not buy exampleapp.com. Do not set up a GitHub repo. Do not install Node packages. Send the manual service offer first. The code can wait. The customer cannot.
         </p>
         <p style={{ fontSize: '15px', color: '#0D47A1', marginBottom: '24px', lineHeight: '1.8' }}>
-          Coding first is a £50,000 bet on your own assumptions. Selling first is a £500/month bet on reality.
+          Draft a £500/month concierge service offer using your business problem. Send it to 10 prospects this week. If 0 buy, kill the SaaS idea before you buy the domain.
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
           <Link
@@ -540,7 +620,7 @@ export default function SaaSSoftwarePage() {
               textAlign: 'center',
             }}
           >
-            Sell Your Manual Service
+            Package the Manual Service
           </Link>
           <Link
             href="/start/business-models"
