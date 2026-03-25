@@ -23,6 +23,7 @@ export { PricingHouse } from './PricingHouse';
 export { ValueCheck } from './ValueCheck';
 export { ContentSignal } from './ContentSignal';
 export { UserNetwork } from './UserNetwork';
+export { WorkflowLoop } from './WorkflowLoop';
 export { Megaphone } from './Megaphone';
 export { Handshake } from './Handshake';
 export { Gear } from './Gear';
@@ -56,4 +57,11 @@ export const MARKETING_ICONS = {
   contentStrategy: 'ContentSignal',
   audience: 'UserNetwork',
   leadMagnet: 'UserNetwork',
+} as const;
+
+// Systems & Operations icons
+export const SYSTEMS_ICONS = {
+  workflows: 'WorkflowLoop',
+  sops: 'WorkflowLoop',
+  processes: 'WorkflowLoop',
 } as const;
