@@ -201,28 +201,7 @@ export default function MoneyPage() {
         </div>
       </section>
 
-      {/* COMING SOON SECTION */}
-      <section style={{
-        padding: '64px 24px',
-        maxWidth: '1200px',
-        margin: '0 auto',
-        borderTop: '1px solid #E2E8F0'
-      }}>
-        <h2 style={{
-          fontSize: '20px',
-          fontWeight: '700',
-          marginBottom: '24px'
-        }}>
-          Coming Soon
-        </h2>
-        <p style={{
-          fontSize: '16px',
-          color: '#666',
-          lineHeight: '1.6'
-        }}>
-          More articles on passive income strategies, affiliate marketing, sponsorship models, and scaling revenue without adding complexity.
-        </p>
-      </section>
+
     </main>
   );
 }

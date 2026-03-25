@@ -76,12 +76,12 @@ export default function BusinessModelPage({ params }: { params: { slug: string }
           </p>
         </div>
 
-        <div style={{ backgroundColor: '#FEF3C7', borderRadius: '12px', padding: '24px', marginBottom: '48px', borderLeft: '4px solid #F59E0B' }}>
-          <p style={{ margin: 0, color: '#92400E', fontSize: '16px', fontWeight: '500' }}>
-            Full guide coming soon.
+        <div style={{ backgroundColor: '#F0F9FF', borderRadius: '12px', padding: '24px', marginBottom: '48px', borderLeft: '4px solid #0EA5E9', border: '1px solid #E0F2FE' }}>
+          <p style={{ margin: 0, color: '#0C4A6E', fontSize: '16px', fontWeight: '600' }}>
+            Guide in development
           </p>
-          <p style={{ margin: '8px 0 0 0', color: '#92400E', fontSize: '14px' }}>
-            Check back soon for a complete breakdown of this business model, including how to get started, pricing strategies, and real examples.
+          <p style={{ margin: '8px 0 0 0', color: '#0369A1', fontSize: '14px' }}>
+            Deep-dive guides with implementation strategies are coming soon. Subscribe to our newsletter to get notified when this guide is ready.
           </p>
         </div>
 
