@@ -66,7 +66,7 @@ export const businessModels: BusinessModel[] = [
     scalability: 'Very High',
     bestFor: 'Developers or no-code builders',
     icon: 'Code',
-    hasArticle: false,
+    hasArticle: true,
   },
   {
     slug: 'content-media',
