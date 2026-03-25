@@ -35,8 +35,7 @@ export const NAV_LINKS = [
 export const SECONDARY_NAV_LINKS = [
   { name: "Money", href: "/money" },
   { name: "Growth", href: "/growth" },
-  { name: "Productivity", href: "/productivity" },
-  { name: "Mindset", href: "/mindset" }
+  { name: "Productivity", href: "/productivity" }
 ];
 
 // TODO: Create these pages
@@ -48,7 +47,13 @@ export const SECONDARY_NAV_LINKS = [
 // - /write-for-us — Guest post submission guidelines
 
 export const FOOTER_LINKS = {
-  Categories: NAV_LINKS,
+  Categories: [
+    ...NAV_LINKS,
+    { name: "Tools", href: "/tools" },
+    { name: "Money", href: "/money" },
+    { name: "Growth", href: "/growth" },
+    { name: "Productivity", href: "/productivity" }
+  ],
   Resources: [
     { name: "Stories (Coming Soon)", href: "/start-here" },
     { name: "Templates (Coming Soon)", href: "/start-here" },
