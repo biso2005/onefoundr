@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Side Hustle to Full Time — OneFoundr",
-  description: "When to quit your job and go full time on your solo business."
+  description: "When to quit your job and go full time on your solo business.",
+  robots: "noindex"
 };
 
 export default function SideHustleToFullTimePage() {

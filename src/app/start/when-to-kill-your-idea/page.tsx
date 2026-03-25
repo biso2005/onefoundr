@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "When to Kill Your Idea — OneFoundr",
-  description: "How to know when to pivot or walk away."
+  description: "How to know when to pivot or walk away.",
+  robots: "noindex"
 };
 
 export default function WhenToKillYourIdeaPage() {

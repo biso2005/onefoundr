@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "The One-Page Business Canvas — OneFoundr",
-  description: "A minimal planning tool for solo founders."
+  description: "A minimal planning tool for solo founders.",
+  robots: "noindex"
 };
 
 export default function BusinessCanvasPage() {

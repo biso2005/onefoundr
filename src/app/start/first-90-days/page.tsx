@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "The Solo Founder's First 90 Days — OneFoundr",
-  description: "Your complete week-by-week launch plan from day one to first revenue."
+  description: "Your complete week-by-week launch plan from day one to first revenue.",
+  robots: "noindex"
 };
 
 export default function First90DaysPage() {
