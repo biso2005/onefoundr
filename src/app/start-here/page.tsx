@@ -1,5 +1,6 @@
 import PathCards from "@/components/start-here/PathCards";
-import { Rocket, Package, Megaphone, DollarSign, Settings, Cpu, ArrowDown } from "lucide-react";
+import { Lightbulb, Package, Megaphone, Handshake, Gear, AutomationGear } from "@/components/icons";
+import { ArrowDown } from "lucide-react";
 import PopularGuides from "@/components/start-here/PopularGuides";
 import FreeResources from "@/components/start-here/FreeResources";
 import NewsletterCTA from "@/components/start-here/NewsletterCTA";
@@ -15,7 +16,7 @@ const JOURNEY_STEPS = [
   {
     number: "1",
     label: "Start Solo",
-    icon: Rocket,
+    icon: Lightbulb,
     stage: "Stage 1: Foundation",
     article: {
       href: "/start/ai-launch-30days",
@@ -45,7 +46,7 @@ const JOURNEY_STEPS = [
   {
     number: "4",
     label: "Sales",
-    icon: DollarSign,
+    icon: Handshake,
     stage: "Stage 2: Growth",
     article: {
       href: "/sales/getting-clients",
@@ -55,7 +56,7 @@ const JOURNEY_STEPS = [
   {
     number: "5",
     label: "Systems",
-    icon: Settings,
+    icon: Gear,
     stage: "Stage 3: Scale",
     article: {
       href: "/systems/sops",
@@ -65,7 +66,7 @@ const JOURNEY_STEPS = [
   {
     number: "6",
     label: "Tools",
-    icon: Cpu,
+    icon: AutomationGear,
     stage: "Stage 3: Scale",
     article: {
       href: "/tools/ai-tools",
@@ -136,7 +137,7 @@ export default function StartHerePage() {
                 const Icon = step.icon;
                 return (
                   <div key={step.number} className="flex flex-col items-start p-4 border border-gray-200 rounded-lg hover:border-emerald-500 hover:bg-emerald-50 transition">
-                    <Icon className="text-emerald-500 mb-3" size={28} />
+                    <div className="mb-3"><Icon size={28} color="#10B981" /></div>
                     <div className="w-10 h-10 rounded-full border-2 border-emerald-500 flex items-center justify-center mb-3">
                       <span className="text-sm font-bold text-emerald-600">{step.number}</span>
                     </div>
@@ -162,7 +163,7 @@ export default function StartHerePage() {
                 const Icon = step.icon;
                 return (
                   <div key={step.number} className="flex flex-col items-start p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition">
-                    <Icon className="text-blue-500 mb-3" size={28} />
+                    <div className="mb-3"><Icon size={28} color="#3B82F6" /></div>
                     <div className="w-10 h-10 rounded-full border-2 border-blue-500 flex items-center justify-center mb-3">
                       <span className="text-sm font-bold text-blue-600">{step.number}</span>
                     </div>
@@ -188,7 +189,7 @@ export default function StartHerePage() {
                 const Icon = step.icon;
                 return (
                   <div key={step.number} className="flex flex-col items-start p-4 border border-gray-200 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition">
-                    <Icon className="text-purple-500 mb-3" size={28} />
+                    <div className="mb-3"><Icon size={28} color="#A855F7" /></div>
                     <div className="w-10 h-10 rounded-full border-2 border-purple-500 flex items-center justify-center mb-3">
                       <span className="text-sm font-bold text-purple-600">{step.number}</span>
                     </div>

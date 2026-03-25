@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Package, PoundSterling, Target, Truck, Rocket, Layers, ArrowRight, Star } from "lucide-react";
+import { Package, PricingTag, NicheCompass, StackingBlocks } from "@/components/icons";
+import { Truck, ArrowRight, Star } from "lucide-react";
 
 export const metadata = {
   title: "Build Your Offer | OneFoundr",
@@ -14,12 +15,12 @@ export default function OfferPage() {
       description: "What exactly are you selling? Scope, deliverables, timeline, format. The clearer this is, the easier it is to sell."
     },
     {
-      icon: PoundSterling,
+      icon: PricingTag,
       title: "Pricing",
       description: "How much does it cost and how do you charge? Hourly, project, value-based, retainer. This shapes everything."
     },
     {
-      icon: Target,
+      icon: NicheCompass,
       title: "Positioning",
       description: "Why should they pick you? Your niche, your angle, your unique promise. This is how you stand out."
     },
@@ -52,7 +53,7 @@ export default function OfferPage() {
 
   const paths = [
     {
-      icon: Rocket,
+      icon: Package,
       title: "First Offer",
       description: "Build your minimum viable offer. Stop overthinking, start selling. We'll cover packaging, simple pricing, and getting it out the door.",
       bestFor: "Complete beginners who haven't sold anything yet",
@@ -60,7 +61,7 @@ export default function OfferPage() {
       featured: true
     },
     {
-      icon: PoundSterling,
+      icon: PricingTag,
       title: "Pricing",
       description: "Hourly vs project vs value-based vs retainer. How to price with confidence, when to raise rates, and how to stop leaving money on the table.",
       bestFor: "Anyone who's unsure if they're charging the right amount",
@@ -68,7 +69,7 @@ export default function OfferPage() {
       featured: false
     },
     {
-      icon: Target,
+      icon: NicheCompass,
       title: "Positioning",
       description: "How to stand out when there are thousands of others doing what you do. Niching, messaging, and attracting ideal clients.",
       bestFor: "Anyone who feels invisible or is attracting the wrong clients",
@@ -76,7 +77,7 @@ export default function OfferPage() {
       featured: false
     },
     {
-      icon: Layers,
+      icon: StackingBlocks,
       title: "Productization",
       description: "Turn custom work into packages. Create tiers (DIY, done-with-you, done-for-you). Escape the time-for-money trap without hiring.",
       bestFor: "Anyone who's selling but drowning in custom requests",
@@ -149,7 +150,7 @@ export default function OfferPage() {
               const Icon = diff.icon;
               return (
                 <div key={idx} className="bg-white border border-gray-100 rounded-xl p-6 hover:shadow-md hover:border-emerald-300 transition-all">
-                  <Icon className="w-8 h-8 text-accent mb-4" />
+                  <div className="mb-4"><Icon size={32} color="#00B894" /></div>
                   <h3 className="text-lg font-semibold text-primary mb-3">{diff.title}</h3>
                   <p className="text-sm text-textLight leading-relaxed">{diff.description}</p>
                 </div>
@@ -175,8 +176,8 @@ export default function OfferPage() {
                       : "bg-white border border-gray-100 hover:shadow-md hover:border-emerald-300"
                   }`}>
                     <div className="flex items-start justify-between mb-4">
-                      <Icon className={`w-8 h-8 ${path.featured ? "text-emerald-600" : "text-accent"}`} />
-                      {path.featured && <Star className="w-5 h-5 text-amber-500 fill-amber-500" />}
+                      <Icon size={32} color={path.featured ? "#059669" : "#00B894"} />
+                      {path.featured && <Star size={20} color="#F59E0B" />}
                     </div>
                     <h3 className="text-lg font-semibold text-primary mb-2">{path.title}</h3>
                     <p className="text-sm text-textLight leading-relaxed mb-4 flex-1">{path.description}</p>

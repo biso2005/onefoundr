@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { TrendingUp, Coins, ArrowRight } from 'lucide-react';
+import { GrowthRocket, Coins } from "@/components/icons";
+import { ArrowRight } from 'lucide-react';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { businessIdeas, ideaCategories, ideaDifficulties } from '@/data/businessIdeas';
 import type { IdeaCategory, Difficulty } from '@/data/businessIdeas';
@@ -146,11 +147,11 @@ export default function BusinessIdeasPage() {
                 {/* Revenue & Cost Row */}
                 <div className="flex gap-4 mb-4">
                   <div className="flex items-center gap-1.5">
-                    <TrendingUp size={14} className="text-accent" />
+                    <GrowthRocket size={14} color="#00B894" />
                     <span className="text-[13px] text-textLight">{idea.revenueRange}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Coins size={14} className="text-gray-400" />
+                    <Coins size={14} color="#9CA3AF" />
                     <span className="text-[13px] text-textLight">{idea.startupCost}</span>
                   </div>
                 </div>

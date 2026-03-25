@@ -1,14 +1,17 @@
 import Link from "next/link";
 import {
   Package,
-  TrendingUp,
+  GrowthRocket,
+  StackingBlocks,
+} from "@/components/icons";
+import {
   Zap,
   AlertCircle,
   CheckCircle2,
-  ArrowRight,
   BarChart3,
   Clock,
   DollarSign,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata = {
@@ -30,7 +33,7 @@ const threeLevers = [
   },
   {
     title: "Premium Pricing",
-    icon: TrendingUp,
+    icon: GrowthRocket,
     subtitle: "Same Hours, 3x Value",
     definition:
       "Stop competing on efficiency. Compete on specificity and outcome certainty.",
@@ -75,7 +78,7 @@ const productLadder = [
     price: "£800–£2,000",
     time: "3–5 hours (group calls or async video reviews)",
     math: "5 clients @ £1,500 = £7,500 at 15 hours vs. 1 client @ £7,500 at 20 hours. Same money, 5x impact.",
-    icon: TrendingUp,
+    icon: GrowthRocket,
   },
   {
     tier: "Tier 3",
@@ -254,7 +257,7 @@ export default function SoloCeilingPage() {
                   className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-center gap-3 mb-6">
-                    <Icon className="w-8 h-8 text-purple-600" />
+                    <Icon size={32} color="#9333EA" />
                     <h3 className="text-xl font-bold text-gray-900">
                       {lever.title}
                     </h3>
@@ -336,7 +339,7 @@ export default function SoloCeilingPage() {
                       </h3>
                       <p className="text-gray-600 font-medium">{tier.tagline}</p>
                     </div>
-                    <Icon className="w-10 h-10 text-purple-600 flex-shrink-0" />
+                    <Icon size={40} color="#9333EA" />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">

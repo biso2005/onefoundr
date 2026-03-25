@@ -1,6 +1,6 @@
 import {
-  Rocket, Package, Megaphone, DollarSign, Settings, Cpu, TrendingUp, Brain
-} from 'lucide-react';
+  Lightbulb, Package, Megaphone, Handshake, Gear, AutomationGear, GrowthRocket
+} from '@/components/icons';
 
 const categoryConfig: Record<string, {
   icon: any;
@@ -8,7 +8,7 @@ const categoryConfig: Record<string, {
   iconColor: string;
 }> = {
   start: {
-    icon: Rocket,
+    icon: Lightbulb,
     gradient: 'from-emerald-50 to-teal-100',
     iconColor: 'text-emerald-600'
   },
@@ -23,27 +23,27 @@ const categoryConfig: Record<string, {
     iconColor: 'text-purple-600'
   },
   sales: {
-    icon: DollarSign,
+    icon: Handshake,
     gradient: 'from-amber-50 to-orange-100',
     iconColor: 'text-amber-600'
   },
   systems: {
-    icon: Settings,
+    icon: Gear,
     gradient: 'from-slate-50 to-gray-200',
     iconColor: 'text-slate-600'
   },
   tools: {
-    icon: Cpu,
+    icon: AutomationGear,
     gradient: 'from-cyan-50 to-sky-100',
     iconColor: 'text-cyan-600'
   },
   growth: {
-    icon: TrendingUp,
+    icon: GrowthRocket,
     gradient: 'from-rose-50 to-pink-100',
     iconColor: 'text-rose-600'
   },
   mindset: {
-    icon: Brain,
+    icon: Lightbulb,
     gradient: 'from-indigo-50 to-purple-100',
     iconColor: 'text-indigo-600'
   },
