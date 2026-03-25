@@ -138,7 +138,7 @@ export default function BusinessIdeasPage() {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-base font-semibold text-primary mb-2">{idea.name}</h3>
+                <h3 className="text-sm sm:text-base md:text-base font-semibold text-primary mb-2 leading-snug">{idea.name}</h3>
 
                 {/* Description */}
                 <p className="text-sm text-textLight leading-relaxed mb-4 flex-1">{idea.description}</p>

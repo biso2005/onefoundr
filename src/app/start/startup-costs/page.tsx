@@ -37,7 +37,7 @@ export default function StartupCostsPage() {
               {/* Card Header */}
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">{category.emoji}</span>
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900">
                   {category.label}
                 </h3>
                 <span className={`${category.badgeColor} text-xs font-medium px-2.5 py-1 rounded-full ml-auto`}>
@@ -150,7 +150,7 @@ export default function StartupCostsPage() {
           {/* Milestone Cards */}
           {reinvestmentPlan.map((milestone) => (
             <div key={milestone.milestone} className="bg-white rounded-xl border border-gray-100 p-6 mb-6">
-              <h3 className="text-xl font-bold text-gray-900">{milestone.milestone}</h3>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900">{milestone.milestone}</h3>
               <p className="text-sm text-gray-600 mt-1">{milestone.description}</p>
 
               {/* Investment Items */}
