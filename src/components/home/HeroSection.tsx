@@ -18,7 +18,7 @@ export default function HeroSection() {
             </h1>
 
             <p style={{ fontSize: "18px", color: "#636E72", lineHeight: "1.6", maxWidth: "540px", marginBottom: "32px" }}>
-              Everything you need to start, grow, and scale a profitable business—by yourself. Practical guides, proven systems, and the right tools to build on your terms.
+              Skip the guesswork. Proven frameworks, step-by-step systems, and real examples to build a profitable solo business—without the burnout.
             </p>
 
             <div style={{ display: "flex", gap: "16px", marginBottom: "32px", flexWrap: "wrap" }} className="md:flex-row flex-col sm:flex">
