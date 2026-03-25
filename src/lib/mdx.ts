@@ -25,6 +25,10 @@ export interface Post {
 
 const contentDirectory = path.join(process.cwd(), "content");
 
+// Cache for getAllPosts() to avoid repeated file I/O during build
+let allPostsCache: Post[] | null = null;
+let categoryPostsCache: Map<string, Post[]> = new Map();
+
 /**
  * Get a single post by category and slug
  */
@@ -69,6 +73,11 @@ export function getPostBySlug(category: string, slug: string): Post | null {
  * Get all posts across all categories
  */
 export function getAllPosts(): Post[] {
+  // Return cached result if available
+  if (allPostsCache !== null) {
+    return allPostsCache;
+  }
+
   try {
     const posts: Post[] = [];
 
@@ -95,9 +104,13 @@ export function getAllPosts(): Post[] {
     }
 
     // Sort by date (newest first)
-    return posts.sort(
+    const sorted = posts.sort(
       (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
     );
+
+    // Cache the result
+    allPostsCache = sorted;
+    return sorted;
   } catch (error) {
     console.error("Error reading all posts:", error);
     return [];
@@ -108,6 +121,11 @@ export function getAllPosts(): Post[] {
  * Get all posts in a specific category
  */
 export function getPostsByCategory(category: string): Post[] {
+  // Return cached result if available
+  if (categoryPostsCache.has(category)) {
+    return categoryPostsCache.get(category)!;
+  }
+
   try {
     const categoryPath = path.join(contentDirectory, category);
 
@@ -128,9 +146,13 @@ export function getPostsByCategory(category: string): Post[] {
     }
 
     // Sort by date (newest first)
-    return posts.sort(
+    const sorted = posts.sort(
       (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
     );
+
+    // Cache the result
+    categoryPostsCache.set(category, sorted);
+    return sorted;
   } catch (error) {
     console.error(`Error reading posts for category ${category}:`, error);
     return [];
