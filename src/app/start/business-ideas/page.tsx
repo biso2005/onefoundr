@@ -128,7 +128,7 @@ export default function BusinessIdeasPage() {
             return (
               <div
                 key={idea.slug}
-                className={`bg-white border border-border rounded-xl p-6 flex flex-col h-full transition-all hover:shadow-md ${cc.hoverBorder}`}
+                className={`bg-white border border-border rounded-xl p-6 flex flex-col h-full transition-all hover:shadow-sm hover:border-gray-300 ${cc.hoverBorder}`}
               >
                 {/* Category Badge */}
                 <div className="mb-3">

@@ -8,7 +8,7 @@ export default function StartupCostsPage() {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="bg-white w-full pt-20 pb-12 md:py-20 py-12 px-6 border-b border-border">
+      <section className="bg-white w-full pt-20 pb-12 md:py-20 py-16 px-6 border-b border-border">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-6">
             <p className="text-xs uppercase tracking-widest text-accentDark font-semibold">Startup Costs</p>
@@ -22,7 +22,7 @@ export default function StartupCostsPage() {
         </div>
       </section>
 
-      <div className="max-w-[1200px] mx-auto py-16 px-6">
+      <div className="max-w-[1200px] mx-auto py-20 px-6">
 
         {/* SECTION 1 — THE TEARDOWN */}
         <section className="mb-20">
@@ -86,7 +86,7 @@ export default function StartupCostsPage() {
             {businessTypeCosts.map((type) => (
               <div
                 key={type.slug}
-                className="bg-white rounded-xl border border-gray-100 p-6 hover:shadow-md transition-all duration-200"
+                className="bg-white rounded-xl border border-gray-100 p-6 hover:shadow-sm transition-all duration-200 hover:border-gray-200"
               >
                 <h3 className="text-lg font-semibold text-gray-900">{type.name}</h3>
                 <p className="text-sm text-gray-600 mt-1">{type.description}</p>

@@ -117,7 +117,7 @@ interface ContentSectionProps {
 
 function ContentSection({ title, subtitle, children }: ContentSectionProps) {
   return (
-    <section className="w-full py-16 px-6">
+    <section className="w-full py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{title}</h2>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl">{subtitle}</p>
@@ -204,7 +204,7 @@ export default function LegalFinancialSetupPage() {
           {modelLegalQuirks.map((model, idx) => (
             <div
               key={idx}
-              className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow"
+              className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-sm transition-shadow hover:border-gray-300"
             >
               <h3 className="text-base font-semibold text-gray-900 mb-3">{model.name}</h3>
               <p className="text-sm text-gray-600 mb-4">{model.quirk}</p>
@@ -248,7 +248,7 @@ export default function LegalFinancialSetupPage() {
       </ContentSection>
 
       {/* Final CTA Section */}
-      <section className="w-full py-16 px-6 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="w-full py-20 px-6 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-2xl mx-auto text-center">
           <div className="bg-white rounded-xl border border-gray-200 p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Your Next Step</h2>
