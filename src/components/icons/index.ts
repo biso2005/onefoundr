@@ -17,6 +17,7 @@ export { Lightbulb } from './Lightbulb';
 export { NicheCompass } from './NicheCompass';
 export { Package } from './Package';
 export { Stack } from './Stack';
+export { StackingBlocks } from './StackingBlocks';
 export { PricingTag } from './PricingTag';
 export { ValueCheck } from './ValueCheck';
 export { Megaphone } from './Megaphone';
@@ -41,6 +42,7 @@ export const CLUSTER_ICONS = {
 export const OFFER_ICONS = {
   niche: 'NicheCompass',
   stack: 'Stack',
+  stackingBlocks: 'StackingBlocks',
   pricing: 'PricingTag',
   value: 'ValueCheck',
 } as const;
