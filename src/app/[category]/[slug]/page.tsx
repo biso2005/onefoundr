@@ -235,7 +235,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           {/* MDX Content */}
-          <div style={{ color: "#636E72" }}>
+          <div style={{ color: "#636E72" }} className="prose prose-sm sm:prose max-w-none">
             <MDXRemote 
               source={post.content} 
               components={MDXComponents}

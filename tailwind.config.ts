@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 const config = {
   content: [
     "./src/app/**/*.{ts,tsx,js,jsx}",
@@ -27,7 +29,7 @@ const config = {
       }
     }
   },
-  plugins: []
+  plugins: [typography]
 };
 
 export default config;
