@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { businessModels, modelScenarios, Scalability } from '@/data/businessModels';
 import NewsletterCTA from '@/components/NewsletterCTA';
 
@@ -35,6 +36,14 @@ export default function BusinessModelsPage() {
       {/* HERO SECTION */}
       <section style={{ backgroundColor: '#FFFFFF', paddingTop: '64px', paddingBottom: '48px', borderBottom: '1px solid #E2E8F0' }} className="px-6">
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ marginBottom: '16px' }}>
+            <Breadcrumbs 
+              items={[
+                { label: 'Start', href: '/start' },
+                { label: 'Business Models' }
+              ]}
+            />
+          </div>
           <div style={{ marginBottom: '16px' }}>
             <p style={{ fontSize: '12px', fontWeight: '600', color: '#00B894', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0 }}>
               CATEGORY

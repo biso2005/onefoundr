@@ -1,5 +1,6 @@
 import CategoryHub from "@/components/CategoryHub";
 import NewsletterCTA from "@/components/NewsletterCTA";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
 
 export const metadata = {
@@ -43,6 +44,18 @@ const validationSteps = [
 export default async function IdeaValidationPage() {
   return (
     <>
+      {/* Breadcrumbs */}
+      <div style={{ backgroundColor: "#FFFFFF", paddingTop: "24px", paddingBottom: "12px", paddingLeft: "24px", paddingRight: "24px", borderBottom: "1px solid #E2E8F0" }} className="px-6">
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <Breadcrumbs 
+            items={[
+              { label: 'Start', href: '/start' },
+              { label: 'Idea Validation' }
+            ]}
+          />
+        </div>
+      </div>
+      
       <CategoryHub
         eyebrow="START SOLO"
         emoji="✅"

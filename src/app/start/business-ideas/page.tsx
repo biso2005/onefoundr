@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { TrendingUp, Coins, ArrowRight } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { businessIdeas, ideaCategories, ideaDifficulties } from '@/data/businessIdeas';
 import type { IdeaCategory, Difficulty } from '@/data/businessIdeas';
 
@@ -36,6 +37,12 @@ export default function BusinessIdeasPage() {
       {/* Hero Section */}
       <section className="bg-white pt-16 pb-12 border-b border-border px-6">
         <div className="max-w-6xl mx-auto">
+          <Breadcrumbs 
+            items={[
+              { label: 'Start', href: '/start' },
+              { label: 'Business Ideas' }
+            ]}
+          />
           <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-4">CATEGORY</p>
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
             One-Person Business Ideas
