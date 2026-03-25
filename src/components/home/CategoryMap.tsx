@@ -7,43 +7,37 @@ const JOURNEY_CARDS = [
     emoji: "💡",
     title: "Start Solo",
     description: "Find your idea, validate it, and choose a business model that works for one person.",
-    href: "/start",
-    tag: "STEP 1"
+    href: "/start"
   },
   {
     emoji: "📦",
     title: "Build Your Offer",
     description: "Turn your skills into sellable products and services people actually want to buy.",
-    href: "/offer",
-    tag: "STEP 2"
+    href: "/offer"
   },
   {
     emoji: "📣",
     title: "Get Found",
     description: "Content marketing, SEO, personal branding, and audience building — the solo way.",
-    href: "/marketing",
-    tag: "STEP 3"
+    href: "/marketing"
   },
   {
     emoji: "🤝",
     title: "Win Clients",
     description: "Sell confidently without being pushy. Funnels, calls, proposals, and closing.",
-    href: "/sales",
-    tag: "STEP 4"
+    href: "/sales"
   },
   {
     emoji: "⚙️",
     title: "Build Systems",
     description: "SOPs, workflows, automation, and operations that run your business smoothly.",
-    href: "/systems",
-    tag: "STEP 5"
+    href: "/systems"
   },
   {
     emoji: "🛠️",
     title: "Tools & AI",
     description: "The essential tech stack and AI tools for running a one-person business efficiently.",
-    href: "/tools",
-    tag: "STEP 6"
+    href: "/tools"
   }
 ];
 
@@ -89,10 +83,7 @@ export default function CategoryMap() {
                 el.style.boxShadow = "none";
               }}
             >
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
-                <span style={{ fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#00B894", fontWeight: "600" }}>
-                  {card.tag}
-                </span>
+              <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "16px" }}>
                 <span style={{ fontSize: "28px" }}>
                   {card.emoji}
                 </span>
