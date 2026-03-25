@@ -14,7 +14,11 @@
 
 export { GrowthRocket } from './GrowthRocket';
 export { Lightbulb } from './Lightbulb';
+export { NicheCompass } from './NicheCompass';
 export { Package } from './Package';
+export { Stack } from './Stack';
+export { PricingTag } from './PricingTag';
+export { ValueCheck } from './ValueCheck';
 export { Megaphone } from './Megaphone';
 export { Handshake } from './Handshake';
 export { Gear } from './Gear';
@@ -31,4 +35,12 @@ export const CLUSTER_ICONS = {
   tools: 'Wrench',
   money: 'Coins',
   growth: 'GrowthRocket',
+} as const;
+
+// Additional offer-related icons
+export const OFFER_ICONS = {
+  niche: 'NicheCompass',
+  stack: 'Stack',
+  pricing: 'PricingTag',
+  value: 'ValueCheck',
 } as const;
