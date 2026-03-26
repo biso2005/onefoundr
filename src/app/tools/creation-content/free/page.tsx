@@ -42,6 +42,9 @@ export default function FreeCreationPage() {
           <h2 className="text-4xl font-black text-gray-900 mb-16">
             Why Paid Tools Don't Matter (Yet)
           </h2>
+          <p className="text-xl text-gray-700 mb-12 max-w-3xl leading-relaxed">
+            Most solopreneurs upgrade tools thinking it'll make them more productive. In reality, tool upgrades are procrastination. You don't need better software. You need consistency. Create 100 pieces with free tools. Master them. Then upgrade.
+          </p>
 
           <div className="space-y-8">
             {/* Myth 1 */}
@@ -480,6 +483,44 @@ export default function FreeCreationPage() {
               </ul>
               <p className="text-sm text-gray-600 mt-4">The problem wasn't free tools. It was expecting software to build the habit of creation.</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Decision Framework */}
+      <div className="py-20 px-6 sm:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-black text-gray-900 mb-4">
+            Should You Upgrade to Mid-Tier Tools?
+          </h2>
+          <p className="text-xl text-gray-700 mb-16">Answer these 5 questions to know when to upgrade.</p>
+          
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl border border-gray-100 p-6">
+              <p className="font-semibold text-gray-900 mb-3">1. Have you created 100+ pieces of content?</p>
+              <p className="text-gray-700">If no: Stay on free. You're still learning the basics. Upgrade after 100.</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-100 p-6">
+              <p className="font-semibold text-gray-900 mb-3">2. Are you hitting tool limits consistently?</p>
+              <p className="text-gray-700">If no: Free tools are fine. If yes (5GB Canva, 25 Loom videos, 3+ hours Descript): Time to upgrade.</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-100 p-6">
+              <p className="font-semibold text-gray-900 mb-3">3. Is your content generating revenue?</p>
+              <p className="text-gray-700">If no: Free tools. If yes: Mid-tier makes sense. Profit should exceed tool cost.</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-100 p-6">
+              <p className="font-semibold text-gray-900 mb-3">4. Are you creating at least 3-4 pieces per week?</p>
+              <p className="text-gray-700">If no: Free is enough. Consistency beats software. If yes: Mid-tier helps manage volume.</p>
+            </div>
+            <div className="bg-white rounded-xl border border-gray-100 p-6">
+              <p className="font-semibold text-gray-900 mb-3">5. Do you have authority in your niche (5k+ audience)?</p>
+              <p className="text-gray-700">If no: Free tools teach you the skills. If yes: Mid-tier allows pro features your audience expects.</p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-r from-pink-100 to-purple-100 rounded-xl border border-pink-200 p-8">
+            <p className="font-semibold text-gray-900 mb-3">Rule of Thumb:</p>
+            <p className="text-gray-700 text-lg leading-relaxed">If you answered "yes" to 3+ questions: Consider mid-tier. If 2 or fewer: Free tools are enough. If 0-1: Definitely stay free.</p>
           </div>
         </div>
       </div>
