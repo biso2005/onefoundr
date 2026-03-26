@@ -186,7 +186,7 @@ export default function ProjectDeliveryPage() {
             <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded mb-6">
               <p className="text-sm font-bold text-yellow-900">Checklist Principles:</p>
               <ul className="text-yellow-800 text-sm space-y-2 list-disc list-inside">
-                <li>10-15 items max (if >15, you're over-detailed)</li>
+                <li>10-15 items max (if {'>'}15, you're over-detailed)</li>
                 <li>Same template for every project</li>
                 <li>Customize the details, not the structure</li>
                 <li>Check off as you complete, not as you imagine</li>
@@ -195,7 +195,7 @@ export default function ProjectDeliveryPage() {
 
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
               <p className="text-sm font-bold text-blue-900">Solo Rule:</p>
-              <p className="text-blue-800">If the checklist has >15 items, it's too detailed. You're project managing, not delivering. Simplify.</p>
+              <p className="text-blue-800">If the checklist has {'>'}15 items, it's too detailed. You're project managing, not delivering. Simplify.</p>
             </div>
           </div>
 

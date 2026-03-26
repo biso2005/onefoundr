@@ -122,7 +122,7 @@ export default function ClientManagementPage() {
             </div>
             <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
               <p className="text-sm font-bold text-yellow-900">Solo Rule:</p>
-              <p className="text-yellow-800">If last contact is >30 days ago, they're getting cold. Move to Past or delete if they never convert.</p>
+              <p className="text-yellow-800">If last contact is {'>'}30 days ago, they're getting cold. Move to Past or delete if they never convert.</p>
             </div>
           </div>
 
@@ -178,7 +178,7 @@ export default function ClientManagementPage() {
             </div>
             <div className="bg-green-50 border-l-4 border-green-600 p-4 rounded">
               <p className="text-sm font-bold text-green-900">Solo Rule:</p>
-              <p className="text-green-800">If a Lead is worth £0 and you haven't talked in 14 days, delete them. Focus on what matters.</p>
+              <p className="text-green-800">If a Lead is worth £0 and you haven't talked in {'>'}14 days, delete them. Focus on what matters.</p>
             </div>
           </div>
 
@@ -232,11 +232,11 @@ export default function ClientManagementPage() {
               </li>
               <li className="flex gap-4">
                 <span className="font-bold text-lg text-blue-600 flex-shrink-0">3.</span>
-                <span>Filter by Status = Lead, sort by Last Contact, check for anyone >14 days old (follow up or delete)</span>
+                <span>Filter by Status = Lead, sort by Last Contact, check for anyone {'>'}14 days old (follow up or delete)</span>
               </li>
               <li className="flex gap-4">
                 <span className="font-bold text-lg text-blue-600 flex-shrink-0">4.</span>
-                <span>Filter by Status = Past, sort by Last Contact, check for anyone >90 days old (follow up with referral ask)</span>
+                <span>Filter by Status = Past, sort by Last Contact, check for anyone {'>'}90 days old (follow up with referral ask)</span>
               </li>
             </ol>
             <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
@@ -394,7 +394,7 @@ export default function ClientManagementPage() {
               <strong>Option 3: Automation (Zapier)</strong>
             </p>
             <p className="text-gray-700">
-              "If Last Contact date in Sheet 1 is >30 days, add to Slack reminder." (Requires Zapier setup, but ~£15/month)
+              \"If Last Contact date in Sheet 1 is {'>'}30 days, add to Slack reminder.\" (Requires Zapier setup, but ~£15/month)
             </p>
           </div>
 
@@ -589,45 +589,6 @@ export default function ClientManagementPage() {
             </li>
           </ul>
         </div>
-      </div>
-    </main>
-  );
-}
-                <p className="text-gray-700 text-sm">Where to store client files so you can find them in 5 seconds, not 25 minutes.</p>
-              </div>
-            </Link>
-          </div>
-        </section>
-
-        {/* NEXT STEPS */}
-        <section className="bg-blue-50 rounded-lg p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Start Here</h2>
-          <p className="text-gray-700 mb-4">
-            Begin with <strong>Lead Tracking</strong> if you're losing prospects. Start with <strong>Communication</strong> if you're drowning in email. Begin with <strong>File Storage</strong> if you can't find client assets.
-          </p>
-          <p className="text-gray-700 font-semibold">
-            Complete all three and you'll have a client management system that runs itself.
-          </p>
-        </section>
-
-        {/* RELATED LINKS */}
-        <section className="pt-12 border-t border-gray-200">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">Related Guides</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/systems/project-delivery">
-              <div className="p-4 border border-gray-200 rounded hover:border-blue-500 transition">
-                <p className="font-bold text-gray-900">Project Delivery</p>
-                <p className="text-sm text-gray-600">Deliver that work on time once you've landed the client.</p>
-              </div>
-            </Link>
-            <Link href="/sales/natural-selling">
-              <div className="p-4 border border-gray-200 rounded hover:border-blue-500 transition">
-                <p className="font-bold text-gray-900">Natural Selling</p>
-                <p className="text-sm text-gray-600">Generate those leads in the first place with DM outreach.</p>
-              </div>
-            </Link>
-          </div>
-        </section>
       </div>
     </main>
   );
