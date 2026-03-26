@@ -1,89 +1,136 @@
-import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
-export default function BusinessOperationsPage() {
+export const metadata = {
+  title: 'Business Operations: The Solo Finance System | OneFoundr',
+  description: 'Invoice on time, track expenses, stay legal—without an accountant. The solo finance system that takes 30 minutes/week.',
+  openGraph: {
+    title: 'Business Operations: The Solo Finance System',
+    description: 'Invoice on time, track expenses, stay legal—without an accountant.',
+  },
+};
+
+export default function BusinessOperations() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
-        {/* Back Link */}
-        <div className="mb-12">
-          <Link href="/systems" className="text-blue-600 hover:underline text-sm">
-            ← Back to Systems Hub
-          </Link>
-        </div>
+    <div className="min-h-screen bg-white">
+      <ScrollToTop />
 
-        {/* HERO SECTION */}
-        <section className="mb-16">
-          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-8 mb-8">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Business Operations: The Money Side</h1>
-            <p className="text-xl text-gray-600 mb-6">Invoicing, finance tracking, and admin systems that don't require a degree in accounting. Everything profitable solopreneurs need to stay legal and solvent.</p>
-          </div>
-
-          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded mb-8">
-            <p className="text-yellow-900 font-semibold mb-0">
-              "You can't scale what you don't measure. Your money system determines whether you're profitable or just busy."
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-green-50 to-teal-50 px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
+            Business Operations: The Solo Finance System
+          </h1>
+          <p className="mt-4 text-xl text-gray-600">
+            Invoice on time, track expenses, stay legal—without an accountant.
+          </p>
+          <div className="mt-8 rounded-xl bg-white p-6 border border-gray-100">
+            <p className="text-lg text-gray-700 leading-relaxed italic">
+              "I forgot to invoice £8,000 in one month. Realised 90 days later. Client paid late. Cash flow died. I built a finance system in 1 hour. Haven't missed an invoice since."
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* SUBCATEGORIES */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">The Business Operations System</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <Link href="/systems/business-operations/invoicing">
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-yellow-400 hover:shadow-lg transition cursor-pointer h-full">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Invoicing System</h3>
-                <p className="text-gray-700 text-sm">How to invoice so clients pay within 14 days instead of 90. Templates, follow-up, and payment terms.</p>
-              </div>
-            </Link>
+      {/* Main Content */}
+      <section className="px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl space-y-12">
 
-            <Link href="/systems/business-operations/finance-tracking">
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-yellow-400 hover:shadow-lg transition cursor-pointer h-full">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Finance Tracking</h3>
-                <p className="text-gray-700 text-sm">Track revenue, expenses, and profit without hiring an accountant. Real-time visibility into your business health.</p>
-              </div>
-            </Link>
+          {/* The Accountant Myth */}
+          <article className="space-y-6">
+            <h2 className="text-3xl font-bold text-gray-900">Why Accountants Don't Work for Solos</h2>
+            
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                You're a solo founder. You're doing the work. You're making money. And now someone tells you that you need an accountant. That you can't handle your own finances. That you'll get in trouble with HMRC.
+              </p>
+              
+              <p>
+                It's a lie designed to sell you software subscriptions and monthly retainers. The truth? You can do it yourself in 1 hour per week. No Excel nightmares. No spreadsheet anxiety. No monthly invoices from professionals who don't understand your business.
+              </p>
+            </div>
 
-            <Link href="/systems/business-operations/admin">
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-yellow-400 hover:shadow-lg transition cursor-pointer h-full">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Admin & Legal</h3>
-                <p className="text-gray-700 text-sm">The minimum admin you need to stay legal, protect yourself, and not lose sleep over compliance.</p>
+            <div className="space-y-4">
+              <div className="rounded-xl bg-white border border-gray-100 p-6">
+                <h3 className="font-semibold text-gray-900 mb-3">The "Monthly Report" Problem</h3>
+                <p className="text-gray-700">
+                  Accountants give you reports after the fact. You need visibility now. They send you P&Ls in February about January's cash. By then, you've already made decisions based on incomplete data. You've already had cash flow stress. You've already considered raising money. The report is worthless.
+                </p>
               </div>
-            </Link>
-          </div>
-        </section>
 
-        {/* NEXT STEPS */}
-        <section className="bg-yellow-50 rounded-lg p-8 mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Start Here</h2>
-          <p className="text-gray-700 mb-4">
-            Begin with <strong>Invoicing</strong> if you're waiting 60+ days to get paid. Start with <strong>Finance Tracking</strong> if you don't know your profit margin. Begin with <strong>Admin & Legal</strong> if you're worried about getting sued.
-          </p>
-          <p className="text-gray-700 font-semibold">
-            Master all three and you'll have 30+ extra hours per year and a business you can actually measure.
-          </p>
-        </section>
+              <div className="rounded-xl bg-white border border-gray-100 p-6">
+                <h3 className="font-semibold text-gray-900 mb-3">The "Too Complex" Problem</h3>
+                <p className="text-gray-700">
+                  They use accounting software that's designed for accountants, not for business owners. QuickBooks. Xero. Wave. All of them have features you'll never use. All of them take 3 hours to set up properly. You don't need double-entry accounting. You don't need depreciation schedules. You need to see: "Did I make money this month?"
+                </p>
+              </div>
 
-        {/* RELATED LINKS */}
-        <section className="pt-12 border-t border-gray-200">
-          <h3 className="text-xl font-bold text-gray-900 mb-6">Related Guides</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/systems/project-delivery">
-              <div className="p-4 border border-gray-200 rounded hover:border-yellow-500 transition">
-                <p className="font-bold text-gray-900">Project Delivery</p>
-                <p className="text-sm text-gray-600">Finish delivery before you invoice.</p>
+              <div className="rounded-xl bg-white border border-gray-100 p-6">
+                <h3 className="font-semibold text-gray-900 mb-3">The "Cost" Problem</h3>
+                <p className="text-gray-700">
+                  You're paying £150/month minimum for bookkeeping services. That's £1,800 per year. You can do it in 1 hour per week. That's 4 hours per month. That's 52 hours per year. Your finance system should take that time, not cost that amount.
+                </p>
               </div>
-            </Link>
-            <Link href="/offer/pricing-strategy">
-              <div className="p-4 border border-gray-200 rounded hover:border-yellow-500 transition">
-                <p className="font-bold text-gray-900">Pricing Strategy</p>
-                <p className="text-sm text-gray-600">Your pricing determines whether this ops system matters.</p>
+
+              <div className="rounded-xl bg-white border border-gray-100 p-6">
+                <h3 className="font-semibold text-gray-900 mb-3">The "Compliance" Problem</h3>
+                <p className="text-gray-700">
+                  Accountants focus on tax compliance. On what you owe HMRC. That's important. But it's not urgent. Your urgent problem is cash flow. Can you pay yourself this month? Do you have cash to reinvest? Will you run out? An accountant won't answer these questions until 3 months after they matter.
+                </p>
               </div>
-            </Link>
-          </div>
-        </section>
-      </div>
-    </main>
+            </div>
+
+            <div className="rounded-xl bg-amber-50 border border-amber-200 p-6">
+              <p className="font-semibold text-amber-900 mb-2">💡 Solo Rule</p>
+              <p className="text-amber-900">
+                If you're paying an accountant before £10k/month revenue, you're over-spending. You can do it yourself in 1 hour/week.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-red-50 border border-red-200 p-6">
+              <p className="font-semibold text-red-900 mb-2">❌ Anti-Example</p>
+              <p className="text-red-900">
+                "I paid an accountant £200/month. He sent me financial statements I didn't understand. I still ran out of cash in month 4. I switched to a simple Google Sheet. Spent 1 hour/week logging things. Suddenly I could see cash flow clearly. Been positive ever since."
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-green-50 border border-green-200 p-6">
+              <p className="font-semibold text-green-900 mb-2">✓ Real Example</p>
+              <p className="text-green-900">
+                "Tom's finance system: Google Sheets for invoicing. FreeAgent for automatic bank feed. Every Monday: 15 minutes logging invoices. Every Wednesday: 15 minutes adding expenses. Every Friday: 30 minutes admin. Total: 1 hour/week. Cost: £30/month. Cash flow: always visible. No panic. No late tax surprises."
+              </p>
+            </div>
+          </article>
+
+          {/* Related Guides */}
+          <article className="space-y-6 mt-12 pt-12 border-t border-gray-200">
+            <h2 className="text-2xl font-bold text-gray-900">Quick Start</h2>
+            
+            <div className="grid gap-4">
+              <a href="/tools/finance-legal" className="rounded-xl bg-white border border-gray-100 p-6 hover:border-blue-400 transition-colors">
+                <h3 className="font-semibold text-gray-900 mb-2">Finance & Legal Tools</h3>
+                <p className="text-gray-700 text-sm">
+                  Set up FreeAgent (£30/month) or Wave (free). Both work. Getting started takes 15 minutes.
+                </p>
+              </a>
+
+              <a href="/systems/client-management" className="rounded-xl bg-white border border-gray-100 p-6 hover:border-green-400 transition-colors">
+                <h3 className="font-semibold text-gray-900 mb-2">Client Management</h3>
+                <p className="text-gray-700 text-sm">
+                  Track clients before you invoice them. The 3-column spreadsheet that replaces CRM software.
+                </p>
+              </a>
+
+              <a href="/systems/project-delivery" className="rounded-xl bg-white border border-gray-100 p-6 hover:border-green-400 transition-colors">
+                <h3 className="font-semibold text-gray-900 mb-2">Project Delivery</h3>
+                <p className="text-gray-700 text-sm">
+                  Deliver work on time. Then invoice. The two-step system that prevents scope creep.
+                </p>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
   );
 }
