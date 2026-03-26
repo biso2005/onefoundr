@@ -1,0 +1,25 @@
+#!/bin/sh
+# Pre-commit hook: runs TypeScript type checking before every commit.
+# Catches JSX unsafe characters (<, >) and import/export mismatches
+# that are invisible during `next build` (which has ignoreBuildErrors: true).
+#
+# To activate: git config core.hooksPath .githooks
+# This is done automatically via `npm install` (see "prepare" script in package.json).
+
+echo "⏳ Running type check before commit..."
+
+npx tsc --noEmit
+
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "❌ Type check failed. Commit blocked."
+  echo ""
+  echo "Common causes:"
+  echo "  • Bare < or > in JSX text (use 'less than 5' or {'<'} or &lt;)"
+  echo "  • Default import of a named export (use import { Name } from '...')"
+  echo ""
+  echo "Run 'npm run check' to see all errors."
+  exit 1
+fi
+
+echo "✅ Type check passed."
