@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,6 +71,7 @@ export default function RootLayout({
         <Footer />
         {/* Scroll to top button */}
         <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   );
