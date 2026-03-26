@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  allowedDevOrigins: ['10.5.5.31', 'localhost'],
   eslint: {
     // ESLint v9 is incompatible with Next.js 14's internal ESLint runner.
     // Type checking (tsc) still runs; only the ESLint pass is skipped.
