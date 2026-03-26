@@ -5,69 +5,83 @@ import { getPostsByCategory } from "@/lib/mdx";
 
 export const metadata = {
   title: "Marketing for Solopreneurs | OneFoundr",
-  description: "Marketing strategies and channels that work when you're a team of one. From getting your first customers to scaling what works."
+  description: "You don't need a marketing team. You need one working system that brings you qualified leads while you deliver the work."
 };
 
 export default async function MarketingPage() {
   const posts = getPostsByCategory("marketing");
+  
   return (
     <CategoryHub
       eyebrow="STAGE 3"
       emoji="📣"
       title="Marketing"
-      description="You don't need a marketing team or a massive budget. You need the right strategy for where you are right now—and channels that work when it's just you."
-      color="text-purple-500"
+      description="You don't need a marketing team. You need one working system that brings you qualified leads while you deliver the work."
+      color="text-blue-500"
       pillarGuide={{
-        title: "Marketing for Solopreneurs: The Complete Guide",
-        description: "A full marketing system designed for one-person businesses with limited time and budget.",
-        readTime: "18 min read",
+        title: "Getting Your First Customers",
+        description: "The fastest route to revenue: zero to 10 clients using one of six proven tactics.",
+        readTime: "12 min read",
         href: "/marketing/first-customers"
       }}
       subcategories={[
         {
           name: "First Customers",
-          description: "Scrappy, practical tactics to get your first 10 paying customers—no matter what you're selling.",
+          description: "Zero to 10 clients: warm outreach, cold outreach, free work, and partnerships that actually work when you have no audience.",
           href: "/marketing/first-customers",
           articleCount: 1
         },
         {
           name: "Lead Flow",
-          description: "Build a repeatable system that brings in consistent leads without burning out.",
+          description: "Build one system that brings leads in while you work. Simple system, content system, outbound, or social—pick ONE that fits your business.",
           href: "/marketing/lead-flow",
           articleCount: 1
         },
         {
           name: "Scaling What Works",
-          description: "Double down on what's working and grow your reach without hiring a team.",
+          description: "You found a channel. Now squeeze more from it, multiply reach, or expand strategically—without hiring.",
           href: "/marketing/scaling",
           articleCount: 1
         },
         {
           name: "Local Marketing",
-          description: "For service providers and local businesses: get found, build trust, and dominate your area.",
+          description: "Own your neighborhood first: Google Business, referrals, local SEO, and partnerships with nearby businesses.",
           href: "/marketing/local-marketing",
           articleCount: 1
         },
         {
           name: "Content Marketing",
-          description: "SEO, blogging, and YouTube—build authority and attract customers while you sleep.",
+          description: "The 4-step solo flywheel: create one strong asset, splice it, distribute it, compound it. No content calendar required.",
           href: "/marketing/content-marketing",
           articleCount: 1
         },
         {
           name: "Social Media",
-          description: "LinkedIn, Twitter, Instagram—turn your personal brand into a client magnet.",
+          description: "One platform. One hour/day. The Sniper Method: comment on whales, post insight grenades, convert DMs to calls. Anti-influencer.",
           href: "/marketing/social-media",
           articleCount: 1
         },
         {
           name: "Partnerships & Referrals",
-          description: "Leverage other people's audiences and turn happy customers into your best salespeople.",
+          description: "Customer referrals first, provider reciprocity second, community nodes third. The 2-hour/week system that compounds trust.",
           href: "/marketing/partnerships",
           articleCount: 1
         }
       ]}
-      featuredArticles={[]}
+      featuredArticles={[
+        {
+          title: "The Marketing Trap Most Solos Fall Into",
+          category: "STRATEGY",
+          readTime: "6 min",
+          href: "/marketing/marketing-trap"
+        },
+        {
+          title: "My First 10 Customers: What Actually Worked",
+          category: "CASE STUDY",
+          readTime: "5 min",
+          href: "/marketing/first-10-customers"
+        }
+      ]}
       relatedCategories={[
         { name: "Sales", emoji: "🤝", href: "/sales" },
         { name: "Start Solo", emoji: "🚀", href: "/start" },
