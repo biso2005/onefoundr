@@ -1,529 +1,644 @@
-'use client';
-
 import Link from 'next/link';
-import { CheckCircle, AlertCircle, TrendingUp, Calendar, DollarSign, MessageSquare, Zap } from 'lucide-react';
 
 export default function First90DaysPage() {
   return (
-    <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '48px 24px', fontSize: '16px', lineHeight: '1.8', color: '#2D3436' }}>
+    <div className="max-w-3xl mx-auto px-6 py-16 sm:px-8 sm:py-20 text-base sm:text-lg leading-relaxed text-gray-900">
       
-      {/* Hero */}
-      <section style={{ marginBottom: '64px' }}>
-        <h1 style={{ fontSize: '48px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>
-          The 90-Day Solo Survival Guide
+      {/* Hero Section */}
+      <section className="mb-16 sm:mb-20">
+        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          The Solo Founder's First 90 Days
         </h1>
-        <p style={{ fontSize: '20px', color: '#636E72', marginBottom: '24px', fontWeight: '500' }}>
-          Stop planning. Start eliminating uncertainty about whether anyone will pay you.
+        <p className="text-xl sm:text-2xl text-gray-600 mb-8 font-medium">
+          Your week-by-week launch plan: from Day 1 to first revenue
         </p>
-        <div style={{ backgroundColor: '#FFF3E0', borderLeft: '4px solid #F57C00', padding: '20px', borderRadius: '8px', margin: '32px 0' }}>
-          <p style={{ margin: '0', fontSize: '15px', color: '#E65100' }}>
-            <strong>The Solo Founder Reality:</strong> You have 90 days of mental energy and financial runway. Most startup failure happens on Day 91 because Days 1–90 were spent on beautiful business cards instead of revenue. This guide eliminates that. By Day 30, you'll know if anyone will pay you. By Day 60, you'll know if you can deliver. By Day 90, you'll have a system. Or you'll kill the idea and move on.
+        <div className="bg-amber-50 border-l-4 border-amber-600 p-6 rounded mb-8">
+          <p className="text-amber-900 m-0">
+            <strong>Personal Story:</strong> By Day 87, I had 3 clients and £6,200 in revenue. By Day 120, I was at £11k/month. Most founders quit between Day 31–90 because they're building the wrong thing. This guide makes sure you're not one of them.
           </p>
         </div>
       </section>
 
-      {/* The Problem */}
-      <section style={{ marginBottom: '64px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          The 90-Day Startup Cemetery
+      {/* The 90-Day Mindset */}
+      <section className="mb-16 sm:mb-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+          Why 90 Days Is Perfect
         </h2>
-        <p style={{ marginBottom: '16px' }}>
-          Most solopreneurs fail between Day 31 and Day 90. Not because the idea is bad. But because they spent Days 1–30 on the wrong things:
-        </p>
-        <ul style={{ paddingLeft: '24px', marginBottom: '32px' }}>
-          <li style={{ marginBottom: '12px' }}>Building a website before talking to customers</li>
-          <li style={{ marginBottom: '12px' }}>Creating a logo instead of creating an offer</li>
-          <li style={{ marginBottom: '12px' }}>Writing a business plan instead of making a sale</li>
-          <li style={{ marginBottom: '12px' }}>Optimizing for compliance instead of validating demand</li>
-        </ul>
-        <p style={{ marginBottom: '24px' }}>
-          By Day 30, they've spent £0 and earned £0. By Day 60, the momentum is gone. By Day 90, they're "taking a different direction" (code for: quit).
-        </p>
-        <p style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-          <strong>This page is the opposite architecture:</strong> Revenue is the only metric. Everything else is a distraction.
-        </p>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">30 Days Is Too Short</h3>
+            <p className="text-gray-700">
+              You need time to iterate. By Day 30, most founders either have their first sale or nothing. If you only give yourself 30 days, you panic on Day 25 and either lower your price to zero or quit.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Six Months Is Too Long</h3>
+            <p className="text-gray-700">
+              This is when founders lose focus. By Month 4, they're building features no one asked for. By Month 5, they're burning out. By Month 6, they're dead. 90 days is the constraint that forces execution.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">90 Days Is Just Right</h3>
+            <p className="text-gray-700">
+              12 weeks + 2 weekend buffers = enough time to sell, deliver, and build a repeatable system. Not enough time to overthink. The pressure keeps you focused.
+            </p>
+          </div>
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+            <p className="text-blue-900 m-0">
+              <strong>Reality Check:</strong> By Day 30, you know if anyone will pay. By Day 60, you know if you can deliver without burning out. By Day 90, you have a real business or a clear signal to pivot. No exceptions.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Phase 1 */}
-      <section style={{ marginBottom: '64px' }}>
-        <div style={{ backgroundColor: '#E3F2FD', borderRadius: '12px', padding: '32px', marginBottom: '32px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#1565C0', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <Calendar size={32} />
-            Phase 1: The Pre-Sale Sprint (Days 1–30)
-          </h2>
-          <p style={{ fontSize: '16px', color: '#1976D2', margin: '8px 0 0 0' }}>
-            The validation phase. Do this or die.
-          </p>
-        </div>
+      {/* Week-by-Week Plan */}
+      <section className="mb-16 sm:mb-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          The 12-Week Timeline
+        </h2>
 
-        <div style={{ backgroundColor: '#FFF', borderLeft: '4px solid #1565C0', padding: '24px', marginBottom: '32px', borderRadius: '4px' }}>
-          <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>The Checkpoint: Day 30</h3>
-          <p style={{ marginBottom: '16px' }}>
-            By Day 30, you must have <strong>one of these two outcomes</strong>:
+        {/* Week 1 */}
+        <div className="mb-12 border-l-4 border-green-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Week 1: The Setup Sprint (Days 1–7)</h3>
+          <p className="text-gray-700 mb-4">
+            <strong>Objective:</strong> Get payment-ready. By Day 7, someone should be able to buy from you.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
-            <div style={{ backgroundColor: '#E8F5E9', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #2E7D32' }}>
-              <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#1B5E20', margin: '0 0 8px 0' }}>Option A: Revenue</h4>
-              <p style={{ margin: '0', fontSize: '14px', color: '#2E7D32' }}>
-                <strong>3 paid clients at £500+ each</strong><br />
-                OR<br />
-                <strong>10 pre-sales at £50+ each</strong>
-              </p>
+          
+          <div className="space-y-4 mb-6 bg-gray-50 p-6 rounded">
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 1–2: Offer Definition</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Go through <Link href="/start/niche-selection" className="text-blue-600 hover:underline">/start/niche-selection</Link> and lock in your niche</li>
+                <li>Define: Problem, Solution, Price (charge something: £200–£2,000 minimum)</li>
+                <li>Write 3-sentence pitch: "I help [person] solve [problem] by doing [thing]. It costs £X and takes Y weeks."</li>
+              </ul>
             </div>
-            <div style={{ backgroundColor: '#E8F5E9', padding: '20px', borderRadius: '8px', borderLeft: '4px solid #2E7D32' }}>
-              <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#1B5E20', margin: '0 0 8px 0' }}>Option B: Kill</h4>
-              <p style={{ margin: '0', fontSize: '14px', color: '#2E7D32' }}>
-                <strong>Zero revenue on Day 30</strong><br />
-                → Pivot to a different offer<br />
-                → Try a different market<br />
-                → Or abandon the idea
-              </p>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 3–4: Payment Setup</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Create Stripe account (free): stripe.com</li>
+                <li>Test a £1 transaction to verify it works</li>
+                <li>Add Calendly (free calendly.com) for booking calls</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 5–6: Landing Page</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Create a one-page offer page: <strong>Carrd (£39/year)</strong> or Google Doc link</li>
+                <li>Include: Problem, your solution, testimonial (fake one from a friend OK for now), price, Calendly link</li>
+                <li>Do NOT build a custom website. Do NOT overthink design.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 7: First Outreach</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Send 3 messages today to people in your network: "Hey [name], I'm starting X. Do you know anyone who struggles with [problem]?"</li>
+                <li>Include your offer page link</li>
+                <li>Track: who you messaged, when, if they replied</li>
+              </ul>
             </div>
           </div>
-          <p style={{ color: '#C62828', fontWeight: '600', margin: '16px 0 0 0' }}>
-            ⚠️ There is no "continue building." There is no "wait until Month 4." Day 30 is binary: revenue or pivot.
-          </p>
-        </div>
 
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>What You Do (Days 1–30)</h3>
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>Day 1–7: Offer Packaging</h4>
-          <p style={{ marginBottom: '12px' }}>
-            You do NOT have a product yet. You have a skill or a solution. Package it into a sellable offer.
-          </p>
-          <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Download the Cobblestone Method:</strong> <Link href="/offer/from-scratch" style={{ color: '#00B894', textDecoration: 'none' }}>Go through /offer/from-scratch</Link> and fill out the 3 sections: Problem → Offer → Price.
-            </li>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Set one price:</strong> Don't overthink. For services: £500–£2,000 per project. For pre-sales (SaaS/Product): £50–£500 upfront. For done-for-you: £2,000–£10,000. You'll adjust after Day 30 based on market feedback.
-            </li>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Write one pitch:</strong> 2–3 sentences. "I help [specific person] solve [specific problem] by doing [specific thing]. It costs £X and takes Y weeks."
-            </li>
-          </ul>
-          <p style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', fontSize: '14px' }}>
-            <strong>Budget:</strong> £0. Everything free: Notion, Google Docs, pen and paper.
-          </p>
-        </div>
-
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>Day 7–30: Manual Outreach (20 Attempts)</h4>
-          <p style={{ marginBottom: '12px' }}>
-            You have 20 manual outreach attempts to make before Day 30. That's slightly less than 1 per day (gives you weekends/buffer).
-          </p>
-          <p style={{ marginBottom: '12px' }}>
-            <strong>What "outreach" means:</strong> A direct, personal message to someone in your target market. Not LinkedIn automation. Not email blasts. <strong>Human to human.</strong>
-          </p>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', marginBottom: '16px' }}>
-            <p style={{ margin: '0 0 12px 0', fontSize: '14px' }}>
-              <strong>The 20 Outreach Attempts:</strong>
+          <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded mb-4">
+            <p className="text-red-900 text-sm m-0">
+              <strong>What NOT to Do Week 1:</strong> Logo, business cards, domain name, legal registration, fancy website, content calendar, social media setup. Only: offer definition → payment → landing page → first outreach.
             </p>
-            <ul style={{ paddingLeft: '24px', margin: '0', fontSize: '14px' }}>
-              <li style={{ marginBottom: '6px' }}>5 direct LinkedIn messages to people in your network</li>
-              <li style={{ marginBottom: '6px' }}>5 cold emails to potential customers (find via LinkedIn, Google, industry lists)</li>
-              <li style={{ marginBottom: '6px' }}>5 Slack/Discord messages in relevant communities</li>
-              <li style={{ marginBottom: '6px' }}>5 in-person conversations or phone calls</li>
+          </div>
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+            <p className="text-purple-900 text-sm m-0">
+              <strong>Solo Rule:</strong> "Your landing page must have a payment button by Day 7." If someone wants to buy, they should be able to click and pay. No "coming soon."
+            </p>
+          </div>
+        </div>
+
+        {/* Week 2 */}
+        <div className="mb-12 border-l-4 border-green-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Week 2: First 5 Conversations (Days 8–14)</h3>
+          <p className="text-gray-700 mb-4">
+            <strong>Objective:</strong> Talk to 5 potential customers. Learn if your offer resonates.
+          </p>
+          
+          <div className="space-y-4 mb-6 bg-gray-50 p-6 rounded">
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 8–9: Scheduling</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Send 5 calendar booking links: "Want to chat about your [problem]? 15-min call, free."</li>
+                <li>Track: who you invited, who booked</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 10–12: Calls</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Have 3–5 calls (even if only 2 booked, that's progress)</li>
+                <li>Listen: "What's your biggest frustration?" "Would you pay £X for this solution?" "Who else has this problem?"</li>
+                <li>Record notes on their budget, timeline, and whether they'd commit</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 13–14: Follow-up</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Send 1 follow-up email to each: "Thanks for the call. To move forward, click here [payment link]."</li>
+                <li>If they have questions, answer them same-day</li>
+                <li>Continue outreach: send 3 more booking invites</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded mb-4">
+            <p className="text-red-900 text-sm m-0">
+              <strong>What NOT to Do Week 2:</strong> Perfecting your pitch, building features, creating a content calendar. Just: calls and listening.
+            </p>
+          </div>
+        </div>
+
+        {/* Week 3 */}
+        <div className="mb-12 border-l-4 border-green-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Week 3: Offer Polish (Days 15–21)</h3>
+          <p className="text-gray-700 mb-4">
+            <strong>Objective:</strong> Iterate your offer based on feedback. Get closer to first sale.
+          </p>
+          
+          <div className="space-y-4 mb-6 bg-gray-50 p-6 rounded">
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 15–16: Review Feedback</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Look at Week 2 calls: What questions came up? What objections?</li>
+                <li>Adjust your offer slightly: scope, price, or positioning</li>
+                <li>Don't change everything—just what's broken</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 17–18: New Outreach</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Send 5 new booking requests with updated pitch</li>
+                <li>Include social proof if you have it: "3 people are testing this, 1 was interested"</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 19–20: More Calls</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Aim for 3–5 more calls</li>
+                <li>If anyone says "yes," move them to payment ASAP (don't lose momentum)</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 21: Weekly Review</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Total outreach attempts so far: ~18 (3 Week 1 + 5 Week 2 + 5 Week 3, plus follow-ups)</li>
+                <li>Sales so far: 0? 1? 2?</li>
+                <li>If 0 sales by Day 21: You have 9 days to adjust. Go back to niche or offer iteration.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded mb-4">
+            <p className="text-red-900 text-sm m-0">
+              <strong>What NOT to Do Week 3:</strong> Adding features, redesigning your website, lowering price too much, second-guessing. Just: listen and iterate.
+            </p>
+          </div>
+        </div>
+
+        {/* Week 4 */}
+        <div className="mb-12 border-l-4 border-green-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Week 4: The First Sale (Days 22–30)</h3>
+          <p className="text-gray-700 mb-4">
+            <strong>Objective:</strong> Close at least 1 paying customer. This is binary: revenue or pivot.
+          </p>
+          
+          <div className="space-y-4 mb-6 bg-gray-50 p-6 rounded">
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 22–24: Full Push</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Send 6 booking invites (this is your last push before Day 30 checkpoint)</li>
+                <li>Follow up with Week 2 and 3 people who said "maybe": "I'm opening 2 spots this week. If interested, book here."</li>
+                <li>If anyone is on the fence, offer: "First month at 50% off if you commit by Day 24"</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 25–27: Close</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Have calls with everyone who booked</li>
+                <li>Goal: Close 1 customer (or 2, or 3—the more the better)</li>
+                <li>When they say yes: "Great, click here to pay [Stripe link]"</li>
+                <li>Track exact details: Price, scope, timeline, deliverables</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-1">Day 28–30: Document</p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                <li>Create a Notion page: "Customer 1: [Name], [Price], [Scope], [Timeline]"</li>
+                <li>Start a delivery plan: what will you actually do to serve them?</li>
+                <li>Total outreach: 25–30 attempts over 30 days</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded mb-4">
+            <p className="text-yellow-900 text-sm m-0">
+              <strong>Anti-Example: The Week 4 Redesign Trap</strong><br />
+              Founder gets nervous on Day 25. Cancels calls. Decides to rebuild website as a "safety net." Loses momentum. Hits Day 30 with zero revenue and a shiny new website nobody sees. Quits Week 5.
+            </p>
+          </div>
+
+          <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded mb-4">
+            <p className="text-red-900 text-sm m-0">
+              <strong>What NOT to Do Week 4:</strong> Redesigning anything, hiring, building features, writing content, being "perfect." Only: close the sale.
+            </p>
+          </div>
+
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+            <p className="text-purple-900 text-sm m-0">
+              <strong>Day 30 Checkpoint (Binary):</strong> Either you have 1+ paying customer OR you pivot. No middle ground. No "continue building." If zero revenue by Day 30, you change niche, offer, or target market. Then restart the 30-day clock.
+            </p>
+          </div>
+        </div>
+
+        {/* Weeks 5-6 */}
+        <div className="mb-12 border-l-4 border-blue-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Weeks 5–6: Delivery Sprint (Days 31–42)</h3>
+          <p className="text-gray-700 mb-6">
+            <strong>What You Do:</strong> Deliver the work you promised. Do it beautifully. Do it manually. Do NOT hire or automate.
+          </p>
+          <div className="bg-gray-50 p-6 rounded mb-4">
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>Follow your delivery plan from Day 30</li>
+              <li>Track every hour: "Spent 4 hours on research, 3 hours on execution, 1 hour on client feedback"</li>
+              <li>Document the playbook as you go: "Step 1: X, estimated 2 hours. Step 2: Y, estimated 3 hours."</li>
+              <li>Get client feedback weekly</li>
+              <li>Get a testimonial by Day 40: "What exceeded expectations? Would you recommend?"</li>
+              <li>Ongoing: send 5–8 new booking requests (you're still selling while delivering)</li>
             </ul>
           </div>
-          <p style={{ marginBottom: '12px' }}>
-            <strong>Expected conversion:</strong> 1 in 10 will reply. 1 in 20 will become a customer. So: 20 outreach attempts = ~1 sale. If you want 3 clients by Day 30, you need ~60 attempts. Adjust your daily pace accordingly.
-          </p>
-          <p style={{ marginBottom: '16px' }}>
-            <Link href="/marketing/first-customers" style={{ color: '#00B894', textDecoration: 'none', fontWeight: '600' }}>
-              Full playbook → /marketing/first-customers
-            </Link>
-          </p>
-          <p style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', fontSize: '14px' }}>
-            <strong>Budget:</strong> £0 (coffee shops are free, LinkedIn is free, email is free).
-          </p>
-        </div>
-
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>Model Markers: How to Interpret "3 Clients"</h3>
-        <p style={{ marginBottom: '16px' }}>
-          The checkpoint is the same (binary: revenue or pivot), but what "revenue" means depends on your model:
-        </p>
-        <div style={{ display: 'grid', gap: '20px', marginBottom: '32px' }}>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2D3436', marginBottom: '8px' }}>Service (Freelancing, Consulting, Done-for-You)</h4>
-            <p style={{ margin: '0', fontSize: '14px' }}>
-              <strong>Day 30 checkpoint:</strong> 1 paying client at £500+, OR 3 clients at £200+<br />
-              <strong>Example:</strong> You sell "LinkedIn profile optimization" for £800. You land one client. ✅ Pass.
-            </p>
-          </div>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2D3436', marginBottom: '8px' }}>SaaS / Subscription</h4>
-            <p style={{ margin: '0', fontSize: '14px' }}>
-              <strong>Day 30 checkpoint:</strong> 10 people who put down £10+ for early access, OR 3 people at £100+ MRR<br />
-              <strong>Example:</strong> You're building an AI writing tool. You get 10 beta customers to put £10 down "when it's ready." ✅ Pass.
-            </p>
-          </div>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2D3436', marginBottom: '8px' }}>Digital Product (Course, Template, Ebook)</h4>
-            <p style={{ margin: '0', fontSize: '14px' }}>
-              <strong>Day 30 checkpoint:</strong> 5 pre-sales at £50+ (before the product exists)<br />
-              <strong>Example:</strong> You sell a notion email template. 5 people buy it for £99. ✅ Pass.
-            </p>
-          </div>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2D3436', marginBottom: '8px' }}>Content / Affiliate</h4>
-            <p style={{ margin: '0', fontSize: '14px' }}>
-              <strong>Day 30 checkpoint:</strong> NOT revenue. Instead: 100 email subscribers on Day 30 (you'll monetize later).<br />
-              <strong>Why?</strong> Affiliate/content is slower. Switch to this model ONLY if you're already a good writer and have built an audience.
+          <div className="bg-red-50 border-l-4 border-red-600 p-4 rounded">
+            <p className="text-red-900 text-sm m-0">
+              <strong>Week 5–6 Reality:</strong> If delivery takes 30+ hours for one client at £1,000, you have a problem. Scope is too big. By Day 45, you'll know if this is sustainable. If not, kill the offer and design a smaller scope.
             </p>
           </div>
         </div>
 
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>What NOT to Do (Days 1–30)</h3>
-        <ul style={{ paddingLeft: '24px', marginBottom: '32px' }}>
-          <li style={{ marginBottom: '8px' }}>Don't build a website. Use Carrd (£39/year) or a Calendly link if you need somewhere to send people.</li>
-          <li style={{ marginBottom: '8px' }}>Don't register an LLC or company. You'll do that at £5k revenue. For now: sole trader / Schedule C.</li>
-          <li style={{ marginBottom: '8px' }}>Don't buy business cards, logos, or a domain name. This is distraction.</li>
-          <li style={{ marginBottom: '8px' }}>Don't spend on Slack workspaces, Notion, fancy tools. Free tier, always.</li>
-          <li style={{ marginBottom: '8px' }}>Don't create a "content calendar" or "personal brand." No one cares yet. Sell first, then build an audience.</li>
-          <li style={{ marginBottom: '8px' }}>Don't overthink pricing. Charge something. You'll adjust.</li>
-        </ul>
-      </section>
-
-      {/* Phase 2 */}
-      <section style={{ marginBottom: '64px' }}>
-        <div style={{ backgroundColor: '#F3E5F5', borderRadius: '12px', padding: '32px', marginBottom: '32px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#6A1B9A', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <Zap size={32} />
-            Phase 2: The Delivery Crucible (Days 31–60)
-          </h2>
-          <p style={{ fontSize: '16px', color: '#7B1FA2', margin: '8px 0 0 0' }}>
-            Deliver the work. Prove you can do it without burning out.
+        {/* Weeks 7-8 */}
+        <div className="mb-12 border-l-4 border-blue-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Weeks 7–8: Referral Engine (Days 43–56)</h3>
+          <p className="text-gray-700 mb-6">
+            <strong>What You Do:</strong> Finish delivery. Build your referral ask. Get Customer 2.
           </p>
+          <div className="bg-gray-50 p-6 rounded mb-4">
+            <ul className="list-disc pl-6 text-gray-700 space-y-2">
+              <li>Complete delivery for Customer 1 by Day 45</li>
+              <li>Send testimonial request + case study outline</li>
+              <li>Ask referrals: "Who do you know that has this problem? I'll give you £100 if they become a customer."</li>
+              <li>Send 8–10 new outreach messages (different niches or angles if needed)</li>
+              <li>Target: 1–2 more sales by Day 56 (your pipeline from Week 1–4 is still active)</li>
+            </ul>
+          </div>
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
+            <p className="text-purple-900 text-sm m-0">
+              <strong>Solo Rule:</strong> "Referrals are your fuel." Customer 1 should refer you to Customer 2. If not, your offer isn't good enough or your delivery wasn't impactful enough. Note this.
+            </p>
+          </div>
         </div>
 
-        <div style={{ backgroundColor: '#FFF', borderLeft: '4px solid #6A1B9A', padding: '24px', marginBottom: '32px', borderRadius: '4px' }}>
-          <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>The Checkpoint: Day 60</h3>
-          <p style={{ marginBottom: '16px' }}>
-            By Day 60, you must have <strong>delivered the work for at least 1 client</strong> and captured:
+        {/* Weeks 9-12 */}
+        <div className="mb-12 border-l-4 border-blue-600 pl-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Weeks 9–12: Systematize (Days 57–90)</h3>
+          <p className="text-gray-700 mb-6">
+            <strong>What You Do:</strong> Turn the manual playbook into a system. Achieve 4-hour/week delivery. Lock in pricing.
           </p>
-          <ul style={{ paddingLeft: '24px', marginBottom: '20px' }}>
-            <li style={{ marginBottom: '8px' }}>1 written testimonial or case study (what problem did you solve, how much did they pay, would they recommend you?)</li>
-            <li style={{ marginBottom: '8px' }}>Proof that you can deliver without crying (the scope fits your 4-hour delivery week estimate, or you discovered it doesn't)</li>
-          </ul>
-          <p style={{ color: '#C62828', fontWeight: '600' }}>
-            ⚠️ If by Day 60 you're still delivering and want to crawl under your desk, your offer is too complex. Kill it. The problem isn't you—it's the scope.
-          </p>
-        </div>
-
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>What You Do (Days 31–60)</h3>
-        <p style={{ marginBottom: '16px' }}>
-          <strong>One rule:</strong> Deliver beautifully but manually. No automation. No "scaling." Just you and your client.
-        </p>
-        <ul style={{ paddingLeft: '24px', marginBottom: '32px' }}>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Deliver the work.</strong> Do exactly what you promised. If you promised 5 days delivery, take 5 days. If you promised it would take 10 hours, track every hour.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Document the delivery process.</strong> Keep a log of what you did: "Day 1: research, 3 hours. Day 2: strategy call, 1 hour. Day 3: execution, 4 hours." This becomes your template for scaling later.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Collect feedback from your client.</strong> Ask: "What exceeded your expectations? What didn't? Would you pay 20% more for Y feature?" Record their answers. This informs your pricing and offer for Phase 3.
-          </li>
-          <li style={{ marginBottom: '12px' }}>
-            <strong>Get a testimonial or case study.</strong> Ask your client: "Would you write 2–3 sentences about working with me?" Or offer to write it for them and get approval. Include: the problem, what you did, the result/outcome they'd recommend.
-          </li>
-        </ul>
-
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>The Scope Discipline</h3>
-        <p style={{ marginBottom: '16px' }}>
-          During Days 31–60, you're testing: <strong>Can I deliver this profitably in 4 hours a week?</strong>
-        </p>
-        <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px', marginBottom: '32px' }}>
-          <p style={{ margin: '0 0 12px 0' }}>
-            <strong>Example math:</strong> You charge £1,000 per project. It takes 20 hours. That's £50/hour. You're free. But if it takes 40 hours, that's £25/hour. You're broke.
-          </p>
-          <p style={{ margin: '0' }}>
-            By Day 60, you should know: "My offer is a 15-hour project that clients pay £1,500 for. That's sustainable long-term."
-          </p>
-        </div>
-
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>What NOT to Do (Days 31–60)</h3>
-        <ul style={{ paddingLeft: '24px', marginBottom: '32px' }}>
-          <li style={{ marginBottom: '8px' }}>Don't hire a freelancer to help. You need to know what's hard about this work.</li>
-          <li style={{ marginBottom: '8px' }}>Don't build a process. Build a manual playbook (document in Notion).</li>
-          <li style={{ marginBottom: '8px' }}>Don't upgrade to "premium" software. Stick with free tools.</li>
-          <li style={{ marginBottom: '8px' }}>Don't launch a second offer. Master this one.</li>
-        </ul>
-      </section>
-
-      {/* Phase 3 */}
-      <section style={{ marginBottom: '64px' }}>
-        <div style={{ backgroundColor: '#E0F2F1', borderRadius: '12px', padding: '32px', marginBottom: '32px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#00695C', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <TrendingUp size={32} />
-            Phase 3: Stabilization (Days 61–90)
-          </h2>
-          <p style={{ fontSize: '16px', color: '#00897B', margin: '8px 0 0 0' }}>
-            Build the machine that replaces manual labor.
-          </p>
-        </div>
-
-        <div style={{ backgroundColor: '#FFF', borderLeft: '4px solid #00695C', padding: '24px', marginBottom: '32px', borderRadius: '4px' }}>
-          <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>The Checkpoint: Day 90</h3>
-          <p>
-            By Day 90, you'll have:
-          </p>
-          <ul style={{ paddingLeft: '24px', marginBottom: '20px' }}>
-            <li style={{ marginBottom: '8px' }}>A repeatable 4-hour delivery week (templated work, documented process)</li>
-            <li style={{ marginBottom: '8px' }}>A simple system for scheduling, invoicing, and payment (Calendly + Stripe + Notion)</li>
-            <li style={{ marginBottom: '8px' }}>6–9 months of financial runway (salary replacement + personal runway)</li>
-            <li style={{ marginBottom: '8px' }}>Clear pricing locked in (you've tested it with 2–5 clients, know what margin works)</li>
-            <li style={{ marginBottom: '8px' }}>Two customer testimonials or case studies (for future marketing)</li>
-          </ul>
-          <p style={{ color: '#00695C', fontWeight: '600', marginTop: '16px' }}>
-            ✅ If all of the above is true on Day 90, you have a viable business. Time to decide: grow it, automate it, or step back.
-          </p>
-        </div>
-
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>What You Do (Days 61–90)</h3>
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>Task 1: Template Your Delivery (Days 61–75)</h4>
-          <p style={{ marginBottom: '12px' }}>
-            Take the playbook you documented in Phase 2. Turn it into a template:
-          </p>
-          <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
-            <li style={{ marginBottom: '8px' }}>Create a Notion template or checklist with the exact steps you take</li>
-            <li style={{ marginBottom: '8px' }}>Estimate time for each step (you have real data from Phase 2)</li>
-            <li style={{ marginBottom: '8px' }}>Identify any task that takes &gt;2 hours that could be delegated later</li>
-          </ul>
-          <p style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', fontSize: '14px' }}>
-            <strong>Goal:</strong> By Day 75, you can deliver the entire offer by following a 1-page checklist. Any new client reuses 80% of the work from the last client.
-          </p>
-        </div>
-
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>Task 2: Lock in Systems (Days 76–85)</h4>
-          <p style={{ marginBottom: '12px' }}>
-            Set up the three tools you'll use forever:
-          </p>
-          <div style={{ display: 'grid', gap: '16px', marginBottom: '16px' }}>
-            <div style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px' }}>
-              <p style={{ margin: '0 0 8px 0', fontWeight: '600', color: '#2D3436' }}>1. Scheduling (Calendly) — Free</p>
-              <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>Clients book consultation calls. You set your availability once.</p>
+          <div className="bg-gray-50 p-6 rounded">
+            <div className="mb-4">
+              <p className="font-bold text-gray-900 mb-2">Days 57–63: Template Your Playbook</p>
+              <p className="text-gray-700">Create a 1-page checklist: Step 1 (X hours), Step 2 (Y hours), Step 3 (Z hours). Each customer should follow it.</p>
             </div>
-            <div style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px' }}>
-              <p style={{ margin: '0 0 8px 0', fontWeight: '600', color: '#2D3436' }}>2. Invoicing & Payment (Stripe or PayPal) — 2–3% fee</p>
-              <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>Send invoice, client pays, money lands in your bank. Automate this completely.</p>
+            <div className="mb-4">
+              <p className="font-bold text-gray-900 mb-2">Days 64–70: Lock in Systems</p>
+              <p className="text-gray-700">Set up: Calendly (scheduling) + Stripe (payments) + Notion (tracking). These three shouldn't change for 2 years.</p>
             </div>
-            <div style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px' }}>
-              <p style={{ margin: '0 0 8px 0', fontWeight: '600', color: '#2D3436' }}>3. Financial Tracking (Notion or Spreadsheet) — Free</p>
-              <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>Each client: cost to deliver, revenue, net profit, delivery time. This becomes your data.</p>
+            <div className="mb-4">
+              <p className="font-bold text-gray-900 mb-2">Days 71–77: Pricing Audit</p>
+              <p className="text-gray-700">Look at all 2–5 customers: price, hours, profit per customer. If profitable: raise price 20%. If not: change scope.</p>
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 mb-2">Days 78–84: Referral Push</p>
+              <p className="text-gray-700">Send 10–15 more outreach messages. Ask all customers for referrals. Target: 6–9 customers total by Day 90.</p>
+            </div>
+            <div className="mt-4 p-4 bg-blue-50 rounded">
+              <p className="font-bold text-gray-900 mb-2">Day 85–90: Final Review</p>
+              <p className="text-gray-700">Calculate: revenue, clients, delivery hours per customer, profit per client, system readiness. What's your £/hour rate? Can you do 4 hours/week indefinitely?</p>
             </div>
           </div>
-          <p style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', fontSize: '14px' }}>
-            <strong>Time investment:</strong> 3 hours to set up all three. You're done by Day 80.
-          </p>
         </div>
 
-        <div style={{ marginBottom: '32px' }}>
-          <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', marginBottom: '12px' }}>Task 3: Financial Checkup (Days 86–90)</h4>
-          <p style={{ marginBottom: '12px' }}>
-            Look at your Phase 2 + Phase 3 data. Calculate:
-          </p>
-          <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Per-client profitability:</strong> Revenue £X – Cost £Y = Profit £Z. What's the median?
-            </li>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Delivery time per client:</strong> You estimated 4 hours/week. What was actual? (Phase 2 data says this.)
-            </li>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Runway math:</strong> You've earned £X in 90 days. At this rate, do you have 6 months to grow? Or do you need to find clients faster?
-            </li>
-            <li style={{ marginBottom: '8px' }}>
-              <strong>Pricing power:</strong> Did clients push back on price? Or did they pay quickly? Are you leaving money on the table?
-            </li>
-          </ul>
-          <p style={{ backgroundColor: '#F5F5F5', padding: '16px', borderRadius: '8px', fontSize: '14px' }}>
-            Link: See <Link href="/offer/pricing" style={{ color: '#00B894', textDecoration: 'none' }}>pricing strategies</Link> — if data says clients have budget for more, raise price 20%.
-          </p>
-        </div>
-
-        <h3 style={{ fontSize: '22px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>What NOT to Do (Days 61–90)</h3>
-        <ul style={{ paddingLeft: '24px', marginBottom: '32px' }}>
-          <li style={{ marginBottom: '8px' }}>Don't hire someone yet. You haven't proven the business can support two salaries.</li>
-          <li style={{ marginBottom: '8px' }}>Don't build complex systems (no CRM, no custom software, no "ops stack").</li>
-          <li style={{ marginBottom: '8px' }}>Don't scale to 5 offers. Master 1.</li>
-          <li style={{ marginBottom: '8px' }}>Don't neglect financial tracking. This data is your competitive advantage.</li>
-        </ul>
-      </section>
-
-      {/* The Forbidden List */}
-      <section style={{ marginBottom: '64px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#C62828', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <AlertCircle size={32} />
-          The Forbidden List: What You Do NOT Do (Days 1–90)
-        </h2>
-        <p style={{ marginBottom: '24px', fontSize: '16px' }}>
-          These are the things solopreneurs do in the first 90 days that kill momentum. Every one of these is a distraction from revenue.
-        </p>
-
-        <div style={{ display: 'grid', gap: '16px' }}>
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No LLC / Company Registration</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Wait until revenue exceeds £5,000. Until then: sole trader / Schedule C (US). It's simpler and costs £0.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No Custom Website</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Use Carrd (£39/year), a Calendly link, or a Google Doc. A custom website is 40 hours and £0 customers gained.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No Logo / Branding / Business Cards</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Distraction. Your customers care about results, not your typeface. Do this at Month 4 if you're still in business.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No Content Calendar / Personal Brand</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>You don't have an audience. Build one after you've proven revenue. For now: 1-to-1 outreach, not broadcasts.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No Co-Working Space / Fancy Office</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Coffee shops are free. Your home is free. £30–200/month on workspace is £30–200 not going to customers.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No "Premium" SaaS Stack</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Notion (free) + Stripe (free) + Calendly (free) + Gmail (free) + Google Docs (free). You don't need HubSpot. You need revenue.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No Hiring</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Not until Day 91. You're proving you can deliver solo first. Payroll kills solo founders at the 120-day mark.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No Pivot to a Second Offer</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>You get one offer in 90 days. If it doesn't work on Day 30, iterate the pitch, not the offer. Two offers = half focus on each.</p>
-          </div>
-
-          <div style={{ backgroundColor: '#FFEBEE', borderLeft: '4px solid #C62828', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 6px 0', fontWeight: '700', color: '#C62828' }}>No "Perfecting" the offer before selling</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2D3436' }}>Your offer is good enough today. The customer will tell you what to fix. Ship, sell, learn.</p>
+        {/* Day 90 Checkpoint */}
+        <div className="mb-12 border-l-4 border-green-600 pl-6 bg-green-50 p-6 rounded">
+          <h3 className="text-2xl font-bold text-green-900 mb-6">Day 90 Checkpoint: Final Truth</h3>
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold text-green-900 mb-1">✅ Revenue (£1K–£15K or 2–9 customers)</p>
+              <p className="text-green-900">You have proof. Decision: grow, automate, or steady-state.</p>
+            </div>
+            <div>
+              <p className="font-bold text-green-900 mb-1">✅ Delivery System (4 hours/week, repeatable)</p>
+              <p className="text-green-900">You can deliver without burning out. Sustainable.</p>
+            </div>
+            <div>
+              <p className="font-bold text-green-900 mb-1">✅ Referral Pipeline (organic leads from customers)</p>
+              <p className="text-green-900">Next customers come from referrals. You don't need to outreach as hard.</p>
+            </div>
+            <div>
+              <p className="font-bold text-green-900 mb-1">✅ System (Calendly, Stripe, Notion, testimonials)</p>
+              <p className="text-green-900">Your machine is built. You can hire, delegate, or stay solo.</p>
+            </div>
+            <div className="pt-4 border-t-2 border-green-200">
+              <p className="text-green-900 font-bold">
+                If all 4 are YES by Day 90: You have a real business. Time to decide your next 90 days.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* The Solo Safety Net */}
-      <section style={{ marginBottom: '64px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          The Solo Safety Net: Do You Have a Runway?
+      {/* Startup Costs Budget Table */}
+      <section className="mb-16 sm:mb-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          Startup Costs: The Real Numbers
         </h2>
-        <p style={{ marginBottom: '24px' }}>
-          Before you start, answer this truthfully:
+        <p className="text-gray-700 mb-6">
+          You don't need much money to start. Here's what you actually spend:
         </p>
-        <div style={{ display: 'grid', gap: '16px', marginBottom: '32px' }}>
-          <div style={{ backgroundColor: '#E8F5E9', borderLeft: '4px solid #2E7D32', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 8px 0', fontWeight: '700', color: '#1B5E20' }}>Option A: You Have 3+ Months Savings</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#2E7D32' }}>
-              Commit 90 days full-time to Days 1–60. You need to sell fast (Days 1–30) and deliver flawlessly (Days 31–60). Half-time won't work.
-            </p>
-          </div>
-          <div style={{ backgroundColor: '#FFF3E0', borderLeft: '4px solid #F57C00', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 8px 0', fontWeight: '700', color: '#E65100' }}>Option B: You Don't Have Savings</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#E65100' }}>
-              Keep your part-time job. Run this in your evenings and weekends. Expect: 120 days, not 90. The timeline is the same; you're just slower.
-            </p>
-          </div>
-          <div style={{ backgroundColor: '#FCE4EC', borderLeft: '4px solid #C2185B', padding: '16px', borderRadius: '4px' }}>
-            <p style={{ margin: '0 0 8px 0', fontWeight: '700', color: '#880E4F' }}>Option C: You MUST Quit Your Job (High Risk)</p>
-            <p style={{ margin: '0', fontSize: '14px', color: '#C2185B' }}>
-              Only if: (1) you have 6+ months savings, (2) you have <strong>already validated</strong> the idea with customers, and (3) you can live on £500/month. Even then: risk.
-            </p>
+        
+        <div className="overflow-x-auto mb-8">
+          <table className="w-full text-sm sm:text-base">
+            <thead>
+              <tr className="bg-gray-100 border-b-2 border-gray-300">
+                <th className="text-left px-4 py-3 font-bold text-gray-900">Item</th>
+                <th className="text-left px-4 py-3 font-bold text-gray-900">Cost</th>
+                <th className="text-left px-4 py-3 font-bold text-gray-900">When</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Domain Name (optional)</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">£10/year</td>
+                <td className="px-4 py-3 text-gray-600">Day 1 (optional)</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Landing Page (Carrd)</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">£39/year</td>
+                <td className="px-4 py-3 text-gray-600">Day 5</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Email (Gmail)</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">Free</td>
+                <td className="px-4 py-3 text-gray-600">Day 1</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Calendly (free tier)</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">Free</td>
+                <td className="px-4 py-3 text-gray-600">Day 3</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Stripe (payment processing)</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">2.9% + £0.20/transaction</td>
+                <td className="px-4 py-3 text-gray-600">Day 3</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Notion (free tier)</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">Free</td>
+                <td className="px-4 py-3 text-gray-600">Day 1</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-3 text-gray-700">Professional Indemnity Insurance</td>
+                <td className="px-4 py-3 font-semibold text-gray-900">£25–50/month</td>
+                <td className="px-4 py-3 text-gray-600">Day 30–60</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="px-4 py-3 font-bold text-gray-900">Business Bank Account</td>
+                <td className="px-4 py-3 font-bold text-gray-900">Free–£10/month</td>
+                <td className="px-4 py-3 text-gray-600">Day 30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded mb-6">
+          <p className="text-green-900 m-0">
+            <strong>Month 1 Total Out-of-Pocket:</strong> £49–99 (just Carrd + optional domain). That's it.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">What NOT to Spend On (Days 1–90)</h3>
+          <div className="space-y-3">
+            <div className="flex gap-3">
+              <span className="text-red-600 font-bold">❌</span>
+              <div>
+                <p className="font-bold text-gray-900">Logo Design (£300–1,000)</p>
+                <p className="text-gray-700 text-sm">No customer cares. Save this for Year 2.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-red-600 font-bold">❌</span>
+              <div>
+                <p className="font-bold text-gray-900">Business Cards (£50–200)</p>
+                <p className="text-gray-700 text-sm">Digital is free. Printing is waste.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-red-600 font-bold">❌</span>
+              <div>
+                <p className="font-bold text-gray-900">Custom Website (£1K–5K+)</p>
+                <p className="text-gray-700 text-sm">Carrd is £39 and converts just as well.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-red-600 font-bold">❌</span>
+              <div>
+                <p className="font-bold text-gray-900">Ads (Google, Facebook, LinkedIn)</p>
+                <p className="text-gray-700 text-sm">You don't have a repeatable pitch yet. Organic first.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-red-600 font-bold">❌</span>
+              <div>
+                <p className="font-bold text-gray-900">LLC Registration (£200–500)</p>
+                <p className="text-gray-700 text-sm">Wait until revenue hits £5K. Sole Trader costs £0.</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <span className="text-red-600 font-bold">❌</span>
+              <div>
+                <p className="font-bold text-gray-900">Premium SaaS Tools (HubSpot, Pipedrive, etc.)</p>
+                <p className="text-gray-700 text-sm">You don't need CRM. You have 5 customers. Use a spreadsheet.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-          <p style={{ margin: '0 0 12px 0', fontWeight: '600' }}>Budget Planning:</p>
-          <ul style={{ paddingLeft: '24px', margin: '0', fontSize: '14px' }}>
-            <li style={{ marginBottom: '6px' }}>Carrd website: £39/year</li>
-            <li style={{ marginBottom: '6px' }}>Domain name (if you want one): £10/year</li>
-            <li style={{ marginBottom: '6px' }}>Stripe fees (2.9% + £0.30 per transaction): eat this from profit</li>
-            <li>Everything else: free</li>
-          </ul>
-          <p style={{ margin: '12px 0 0 0', fontStyle: 'italic', color: '#636E72' }}>
-            Total out-of-pocket cost for 90 days: £49–100. Your runway isn't about startup costs. It's about your living expenses.
+
+        <div className="mt-8 bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+          <p className="text-purple-900 font-bold m-0">
+            Solo Rule – The £200 Rule: You can spend up to £200 total in your first 90 days, and it should all be on income-generating activities (landing page, payment processing, calendar tool). Everything else is distraction until you hit £5K revenue.
           </p>
         </div>
       </section>
 
-      {/* The Next 90 Days */}
-      <section style={{ marginBottom: '64px' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: '700', color: '#2D3436', marginBottom: '24px' }}>
-          Days 91–365: What Comes After
+      {/* Legal & Financial Setup */}
+      <section className="mb-16 sm:mb-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          Legal & Financial Setup: Minimum Viable Compliance
         </h2>
-        <p style={{ marginBottom: '24px' }}>
-          If you pass Day 90 with revenue, a template, and a system, here's your next move:
+        <p className="text-gray-700 mb-8">
+          Don't hire a lawyer. Don't overcomplicate this. Do the minimum, then scale.
         </p>
-        <div style={{ display: 'grid', gap: '16px' }}>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', margin: '0 0 8px 0' }}>Growth Path (£1K–£10K/Month)</h3>
-            <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>
-              Optimize your sales: find more customers using the outreach method that worked (LinkedIn? Cold email? Referrals?). Raise prices 20%. Invest in a website (Day 91+). Build an email list from customers.
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">The Compliance Ladder</h3>
+            <p className="text-gray-700 mb-6">
+              What you do depends on your revenue stage. Not before.
             </p>
+
+            <div className="space-y-6">
+              {/* Tier 1 */}
+              <div className="border-2 border-gray-300 rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                    <span className="font-bold text-green-700">1</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900">£0–£5K Revenue: Sole Trader (Days 1–30)</h4>
+                </div>
+                <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                  <li>Create email for business (Gmail, free)</li>
+                  <li>Register as Sole Trader online (gov.uk, 10 minutes, £0)</li>
+                  <li>Keep all receipts and invoices in a folder (Notion works)</li>
+                  <li>Track income and expenses in a spreadsheet</li>
+                  <li>This is legal. You're compliant.</li>
+                </ul>
+              </div>
+
+              {/* Tier 2 */}
+              <div className="border-2 border-blue-300 rounded-lg p-6 bg-blue-50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                    <span className="font-bold text-blue-700">2</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900">£5K–£50K Revenue: Business Bank Account (Day 30–60)</h4>
+                </div>
+                <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                  <li>Open a business bank account (Starling, Wise, or traditional bank, £0–10/month)</li>
+                  <li>Set up accounting software: FreeAgent (£30/month on Day 30) or Wave (free)</li>
+                  <li>Save 29% of every pound: 20% income tax + 9% National Insurance (put in separate account)</li>
+                  <li>Get professional indemnity insurance (£25–50/month, required for most services)</li>
+                  <li>Register VAT if you hit £85K/year (not before)</li>
+                </ul>
+              </div>
+
+              {/* Tier 3 */}
+              <div className="border-2 border-purple-300 rounded-lg p-6 bg-purple-50">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+                    <span className="font-bold text-purple-700">3</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900">£50K+ Revenue: Limited Company (Year 1 if profitable)</h4>
+                </div>
+                <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                  <li>Talk to an accountant (not a lawyer for now)</li>
+                  <li>Register Limited Company (£12 online, ~5 hours admin)</li>
+                  <li>File Companies House accounts annually (£13)</li>
+                  <li>Use proper bookkeeping software (Xero, FreeAgent Pro, ~£10–20/month)</li>
+                  <li>Pay corporation tax (19%)</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', margin: '0 0 8px 0' }}>Efficiency Path (£500–£2K/Month, 10 Hours/Week)</h3>
-            <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>
-              Automate the 2-hour tasks from your template. Delegate 1 task to a freelancer (costs £200/project, saves 5 hours). Transform service delivery into a semi-passive system.
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded">
+            <p className="text-yellow-900 mb-2">
+              <strong>Anti-Example: The Lawyer Trap</strong><br />
+              Founder hires lawyer on Day 1 to draft T&Cs, privacy policy, and client contracts. Cost: £800. By Day 90: zero customers. T&Cs never used. Money wasted.
             </p>
-          </div>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', margin: '0 0 8px 0' }}>Product Path (SaaS or Digital Product)</h3>
-            <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>
-              Take your manual template and productize it: bundle into a course, create an app, or sell it as a template. This unlocks £10K+/month (but requires Day 91+).
-            </p>
-          </div>
-          <div style={{ backgroundColor: '#F5F5F5', padding: '20px', borderRadius: '8px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: '#2D3436', margin: '0 0 8px 0' }}>Audience Path (Content / Affiliate)</h3>
-            <p style={{ margin: '0', fontSize: '14px', color: '#636E72' }}>
-              Now that you have revenue and proof, start writing: case studies, guides, tutorials. Build an email list. Monetize via affiliates or sponsorships. (This is the long game, but by Day 91 you have proof to back it up.)
+            <p className="text-yellow-900 m-0">
+              <strong>The Rule:</strong> No lawyer until you have 10+ customers and £10K+ revenue. Until then: simple Stripe terms are enough.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Your Day 1 Action */}
-      <section style={{ marginBottom: '64px', backgroundColor: '#E3F2FD', padding: '32px', borderRadius: '12px' }}>
-        <h2 style={{ fontSize: '28px', fontWeight: '700', color: '#1565C0', marginBottom: '24px' }}>
-          Your Day 1 Action
+      {/* Next Steps */}
+      <section className="mb-16 sm:mb-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+          Your Day 1 Action Plan
         </h2>
-        <p style={{ marginBottom: '20px', fontSize: '16px' }}>
-          Don't read more. Start here:
+        <p className="text-gray-700 mb-8">
+          Don't read another page. Do these 5 things today:
         </p>
-        <ol style={{ paddingLeft: '24px', marginBottom: '0' }}>
-          <li style={{ marginBottom: '12px', fontSize: '15px' }}>
-            <strong>Go to <Link href="/offer/from-scratch" style={{ color: '#00B894', textDecoration: 'none' }}>/offer/from-scratch</Link></strong> and fill out the Cobblestone Method. 30 minutes. You'll have: problem, offer, price.
+        
+        <ol className="list-decimal pl-6 space-y-4 text-gray-700">
+          <li>
+            <strong>Go to <Link href="/start/niche-selection" className="text-blue-600 hover:underline">/start/niche-selection</Link></strong> and lock your niche in. 30 minutes. Do it now.
           </li>
-          <li style={{ marginBottom: '12px', fontSize: '15px' }}>
-            <strong>Write your 3-sentence pitch.</strong> "I help [person] solve [problem] by doing [thing]. It costs £X and takes Y weeks." Post it where you'll see it daily.
+          <li>
+            <strong>Fill out the Cobblestone Method.</strong> Problem → Your Solution → Price. Write it down in Notion or a Google Doc.
           </li>
-          <li style={{ marginBottom: '12px', fontSize: '15px' }}>
-            <strong>Open a spreadsheet.</strong> Title: "20 Outreach Targets." List 20 people in your network or market you could contact. Name, why they're a fit, how to reach them.
+          <li>
+            <strong>Write your 3-sentence pitch:</strong> "I help [person] solve [problem] by doing [thing]. It costs £X and takes Y weeks." Print it. Put it on your wall.
           </li>
-          <li style={{ marginBottom: '12px', fontSize: '15px' }}>
-            <strong>Send 1 message today.</strong> "Hey [name], I'm starting a solo business helping [people] with [problem]. Do you know anyone who struggles with [specific pain]? I'd love to chat for 15 minutes."
+          <li>
+            <strong>Create a Stripe account</strong> (stripe.com, 10 minutes). Test a £1 transaction to yourself.
           </li>
-          <li style={{ marginBottom: '0', fontSize: '15px' }}>
-            <strong>Go to <Link href="/marketing/first-customers" style={{ color: '#00B894', textDecoration: 'none' }}>/marketing/first-customers</Link></strong> and study the full outreach playbook. You'll need it for the next 29 days.
+          <li>
+            <strong>Send 1 message today.</strong> Pick someone in your network. "Hey [name], I'm starting X. Do you know anyone who struggles with [specific problem]?" Include your offer page link (Carrd or Google Doc).
           </li>
         </ol>
+
+        <div className="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+          <p className="text-blue-900 mb-3">
+            <strong>Related Guides:</strong>
+          </p>
+          <ul className="list-disc pl-6 text-blue-900 space-y-1">
+            <li><Link href="/marketing/first-customers" className="text-blue-600 hover:underline">First Customers: The Full Outreach Playbook</Link> — once you've got your offer, use this to make your 30 sales calls</li>
+            <li><Link href="/start/business-models" className="text-blue-600 hover:underline">Business Models</Link> — if your niche doesn't feel right, explore different models</li>
+            <li><Link href="/marketing/lead-flow" className="text-blue-600 hover:underline">Lead Flow Systems</Link> — once you hit Day 60, use this to systematize your referrals</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Warning Box */}
+      <section className="mb-16 sm:mb-20 bg-red-50 border-l-4 border-red-600 p-8 rounded">
+        <h2 className="text-2xl font-bold text-red-900 mb-6">
+          ⚠️ The Critical Warning: Do Not Skip Week 1
+        </h2>
+        <div className="space-y-4 text-red-900">
+          <p>
+            Week 1 is not optional. You must have a payment-ready offer by Day 7. This is where 90% of solo founders fail: they spend Weeks 1–4 building a perfect website, logo, or business plan. Then they run out of runway.
+          </p>
+          <p>
+            <strong>Your priorities in Week 1 (in order):</strong>
+          </p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Offer definition (Days 1–2)</li>
+            <li>Stripe setup (Days 3–4)</li>
+            <li>Landing page (Days 5–6)</li>
+            <li>First outreach (Day 7)</li>
+          </ol>
+          <p>
+            Everything else can wait. Logo? Month 4. LLC? Month 3. Website? Month 2. Content calendar? Month 6. Marketing funnel? Day 31+.
+          </p>
+          <p className="mt-6 font-bold">
+            If you don't have revenue by Day 30, you pivot or quit. There is no Plan B. There is only revenue or iteration.
+          </p>
+        </div>
       </section>
 
       {/* Closing */}
-      <section style={{ marginBottom: '32px', backgroundColor: '#F5F5F5', padding: '32px', borderRadius: '12px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '24px', fontWeight: '700', color: '#2D3436', marginBottom: '16px' }}>
+      <section className="bg-gray-900 text-white p-8 sm:p-12 rounded-lg text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">
           The 90-Day Truth
         </h2>
-        <p style={{ fontSize: '16px', color: '#636E72', lineHeight: '1.8', margin: '0' }}>
-          Most solopreneurs fail between Day 31 and Day 90 because they confuse motion with progress. You'll know the truth on Day 30: will someone pay you? If yes, you manage delivery. If no, you pivot. This is not cruel. This is honest. By Day 90, you'll either have a machine that generates revenue, or you'll have eliminated the uncertainty and moved on to the next idea. <strong>Both outcomes are wins.</strong>
+        <p className="text-gray-100 text-lg leading-relaxed max-w-2xl mx-auto">
+          Most solo founders fail between Day 31 and Day 90 because they confuse motion with progress. This guide removes that confusion. By Day 30, you'll know if anyone will pay you. By Day 60, you'll know if you can deliver. By Day 90, you'll have a real business or a clear signal to move on. Both outcomes are wins. The only loss is the founder who builds for 6 months and quits without knowing if their idea works.
+        </p>
+        <p className="text-gray-100 text-lg leading-relaxed max-w-2xl mx-auto mt-6">
+          <strong>You've got 90 days. Use them.</strong>
         </p>
       </section>
     </div>
