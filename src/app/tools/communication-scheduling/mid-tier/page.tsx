@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mid-Tier Communication: When Free Limits Cost You Money | OneFoundr',
-  description: 'Google Workspace, Calendly Pro, Zoom Pro, Loom Pro. £47/month. When free limits cost you clients.',
+  title: 'Mid-Tier Communication: When Free Tools Start Costing You Money | OneFoundr',
+  description: 'Google Workspace, Calendly Pro, Zoom Pro, Loom Pro. £47/month. Revenue impact calculations. Pays for itself when you close one extra client or save 30 minutes/week.',
   openGraph: {
-    title: 'Mid-Tier Communication: When Free Limits Cost You Money',
-    description: 'Upgrade triggers that matter. ROI calculations. Worth it when a limit costs you revenue.',
+    title: 'Mid-Tier Communication: When Free Tools Start Costing You Money',
+    description: 'Upgrade triggers with revenue impact. ROI calculations. The real math on professionalism.',
   },
 };
 
@@ -23,16 +23,19 @@ export default function MidTierCommunicationPage() {
         <section className="mb-16">
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-8 mb-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Mid-Tier Communication: When Free Limits Cost You Money
+              Mid-Tier Communication: When Free Tools Start Costing You Money
             </h1>
             <p className="text-xl text-gray-600 mb-6">
-              Google Workspace, Calendly Pro, Zoom Pro, Loom Pro. £47/month. Worth it when free costs you clients.
+              Google Workspace, Calendly Pro, Zoom Pro, Loom Pro. £47/month. Pays for itself when you keep one client or save 30 minutes/week.
             </p>
           </div>
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded mb-8">
-            <p className="text-blue-900 font-semibold mb-0">
-              "I stayed on free tools until I lost a £3k client because Zoom cut out at 40 minutes. Upgraded to Pro (£47/month). Kept the next client. The upgrade paid for itself 60x."
+            <p className="text-blue-900 font-semibold mb-2">
+              "I lost a £3k client because Zoom cut out at 40 minutes. Upgraded to Pro (£12/month). Kept the next £3k client. That's 250x ROI. The upgrade wasn't an expense—it was insurance."
+            </p>
+            <p className="text-sm text-blue-800">
+              This page shows you the honest triggers for upgrading, and the exact ROI math that justifies it.
             </p>
           </div>
         </section>
@@ -750,38 +753,236 @@ export default function MidTierCommunicationPage() {
         </div>
       </div>
 
+      {/* UPGRADE DECISION FRAMEWORK */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-4xl font-bold text-gray-900 mb-8">Should You Upgrade? Answer These 5 Questions</h2>
+
+        <div className="bg-white rounded-xl border border-gray-100 p-8">
+          <div className="space-y-6">
+            {/* Question 1 */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Question 1: Have you hit a free tool limit?</h3>
+              <p className="text-gray-700 mb-4">Not "could you hit one" — have you actually hit one?</p>
+              <div className="bg-gray-50 p-4 rounded border border-gray-200 mb-3">
+                <p className="text-sm text-gray-700 mb-2"><strong>Examples of "yes":</strong></p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>— A Zoom call cut off mid-call</li>
+                  <li>— You've recorded 25+ Loom videos this month</li>
+                  <li>— A client said "do you have a business email?"</li>
+                  <li>— You're scheduling 10+ calls weekly</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-600"><strong>If you answered "no":</strong> Stop here. Upgrade later. You're not ready.</p>
+            </div>
+
+            {/* Question 2 */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Question 2: Did it cost you money?</h3>
+              <p className="text-gray-700 mb-4">Did that limit result in a lost client, lost time, or lost opportunity?</p>
+              <div className="bg-gray-50 p-4 rounded border border-gray-200 mb-3">
+                <p className="text-sm text-gray-700 mb-2"><strong>Examples of "yes":</strong></p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>— A £3k client disappeared after a Zoom cutoff</li>
+                  <li>— You're manually scheduling calls instead of using Calendly</li>
+                  <li>— You can't record all the videos you want in Loom</li>
+                  <li>— A prospect asked about your "professional email"</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-600"><strong>If you answered "no":</strong> The free tools are working. Don't upgrade.</p>
+            </div>
+
+            {/* Question 3 */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Question 3: Can you calculate the ROI?</h3>
+              <p className="text-gray-700 mb-4">Can you actually measure the benefit? If not, you're guessing.</p>
+              <div className="bg-gray-50 p-4 rounded border border-gray-200 mb-3">
+                <p className="text-sm text-gray-700 mb-2"><strong>Examples of "yes":</strong></p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>— Lost a £3k client to Zoom. Pro would have prevented it = 6,300% ROI</li>
+                  <li>— Save 30 min/week at £100/hour = £200/month benefit on £47 cost = 325% ROI</li>
+                  <li>— Google Workspace makes you look professional, potentially worth 1 extra client/year</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-600"><strong>If you answered "no":</strong> You can't justify the expense. Stay free.</p>
+            </div>
+
+            {/* Question 4 */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Question 4: Is the ROI positive?</h3>
+              <p className="text-gray-700 mb-4">Does the benefit outweigh £47/month?</p>
+              <div className="bg-gray-50 p-4 rounded border border-gray-200 mb-3">
+                <p className="text-sm text-gray-700 mb-2"><strong>Minimum thresholds:</strong></p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>— Saves you 20+ minutes/month at your hourly rate</li>
+                  <li>— Prevents 1 lost client per year</li>
+                  <li>— Gains you 1 additional client per year due to professionalism</li>
+                  <li>— Eliminates a single costly incident (demo cutoff, etc.)</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-600"><strong>If you answered "no":</strong> The math doesn't work yet. Wait.</p>
+            </div>
+
+            {/* Question 5 */}
+            <div>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Question 5: Will you actually use it?</h3>
+              <p className="text-gray-700 mb-4">Be honest. This is where most upgrades fail.</p>
+              <div className="bg-gray-50 p-4 rounded border border-gray-200 mb-3">
+                <p className="text-sm text-gray-700 mb-2"><strong>Red flags:</strong></p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>— You're not sure what the upgrade does</li>
+                  <li>— You're upgrading "just to have it"</li>
+                  <li>— You haven't used the free version in a month</li>
+                  <li>— You can't name 3 features you'll actually use</li>
+                </ul>
+              </div>
+              <p className="text-sm text-gray-600"><strong>If you answered "no" to this:</strong> You'll cancel in 2 months. Don't waste the money.</p>
+            </div>
+          </div>
+
+          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
+            <p className="text-lg font-bold text-green-900 mb-2">✓ All 5 questions = "yes"?</p>
+            <p className="text-green-800">Upgrade now. You're ready. Spend 25 minutes setting it up this week.</p>
+          </div>
+        </div>
+      </div>
+
       {/* NEXT STEPS */}
       <div className="bg-blue-600 text-white py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Your Next Action</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Upgrade?</h2>
           <p className="text-lg opacity-90 mb-8">
-            Before upgrading:
+            Here's your 25-minute setup:
           </p>
           <ol className="text-left max-w-md mx-auto mb-8 space-y-3">
             <li className="flex gap-3">
               <span className="font-bold flex-shrink-0">1.</span>
-              <span>Audit your free tool usage. Are you hitting limits?</span>
+              <span>Answer the 5 questions above honestly</span>
             </li>
             <li className="flex gap-3">
               <span className="font-bold flex-shrink-0">2.</span>
-              <span>Measure the cost. Did a limit cost you a client?</span>
+              <span>Pick ONE tool to upgrade first (whichever limits you most)</span>
             </li>
             <li className="flex gap-3">
               <span className="font-bold flex-shrink-0">3.</span>
-              <span>Calculate the ROI. Is £47/month worth the benefit?</span>
+              <span>Sign up and set it up using the guides in this page</span>
             </li>
             <li className="flex gap-3">
               <span className="font-bold flex-shrink-0">4.</span>
-              <span>If all three pass, spend 25 minutes upgrading.</span>
+              <span>Track the result. Did it help?</span>
             </li>
           </ol>
           <p className="text-lg opacity-90 mb-12">
-            If you can't answer "yes" to all three, stay on free. You're not ready yet.
+            If you get results, add the next tool. If not, downgrade and save the money.
           </p>
 
           <div className="bg-blue-700 rounded-lg p-6 mb-8">
-            <p className="font-bold text-sm opacity-75 mb-2">Download the Upgrade Decision Worksheet</p>
-            <p className="text-sm opacity-90">Calculate your specific ROI before spending £47/month.</p>
+            <p className="font-bold text-sm opacity-75 mb-2">Track Your Upgrade ROI</p>
+            <p className="text-sm opacity-90">After 30 days, score how many times each upgrade prevented a problem or saved time.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* PROFESSIONAL EMAIL SCRIPTS */}
+      <div className="bg-gray-50 py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-8">Email Scripts: How to Communicate Your Upgrade</h2>
+
+          <p className="text-gray-700 text-lg mb-8">
+            When you upgrade to mid-tier tools, your communication changes. Here are professional email templates you can use.
+          </p>
+
+          {/* Script 1 */}
+          <div className="bg-white rounded-xl border border-gray-100 p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Script 1: For New Prospects (Business Email)</h3>
+            <p className="text-gray-600 mb-4">Send this when introducing yourself:</p>
+            <div className="bg-blue-50 p-6 rounded border border-blue-200 font-mono text-sm mb-4 text-gray-800 whitespace-pre-wrap">
+{`Subject: Quick question about working together
+
+Hi [Name],
+
+Thanks for reaching out. I'd love to chat about [topic].
+
+I usually start with a quick discovery call. Here's my calendar link: [Calendly link]
+
+Pick whatever time works best. I have 30-min, 60-min, or a quick 20-min slot depending on what you prefer.
+
+Looking forward to it.
+
+[Your Name]
+[your@yourdomain.com]
+[Your Website]`}
+            </div>
+            <p className="text-gray-700 text-sm mb-4"><strong>Why this works:</strong> Custom email domain signals professionalism. Multiple calendar types show you're organized. Calendly link removes the back-and-forth.</p>
+          </div>
+
+          {/* Script 2 */}
+          <div className="bg-white rounded-xl border border-gray-100 p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Script 2: For Delivery Updates (Using Recorded Videos)</h3>
+            <p className="text-gray-600 mb-4">Send this to clients when you're providing feedback or updates:</p>
+            <div className="bg-blue-50 p-6 rounded border border-blue-200 font-mono text-sm mb-4 text-gray-800 whitespace-pre-wrap">
+{`Subject: Quick feedback on [project/deliverable]
+
+Hi [Name],
+
+I recorded a 5-minute walkthrough of my thoughts on [what they're asking about]. It's easier than typing it all out.
+
+Watch it here: [Loom link]
+
+Let me know if you have questions—I can hop on a call or send another video.
+
+[Your Name]`}
+            </div>
+            <p className="text-gray-700 text-sm mb-4"><strong>Why this works:</strong> Loom videos feel personal and save you typing time. Clients perceive this as higher-touch service. It's much faster than a 30-min call for simple feedback.</p>
+          </div>
+
+          {/* Script 3 */}
+          <div className="bg-white rounded-xl border border-gray-100 p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Script 3: For Scheduling (Multiple Options)</h3>
+            <p className="text-gray-600 mb-4">Send this after a discovery call to schedule next steps:</p>
+            <div className="bg-blue-50 p-6 rounded border border-blue-200 font-mono text-sm mb-4 text-gray-800 whitespace-pre-wrap">
+{`Subject: Next Steps—Project Kickoff
+
+Hi [Name],
+
+Thanks for the great call today. I'm excited about working on [project].
+
+For next week, let's do a project kickoff (60 minutes). Here's my calendar:
+
+[Calendly link for "Project Kickoff" event]
+
+This gives us time to dive deep into your goals and make sure we're aligned.
+
+Talk soon,
+[Your Name]`}
+            </div>
+            <p className="text-gray-700 text-sm mb-4"><strong>Why this works:</strong> Multiple event types in Calendly mean you're not sending confusing "pick any time" links. You're sending specific, labeled event types. That feels organized.</p>
+          </div>
+
+          {/* Script 4 */}
+          <div className="bg-white rounded-xl border border-gray-100 p-8 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Script 4: For Rescheduling (Professional Transparency)</h3>
+            <p className="text-gray-600 mb-4">When you need to reschedule or a client needs to:</p>
+            <div className="bg-blue-50 p-6 rounded border border-blue-200 font-mono text-sm mb-4 text-gray-800 whitespace-pre-wrap">
+{`Subject: Let's reschedule our call
+
+Hi [Name],
+
+Something came up on my end, and I want to give you my full attention on this call. Would you rather reschedule to [day/date] or [alternative day/date]?
+
+Here's my calendar if neither of those work: [Calendly link]
+
+Sorry for the inconvenience—I know your time is valuable.
+
+[Your Name]`}
+            </div>
+            <p className="text-gray-700 text-sm mb-4"><strong>Why this works:</strong> You're not just canceling—you're showing respect for their time. Offering specific dates + a Calendly link feels professional. Clients appreciate this vs. "let me know what works."</p>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-600 p-6 rounded">
+            <p className="text-sm font-bold text-yellow-900 mb-2">Pro Tip: Before Sending</p>
+            <p className="text-yellow-800 text-sm">
+              All emails should be sent from your custom domain email (yourname@yourdomain.com). This single change signals professionalism more than anything else.
+            </p>
           </div>
         </div>
       </div>
